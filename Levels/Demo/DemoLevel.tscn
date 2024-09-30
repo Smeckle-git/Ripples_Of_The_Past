@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnswkxolwtqm"]
+
+[ext_resource type="Script" path="res://Levels/Demo/demo_level.gd" id="1_v2s1b"]
+[ext_resource type="Texture2D" uid="uid://iwvxo0tddg4r" path="res://Resources/temp/player.png" id="2_egi2g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipk1e"]
+atlas = ExtResource("2_egi2g")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n42ly"]
+atlas = ExtResource("2_egi2g")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3pxx"]
+atlas = ExtResource("2_egi2g")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5u0g"]
+atlas = ExtResource("2_egi2g")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bt35p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipk1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n42ly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3pxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5u0g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DemoLevel" type="Node"]
+process_mode = 1
+script = ExtResource("1_v2s1b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "ALLOOOOOOOOOOO"
+horizontal_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(468.25, 202.5)
+scale = Vector2(3.39844, 3.60938)
+sprite_frames = SubResource("SpriteFrames_bt35p")
+autoplay = "default"
+frame_progress = 0.833625

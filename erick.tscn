@@ -31555,7 +31555,7 @@ bones/47/rotation = Quaternion(0.758253, 1.82539e-07, -0.651961, 1.11759e-08)
 bones/47/scale = Vector3(1, 1, 1)
 
 [node name="1H_Axe_Offhand" type="BoneAttachment3D" parent="Rig/Skeleton3D"]
-transform = Transform3D(4.69046e-07, 0.262865, 0.964832, 0.999999, -3.09948e-07, 6.87437e-07, 8.37225e-07, 0.964832, -0.262864, 0.516524, 0.636706, 0.0136165)
+transform = Transform3D(4.09441e-07, 0.262865, 0.964832, 0.999999, -3.09948e-07, 6.27832e-07, 7.6272e-07, 0.964832, -0.262864, 0.516524, 0.636706, 0.0136165)
 bone_name = "1H_Axe_Offhand"
 bone_idx = 9
 
@@ -31564,7 +31564,7 @@ mesh = SubResource("ArrayMesh_epi6i")
 skeleton = NodePath("")
 
 [node name="Barbarian_Round_Shield" type="BoneAttachment3D" parent="Rig/Skeleton3D"]
-transform = Transform3D(2.57561e-07, 0.262865, 0.964832, 0.999999, -2.8304e-06, 1.59332e-06, 3.50716e-06, 0.964832, -0.262864, 0.662642, 0.636706, -0.0430842)
+transform = Transform3D(1.97955e-07, 0.262864, 0.964832, 0.999999, -2.8304e-06, 1.53371e-06, 3.43266e-06, 0.964832, -0.262864, 0.662642, 0.636706, -0.0430841)
 visible = false
 bone_name = "Barbarian_Round_Shield"
 bone_idx = 10
@@ -31574,7 +31574,7 @@ mesh = SubResource("ArrayMesh_a06mc")
 skeleton = NodePath("")
 
 [node name="1H_Axe" type="BoneAttachment3D" parent="Rig/Skeleton3D"]
-transform = Transform3D(-1.74733e-07, -0.149894, 0.988702, 0.999999, -8.76192e-07, -8.80383e-07, 1.34781e-06, 0.988701, 0.149893, -0.496053, 0.64103, 0.139529)
+transform = Transform3D(-1.44931e-07, -0.149894, 0.988702, 0.999999, -1.14441e-06, -1.0294e-06, 1.66074e-06, 0.988701, 0.149894, -0.496053, 0.64103, 0.139528)
 bone_name = "1H_Axe"
 bone_idx = 16
 
@@ -31583,7 +31583,7 @@ mesh = SubResource("ArrayMesh_trlad")
 skeleton = NodePath("")
 
 [node name="2H_Axe" type="BoneAttachment3D" parent="Rig/Skeleton3D"]
-transform = Transform3D(-1.74733e-07, -0.149894, 0.988702, 0.999999, -8.76192e-07, -8.80383e-07, 1.34781e-06, 0.988701, 0.149893, -0.496053, 0.64103, 0.139529)
+transform = Transform3D(-1.44931e-07, -0.149894, 0.988702, 0.999999, -1.14441e-06, -1.0294e-06, 1.66074e-06, 0.988701, 0.149894, -0.496053, 0.64103, 0.139528)
 visible = false
 bone_name = "2H_Axe"
 bone_idx = 17
@@ -31593,7 +31593,7 @@ mesh = SubResource("ArrayMesh_qj45m")
 skeleton = NodePath("")
 
 [node name="Mug" type="BoneAttachment3D" parent="Rig/Skeleton3D"]
-transform = Transform3D(-1.74733e-07, -0.149894, 0.988702, 0.999999, -8.76192e-07, -8.80383e-07, 1.34781e-06, 0.988701, 0.149893, -0.488716, 0.340464, 0.0911351)
+transform = Transform3D(-1.44931e-07, -0.149894, 0.988702, 0.999999, -1.14441e-06, -1.0294e-06, 1.66074e-06, 0.988701, 0.149894, -0.488716, 0.340464, 0.0911349)
 visible = false
 bone_name = "Mug"
 bone_idx = 18

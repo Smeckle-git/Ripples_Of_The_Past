@@ -1,7 +1,7 @@
 [gd_scene load_steps=107 format=4 uid="uid://bfg77uo5bhs0x"]
 
 [ext_resource type="Script" path="res://Scripts/erick.gd" id="1_ddkfx"]
-[ext_resource type="Texture2D" uid="uid://c7v2mgt4ol5rc" path="res://Objects/Prototypes/Barbarian_barbarian_texture.png" id="1_ywhwy"]
+[ext_resource type="Texture2D" uid="uid://c7v2mgt4ol5rc" path="res://Objects/Prototypes/Player/Barbarian_barbarian_texture.png" id="1_ywhwy"]
 [ext_resource type="Script" path="res://Scripts/player_state.gd" id="2_vsd8q"]
 [ext_resource type="Script" path="res://Scripts/idle.gd" id="3_vn6aa"]
 [ext_resource type="Script" path="res://Scripts/walking.gd" id="4_0qk5i"]
@@ -31209,7 +31209,7 @@ size = Vector3(2.03168, 2.45258, 1)
 
 [node name="erick" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.092186, 0.573573, 0.240184)
-collision_layer = 3
+collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_ddkfx")
 

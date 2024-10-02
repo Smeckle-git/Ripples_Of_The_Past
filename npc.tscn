@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cd328dl6lmqmm"]
+[gd_scene load_steps=6 format=3 uid="uid://cd328dl6lmqmm"]
 
-[ext_resource type="PackedScene" uid="uid://nvau0sin12gr" path="res://Objects/Prototypes/Mage.glb" id="1_r8g6j"]
+[ext_resource type="PackedScene" uid="uid://nvau0sin12gr" path="res://Objects/Prototypes/Player/Mage.glb" id="1_r8g6j"]
 [ext_resource type="Script" path="res://npc.gd" id="1_uipof"]
+[ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://Objects/Prototypes/Interaction/Interaction area/interaction_area.tscn" id="3_5p6ns"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7thgn"]
 size = Vector3(2.15034, 2.73434, 1.42993)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jkdjb"]
+size = Vector3(4.01165, 2.70007, 4.06335)
 
 [node name="Npc" type="CharacterBody3D"]
 script = ExtResource("1_uipof")
@@ -69,10 +73,10 @@ transform = Transform3D(-5.21052e-08, 0.964832, 0.262863, -0.999999, 3.1474e-07,
 visible = false
 
 [node name="1H_Wand" parent="Mage/Rig/Skeleton3D" index="2"]
-transform = Transform3D(-5.58357e-07, -0.149894, 0.988701, 0.999999, -2.05809e-07, 3.57628e-07, 4.87279e-07, 0.988701, 0.149894, -0.491061, 0.641029, 0.106596)
+transform = Transform3D(-5.88159e-07, -0.149894, 0.988701, 0.999999, -2.95216e-07, 2.08616e-07, 6.3629e-07, 0.988701, 0.149895, -0.491061, 0.641029, 0.106596)
 
 [node name="2H_Staff" parent="Mage/Rig/Skeleton3D" index="3"]
-transform = Transform3D(-5.58357e-07, -0.149894, 0.988701, 0.999999, -2.05809e-07, 3.57628e-07, 4.87279e-07, 0.988701, 0.149894, -0.491061, 0.641029, 0.106596)
+transform = Transform3D(-5.88159e-07, -0.149894, 0.988701, 0.999999, -2.95216e-07, 2.08616e-07, 6.3629e-07, 0.988701, 0.149895, -0.491061, 0.641029, 0.106596)
 visible = false
 
 [node name="Mage_Hat" parent="Mage/Rig/Skeleton3D" index="4"]
@@ -86,12 +90,14 @@ autoplay = "Idle"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0161057, 1.35732, -0.072876)
+visible = false
 shape = SubResource("BoxShape3D_7thgn")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.882172, -0.0199568, 1.23043, -0.03624)
-target_position = Vector3(0, 0, 2)
-debug_shape_custom_color = Color(1, 0, 0, 1)
-debug_shape_thickness = 5
+[node name="InteractionArea" parent="." instance=ExtResource("3_5p6ns")]
+action_name = "Interact"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.145911, 1.3614, 1.66549)
+shape = SubResource("BoxShape3D_jkdjb")
 
 [editable path="Mage"]

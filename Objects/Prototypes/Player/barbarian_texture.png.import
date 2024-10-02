@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2b04hc8y3l2b"
-path="res://.godot/imported/mage_texture.png-a767e1f1d04fe1840044f41fe4215a0b.ctex"
+uid="uid://cvjvbtpng1bs8"
+path="res://.godot/imported/barbarian_texture.png-43637ed53a863b63bf437de162850854.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Prototypes/mage_texture.png"
-dest_files=["res://.godot/imported/mage_texture.png-a767e1f1d04fe1840044f41fe4215a0b.ctex"]
+source_file="res://Objects/Prototypes/Player/barbarian_texture.png"
+dest_files=["res://.godot/imported/barbarian_texture.png-43637ed53a863b63bf437de162850854.ctex"]
 
 [params]
 

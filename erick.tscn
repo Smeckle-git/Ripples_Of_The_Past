@@ -31665,3 +31665,6 @@ script = ExtResource("4_0qk5i")
 
 [node name="Running" type="Node" parent="PlayerState2"]
 script = ExtResource("5_5h08b")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.909997, 0.414614, 0, -0.414614, 0.909997, 0, 2.85827, 4.73108)

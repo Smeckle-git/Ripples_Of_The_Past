@@ -14,7 +14,7 @@ size = Vector3(29.0689, 0.643799, 34.7973)
 transform = Transform3D(1, 0, 0, 0, 0.810512, 0.585721, 0, -0.585721, 0.810512, 0, 9.33905, 10.8641)
 fov = 57.13
 
-[node name="erick" parent="." instance=ExtResource("2_0p2vu")]
+[node name="erick" parent="." groups=["player"] instance=ExtResource("2_0p2vu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

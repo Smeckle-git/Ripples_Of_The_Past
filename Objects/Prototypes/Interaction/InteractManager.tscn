@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Objects/Prototypes/Interaction/InteractManager.gd" id="1_a7am0"]
 
-[node name="InteractionManager" type="Node3D" groups=["player"]]
+[node name="InteractionManager" type="Node3D"]
 script = ExtResource("1_a7am0")
 
 [node name="Label" type="Label3D" parent="."]

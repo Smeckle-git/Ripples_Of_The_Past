@@ -10,7 +10,11 @@ func _ready() -> void:
 	interaction_area.interact = Callable(self, "_on_interact")
 	
 func _on_interact():
-	animation_player.play("Lie_Down")
+	Dialogic.start("DEMO_interaction")
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 	print("yes")
 	
-	
+
+func _on_dialogic_signal(argument:String):
+	if argument == "denied":
+		animation_player.play("Lie_Down")

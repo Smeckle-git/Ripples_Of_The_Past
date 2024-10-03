@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2ckk6nrmq7gh"]
+
+[ext_resource type="PackedScene" uid="uid://ctl1b3122xblf" path="res://Levels/Prototypes/buildingblock.tscn" id="1_abtf1"]
+
+[node name="Meshlib" type="Node3D"]
+
+[node name="Buildingblock" parent="." instance=ExtResource("1_abtf1")]

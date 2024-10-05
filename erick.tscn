@@ -1,11 +1,9 @@
-[gd_scene load_steps=107 format=4 uid="uid://bfg77uo5bhs0x"]
+[gd_scene load_steps=105 format=4 uid="uid://bfg77uo5bhs0x"]
 
-[ext_resource type="Script" path="res://Scripts/erick.gd" id="1_ddkfx"]
 [ext_resource type="Texture2D" uid="uid://c7v2mgt4ol5rc" path="res://Objects/Prototypes/Player/Barbarian_barbarian_texture.png" id="1_ywhwy"]
-[ext_resource type="Script" path="res://Scripts/player_state.gd" id="2_vsd8q"]
-[ext_resource type="Script" path="res://Scripts/idle.gd" id="3_vn6aa"]
-[ext_resource type="Script" path="res://Scripts/walking.gd" id="4_0qk5i"]
-[ext_resource type="Script" path="res://Scripts/running.gd" id="5_5h08b"]
+[ext_resource type="Script" path="res://Resources/Prototypes/Player/state_machine.gd" id="3_il6cc"]
+[ext_resource type="Script" path="res://Resources/Prototypes/Player/idle.gd" id="4_4xbm1"]
+[ext_resource type="Script" path="res://Resources/Prototypes/Player/walking.gd" id="5_77u64"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxp6e"]
 resource_name = "barbarian_texture"
@@ -31211,7 +31209,6 @@ size = Vector3(2.03168, 2.45258, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.092186, 0.573573, 0.240184)
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_ddkfx")
 
 [node name="Rig" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.568251, 0)
@@ -31654,17 +31651,13 @@ autoplay = "Walking_A"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.621233, 0)
 shape = SubResource("BoxShape3D_bgcuk")
 
-[node name="PlayerState2" type="Node" parent="."]
-script = ExtResource("2_vsd8q")
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "player")]
+script = ExtResource("3_il6cc")
+initial_state = NodePath("Idle")
+player = NodePath("..")
 
-[node name="Idle" type="Node" parent="PlayerState2"]
-script = ExtResource("3_vn6aa")
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("4_4xbm1")
 
-[node name="Walking" type="Node" parent="PlayerState2"]
-script = ExtResource("4_0qk5i")
-
-[node name="Running" type="Node" parent="PlayerState2"]
-script = ExtResource("5_5h08b")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.909997, 0.414614, 0, -0.414614, 0.909997, 0, 2.85827, 4.73108)
+[node name="Walking" type="Node" parent="StateMachine"]
+script = ExtResource("5_77u64")

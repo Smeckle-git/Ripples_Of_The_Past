@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://nyml7y4ttuo2"]
+[gd_scene load_steps=5 format=3 uid="uid://wt4mn2siykjq"]
 
-[ext_resource type="Texture2D" uid="uid://bikvuu35g0vny" path="res://Objects/Prototypes/grass_texture_pixelartmaker.png" id="1_3ddf7"]
+[ext_resource type="Texture2D" uid="uid://db07c34tqg824" path="res://Objects/Prototypes/grass_texture_pixelartmaker.png" id="1_3ddf7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyjr0"]
 albedo_texture = ExtResource("1_3ddf7")

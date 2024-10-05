@@ -7,7 +7,8 @@ const SPEED = 5.0
 @onready var state_machine = get_parent()
 
 func Enter():
-	state_machine.sprite.play("walking-up")
+	pass
+	#state_machine.sprite.play("walking-up")
 
 func Update(_delta: float):
 	var player = state_machine.player

@@ -25,8 +25,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Barbarian": "res://Dialog/Characters/Barbarian.dch",
-"Mage": "res://Dialog/Characters/Mage.dch",
-"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+"Mage": "res://Dialog/Characters/Mage.dch"
 }
 directories/dtl_directory={
 "DEMO_interaction": "res://Dialog/Timelines/DEMO_interaction.dtl"
@@ -39,6 +38,7 @@ variables={
 }
 layout/style_list=["res://Dialog/Interaction_Style.tres"]
 layout/default_style="Default"
+glossary/default_case_sensitive=true
 
 [dotnet]
 

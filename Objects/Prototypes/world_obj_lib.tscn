@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://di55lv8a6ufmb"]
+[gd_scene load_steps=5 format=3 uid="uid://dqg2a6l3quf32"]
 
-[ext_resource type="PackedScene" uid="uid://duf26uu2tvh8" path="res://Objects/Prototypes/ground.tscn" id="1_kd8vx"]
-[ext_resource type="PackedScene" uid="uid://cumuxu5rf8qal" path="res://Objects/Prototypes/ground2.tscn" id="2_5odps"]
-[ext_resource type="PackedScene" uid="uid://nyml7y4ttuo2" path="res://Objects/Prototypes/ground3.tscn" id="3_fhrtm"]
-[ext_resource type="PackedScene" uid="uid://cw23bd3q4okjw" path="res://Objects/Prototypes/tree.tscn" id="4_mv23o"]
+[ext_resource type="PackedScene" uid="uid://d0hrfljsnvd78" path="res://Objects/Prototypes/ground.tscn" id="1_kd8vx"]
+[ext_resource type="PackedScene" uid="uid://lloi5oeaac6q" path="res://Objects/Prototypes/ground2.tscn" id="2_5odps"]
+[ext_resource type="PackedScene" uid="uid://wt4mn2siykjq" path="res://Objects/Prototypes/ground3.tscn" id="3_fhrtm"]
+[ext_resource type="PackedScene" uid="uid://cqvsffngxa5yu" path="res://Objects/Prototypes/tree.tscn" id="4_mv23o"]
 
 [node name="Node3D" type="Node3D"]
 

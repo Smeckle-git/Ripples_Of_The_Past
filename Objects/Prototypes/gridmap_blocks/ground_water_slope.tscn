@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://wt4mn2siykjq"]
-
-[ext_resource type="Texture2D" uid="uid://db07c34tqg824" path="res://Objects/Prototypes/grass_texture_pixelartmaker.png" id="1_3ddf7"]
+[gd_scene load_steps=4 format=3 uid="uid://b0d8rfwrlalc2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyjr0"]
-albedo_texture = ExtResource("1_3ddf7")
+transparency = 1
+albedo_color = Color(0, 0.25098, 0.752941, 0.752941)
 
 [sub_resource type="PrismMesh" id="PrismMesh_i116k"]
 material = SubResource("StandardMaterial3D_oyjr0")

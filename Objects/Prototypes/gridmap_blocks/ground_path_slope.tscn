@@ -1,0 +1,33 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbsmlyf8p2a1e"]
+
+[ext_resource type="Texture2D" uid="uid://d6k4wbxhdfor" path="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Color.png" id="1_jwcsv"]
+[ext_resource type="Texture2D" uid="uid://r8cvqwyyjuss" path="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_AmbientOcclusion.png" id="2_km2oh"]
+[ext_resource type="Texture2D" uid="uid://bqv1t4d8sbatu" path="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Displacement.png" id="3_y3iaq"]
+[ext_resource type="Texture2D" uid="uid://bimqxfxcbijl5" path="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_NormalGL.png" id="4_xlic8"]
+[ext_resource type="Texture2D" uid="uid://dtnddvba32no2" path="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Roughness.png" id="5_ljrh3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyjr0"]
+albedo_texture = ExtResource("1_jwcsv")
+roughness_texture = ExtResource("5_ljrh3")
+normal_enabled = true
+normal_texture = ExtResource("4_xlic8")
+ao_enabled = true
+ao_texture = ExtResource("2_km2oh")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_y3iaq")
+
+[sub_resource type="PrismMesh" id="PrismMesh_i116k"]
+material = SubResource("StandardMaterial3D_oyjr0")
+left_to_right = 1.0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iskc7"]
+margin = 0.0
+points = PackedVector3Array(0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5)
+
+[node name="Ground3" type="MeshInstance3D"]
+mesh = SubResource("PrismMesh_i116k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_iskc7")

@@ -2,9 +2,9 @@
 
 [ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://Objects/Prototypes/gridmap_blocks/world_obj_lib.meshlib" id="1_a2h3d"]
 [ext_resource type="PackedScene" uid="uid://c43be3tlcmwyt" path="res://Objects/Prototypes/tree/tree.tscn" id="2_8om2v"]
-[ext_resource type="Terrain3DStorage" uid="uid://dptuy4g7tymh8" path="res://Objects/Prototypes/terrain3d_res/storage.res" id="2_lua6u"]
-[ext_resource type="Terrain3DMaterial" uid="uid://brujfmh3hlv2p" path="res://Objects/Prototypes/terrain3d_res/material.res" id="3_37hop"]
-[ext_resource type="Terrain3DAssets" uid="uid://cth7u6ivq71xo" path="res://Objects/Prototypes/terrain3d_res/assets.res" id="4_fws5c"]
+[ext_resource type="Terrain3DStorage" uid="uid://dptuy4g7tymh8" path="res://Objects/Prototypes/terrain3d_resources/storage.res" id="2_lua6u"]
+[ext_resource type="Terrain3DMaterial" uid="uid://brujfmh3hlv2p" path="res://Objects/Prototypes/terrain3d_resources/material.res" id="3_37hop"]
+[ext_resource type="Terrain3DAssets" uid="uid://cth7u6ivq71xo" path="res://Objects/Prototypes/terrain3d_resources/assets.res" id="4_fws5c"]
 
 [node name="Node3D" type="Node3D"]
 

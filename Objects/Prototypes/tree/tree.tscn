@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dw27rbtgl2xx2" path="res://Objects/Prototypes/tree/tree.png" id="1_i8c2y"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_gq4b7"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nm4n6"]
+height = 4.0
 
 [node name="Tree" type="StaticBody3D"]
 
@@ -15,5 +16,5 @@ texture_filter = 2
 texture = ExtResource("1_i8c2y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-1.57243, 0.00689963, 2.51669e-08, 0.00248735, 3.58279, 0.134239, -0.00115973, -1.67068, 0.287876, -0.148242, 1.63087, 1.02827)
-shape = SubResource("BoxShape3D_gq4b7")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("CylinderShape3D_nm4n6")

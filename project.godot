@@ -46,7 +46,7 @@ project/assembly_name="Ripples_Of_The_Past"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [input]
 

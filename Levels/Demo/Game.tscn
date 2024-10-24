@@ -11,5 +11,5 @@ script = ExtResource("1_qyr1s")
 [node name="PauseMenu" parent="." instance=ExtResource("2_0r4c8")]
 visible = false
 
-[node name="Node3D" parent="." instance=ExtResource("3_xwloq")]
+[node name="World" parent="." instance=ExtResource("3_xwloq")]
 process_mode = 1

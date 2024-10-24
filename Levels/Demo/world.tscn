@@ -6,9 +6,11 @@
 [ext_resource type="Terrain3DMaterial" uid="uid://brujfmh3hlv2p" path="res://Objects/Prototypes/terrain3d_resources/material.res" id="3_37hop"]
 [ext_resource type="Terrain3DAssets" uid="uid://cth7u6ivq71xo" path="res://Objects/Prototypes/terrain3d_resources/assets.res" id="4_fws5c"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Level" type="Node3D"]
 
-[node name="GridMap" type="GridMap" parent="."]
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="GridMap" type="GridMap" parent="Environment"]
 mesh_library = ExtResource("1_a2h3d")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -16,10 +18,14 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(16, 1, 0)
 
-[node name="Terrain3D" type="Terrain3D" parent="."]
+[node name="Terrain3D" type="Terrain3D" parent="Environment"]
 storage = ExtResource("2_lua6u")
 material = ExtResource("3_37hop")
 assets = ExtResource("4_fws5c")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 404.394, 281.832)
+light_color = Color(0.488567, 0.718503, 0.996416, 1)
 
 [node name="tree_collection_forrest" type="Node3D" parent="."]
 
@@ -67,9 +73,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5161, 2, 4.88495)
 
 [node name="Tree15" parent="tree_collection_forrest" instance=ExtResource("2_8om2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.07749, 2, 18.3074)
-
-[node name="Tree16" parent="tree_collection_forrest" instance=ExtResource("2_8om2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.04756, 6.48691, 15.2521)
 
 [node name="Tree17" parent="tree_collection_forrest" instance=ExtResource("2_8om2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8332, 2, 73.1052)

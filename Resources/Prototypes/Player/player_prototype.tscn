@@ -1,0 +1,222 @@
+[gd_scene load_steps=29 format=3 uid="uid://dhh8ca70jl53s"]
+
+[ext_resource type="Script" path="res://player_prototype_st.gd" id="1_gnu3e"]
+[ext_resource type="Texture2D" uid="uid://iwvxo0tddg4r" path="res://Resources/Prototypes/Player/player.png" id="1_pv38u"]
+[ext_resource type="Script" path="res://Resources/Prototypes/Player/state_machine.gd" id="3_ya424"]
+[ext_resource type="Script" path="res://Resources/Prototypes/Player/state.gd" id="4_lak6r"]
+[ext_resource type="Script" path="res://Resources/Prototypes/Player/idle.gd" id="5_ycpli"]
+[ext_resource type="Script" path="res://Resources/Prototypes/Player/walking.gd" id="6_gxcxe"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tt21k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pt4e"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p7at"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbxri"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4orx"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o8pt"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brgxm"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0alnc"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_in5m3"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v15gf"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ykvj"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3sd5"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uvub"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5l21"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8h7w"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uf34j"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m77f3"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_347lg"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63fmp"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es46i"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdly0"]
+atlas = ExtResource("1_pv38u")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_stfk6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pt4e")
+}],
+"loop": true,
+"name": &"idle-down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p7at")
+}],
+"loop": true,
+"name": &"idle-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbxri")
+}],
+"loop": true,
+"name": &"idle-right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4orx")
+}],
+"loop": true,
+"name": &"idle-up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1o8pt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brgxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0alnc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_in5m3")
+}],
+"loop": true,
+"name": &"walking-down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v15gf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ykvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3sd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2uvub")
+}],
+"loop": true,
+"name": &"walking-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5l21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8h7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uf34j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m77f3")
+}],
+"loop": true,
+"name": &"walking-right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_347lg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63fmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es46i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdly0")
+}],
+"loop": true,
+"name": &"walking-up",
+"speed": 5.0
+}]
+
+[node name="PlayerPrototype" type="CharacterBody3D"]
+script = ExtResource("1_gnu3e")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "sprite", "player")]
+script = ExtResource("3_ya424")
+initial_state = NodePath("Idle")
+sprite = NodePath("../AnimatedSprite3D")
+player = NodePath("..")
+
+[node name="State" type="Node" parent="StateMachine"]
+script = ExtResource("4_lak6r")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("5_ycpli")
+
+[node name="Walking" type="Node" parent="StateMachine"]
+script = ExtResource("6_gxcxe")
+
+[node name="Jumping" type="Node" parent="StateMachine"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_tt21k")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_stfk6")
+animation = &"idle-down"
+autoplay = "idle-down"
+frame_progress = 0.153413

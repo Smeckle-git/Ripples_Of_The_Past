@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://0ft6wn2pxu0l"]
+[gd_scene load_steps=7 format=3 uid="uid://0ft6wn2pxu0l"]
 
 [ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://Objects/Prototypes/gridmap_blocks/world_obj_lib.meshlib" id="1_a2h3d"]
 [ext_resource type="PackedScene" uid="uid://c43be3tlcmwyt" path="res://Objects/Prototypes/tree/tree.tscn" id="2_8om2v"]
 [ext_resource type="Terrain3DStorage" uid="uid://dptuy4g7tymh8" path="res://Objects/Prototypes/terrain3d_resources/storage.res" id="2_lua6u"]
 [ext_resource type="Terrain3DMaterial" uid="uid://brujfmh3hlv2p" path="res://Objects/Prototypes/terrain3d_resources/material.res" id="3_37hop"]
 [ext_resource type="Terrain3DAssets" uid="uid://cth7u6ivq71xo" path="res://Objects/Prototypes/terrain3d_resources/assets.res" id="4_fws5c"]
+[ext_resource type="PackedScene" uid="uid://hqh15shxywyx" path="res://Objects/Characters/Thorinn.tscn" id="6_dd3lb"]
 
 [node name="Level" type="Node3D"]
 
@@ -1172,3 +1173,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4157, 0.288744, -37.5819)
 
 [node name="Tree120" parent="tree_collection_border" instance=ExtResource("2_8om2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.6773, 9.53674e-07, -26.6392)
+
+[node name="Thorinn" parent="." instance=ExtResource("6_dd3lb")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.00023365, 5.00426, 66.6939)

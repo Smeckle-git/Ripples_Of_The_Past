@@ -1,21 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://cumuxu5rf8qal"]
+[gd_scene load_steps=8 format=3 uid="uid://cumuxu5rf8qal"]
 
-[ext_resource type="Texture2D" uid="uid://d6k4wbxhdfor" path="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Color.png" id="1_1wpy1"]
+[ext_resource type="Texture2D" uid="uid://b6tir73wjex5q" path="res://Objects/Prototypes/TEXT/dirt.png" id="1_04ene"]
 [ext_resource type="Texture2D" uid="uid://r8cvqwyyjuss" path="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_AmbientOcclusion.png" id="2_sxjtp"]
-[ext_resource type="Texture2D" uid="uid://bimqxfxcbijl5" path="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_NormalGL.png" id="3_1y7js"]
 [ext_resource type="Texture2D" uid="uid://bqv1t4d8sbatu" path="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Displacement.png" id="3_os0l0"]
-[ext_resource type="Texture2D" uid="uid://dtnddvba32no2" path="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Roughness.png" id="4_mb6au"]
+[ext_resource type="Texture2D" uid="uid://cdpsaos73chio" path="res://Objects/Prototypes/TEXT/dirt_n.png" id="4_re2ag"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_1sife"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxdyv"]
-albedo_texture = ExtResource("1_1wpy1")
-roughness_texture = ExtResource("4_mb6au")
-normal_enabled = true
-normal_texture = ExtResource("3_1y7js")
-ao_enabled = true
+albedo_texture = ExtResource("1_04ene")
+normal_texture = ExtResource("4_re2ag")
 ao_texture = ExtResource("2_sxjtp")
-heightmap_enabled = true
 heightmap_texture = ExtResource("3_os0l0")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jcufv"]

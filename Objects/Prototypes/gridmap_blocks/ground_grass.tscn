@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://duf26uu2tvh8"]
+[gd_scene load_steps=6 format=3 uid="uid://duf26uu2tvh8"]
 
-[ext_resource type="Texture2D" uid="uid://bikvuu35g0vny" path="res://Objects/Prototypes/grass_texture_pixelartmaker.png" id="1_x66hu"]
+[ext_resource type="Texture2D" uid="uid://dnqryeempp0n1" path="res://Objects/Prototypes/TEXT/grass.png" id="1_qyds0"]
+[ext_resource type="Texture2D" uid="uid://d1ac6p62pmmr2" path="res://Objects/Prototypes/TEXT/grass_n.png" id="2_hhrs7"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_725jr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8s5lh"]
-albedo_texture = ExtResource("1_x66hu")
+albedo_texture = ExtResource("1_qyds0")
+normal_enabled = true
+normal_texture = ExtResource("2_hhrs7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o4ah8"]
 

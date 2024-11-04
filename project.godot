@@ -25,12 +25,21 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Barbarian": "res://Dialog/Characters/Barbarian.dch",
-"Mage": "res://Dialog/Characters/Mage.dch"
+"Hugo": "res://Dialog/Characters/Hugo.dch",
+"Mage": "res://Dialog/Characters/Mage.dch",
+"Thorinn": "res://Dialog/Characters/Thorinn.dch",
+"Whiskers": "res://Dialog/Characters/Whiskers.dch"
 }
 directories/dtl_directory={
-"DEMO_interaction": "res://Dialog/Timelines/DEMO_interaction.dtl"
+"DEMO_interaction": "res://Dialog/Timelines/DEMO_interaction.dtl",
+"thorinn_hugo_forest": "res://Dialog/Timelines/thorinn_hugo_forest.dtl",
+"thorinn_whiskers_forest": "res://Dialog/Timelines/thorinn_whiskers_forest.dtl"
 }
 variables={
+"Whiskers": {
+"Forest_Interaction_phase": 1,
+"New_Dialog": true
+},
 "mage": {
 "Accepted quest": false,
 "Phase 1": false

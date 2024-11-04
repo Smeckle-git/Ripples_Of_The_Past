@@ -27,6 +27,8 @@ assets = ExtResource("4_fws5c")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 404.394, 281.832)
 light_color = Color(0.488567, 0.718503, 0.996416, 1)
+light_energy = 4.407
+shadow_enabled = true
 
 [node name="tree_collection_forrest" type="Node3D" parent="."]
 

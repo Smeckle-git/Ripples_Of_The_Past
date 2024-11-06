@@ -99,14 +99,14 @@ texture = ExtResource("2_cdvaw")
 hframes = 2
 
 [node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.179844, 2.68011, -0.0673194)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.327883, 2.68011, 0.280642)
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_tgomx")
 autoplay = "default"
 frame_progress = 0.846926
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="AnimatedSprite3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00067091, -0.862459, -0.113597)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00067091, -0.862459, 0.0419978)
 billboard = 2
 render_priority = 1
 sprite_frames = SubResource("SpriteFrames_yj1pu")

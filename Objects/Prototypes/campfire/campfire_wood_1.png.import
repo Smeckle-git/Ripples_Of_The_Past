@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbi7hva8lng2n"
-path="res://.godot/imported/Untitled_7.png-c130ce4a1081b7c2863a213640b15f94.ctex"
+uid="uid://bf3tffhqaq62y"
+path="res://.godot/imported/campfire_wood_1.png-d5a45516535eda3d04d4e57af57c3450.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Prototypes/Untitled_7.png"
-dest_files=["res://.godot/imported/Untitled_7.png-c130ce4a1081b7c2863a213640b15f94.ctex"]
+source_file="res://Objects/Prototypes/Campfire/campfire_wood_1.png"
+dest_files=["res://.godot/imported/campfire_wood_1.png-d5a45516535eda3d04d4e57af57c3450.ctex"]
 
 [params]
 

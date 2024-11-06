@@ -2,7 +2,9 @@ extends Player_State
 class_name PlayerWalking
 	
 func Update(_delta:float):
-	if Input.get_axis("ui_left", "ui_right") == 0.0 and Input.get_axis("ui_up", "ui_down") == 0.0:
+	if not target.is_on_floor():
+		state_transition.emit("falling")
+	elif Input.get_axis("ui_left", "ui_right") == 0.0 and Input.get_axis("ui_up", "ui_down") == 0.0:
 		state_transition.emit("idle")
 
 func Physics_Update(_delta: float):

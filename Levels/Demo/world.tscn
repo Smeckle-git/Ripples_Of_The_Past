@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://0ft6wn2pxu0l"]
+[gd_scene load_steps=8 format=3 uid="uid://0ft6wn2pxu0l"]
 
 [ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://Objects/Prototypes/gridmap_blocks/world_obj_lib.meshlib" id="1_a2h3d"]
 [ext_resource type="PackedScene" uid="uid://c43be3tlcmwyt" path="res://Objects/Prototypes/tree/tree.tscn" id="2_8om2v"]
@@ -6,6 +6,7 @@
 [ext_resource type="Terrain3DMaterial" uid="uid://brujfmh3hlv2p" path="res://Objects/Prototypes/terrain3d_resources/material.res" id="3_37hop"]
 [ext_resource type="Terrain3DAssets" uid="uid://cth7u6ivq71xo" path="res://Objects/Prototypes/terrain3d_resources/assets.res" id="4_fws5c"]
 [ext_resource type="PackedScene" uid="uid://hqh15shxywyx" path="res://Objects/Characters/Thorinn.tscn" id="6_dd3lb"]
+[ext_resource type="PackedScene" uid="uid://csx0asdvaywjk" path="res://Objects/Prototypes/Campfire/Campfire.tscn" id="6_sr3th"]
 
 [node name="Level" type="Node3D"]
 
@@ -29,9 +30,8 @@ collision_layer = 15
 collision_mask = 15
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 404.394, 281.832)
+transform = Transform3D(0.556318, 0.525044, -0.644081, 0.303292, 0.593329, 0.745637, 0.773644, -0.610156, 0.170837, -18.7407, 60.3268, 88.5886)
 light_color = Color(0.488567, 0.718503, 0.996416, 1)
-light_energy = 4.407
 shadow_enabled = true
 
 [node name="tree_collection_forrest" type="Node3D" parent="."]
@@ -1179,6 +1179,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4157, 0.288744, -37.5819)
 
 [node name="Tree120" parent="tree_collection_border" instance=ExtResource("2_8om2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.6773, 9.53674e-07, -26.6392)
+
+[node name="Campfire" parent="." instance=ExtResource("6_sr3th")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.850652, 2.43704, 54.4469)
 
 [node name="Thorinn" parent="." instance=ExtResource("6_dd3lb")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.00023365, 5.00426, 66.6939)

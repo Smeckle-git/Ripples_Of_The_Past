@@ -1,6 +1,6 @@
 class_name QuestManager extends Node3D
-@onready var QuestLog: CanvasLayer = $QuestLog
-@onready var QuestTitle: RichTextLabel = GameHudManager.get_node("QuestLog/HUD/MarginContainer/HBoxContainer/Quest/Mar")
+@onready var QuestLog: CanvasLayer = GameHudManager.get_node("QuestLog")
+@onready var QuestTitle: RichTextLabel = GameHudManager.get_node("QuestLog/HUD/MarginContainer/HBoxContainer/Quest/MarginContainer/quest title")
 @onready var QuestDescription: RichTextLabel = GameHudManager.get_node("QuestLog/HUD/MarginContainer/HBoxContainer/Quest/MarginContainer/quest text")
 
 

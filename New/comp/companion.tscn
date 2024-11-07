@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dn4vjb5x6o1yr"]
+[gd_scene load_steps=9 format=3 uid="uid://dn4vjb5x6o1yr"]
 
 [ext_resource type="Texture2D" uid="uid://crgykggirkyva" path="res://Resources/Images/sprites/Companion/little-bear-walk.png" id="1_3huqi"]
 [ext_resource type="Script" path="res://New/comp/companion.gd" id="1_dmbtv"]
-[ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://Objects/Prototypes/Interaction/Interaction area/interaction_area.tscn" id="3_nwrjx"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_m20or"]
 radius = 0.155276
@@ -43,10 +42,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_2csny"]
-height = 0.652291
-radius = 0.782408
-
 [node name="Companion" type="CharacterBody3D"]
 script = ExtResource("1_dmbtv")
 
@@ -60,9 +55,3 @@ sprite_frames = SubResource("SpriteFrames_46t2y")
 animation = &"Walking"
 autoplay = "Walking"
 frame_progress = 0.293653
-
-[node name="InteractionArea" parent="." instance=ExtResource("3_nwrjx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45541, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
-shape = SubResource("CylinderShape3D_2csny")

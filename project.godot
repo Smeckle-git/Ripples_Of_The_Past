@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 InteractManager="*res://Objects/Prototypes/Interaction/InteractManager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-GameHudManager="*res://UI_Elements/HUD/game_hud_manager.gd"
+GameHudManager="*res://UI_Elements/HUD/game_hud_manager.tscn"
 
 [dialogic]
 

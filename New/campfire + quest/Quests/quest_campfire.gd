@@ -28,5 +28,3 @@ func finish_quest() -> void:
 		GameHudManager.reputation += Reputation_amount 
 
 # create function that update the amount of picked up parts
-func update_quest() -> void:
-	pass

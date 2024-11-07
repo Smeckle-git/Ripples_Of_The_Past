@@ -3,7 +3,7 @@ extends Area3D
 @onready var interaction_area: InteractionArea = $InteractionArea
 @export var quest : Quest
 
-var wood_1:=load("res://Scripts/HUD/Wood_1.tscn")
+var wood_1:=load("res://New/campfire + quest/Wood_1.tscn")
 
 func _ready() -> void:
 	interaction_area.interact = Callable(self, "_on_interact")
@@ -19,6 +19,7 @@ func _on_interact():
 #	dit is voor het op pakken van een element van de quest 
 	if quest.quest_status == quest.QuestStatus.reached_goal:
 		quest.finish_quest()
+
 func collected() ->void:
 	quest.update_goal()
 	queue_free()

@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://dn4vjb5x6o1yr"]
+
+[ext_resource type="Texture2D" uid="uid://crgykggirkyva" path="res://Resources/Images/Companion/little-bear-walk.png" id="1_3huqi"]
+[ext_resource type="Script" path="res://Objects/Prototypes/companion/companion.gd" id="1_dmbtv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m20or"]
+radius = 0.155276
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypql8"]
+atlas = ExtResource("1_3huqi")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djdn1"]
+atlas = ExtResource("1_3huqi")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_an1da"]
+atlas = ExtResource("1_3huqi")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ou7u"]
+atlas = ExtResource("1_3huqi")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_46t2y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypql8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djdn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_an1da")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ou7u")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[node name="Companion" type="CharacterBody3D"]
+script = ExtResource("1_dmbtv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.420316, 0)
+shape = SubResource("SphereShape3D_m20or")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3.67033, 0, 0, 0, 4.05078, 0, 0, 0, 1, 0, 0.639835, 0)
+sprite_frames = SubResource("SpriteFrames_46t2y")
+animation = &"Walking"
+autoplay = "Walking"
+frame_progress = 0.293653
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

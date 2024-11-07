@@ -1,6 +1,7 @@
-[gd_scene load_steps=48 format=3 uid="uid://hqh15shxywyx"]
+[gd_scene load_steps=49 format=3 uid="uid://hqh15shxywyx"]
 
 [ext_resource type="Script" path="res://Scripts/StateMachine/Player_State_machine.gd" id="1_f5mfv"]
+[ext_resource type="Script" path="res://Objects/Characters/thorinn.gd" id="1_hag26"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/Player_Idle.gd" id="2_3kbvd"]
 [ext_resource type="Texture2D" uid="uid://7r8tnll8v7ns" path="res://Resources/Images/sprites/thorinn/WalkingLeft.png" id="2_q7ov7"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/Player_Walking.gd" id="3_xygho"]
@@ -445,7 +446,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Thorinn" type="CharacterBody3D" groups=["Player"]]
+[node name="Thorinn" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("1_hag26")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(3.24979, 0, 0, 0, 3.41856, 0, 0, 0, 1.00143, 0, 0, 0)

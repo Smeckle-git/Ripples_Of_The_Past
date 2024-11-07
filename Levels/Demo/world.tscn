@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://0ft6wn2pxu0l"]
+[gd_scene load_steps=21 format=3 uid="uid://0ft6wn2pxu0l"]
 
 [ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://Objects/Prototypes/gridmap_blocks/world_obj_lib.meshlib" id="1_a2h3d"]
 [ext_resource type="PackedScene" uid="uid://c43be3tlcmwyt" path="res://Objects/Prototypes/trees/tree_1.tscn" id="2_8om2v"]
@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://br7jritw20une" path="res://Objects/Prototypes/foilage/grass_1.tscn" id="13_0knda"]
 [ext_resource type="PackedScene" uid="uid://cbobc1jori2it" path="res://Objects/Prototypes/foilage/grass_2.tscn" id="14_26oe3"]
 [ext_resource type="PackedScene" uid="uid://chf253ku10t4e" path="res://Objects/Prototypes/foilage/grass_3.tscn" id="15_83egy"]
-[ext_resource type="PackedScene" uid="uid://dn4vjb5x6o1yr" path="res://New/comp/companion.tscn" id="19_o73xn"]
 [ext_resource type="PackedScene" uid="uid://dkwevn51pv8k7" path="res://New/campfire + quest/campfire_merchant.tscn" id="20_0xhrj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ah4qg"]
@@ -1555,11 +1554,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.3525, 1.00001, -85.9894)
 [node name="Campfire" parent="." instance=ExtResource("6_sr3th")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.850652, 2.43704, 54.4469)
 
-[node name="Thorinn" parent="." instance=ExtResource("6_dd3lb")]
+[node name="Thorinn" parent="." groups=["Player"] instance=ExtResource("6_dd3lb")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 3, 67)
-
-[node name="Companion" parent="." instance=ExtResource("19_o73xn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.32455, 2.11456, 54.9855)
 
 [node name="Campfire_merchant" parent="." instance=ExtResource("20_0xhrj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8241, 2.52924, 54.7291)

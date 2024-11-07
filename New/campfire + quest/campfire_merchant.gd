@@ -7,7 +7,6 @@ var wood_1:=load("res://Scripts/HUD/Wood_1.tscn")
 
 func _ready() -> void:
 	interaction_area.interact = Callable(self, "_on_interact")
-	pass # Replace with function body.
 
 # gebruik om de quest te starten
 func _on_interact():

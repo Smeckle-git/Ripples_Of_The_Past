@@ -445,7 +445,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Thorinn" type="CharacterBody3D" groups=["player"]]
+[node name="Thorinn" type="CharacterBody3D" groups=["Player"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(3.24979, 0, 0, 0, 3.41856, 0, 0, 0, 1.00143, 0, 0, 0)

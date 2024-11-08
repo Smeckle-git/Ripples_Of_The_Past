@@ -2,6 +2,7 @@ extends Area3D
 class_name InteractionArea
 
 @export var action_name: String = "interact"
+@export var show_label := true
 
 var interact: Callable = func():
 	pass

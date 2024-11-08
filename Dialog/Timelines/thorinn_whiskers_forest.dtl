@@ -1,5 +1,5 @@
-join Thorinn leftmost
-join Whiskers rightmost
+join Thorinn left [animation="Fade In Up" wait="true"]
+join Whiskers right [animation="Fade In Up" length="2.0" wait="true"]
 if {Whiskers.Forest_Interaction_phase} == 1:
 	if {Whiskers.New_Dialog} == true:
 		Thorinn: Poor kitty. All by himself, cold and hungry. Come here!

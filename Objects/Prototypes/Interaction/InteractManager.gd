@@ -20,11 +20,14 @@ func unregister_area(area: InteractionArea):
 func _process(delta: float) -> void:
 	if active_areas.size() > 0 && can_interact:
 		active_areas.sort_custom(_sort_by_distance_to_player)
-		label.text = base_text + active_areas[0].action_name
-		label.global_position = active_areas[0].global_position
-		label.global_position.y = 3
-		label.scale = Vector3(3,3,3) 
-		label.show()
+		if active_areas[0].show_label:
+			label.text = base_text + active_areas[0].action_name
+			label.global_position = active_areas[0].global_position
+			label.global_position.y = 3
+			label.scale = Vector3(3,3,3) 
+			label.show()
+		else:
+			label.hide()
 	else:
 		label.hide()
 

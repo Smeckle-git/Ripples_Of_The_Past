@@ -1597,4 +1597,4 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.0136, 2.59892, 56.34
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.119, -0.964409, -16.2421)
 
 [node name="Companion" parent="." instance=ExtResource("20_7nc36")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 2.29225, 48.9209)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.110936, 2.29225, 56.6826)

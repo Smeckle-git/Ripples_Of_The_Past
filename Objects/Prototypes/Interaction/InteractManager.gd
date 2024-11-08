@@ -1,8 +1,7 @@
 extends Node3D
 #Script from this tutorial video
 #https://www.youtube.com/watch?v=ajCraxGAeYU&t=1s&ab_channel=DashNothing
-
-@onready var player = get_tree().get_first_node_in_group("player")
+@onready var player = get_tree().get_first_node_in_group("Player")
 @onready var label: Label3D = $Label
 
 const base_text = "[E] to "

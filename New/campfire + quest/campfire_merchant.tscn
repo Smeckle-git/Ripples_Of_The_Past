@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkwevn51pv8k7"]
+
+[ext_resource type="Script" path="res://New/campfire + quest/campfire_merchant.gd" id="1_chvg5"]
+[ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://Objects/Prototypes/Interaction/Interaction area/interaction_area.tscn" id="1_sro3d"]
+[ext_resource type="Texture2D" uid="uid://di6ku4hjj5jtx" path="res://Resources/Images/sprites/Companion/little-bear-idle.png" id="2_he2s4"]
+[ext_resource type="Script" path="res://New/campfire + quest/Quests/quest_campfire.gd" id="3_dgjng"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_giyk6"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4honw"]
+height = 0.921923
+radius = 1.42602
+
+[node name="Campfire_merchant" type="Area3D" node_paths=PackedStringArray("quest")]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_chvg5")
+quest = NodePath("Quest")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_giyk6")
+
+[node name="MeshInstance3D" type="Sprite3D" parent="."]
+transform = Transform3D(400, 0, 0, 0, 400, 0, 0, 0, 400, -9.20296e-05, 0.202035, -0.00277424)
+pixel_size = 0.0001
+texture = ExtResource("2_he2s4")
+region_rect = Rect2(1340, 655, 773, 508)
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_sro3d")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.236827, 0)
+shape = SubResource("CylinderShape3D_4honw")
+
+[node name="Quest" type="Node3D" parent="."]
+script = ExtResource("3_dgjng")
+quest_name = "Make a campfire"
+quest_description = "Find wood to start a campfire"
+reached_goal_text = "Go back to the campfire"
+amount_obj = 2

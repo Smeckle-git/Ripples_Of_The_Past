@@ -1,6 +1,7 @@
-[gd_scene load_steps=47 format=3 uid="uid://hqh15shxywyx"]
+[gd_scene load_steps=49 format=3 uid="uid://hqh15shxywyx"]
 
 [ext_resource type="Script" path="res://Scripts/StateMachine/Player_State_machine.gd" id="1_f5mfv"]
+[ext_resource type="Script" path="res://Objects/Characters/thorinn.gd" id="1_hag26"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/Player_Idle.gd" id="2_3kbvd"]
 [ext_resource type="Texture2D" uid="uid://7r8tnll8v7ns" path="res://Resources/Images/sprites/thorinn/WalkingLeft.png" id="2_q7ov7"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/Player_Walking.gd" id="3_xygho"]
@@ -8,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://krseffdqxmue" path="res://Resources/Images/sprites/thorinn/WalkingDown.png" id="4_e8p41"]
 [ext_resource type="Texture2D" uid="uid://b54wbjuhk5mu8" path="res://Resources/Images/sprites/thorinn/WakingUp.png" id="6_4q44a"]
 [ext_resource type="Texture2D" uid="uid://cuk6cvdvodwkm" path="res://Resources/Images/sprites/thorinn/WalkingRight.png" id="7_v6xmq"]
+[ext_resource type="PackedScene" uid="uid://dve4r2tv8p2id" path="res://UI_Elements/HUD/game_hud_manager.tscn" id="9_kmxtj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ulyrf"]
 
@@ -445,6 +447,9 @@ animations = [{
 }]
 
 [node name="Thorinn" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("1_hag26")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(3.24979, 0, 0, 0, 3.41856, 0, 0, 0, 1.00143, 0, 0, 0)
@@ -488,3 +493,5 @@ animation = &"WalkingDown"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.99961, 0.00131529, -0.0278906, 0.0134812, 0.85201, 0.523352, 0.0244514, -0.523524, 0.85166, 0, 10.6699, 11.4866)
+
+[node name="Game_hud_manager" parent="Camera3D" instance=ExtResource("9_kmxtj")]

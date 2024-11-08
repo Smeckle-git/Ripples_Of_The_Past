@@ -13,3 +13,4 @@ visible = false
 
 [node name="World" parent="." instance=ExtResource("3_xwloq")]
 process_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08706, 3.8147e-06, 0.00326538)

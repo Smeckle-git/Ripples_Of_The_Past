@@ -5,8 +5,10 @@
 [ext_resource type="Terrain3DStorage" uid="uid://dptuy4g7tymh8" path="res://Objects/Prototypes/terrain3d_resources/storage.res" id="2_lua6u"]
 [ext_resource type="Terrain3DMaterial" uid="uid://brujfmh3hlv2p" path="res://Objects/Prototypes/terrain3d_resources/material.res" id="3_37hop"]
 [ext_resource type="Terrain3DAssets" uid="uid://cth7u6ivq71xo" path="res://Objects/Prototypes/terrain3d_resources/assets.res" id="4_fws5c"]
+[ext_resource type="Texture2D" uid="uid://caywlopemv63v" path="res://Resources/Images/874898150658134d8f3b33a13ff2b247_images_jpeg.webp" id="5_yv3ao"]
 [ext_resource type="PackedScene" uid="uid://cwhg5dt7uh11x" path="res://Objects/Prototypes/trees/tree_3.tscn" id="6_ced4g"]
 [ext_resource type="PackedScene" uid="uid://hqh15shxywyx" path="res://Objects/Characters/Thorinn.tscn" id="6_dd3lb"]
+[ext_resource type="Shader" path="res://Objects/restrictionFog.gdshader" id="6_qykmj"]
 [ext_resource type="PackedScene" uid="uid://csx0asdvaywjk" path="res://Objects/Prototypes/Campfire/Campfire.tscn" id="6_sr3th"]
 [ext_resource type="PackedScene" uid="uid://cju7mir2fyt65" path="res://Objects/Prototypes/trees/tree_2.tscn" id="7_jfi5y"]
 [ext_resource type="PackedScene" uid="uid://b5rxeqhdmkkkj" path="res://Objects/Prototypes/trees/tree_4.tscn" id="8_vdqgb"]
@@ -21,12 +23,40 @@
 [ext_resource type="PackedScene" uid="uid://dkwevn51pv8k7" path="res://New/campfire + quest/campfire_merchant.tscn" id="20_0xhrj"]
 [ext_resource type="PackedScene" uid="uid://dn4vjb5x6o1yr" path="res://New/comp/companion.tscn" id="20_7nc36"]
 
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lfbac"]
+panorama = ExtResource("5_yv3ao")
+energy_multiplier = 0.5
+
+[sub_resource type="Sky" id="Sky_qc8gy"]
+sky_material = SubResource("PanoramaSkyMaterial_lfbac")
+
+[sub_resource type="Environment" id="Environment_hbv23"]
+background_mode = 2
+sky = SubResource("Sky_qc8gy")
+sky_rotation = Vector3(0, 3.52906, 0)
+fog_density = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_ah4qg"]
 size = Vector3(88.1207, 18.0792, 7.76953)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1of0i"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_syuyu"]
+noise = SubResource("FastNoiseLite_1of0i")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y1wvd"]
+shader = ExtResource("6_qykmj")
+shader_parameter/noise_scale = 0.2
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_syuyu")
 
 [node name="Level" type="Node3D"]
 
 [node name="Environment" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_hbv23")
 
 [node name="GridMap" type="GridMap" parent="Environment"]
 mesh_library = ExtResource("1_a2h3d")
@@ -46,11 +76,12 @@ collision_layer = 15
 collision_mask = 15
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(0.556318, 0.525044, -0.644081, 0.303292, 0.593329, 0.745637, 0.773644, -0.610156, 0.170837, -18.7407, 60.3268, 88.5886)
-light_color = Color(0.488567, 0.718503, 0.996416, 1)
-light_energy = 4.407
-light_angular_distance = 30.0
+transform = Transform3D(-0.165619, 0.874484, -0.455904, -0.862612, 0.0956048, 0.496749, 0.477986, 0.475539, 0.738507, -1.98076, 6.68298, 67.9945)
+light_color = Color(0.812832, 0.895886, 0.998805, 1)
 shadow_enabled = true
+shadow_bias = 0.05
+shadow_opacity = 0.5
+shadow_blur = 6.0
 
 [node name="Progression_block" type="StaticBody3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.26, 3.609, -19.3771)
@@ -58,6 +89,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.26, 3.609, -19.3771)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Progression_block"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25544, 0)
 shape = SubResource("BoxShape3D_ah4qg")
+
+[node name="FogVolume" type="FogVolume" parent="Environment/Progression_block"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.255, -0.334045)
+size = Vector3(88.12, 18.08, 11.3319)
+material = SubResource("ShaderMaterial_y1wvd")
 
 [node name="trees" type="Node3D" parent="."]
 
@@ -1553,7 +1589,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.3525, 1.00001, -85.9894)
 [node name="tree trunks" type="Node3D" parent="foilage/foilage_collection_village"]
 
 [node name="Campfire" parent="." instance=ExtResource("6_sr3th")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.850652, 2.43704, 54.4469)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.332431, 2.46053, 50.8196)
 
 [node name="Thorinn" parent="." groups=["Player"] instance=ExtResource("6_dd3lb")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 3, 67)

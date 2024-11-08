@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://0ft6wn2pxu0l"]
+[gd_scene load_steps=29 format=3 uid="uid://0ft6wn2pxu0l"]
 
 [ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://Objects/Prototypes/gridmap_blocks/world_obj_lib.meshlib" id="1_a2h3d"]
 [ext_resource type="PackedScene" uid="uid://c43be3tlcmwyt" path="res://Objects/Prototypes/trees/tree_1.tscn" id="2_8om2v"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://cwhg5dt7uh11x" path="res://Objects/Prototypes/trees/tree_3.tscn" id="6_ced4g"]
 [ext_resource type="PackedScene" uid="uid://hqh15shxywyx" path="res://Objects/Characters/Thorinn.tscn" id="6_dd3lb"]
 [ext_resource type="Shader" path="res://Objects/restrictionFog.gdshader" id="6_qykmj"]
-[ext_resource type="PackedScene" uid="uid://csx0asdvaywjk" path="res://Objects/Prototypes/Campfire/Campfire.tscn" id="6_sr3th"]
 [ext_resource type="PackedScene" uid="uid://cju7mir2fyt65" path="res://Objects/Prototypes/trees/tree_2.tscn" id="7_jfi5y"]
 [ext_resource type="PackedScene" uid="uid://b5rxeqhdmkkkj" path="res://Objects/Prototypes/trees/tree_4.tscn" id="8_vdqgb"]
 [ext_resource type="PackedScene" uid="uid://bvy7tlferryk5" path="res://Objects/Prototypes/foilage/tree_trunk.tscn" id="9_cyinu"]
@@ -1588,17 +1587,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.3525, 1.00001, -85.9894)
 
 [node name="tree trunks" type="Node3D" parent="foilage/foilage_collection_village"]
 
-[node name="Campfire" parent="." instance=ExtResource("6_sr3th")]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.332431, 2.46053, 50.8196)
-
 [node name="Thorinn" parent="." groups=["Player"] instance=ExtResource("6_dd3lb")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 3, 67)
 
 [node name="Campfire_merchant" parent="." instance=ExtResource("20_0xhrj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8241, 2.52924, 54.7291)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.0136, 2.59892, 56.3487)
 
 [node name="Wood_1_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6928, -0.112041, -2.80638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.119, -0.964409, -16.2421)
 
 [node name="Companion" parent="." instance=ExtResource("20_7nc36")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35376, 58.4212)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 2.29225, 48.9209)

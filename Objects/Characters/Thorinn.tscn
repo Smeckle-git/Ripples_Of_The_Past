@@ -290,10 +290,11 @@ advance_expression = "!velocity"
 states/End/position = Vector2(1209.33, 100)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_5ulfx")
 states/Idle/position = Vector2(492.667, 98.6667)
+states/Start/position = Vector2(199.333, 100)
 states/Walking/node = SubResource("AnimationNodeBlendSpace2D_b0dps")
 states/Walking/position = Vector2(706, 99.7778)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_iobuu"), "Idle", "Walking", SubResource("AnimationNodeStateMachineTransition_r84fy"), "Walking", "Idle", SubResource("AnimationNodeStateMachineTransition_behpf")]
-graph_offset = Vector2(310, 13)
+graph_offset = Vector2(-67, -27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xs6lr"]
 atlas = ExtResource("4_e8p41")

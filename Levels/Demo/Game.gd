@@ -4,7 +4,7 @@ extends Node
 
 
 func _ready() -> void:
-	print_debug(get_tree())
+	pass
 
 func _process(delta: float) -> void:
 	# pause logic

@@ -15,11 +15,11 @@ func _ready() -> void:
 
 
 func _on_interact():
-	Dialogic.start("thorinn_whiskers_forest")
-	area_3d.scale = Vector3(0.5, 1, 0.5)
 	interaction_area.show_label = false
+	Dialogic.start("thorinn_whiskers_forest")
+	await Dialogic.timeline_ended
+	area_3d.scale = Vector3(0.5, 1, 0.5)
 	following = true
-
 
 
 

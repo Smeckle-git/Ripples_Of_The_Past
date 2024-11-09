@@ -42,6 +42,6 @@ func _input(event: InputEvent) -> void:
 			can_interact = false
 			label.hide()
 			
-			await  active_areas[0].interact.call()
+			await active_areas[0].interact.call()
 			
 			can_interact = true

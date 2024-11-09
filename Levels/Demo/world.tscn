@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://0ft6wn2pxu0l"]
+[gd_scene load_steps=31 format=3 uid="uid://0ft6wn2pxu0l"]
 
 [ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://Objects/Prototypes/gridmap_blocks/world_obj_lib.meshlib" id="1_a2h3d"]
+[ext_resource type="Script" path="res://Levels/Demo/demo_environment.gd" id="1_ivdn3"]
 [ext_resource type="PackedScene" uid="uid://c43be3tlcmwyt" path="res://Objects/Prototypes/trees/tree_1.tscn" id="2_8om2v"]
 [ext_resource type="Terrain3DStorage" uid="uid://dptuy4g7tymh8" path="res://Objects/Prototypes/terrain3d_resources/storage.res" id="2_lua6u"]
 [ext_resource type="Terrain3DMaterial" uid="uid://brujfmh3hlv2p" path="res://Objects/Prototypes/terrain3d_resources/material.res" id="3_37hop"]
@@ -21,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://chf253ku10t4e" path="res://Objects/Prototypes/foilage/grass_3.tscn" id="15_83egy"]
 [ext_resource type="PackedScene" uid="uid://dkwevn51pv8k7" path="res://New/campfire + quest/campfire_merchant.tscn" id="20_0xhrj"]
 [ext_resource type="PackedScene" uid="uid://dn4vjb5x6o1yr" path="res://New/comp/companion.tscn" id="20_7nc36"]
+[ext_resource type="PackedScene" uid="uid://bx461jbnpm1h7" path="res://Resources/Images/Spooky/spooky.tscn" id="20_xasyh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lfbac"]
 panorama = ExtResource("5_yv3ao")
@@ -53,6 +55,7 @@ shader_parameter/noise_texture = SubResource("NoiseTexture2D_syuyu")
 [node name="Level" type="Node3D"]
 
 [node name="Environment" type="Node3D" parent="."]
+script = ExtResource("1_ivdn3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
 environment = SubResource("Environment_hbv23")
@@ -435,7 +438,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4157, 0.288744, -37.5819)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.6773, 9.53674e-07, -26.6392)
 
 [node name="tree_collection_forest" type="Node3D" parent="trees"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0311857, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.501356, 0)
 
 [node name="Tree" parent="trees/tree_collection_forest" instance=ExtResource("2_8om2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8766, 2.5, 82.7715)
@@ -486,7 +489,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.07749, 2, 18.3074)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8332, 2, 73.1052)
 
 [node name="Tree18" parent="trees/tree_collection_forest" instance=ExtResource("2_8om2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7358, 2.375, 50.1533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7358, 2.31539, 50.1533)
 
 [node name="Tree19" parent="trees/tree_collection_forest" instance=ExtResource("2_8om2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5285, 2, 34.6098)
@@ -750,7 +753,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0501, 2.00001, 83.4888)
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.87623, 2, 27.8977)
 
 [node name="Tree21" parent="trees/tree_collection_forest" instance=ExtResource("7_jfi5y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.858, 2, -8.823)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.858, 1.51249, -8.81904)
 
 [node name="tree_collection_tutorial" type="Node3D" parent="trees"]
 
@@ -1578,6 +1581,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.3525, 1.00001, -85.9894)
 
 [node name="tree trunks" type="Node3D" parent="foilage/foilage_collection_village"]
 
+[node name="ScaryNode" type="Node3D" parent="foilage"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="Spooky" parent="foilage/ScaryNode" instance=ExtResource("20_xasyh")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -62.3827, 4.31573, -52.6872)
+
 [node name="Thorinn" parent="." groups=["Player"] instance=ExtResource("6_dd3lb")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 3, 67)
 
@@ -1586,6 +1595,9 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.0136, 2.59892, 56.34
 
 [node name="Wood_1_marker" type="Marker3D" parent="Campfire_merchant"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.119, -0.964409, -16.2421)
+
+[node name="Wood_2_marker" type="Marker3D" parent="Campfire_merchant"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45407, 1.23203, -218.401)
 
 [node name="Companion" parent="." instance=ExtResource("20_7nc36")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.110936, 2.29225, 56.6826)

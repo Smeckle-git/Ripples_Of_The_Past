@@ -70,7 +70,7 @@ text = "New Game"
 
 [node name="Settings" type="Button" parent="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer"]
 layout_mode = 2
-text = "Settings"
+text = "Settings [WIP]"
 
 [node name="Quit" type="Button" parent="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer"]
 layout_mode = 2
@@ -86,7 +86,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Main_divide_Slice/CreditsContainer/TextContainer"]
 layout_mode = 2
-text = "Prototype Version 0.0.1 - Entangled Studios"
+text = "Playtest Version 0.1.0 - Entangled Studios"
 
 [connection signal="pressed" from="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer/ContinueGame" to="." method="_on_continue_game_pressed"]
 [connection signal="pressed" from="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer/NewGame" to="." method="_on_new_game_pressed"]

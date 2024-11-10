@@ -1,0 +1,27 @@
+join Thorinn leftmost [animation="Fade In Up" wait="true"]
+join Whiskers rightmost [animation="Fade In Up" wait="true"]
+if {Whiskers.Forest_Interaction_phase} == 1:
+	if {Whiskers.New_Dialog} == true:
+		Whiskers: Well, well. You’re not from around here, are you, Thorinn?
+		- And how would you know my name, little cat?
+			Whiskers: Curiosity suits you, Thorinn, but I am not going to reveal all of my secrets right now.
+			Whiskers: Anyways, you must rest among these trees when night falls, Thorinn, remember this\: shadows here don’t sleep.
+			Whiskers: A ring of fire will keep you safe from things that lurk beyond the light.
+			Whiskers: Without it, well… let’s just say, you won’t be alone in the dark.
+			set {Whiskers.Selected_Option} = 1
+		- A talking cat? I must be dreaming…
+			Whiskers: Mortals always assume the strangest things. But unlike your assumption I am just a cat who can in fact speak.
+			Whiskers: By all means, sleep out in the open if that’s your style, I’m sure the forest’s night-stalkers will appreciate the easy company.
+			set {Whiskers.Selected_Option} = 2
+		- Great. Just what I needed... a talking furball
+			Whiskers: I don’t have time for fools, if you are not interested in hearing me out, we don't have to talk. Best luck on your journey.
+			set {Whiskers.Selected_Option} = 3
+			[signal arg="cat leaves"]
+		set {Whiskers.New_Dialog} = false
+	else:
+		if {Whiskers.Selected_Option} == 1:
+			Whiskers: A ring of fire will keep you safe from things that lurk beyond the light.
+			Whiskers: Without it, well… let’s just say, you won’t be alone in the dark.
+		else:
+			Whiskers: meow
+if {Whiskers.Forest_Interaction_phase} == 2:

@@ -465,6 +465,8 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 radius = 20.0
 
 [node name="Companion" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_dmbtv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

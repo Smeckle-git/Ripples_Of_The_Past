@@ -8,28 +8,35 @@ extends CharacterBody3D
 
 const SPEED = 10.0
 @export var following := false
+@export var move_to_location : Vector3 = Vector3(0,0,0)
 
 
 func _ready() -> void:
 	interaction_area.interact = Callable(self, "_on_interact")
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 
 func _on_interact():
 	interaction_area.show_label = false
-	Dialogic.start("thorinn_whiskers_forest")
-	await Dialogic.timeline_ended
+	Dialogic.start("thorinn_meets_whiskers")
 	area_3d.scale = Vector3(0.5, 1, 0.5)
 	following = true
 
 
+func _on_dialogic_signal(argument:String):
+	if argument == "cat leaves":
+		following = false
+		move_to_location = Vector3(-20, 2.3, 65)
+		
+
 
 func _physics_process(delta: float) -> void:
 	manage_animations()
-	move_and_slide()
+	move_and_slide()	
+	var direction
 	if following:
-		var direction = thorinn.global_position - companion.global_position
+		direction = thorinn.global_position - companion.global_position
 		
-		#print(direction.length())
 		if direction.length() > 6:
 			companion.velocity = direction.normalized() * SPEED
 		elif direction.length() > 1:
@@ -37,11 +44,19 @@ func _physics_process(delta: float) -> void:
 		else:
 			companion.velocity = Vector3(0,0,0)
 
+	elif move_to_location != Vector3(0,0,0):
+		direction = move_to_location - companion.position
+		companion.velocity = direction.normalized() * SPEED / 3
+		if direction.length() <= 0.5:
+			move_to_location = Vector3(0,0,0)
+			last_direction = Vector2(0,1)
+			companion.velocity = Vector3(0,0,0)
 
 
 
 
-var last_direction := Vector2(0, 1)
+
+@export var last_direction := Vector2(0, 1)
 func manage_animations():	
 	if velocity != Vector3.ZERO:
 		last_direction = Vector2(velocity.x, velocity.z)

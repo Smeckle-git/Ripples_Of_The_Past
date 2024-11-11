@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgl44i7yedw18"
 path.s3tc="res://.godot/imported/VewyScawy.jpg-2b99c1eba0ebd3f1018f94ec263c5493.s3tc.ctex"
+path.etc2="res://.godot/imported/VewyScawy.jpg-2b99c1eba0ebd3f1018f94ec263c5493.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Resources/Images/Spooky/VewyScawy.jpg"
-dest_files=["res://.godot/imported/VewyScawy.jpg-2b99c1eba0ebd3f1018f94ec263c5493.s3tc.ctex"]
+dest_files=["res://.godot/imported/VewyScawy.jpg-2b99c1eba0ebd3f1018f94ec263c5493.s3tc.ctex", "res://.godot/imported/VewyScawy.jpg-2b99c1eba0ebd3f1018f94ec263c5493.etc2.ctex"]
 
 [params]
 

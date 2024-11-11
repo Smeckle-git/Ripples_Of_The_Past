@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsjpxao2rwd0a"
 path.s3tc="res://.godot/imported/tree_trunk.png-439ebb52abe2599e379cc23eda676476.s3tc.ctex"
+path.etc2="res://.godot/imported/tree_trunk.png-439ebb52abe2599e379cc23eda676476.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Objects/Prototypes/foilage/tree_trunk.png"
-dest_files=["res://.godot/imported/tree_trunk.png-439ebb52abe2599e379cc23eda676476.s3tc.ctex"]
+dest_files=["res://.godot/imported/tree_trunk.png-439ebb52abe2599e379cc23eda676476.s3tc.ctex", "res://.godot/imported/tree_trunk.png-439ebb52abe2599e379cc23eda676476.etc2.ctex"]
 
 [params]
 

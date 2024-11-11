@@ -102,3 +102,7 @@ dialogic_default_action={
 3d_physics/layer_2="Player"
 3d_physics/layer_3="Items"
 3d_physics/layer_4="Hitboxes"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

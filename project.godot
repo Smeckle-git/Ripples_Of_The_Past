@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Ripples_Of_The_Past"
 config/version="Beta Build 0.0.1"
-run/main_scene="res://UI_Elements/MainMenu/MainMenu.tscn"
+run/main_scene="res://scenes/ui/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -20,22 +20,22 @@ config/icon="res://icon.svg"
 
 InteractManager="*res://Objects/Prototypes/Interaction/InteractManager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-GameHudManager="*res://UI_Elements/HUD/game_hud_manager.tscn"
+GameHudManager="*res://scenes/ui/game_hud_manager.tscn"
 
 [dialogic]
 
 directories/dch_directory={
-"Barbarian": "res://Dialog/Characters/Barbarian.dch",
-"Hugo": "res://Dialog/Characters/Hugo.dch",
-"Mage": "res://Dialog/Characters/Mage.dch",
-"Thorinn": "res://Dialog/Characters/Thorinn.dch",
-"Whiskers": "res://Dialog/Characters/Whiskers.dch"
+"Barbarian": "res://gui/Dialog/Characters/Barbarian.dch",
+"Hugo": "res://gui/Dialog/Characters/Hugo.dch",
+"Mage": "res://gui/Dialog/Characters/Mage.dch",
+"Thorinn": "res://gui/Dialog/Characters/Thorinn.dch",
+"Whiskers": "res://gui/Dialog/Characters/Whiskers.dch"
 }
 directories/dtl_directory={
-"DEMO_interaction": "res://Dialog/Timelines/DEMO_interaction.dtl",
-"thorinn_hugo_forest": "res://Dialog/Timelines/thorinn_hugo_forest.dtl",
-"thorinn_meets_whiskers": "res://Dialog/Timelines/thorinn_meets_whiskers.dtl",
-"thorinn_whiskers_forest": "res://Dialog/Timelines/thorinn_whiskers_forest.dtl"
+"DEMO_interaction": "res://gui/Dialog/Timelines/DEMO_interaction.dtl",
+"thorinn_hugo_forest": "res://gui/Dialog/Timelines/thorinn_hugo_forest.dtl",
+"thorinn_meets_whiskers": "res://gui/Dialog/Timelines/thorinn_meets_whiskers.dtl",
+"thorinn_whiskers_forest": "res://gui/Dialog/Timelines/thorinn_whiskers_forest.dtl"
 }
 variables={
 "Whiskers": {

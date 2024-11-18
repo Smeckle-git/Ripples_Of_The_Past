@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://chf253ku10t4e"]
+
+[ext_resource type="Texture2D" uid="uid://dwykuo7ko6kb4" path="res://assets/Objects/Prototypes/foilage/grass_3.png" id="1_6w40e"]
+
+[node name="grass" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.75, 0)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_6w40e")

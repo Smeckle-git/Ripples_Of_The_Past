@@ -1,0 +1,120 @@
+[gd_scene load_steps=17 format=3 uid="uid://csx0asdvaywjk"]
+
+[ext_resource type="Script" path="res://assets/Objects/Prototypes/Campfire/campfire.gd" id="1_l4uta"]
+[ext_resource type="Texture2D" uid="uid://502u5vibnp3o" path="res://assets/images/sprites/Campfire/Campfire_base.png" id="2_cdvaw"]
+[ext_resource type="Texture2D" uid="uid://xshew6f2edu4" path="res://assets/images/sprites/Campfire/Campfire_flames.png" id="3_b7ass"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fuuy6"]
+frequency = 0.2
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_5isrw"]
+noise = SubResource("FastNoiseLite_fuuy6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ln3xs"]
+size = Vector3(0.667236, 0.922424, 0.456268)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eekrh"]
+atlas = ExtResource("3_b7ass")
+region = Rect2(166, 132, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve2su"]
+atlas = ExtResource("3_b7ass")
+region = Rect2(1773, 132, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lll0p"]
+atlas = ExtResource("3_b7ass")
+region = Rect2(1278, 132, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ce6h"]
+atlas = ExtResource("3_b7ass")
+region = Rect2(683, 132, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgomx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eekrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ve2su")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lll0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ce6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vibdq"]
+atlas = ExtResource("3_b7ass")
+region = Rect2(257, 770, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b80b"]
+atlas = ExtResource("3_b7ass")
+region = Rect2(764, 770, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8rwo"]
+atlas = ExtResource("3_b7ass")
+region = Rect2(1362, 770, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3ofm"]
+atlas = ExtResource("3_b7ass")
+region = Rect2(1862, 770, 250, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yj1pu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vibdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b80b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8rwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3ofm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Campfire" type="StaticBody3D"]
+script = ExtResource("1_l4uta")
+noise = SubResource("NoiseTexture3D_5isrw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.128174, 1.10272, 1.35208)
+shape = SubResource("BoxShape3D_ln3xs")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 2
+texture = ExtResource("2_cdvaw")
+hframes = 2
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.327883, 2.68011, 0.280642)
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_tgomx")
+autoplay = "default"
+frame_progress = 0.846926
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="AnimatedSprite3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00067091, -0.862459, 0.0419978)
+billboard = 2
+render_priority = 1
+sprite_frames = SubResource("SpriteFrames_yj1pu")
+autoplay = "default"
+frame_progress = 0.723478
+
+[node name="OmniLight3D" type="OmniLight3D" parent="AnimatedSprite3D2/AnimatedSprite3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.00715923, 0.0072099, 0.00146294)
+light_color = Color(0.975171, 0.565438, 1.92523e-06, 1)
+light_energy = 4.254
+shadow_enabled = true

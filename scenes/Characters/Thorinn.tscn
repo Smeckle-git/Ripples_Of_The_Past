@@ -1,7 +1,7 @@
 [gd_scene load_steps=48 format=3 uid="uid://hqh15shxywyx"]
 
 [ext_resource type="Script" path="res://Scripts/managers/StateMachine/Player_State_machine.gd" id="1_f5mfv"]
-[ext_resource type="Script" path="res://scenes/Characters/thorinn.gd" id="1_hag26"]
+[ext_resource type="Script" path="res://Scripts/thorinn.gd" id="1_hag26"]
 [ext_resource type="Script" path="res://Scripts/managers/StateMachine/Player_Idle.gd" id="2_3kbvd"]
 [ext_resource type="Texture2D" uid="uid://7r8tnll8v7ns" path="res://assets/images/sprites/thorinn/WalkingLeft.png" id="2_q7ov7"]
 [ext_resource type="Script" path="res://Scripts/managers/StateMachine/Player_Walking.gd" id="3_xygho"]

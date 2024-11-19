@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0bouk24w0k1o"
-path.s3tc="res://.godot/imported/bush_1.png-3b889bae480c4b6e30e89477da3f8b47.s3tc.ctex"
-path.etc2="res://.godot/imported/bush_1.png-3b889bae480c4b6e30e89477da3f8b47.etc2.ctex"
+path.s3tc="res://.godot/imported/bush_1.png-0f557d9843942be12353a6bdd9fc7ab2.s3tc.ctex"
+path.etc2="res://.godot/imported/bush_1.png-0f557d9843942be12353a6bdd9fc7ab2.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Prototypes/foilage/bush_1.png"
-dest_files=["res://.godot/imported/bush_1.png-3b889bae480c4b6e30e89477da3f8b47.s3tc.ctex", "res://.godot/imported/bush_1.png-3b889bae480c4b6e30e89477da3f8b47.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/foilage/bush_1.png"
+dest_files=["res://.godot/imported/bush_1.png-0f557d9843942be12353a6bdd9fc7ab2.s3tc.ctex", "res://.godot/imported/bush_1.png-0f557d9843942be12353a6bdd9fc7ab2.etc2.ctex"]
 
 [params]
 

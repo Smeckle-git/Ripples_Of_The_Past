@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ds3el32t6dq4d"
-path.s3tc="res://.godot/imported/Rock022_1K-PNG_Displacement.png-156455a7f2eb19260018fffe11ebfd4d.s3tc.ctex"
-path.etc2="res://.godot/imported/Rock022_1K-PNG_Displacement.png-156455a7f2eb19260018fffe11ebfd4d.etc2.ctex"
+path.s3tc="res://.godot/imported/Rock022_1K-PNG_Displacement.png-50053ccaf7f506abe89e49615453bf7a.s3tc.ctex"
+path.etc2="res://.godot/imported/Rock022_1K-PNG_Displacement.png-50053ccaf7f506abe89e49615453bf7a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Prototypes/Rock022_1K-PNG/Rock022_1K-PNG_Displacement.png"
-dest_files=["res://.godot/imported/Rock022_1K-PNG_Displacement.png-156455a7f2eb19260018fffe11ebfd4d.s3tc.ctex", "res://.godot/imported/Rock022_1K-PNG_Displacement.png-156455a7f2eb19260018fffe11ebfd4d.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/Rock022_1K-PNG/Rock022_1K-PNG_Displacement.png"
+dest_files=["res://.godot/imported/Rock022_1K-PNG_Displacement.png-50053ccaf7f506abe89e49615453bf7a.s3tc.ctex", "res://.godot/imported/Rock022_1K-PNG_Displacement.png-50053ccaf7f506abe89e49615453bf7a.etc2.ctex"]
 
 [params]
 

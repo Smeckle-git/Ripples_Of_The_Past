@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsjpxao2rwd0a"
-path.s3tc="res://.godot/imported/tree_trunk.png-439ebb52abe2599e379cc23eda676476.s3tc.ctex"
-path.etc2="res://.godot/imported/tree_trunk.png-439ebb52abe2599e379cc23eda676476.etc2.ctex"
+path.s3tc="res://.godot/imported/tree_trunk.png-c4c7a3001c1a4fa29cad7a55e075b541.s3tc.ctex"
+path.etc2="res://.godot/imported/tree_trunk.png-c4c7a3001c1a4fa29cad7a55e075b541.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Prototypes/foilage/tree_trunk.png"
-dest_files=["res://.godot/imported/tree_trunk.png-439ebb52abe2599e379cc23eda676476.s3tc.ctex", "res://.godot/imported/tree_trunk.png-439ebb52abe2599e379cc23eda676476.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/foilage/tree_trunk.png"
+dest_files=["res://.godot/imported/tree_trunk.png-c4c7a3001c1a4fa29cad7a55e075b541.s3tc.ctex", "res://.godot/imported/tree_trunk.png-c4c7a3001c1a4fa29cad7a55e075b541.etc2.ctex"]
 
 [params]
 

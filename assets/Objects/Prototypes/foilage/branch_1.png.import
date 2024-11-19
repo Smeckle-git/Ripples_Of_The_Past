@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwlfos6n6cr7l"
-path="res://.godot/imported/branch_1.png-787d4f50bdaa3e5c1bbdfcf224a2b7bb.ctex"
+path="res://.godot/imported/branch_1.png-470153dd12c38a0b4392fea100887819.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Prototypes/foilage/branch_1.png"
-dest_files=["res://.godot/imported/branch_1.png-787d4f50bdaa3e5c1bbdfcf224a2b7bb.ctex"]
+source_file="res://assets/Objects/Prototypes/foilage/branch_1.png"
+dest_files=["res://.godot/imported/branch_1.png-470153dd12c38a0b4392fea100887819.ctex"]
 
 [params]
 

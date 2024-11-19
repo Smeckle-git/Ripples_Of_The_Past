@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r8cvqwyyjuss"
-path.s3tc="res://.godot/imported/Pathway004_1K-PNG_AmbientOcclusion.png-8ab6e3cf849254cb683689db201300f2.s3tc.ctex"
-path.etc2="res://.godot/imported/Pathway004_1K-PNG_AmbientOcclusion.png-8ab6e3cf849254cb683689db201300f2.etc2.ctex"
+path.s3tc="res://.godot/imported/Pathway004_1K-PNG_AmbientOcclusion.png-d9ec10a0f12cec2dc71232a896ee44e3.s3tc.ctex"
+path.etc2="res://.godot/imported/Pathway004_1K-PNG_AmbientOcclusion.png-d9ec10a0f12cec2dc71232a896ee44e3.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_AmbientOcclusion.png"
-dest_files=["res://.godot/imported/Pathway004_1K-PNG_AmbientOcclusion.png-8ab6e3cf849254cb683689db201300f2.s3tc.ctex", "res://.godot/imported/Pathway004_1K-PNG_AmbientOcclusion.png-8ab6e3cf849254cb683689db201300f2.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_AmbientOcclusion.png"
+dest_files=["res://.godot/imported/Pathway004_1K-PNG_AmbientOcclusion.png-d9ec10a0f12cec2dc71232a896ee44e3.s3tc.ctex", "res://.godot/imported/Pathway004_1K-PNG_AmbientOcclusion.png-d9ec10a0f12cec2dc71232a896ee44e3.etc2.ctex"]
 
 [params]
 

@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dey0fgk5ojitw"
-path.s3tc="res://.godot/imported/Mage_mage_texture.png-c63fb12427dc04aca19c9f20eeb82689.s3tc.ctex"
-path.etc2="res://.godot/imported/Mage_mage_texture.png-c63fb12427dc04aca19c9f20eeb82689.etc2.ctex"
+path.s3tc="res://.godot/imported/Mage_mage_texture.png-7ebe7b2125c80e22fa129491d282ee4c.s3tc.ctex"
+path.etc2="res://.godot/imported/Mage_mage_texture.png-7ebe7b2125c80e22fa129491d282ee4c.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Objects/Prototypes/Player/Mage_mage_texture.png"
-dest_files=["res://.godot/imported/Mage_mage_texture.png-c63fb12427dc04aca19c9f20eeb82689.s3tc.ctex", "res://.godot/imported/Mage_mage_texture.png-c63fb12427dc04aca19c9f20eeb82689.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/Player/Mage_mage_texture.png"
+dest_files=["res://.godot/imported/Mage_mage_texture.png-7ebe7b2125c80e22fa129491d282ee4c.s3tc.ctex", "res://.godot/imported/Mage_mage_texture.png-7ebe7b2125c80e22fa129491d282ee4c.etc2.ctex"]
 
 [params]
 

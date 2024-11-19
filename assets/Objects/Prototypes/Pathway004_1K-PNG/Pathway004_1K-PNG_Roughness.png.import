@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtnddvba32no2"
-path.s3tc="res://.godot/imported/Pathway004_1K-PNG_Roughness.png-3772cfe28783b42cc8fbfbdcf161a083.s3tc.ctex"
-path.etc2="res://.godot/imported/Pathway004_1K-PNG_Roughness.png-3772cfe28783b42cc8fbfbdcf161a083.etc2.ctex"
+path.s3tc="res://.godot/imported/Pathway004_1K-PNG_Roughness.png-bddf6cf35a5446a39ec34e58709d07e7.s3tc.ctex"
+path.etc2="res://.godot/imported/Pathway004_1K-PNG_Roughness.png-bddf6cf35a5446a39ec34e58709d07e7.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Roughness.png"
-dest_files=["res://.godot/imported/Pathway004_1K-PNG_Roughness.png-3772cfe28783b42cc8fbfbdcf161a083.s3tc.ctex", "res://.godot/imported/Pathway004_1K-PNG_Roughness.png-3772cfe28783b42cc8fbfbdcf161a083.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Roughness.png"
+dest_files=["res://.godot/imported/Pathway004_1K-PNG_Roughness.png-bddf6cf35a5446a39ec34e58709d07e7.s3tc.ctex", "res://.godot/imported/Pathway004_1K-PNG_Roughness.png-bddf6cf35a5446a39ec34e58709d07e7.etc2.ctex"]
 
 [params]
 

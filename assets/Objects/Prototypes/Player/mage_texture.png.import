@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2b04hc8y3l2b"
-path="res://.godot/imported/mage_texture.png-781dd6ca90bee92ddd01d4bf8de9cefc.ctex"
+path="res://.godot/imported/mage_texture.png-6e3ee19e5087c92e8cc6a4d7da5636c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Prototypes/Player/mage_texture.png"
-dest_files=["res://.godot/imported/mage_texture.png-781dd6ca90bee92ddd01d4bf8de9cefc.ctex"]
+source_file="res://assets/Objects/Prototypes/Player/mage_texture.png"
+dest_files=["res://.godot/imported/mage_texture.png-6e3ee19e5087c92e8cc6a4d7da5636c9.ctex"]
 
 [params]
 

@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7v2mgt4ol5rc"
-path.s3tc="res://.godot/imported/Barbarian_barbarian_texture.png-4030448709cd60f2bc5e6d23b46ee1d1.s3tc.ctex"
-path.etc2="res://.godot/imported/Barbarian_barbarian_texture.png-4030448709cd60f2bc5e6d23b46ee1d1.etc2.ctex"
+path.s3tc="res://.godot/imported/Barbarian_barbarian_texture.png-928dddf42d25f4b5c5c0b95852a94bfb.s3tc.ctex"
+path.etc2="res://.godot/imported/Barbarian_barbarian_texture.png-928dddf42d25f4b5c5c0b95852a94bfb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Objects/Prototypes/Player/Barbarian_barbarian_texture.png"
-dest_files=["res://.godot/imported/Barbarian_barbarian_texture.png-4030448709cd60f2bc5e6d23b46ee1d1.s3tc.ctex", "res://.godot/imported/Barbarian_barbarian_texture.png-4030448709cd60f2bc5e6d23b46ee1d1.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/Player/Barbarian_barbarian_texture.png"
+dest_files=["res://.godot/imported/Barbarian_barbarian_texture.png-928dddf42d25f4b5c5c0b95852a94bfb.s3tc.ctex", "res://.godot/imported/Barbarian_barbarian_texture.png-928dddf42d25f4b5c5c0b95852a94bfb.etc2.ctex"]
 
 [params]
 

@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gdxls7m26q5s"
-path.s3tc="res://.godot/imported/Rock022_1K-PNG_Roughness.png-c29d2a623bd9965b99b45ed2687d2d44.s3tc.ctex"
-path.etc2="res://.godot/imported/Rock022_1K-PNG_Roughness.png-c29d2a623bd9965b99b45ed2687d2d44.etc2.ctex"
+path.s3tc="res://.godot/imported/Rock022_1K-PNG_Roughness.png-9c97d0840308b067043db945e166e699.s3tc.ctex"
+path.etc2="res://.godot/imported/Rock022_1K-PNG_Roughness.png-9c97d0840308b067043db945e166e699.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Prototypes/Rock022_1K-PNG/Rock022_1K-PNG_Roughness.png"
-dest_files=["res://.godot/imported/Rock022_1K-PNG_Roughness.png-c29d2a623bd9965b99b45ed2687d2d44.s3tc.ctex", "res://.godot/imported/Rock022_1K-PNG_Roughness.png-c29d2a623bd9965b99b45ed2687d2d44.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/Rock022_1K-PNG/Rock022_1K-PNG_Roughness.png"
+dest_files=["res://.godot/imported/Rock022_1K-PNG_Roughness.png-9c97d0840308b067043db945e166e699.s3tc.ctex", "res://.godot/imported/Rock022_1K-PNG_Roughness.png-9c97d0840308b067043db945e166e699.etc2.ctex"]
 
 [params]
 

@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqv1t4d8sbatu"
-path.s3tc="res://.godot/imported/Pathway004_1K-PNG_Displacement.png-3969c863c3452d87db33f28a52da9a1b.s3tc.ctex"
-path.etc2="res://.godot/imported/Pathway004_1K-PNG_Displacement.png-3969c863c3452d87db33f28a52da9a1b.etc2.ctex"
+path.s3tc="res://.godot/imported/Pathway004_1K-PNG_Displacement.png-d13c7ebd3abe984b6f6970fa40139f89.s3tc.ctex"
+path.etc2="res://.godot/imported/Pathway004_1K-PNG_Displacement.png-d13c7ebd3abe984b6f6970fa40139f89.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Displacement.png"
-dest_files=["res://.godot/imported/Pathway004_1K-PNG_Displacement.png-3969c863c3452d87db33f28a52da9a1b.s3tc.ctex", "res://.godot/imported/Pathway004_1K-PNG_Displacement.png-3969c863c3452d87db33f28a52da9a1b.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Displacement.png"
+dest_files=["res://.godot/imported/Pathway004_1K-PNG_Displacement.png-d13c7ebd3abe984b6f6970fa40139f89.s3tc.ctex", "res://.godot/imported/Pathway004_1K-PNG_Displacement.png-d13c7ebd3abe984b6f6970fa40139f89.etc2.ctex"]
 
 [params]
 

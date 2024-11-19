@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dalo2vcqh2c6c"
-path="res://.godot/imported/campfire_wood_3.png-722194328b5064e0b8e676d271b190e7.ctex"
+path="res://.godot/imported/campfire_wood_3.png-275ed5148e0f58a81518c236ad14dca0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Prototypes/Campfire/campfire_wood_3.png"
-dest_files=["res://.godot/imported/campfire_wood_3.png-722194328b5064e0b8e676d271b190e7.ctex"]
+source_file="res://assets/Objects/Prototypes/Campfire/campfire_wood_3.png"
+dest_files=["res://.godot/imported/campfire_wood_3.png-275ed5148e0f58a81518c236ad14dca0.ctex"]
 
 [params]
 

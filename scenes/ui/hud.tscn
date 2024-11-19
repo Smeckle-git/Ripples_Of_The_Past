@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dx2ui4o1f3nb8"]
 
-[ext_resource type="Texture2D" uid="uid://by1w1m2vgoset" path="res://icon.svg" id="1_lwslo"]
-[ext_resource type="Shader" path="res://UI_Elements/HUD/quest_log.gdshader" id="1_nd81k"]
+[ext_resource type="Texture2D" uid="uid://by1w1m2vgoset" path="res://assets/images/icon.svg" id="1_lwslo"]
+[ext_resource type="Shader" path="res://assets/shaders/quest_log.gdshader" id="1_nd81k"]
 [ext_resource type="Script" path="res://Scripts/ui/hud.gd" id="1_rfbj8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hgbee"]

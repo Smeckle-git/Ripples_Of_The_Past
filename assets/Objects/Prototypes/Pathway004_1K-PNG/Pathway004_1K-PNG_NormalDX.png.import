@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm0jujycj8seu"
-path.s3tc="res://.godot/imported/Pathway004_1K-PNG_NormalDX.png-2e34d2fc552f375cecf83babc3c061f4.s3tc.ctex"
-path.etc2="res://.godot/imported/Pathway004_1K-PNG_NormalDX.png-2e34d2fc552f375cecf83babc3c061f4.etc2.ctex"
+path.s3tc="res://.godot/imported/Pathway004_1K-PNG_NormalDX.png-26cf9c606062b530a3c98a5263ab6c8a.s3tc.ctex"
+path.etc2="res://.godot/imported/Pathway004_1K-PNG_NormalDX.png-26cf9c606062b530a3c98a5263ab6c8a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_NormalDX.png"
-dest_files=["res://.godot/imported/Pathway004_1K-PNG_NormalDX.png-2e34d2fc552f375cecf83babc3c061f4.s3tc.ctex", "res://.godot/imported/Pathway004_1K-PNG_NormalDX.png-2e34d2fc552f375cecf83babc3c061f4.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_NormalDX.png"
+dest_files=["res://.godot/imported/Pathway004_1K-PNG_NormalDX.png-26cf9c606062b530a3c98a5263ab6c8a.s3tc.ctex", "res://.godot/imported/Pathway004_1K-PNG_NormalDX.png-26cf9c606062b530a3c98a5263ab6c8a.etc2.ctex"]
 
 [params]
 

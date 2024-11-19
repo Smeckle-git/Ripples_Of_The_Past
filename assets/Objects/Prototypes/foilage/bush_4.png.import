@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://obam00khyd7f"
-path.s3tc="res://.godot/imported/bush_4.png-2d19c0bf4e2aaffeb85e2cb72c33593e.s3tc.ctex"
-path.etc2="res://.godot/imported/bush_4.png-2d19c0bf4e2aaffeb85e2cb72c33593e.etc2.ctex"
+path.s3tc="res://.godot/imported/bush_4.png-0e9428f23dd4159ef1b57768a4c2cbe6.s3tc.ctex"
+path.etc2="res://.godot/imported/bush_4.png-0e9428f23dd4159ef1b57768a4c2cbe6.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Prototypes/foilage/bush_4.png"
-dest_files=["res://.godot/imported/bush_4.png-2d19c0bf4e2aaffeb85e2cb72c33593e.s3tc.ctex", "res://.godot/imported/bush_4.png-2d19c0bf4e2aaffeb85e2cb72c33593e.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/foilage/bush_4.png"
+dest_files=["res://.godot/imported/bush_4.png-0e9428f23dd4159ef1b57768a4c2cbe6.s3tc.ctex", "res://.godot/imported/bush_4.png-0e9428f23dd4159ef1b57768a4c2cbe6.etc2.ctex"]
 
 [params]
 

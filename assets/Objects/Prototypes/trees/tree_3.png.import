@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crdtiumfp6wpa"
-path.s3tc="res://.godot/imported/tree_3.png-bb7586947a26b2fb5b6ed366cf4475cd.s3tc.ctex"
-path.etc2="res://.godot/imported/tree_3.png-bb7586947a26b2fb5b6ed366cf4475cd.etc2.ctex"
+path.s3tc="res://.godot/imported/tree_3.png-a0cdbafafd3b5f00223e5a81f9f7139a.s3tc.ctex"
+path.etc2="res://.godot/imported/tree_3.png-a0cdbafafd3b5f00223e5a81f9f7139a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/Prototypes/trees/tree_3.png"
-dest_files=["res://.godot/imported/tree_3.png-bb7586947a26b2fb5b6ed366cf4475cd.s3tc.ctex", "res://.godot/imported/tree_3.png-bb7586947a26b2fb5b6ed366cf4475cd.etc2.ctex"]
+source_file="res://assets/Objects/Prototypes/trees/tree_3.png"
+dest_files=["res://.godot/imported/tree_3.png-a0cdbafafd3b5f00223e5a81f9f7139a.s3tc.ctex", "res://.godot/imported/tree_3.png-a0cdbafafd3b5f00223e5a81f9f7139a.etc2.ctex"]
 
 [params]
 

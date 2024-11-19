@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cumuxu5rf8qal"]
 
-[ext_resource type="Texture2D" uid="uid://b6tir73wjex5q" path="res://assets/Objects/Prototypes/TEXT/dirt.png" id="1_04ene"]
+[ext_resource type="Texture2D" uid="uid://b6tir73wjex5q" path="res://resources/TEXT/dirt.png" id="1_04ene"]
 [ext_resource type="Texture2D" uid="uid://r8cvqwyyjuss" path="res://assets/Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_AmbientOcclusion.png" id="2_sxjtp"]
 [ext_resource type="Texture2D" uid="uid://bqv1t4d8sbatu" path="res://assets/Objects/Prototypes/Pathway004_1K-PNG/Pathway004_1K-PNG_Displacement.png" id="3_os0l0"]
-[ext_resource type="Texture2D" uid="uid://cdpsaos73chio" path="res://assets/Objects/Prototypes/TEXT/dirt_n.png" id="4_re2ag"]
+[ext_resource type="Texture2D" uid="uid://cdpsaos73chio" path="res://resources/TEXT/dirt_n.png" id="4_re2ag"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_1sife"]
 

@@ -19,7 +19,7 @@ var night_triggered = false
 
 
 #load items to collect
-var wood_1 := load("res://Scripts/Quests/campfire + quest/wood_1.gd")
+var wood_1 := load("res://scenes/environment/Wood_1.tscn")
 
 #link interact signal to function
 func _ready() -> void:

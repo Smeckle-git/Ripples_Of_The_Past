@@ -18,9 +18,9 @@ config/icon="res://assets/images/icon.svg"
 
 [autoload]
 
-InteractManager="*res://Objects/Prototypes/Interaction/InteractManager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GameHudManager="*res://scenes/ui/game_hud_manager.tscn"
+InteractManager="*res://scenes/ui/InteractManager.tscn"
 
 [dialogic]
 

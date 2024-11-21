@@ -1,0 +1,377 @@
+[gd_scene load_steps=3 format=3 uid="uid://ydr85i4u3sto"]
+
+[ext_resource type="Script" path="res://Scripts/ui/SettingsMenu/return_buton.gd" id="1_3lp24"]
+[ext_resource type="Script" path="res://Scripts/ui/SettingsMenu/settings_sound_control_container.gd" id="2_2kfok"]
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0021, 1)
+tab_alignment = 1
+current_tab = 1
+
+[node name="Controls" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Movement" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Movement" type="Label" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement"]
+layout_mode = 2
+text = "Movement Settings:"
+
+[node name="Forward" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Forward"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Forward: "
+
+[node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Forward"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W"
+
+[node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Forward"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Up"
+
+[node name="Back" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Back"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Backwards: "
+
+[node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Back"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "S"
+
+[node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Back"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Down"
+
+[node name="Right" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Right"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Right: "
+
+[node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Right"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "D"
+
+[node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Right"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Right"
+
+[node name="Left" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Left"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Left: "
+
+[node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Left"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A"
+
+[node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Left"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Left"
+
+[node name="Interactions" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Interactions" type="Label" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Interactions"]
+layout_mode = 2
+text = "Interaction Settings:"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Interactions"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Interactions/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Object Interaction Key(s): "
+
+[node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Interactions/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "E"
+
+[node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Interactions/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Space"
+
+[node name="System" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="System" type="Label" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System"]
+layout_mode = 2
+text = "System Settings:"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Open Journal: "
+
+[node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "J"
+
+[node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "..."
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer3"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Game pause: "
+
+[node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ESC"
+
+[node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "..."
+
+[node name="Back" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Back"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="return-buton" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back to Menu"
+script = ExtResource("1_3lp24")
+
+[node name="Sound" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Sound"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="SoundControlContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+script = ExtResource("2_2kfok")
+
+[node name="MasterVolume" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer"]
+layout_mode = 2
+
+[node name="Sound" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume"]
+layout_mode = 2
+text = "Master Volume:"
+
+[node name="General" type="HBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MV-label" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Set volume: "
+
+[node name="MV-Slider" type="HSlider" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="MV-visual" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "...%"
+horizontal_alignment = 1
+
+[node name="SoundOptions" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer"]
+layout_mode = 2
+
+[node name="MS-Title" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions"]
+layout_mode = 2
+text = "Music & Sound Settings:"
+
+[node name="Music" type="HBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions"]
+layout_mode = 2
+
+[node name="M-label" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Music Volume:  "
+
+[node name="MS-Slider" type="HSlider" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="MS-visual" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "...%"
+horizontal_alignment = 1
+
+[node name="Ambience" type="HBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions"]
+layout_mode = 2
+
+[node name="A-label" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Ambient Sound: "
+
+[node name="AM-Slider" type="HSlider" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="AM-visual" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "...%"
+horizontal_alignment = 1
+
+[node name="SoundEffects" type="HBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions"]
+layout_mode = 2
+
+[node name="SFX-label" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Sound Effects Volume: "
+
+[node name="SFX-Slider" type="HSlider" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="SFX-Visual" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "...%"
+horizontal_alignment = 1
+
+[node name="Back" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/Back"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/Back/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="return-buton" type="Button" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/Back/HBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back to Menu"
+script = ExtResource("1_3lp24")
+
+[node name="VideoSettings" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/VideoSettings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/VideoSettings/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="TabContainer/VideoSettings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Aloo"
+
+[node name="Label2" type="Label" parent="TabContainer/VideoSettings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Aloo2"
+
+[connection signal="pressed" from="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer/return-buton" to="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer/return-buton" method="_on_pressed"]
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_mv_slider_value_changed"]
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_ms_slider_value_changed"]
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience/AM-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_am_slider_value_changed"]
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects/SFX-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/Back/HBoxContainer/CenterContainer/return-buton" to="TabContainer/Sound/MarginContainer/SoundControlContainer/Back/HBoxContainer/CenterContainer/return-buton" method="_on_pressed"]

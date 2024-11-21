@@ -1,95 +1,133 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgyt23pysau0k"]
+[gd_scene load_steps=6 format=3 uid="uid://cgyt23pysau0k"]
 
-[ext_resource type="Script" path="res://Scripts/ui/MainMenu.gd" id="1_113an"]
-[ext_resource type="Texture2D" uid="uid://5wmpsam0pl8l" path="res://assets/images/MainMenu/GoDotBanner.png" id="2_p63uy"]
+[ext_resource type="Script" path="res://Scripts/ui/MainMenu/MainMenu.gd" id="1_283wr"]
+[ext_resource type="Texture2D" uid="uid://5wmpsam0pl8l" path="res://assets/images/MainMenu/GoDotBanner.png" id="1_ne5gb"]
+[ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="2_rem4v"]
 
 [sub_resource type="SystemFont" id="SystemFont_iwrgx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mrehf"]
 
-[node name="MainMenu" type="MarginContainer"]
+[node name="MainMenu" type="Control"]
 process_mode = 3
-offset_right = 1153.0
-offset_bottom = 648.0
-script = ExtResource("1_113an")
-metadata/_edit_vertical_guides_ = [-30.0]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Main_divide_Slice" type="VBoxContainer" parent="."]
+[node name="MainMenu" type="MarginContainer" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_283wr")
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu"]
 layout_mode = 2
+texture = ExtResource("2_rem4v")
+expand_mode = 2
+flip_h = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu"]
+layout_mode = 2
+size_flags_stretch_ratio = 12.0
+
+[node name="MenuContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
 alignment = 1
 
-[node name="LogoContainer" type="HBoxContainer" parent="Main_divide_Slice"]
+[node name="LogoContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="Main_divide_Slice/LogoContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Main_divide_Slice/LogoContainer/CenterContainer"]
+[node name="TextureRect" type="TextureRect" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer/CenterContainer"]
 layout_mode = 2
-texture = ExtResource("2_p63uy")
+texture = ExtResource("1_ne5gb")
 
-[node name="LogoContainer2" type="HBoxContainer" parent="Main_divide_Slice"]
+[node name="MainContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="ContinueGame" type="Button" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer"]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Continue Game / Load Game [WIP]"
+
+[node name="NewGame" type="Button" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+size_flags_vertical = 3
+text = "New Game"
+
+[node name="Settings" type="Button" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+size_flags_vertical = 3
+button_mask = 3
+text = "Quit Game"
+expand_icon = true
+
+[node name="CreditsContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="Main_divide_Slice/LogoContainer2"]
+[node name="TextContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer/CreditsContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MenuContainer/CreditsContainer/TextContainer"]
+layout_mode = 2
+text = "Beta Version 0.2.0 - Entangled Studios"
+
+[node name="LogoContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
+alignment = 1
+
+[node name="TitleContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/LogoContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MainMenu/HBoxContainer/LogoContainer/TitleContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="Main_divide_Slice/LogoContainer2/CenterContainer"]
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/LogoContainer/TitleContainer/CenterContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_iwrgx")
 theme_override_font_sizes/font_size = 0
 text = "Ripples Of The Past"
 label_settings = SubResource("LabelSettings_mrehf")
 
-[node name="MainContainer" type="HBoxContainer" parent="Main_divide_Slice"]
-layout_mode = 2
-size_flags_vertical = 6
-alignment = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="Main_divide_Slice/MainContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-
-[node name="ChoiceContainer" type="VBoxContainer" parent="Main_divide_Slice/MainContainer/CenterContainer"]
-layout_mode = 2
-size_flags_stretch_ratio = 3.86
-alignment = 1
-
-[node name="ContinueGame" type="Button" parent="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer"]
-layout_mode = 2
-text = "Continue Game / Load Game [WIP]"
-
-[node name="NewGame" type="Button" parent="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer"]
-layout_mode = 2
-text = "New Game"
-
-[node name="Settings" type="Button" parent="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer"]
-layout_mode = 2
-text = "Settings [WIP]"
-
-[node name="Quit" type="Button" parent="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer"]
-layout_mode = 2
-text = "Quit Game"
-
-[node name="CreditsContainer" type="HBoxContainer" parent="Main_divide_Slice"]
-layout_mode = 2
-alignment = 1
-
-[node name="TextContainer" type="VBoxContainer" parent="Main_divide_Slice/CreditsContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="Main_divide_Slice/CreditsContainer/TextContainer"]
-layout_mode = 2
-text = "Playtest Version 0.1.0 - Entangled Studios"
-
-[connection signal="pressed" from="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer/ContinueGame" to="." method="_on_continue_game_pressed"]
-[connection signal="pressed" from="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer/NewGame" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer/ContinueGame" to="MainMenu" method="_on_continue_game_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer/NewGame" to="MainMenu" method="_on_new_game_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer/Settings" to="MainMenu" method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer/Quit" to="MainMenu" method="_on_quit_pressed"]

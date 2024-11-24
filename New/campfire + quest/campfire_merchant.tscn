@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dkwevn51pv8k7"]
 
-[ext_resource type="Script" path="res://New/campfire + quest/campfire_merchant.gd" id="1_chvg5"]
+[ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/campfire_merchant.gd" id="1_chvg5"]
 [ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://Objects/Prototypes/Interaction/Interaction area/interaction_area.tscn" id="1_sro3d"]
 [ext_resource type="Script" path="res://New/campfire + quest/Quests/quest_campfire.gd" id="3_dgjng"]
 [ext_resource type="Texture2D" uid="uid://502u5vibnp3o" path="res://Resources/Images/sprites/Campfire/Campfire_base.png" id="4_ohopf"]

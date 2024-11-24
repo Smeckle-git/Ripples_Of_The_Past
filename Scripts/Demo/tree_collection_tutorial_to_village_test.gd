@@ -6,6 +6,8 @@ extends Node3D
 @export var tree_3: PackedScene
 @export var tree_4: PackedScene
 
+@export var camara: Camera3D
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if get_child_count() == 0:
@@ -26,6 +28,7 @@ func _ready() -> void:
 				tree = tree_4.instantiate()
 		#
 		tree.position = get_child(i).position
+		#tree.rotation = camara.rotation
 		if i%4 != 1:
 			tree.scale = Vector3(0.5, 0.5, 0.5)
 		add_child(tree)

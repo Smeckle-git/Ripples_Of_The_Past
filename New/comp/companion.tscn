@@ -1,6 +1,6 @@
 [gd_scene load_steps=40 format=3 uid="uid://dn4vjb5x6o1yr"]
 
-[ext_resource type="Script" path="res://New/comp/companion.gd" id="1_dmbtv"]
+[ext_resource type="Script" path="res://Scripts/comp/companion.gd" id="1_dmbtv"]
 [ext_resource type="Texture2D" uid="uid://fbm46rjo2rxs" path="res://Resources/Images/sprites/Companion/cat_sprite.png" id="2_cyqeb"]
 [ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://Objects/Prototypes/Interaction/Interaction area/interaction_area.tscn" id="3_oq3e6"]
 

@@ -1456,7 +1456,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7392, 2, 47.7283)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.571755, 2, 63.2268)
 
 [node name="grass3" parent="foilage/foilage_collection_forest/grass" instance=ExtResource("15_83egy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8982, 2, 71.2052)
+transform = Transform3D(0.605, 0, 0, 0, 0.825, 0, 0, 0, 0.87, 1.8982, 2, 71.2052)
 
 [node name="grass4" parent="foilage/foilage_collection_forest/grass" instance=ExtResource("13_0knda")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2, 50)

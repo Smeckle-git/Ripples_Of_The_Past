@@ -6,7 +6,7 @@ extends Node3D
 @export var tree_3: PackedScene
 @export var tree_4: PackedScene
 
-@export var camara: Camera3D
+#@export var camera: Camera3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

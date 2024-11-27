@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ydr85i4u3sto"]
+[gd_scene load_steps=4 format=3 uid="uid://ydr85i4u3sto"]
 
 [ext_resource type="Script" path="res://Scripts/ui/SettingsMenu/return_buton.gd" id="1_3lp24"]
+[ext_resource type="Script" path="res://scenes/ui/setting_menu.gd" id="1_haik7"]
 [ext_resource type="Script" path="res://Scripts/ui/SettingsMenu/settings_sound_control_container.gd" id="2_2kfok"]
 
 [node name="SettingsMenu" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_haik7")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
@@ -20,10 +22,9 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0021, 1)
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 
 [node name="Controls" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -61,12 +62,10 @@ text = "Forward: "
 [node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Forward"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "W"
 
 [node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Forward"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Up"
 
 [node name="Back" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement"]
 layout_mode = 2
@@ -80,12 +79,10 @@ text = "Backwards: "
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "S"
 
 [node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Back"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Down"
 
 [node name="Right" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement"]
 layout_mode = 2
@@ -98,12 +95,10 @@ text = "Right: "
 [node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Right"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "D"
 
 [node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Right"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Right"
 
 [node name="Left" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement"]
 layout_mode = 2
@@ -116,12 +111,10 @@ text = "Left: "
 [node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Left"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "A"
 
 [node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Movement/Left"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Left"
 
 [node name="Interactions" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -141,12 +134,10 @@ text = "Object Interaction Key(s): "
 [node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Interactions/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "E"
 
 [node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Interactions/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Space"
 
 [node name="System" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -166,12 +157,10 @@ text = "Open Journal: "
 [node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "J"
 
 [node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "..."
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System"]
 layout_mode = 2
@@ -184,12 +173,10 @@ text = "Game pause: "
 [node name="Button" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "ESC"
 
 [node name="Button2" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "..."
 
 [node name="Back" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -210,6 +197,7 @@ text = "Back to Menu"
 script = ExtResource("1_3lp24")
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -250,7 +238,7 @@ text = "Set volume: "
 [node name="MV-Slider" type="HSlider" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
 layout_mode = 2
 size_flags_horizontal = 3
-value = 100.0
+value = 50.0
 
 [node name="MV-visual" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
 layout_mode = 2
@@ -370,8 +358,16 @@ layout_mode = 2
 text = "Aloo2"
 
 [connection signal="pressed" from="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer/return-buton" to="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer/return-buton" method="_on_pressed"]
+[connection signal="drag_ended" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="." method="_on_mv_slider_drag_ended"]
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="." method="_on_mv_slider_value_changed"]
 [connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_mv_slider_value_changed"]
+[connection signal="drag_ended" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="." method="_on_ms_slider_drag_ended"]
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="." method="_on_ms_slider_value_changed"]
 [connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_ms_slider_value_changed"]
+[connection signal="drag_ended" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience/AM-Slider" to="." method="_on_am_slider_drag_ended"]
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience/AM-Slider" to="." method="_on_am_slider_value_changed"]
 [connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience/AM-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_am_slider_value_changed"]
+[connection signal="drag_ended" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects/SFX-Slider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects/SFX-Slider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects/SFX-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/Back/HBoxContainer/CenterContainer/return-buton" to="TabContainer/Sound/MarginContainer/SoundControlContainer/Back/HBoxContainer/CenterContainer/return-buton" method="_on_pressed"]

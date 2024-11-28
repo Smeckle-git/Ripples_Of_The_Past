@@ -12,15 +12,15 @@ config_version=5
 
 config/name="Ripples_Of_The_Past"
 config/version="Beta Build 0.0.1"
-run/main_scene="res://UI_Elements/MainMenu/MainMenu.tscn"
+run/main_scene="res://scenes/ui/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-InteractManager="*res://Objects/Prototypes/Interaction/InteractManager.tscn"
+InteractManager="*res://scenes/ui/InteractManager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-GameHudManager="*res://UI_Elements/HUD/game_hud_manager.tscn"
+GameHudManager="*res://scenes/ui/game_hud_manager.tscn"
 
 [dialogic]
 

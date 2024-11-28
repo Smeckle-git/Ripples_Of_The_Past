@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx5vdbk1vh3gh"]
+
+[ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/wood_1.gd" id="1_5sqmb"]
+[ext_resource type="Texture2D" uid="uid://dfscq3l7tat2e" path="res://resources/Images/sprites/Campfire/Wood_1.png" id="1_xlm5h"]
+
+[node name="Wood_1" type="Area3D"]
+transform = Transform3D(0.998351, 0, 0, 0, 0.998351, 0, 0, 0, 0.998351, 0, 0, 0)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_5sqmb")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+texture = ExtResource("1_xlm5h")
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="."]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+polygon = PackedVector2Array(-0.823426, -0.788624, -0.711636, -0.439226, -0.594349, -0.277788, -0.435678, -0.0873246, -0.333795, 0.0431242, -0.0611245, 0.258382, 0.40309, 0.896702, 0.597162, 0.96943, 0.712387, 0.865895, 0.768781, 0.702453, 0.664834, 0.522733, 0.513706, 0.315925, 0.21412, -0.130678, -0.0428236, -0.587102, -0.1423, -0.713772, -0.410228, -0.733565)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

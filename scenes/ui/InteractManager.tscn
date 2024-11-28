@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl2mqqt3iuuby"]
+
+[ext_resource type="Script" path="res://Scripts/ui/InteractManager.gd" id="1_a7am0"]
+
+[node name="InteractionManager" type="Node3D"]
+script = ExtResource("1_a7am0")
+
+[node name="Label" type="Label3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0)
+text = "Press [E] to intreact"

@@ -31,6 +31,10 @@ func _ready() -> void:
 		#tree.rotation = camara.rotation
 		if i%4 != 1:
 			tree.scale = Vector3(0.5, 0.5, 0.5)
+		#
+		#var random = randf_range(0.8, 1.2)
+		#tree.scale *= random
+		#
 		add_child(tree)
 	#pass # Replace with function body.
 

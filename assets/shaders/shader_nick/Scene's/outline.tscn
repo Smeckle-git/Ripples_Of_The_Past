@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvw84n7vkeil5"]
+
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/outline.gdshader" id="1_ohu3e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kqsnn"]
+render_priority = 0
+shader = ExtResource("1_ohu3e")
+shader_parameter/border_width = 0.116
+shader_parameter/color = Color(0, 1, 0, 1)
+shader_parameter/pattern = true
+shader_parameter/line_number = 50.0
+shader_parameter/line_sharpness = 2.355
+shader_parameter/pulse = null
+shader_parameter/pulse_speed = null
+shader_parameter/line_movement = true
+shader_parameter/line_movement_speed = 11.0
+shader_parameter/wave = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nhuv"]
+next_pass = SubResource("ShaderMaterial_kqsnn")
+
+[sub_resource type="BoxMesh" id="BoxMesh_kl3lj"]
+material = SubResource("StandardMaterial3D_0nhuv")
+
+[node name="Outline" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.526539, 0)
+mesh = SubResource("BoxMesh_kl3lj")

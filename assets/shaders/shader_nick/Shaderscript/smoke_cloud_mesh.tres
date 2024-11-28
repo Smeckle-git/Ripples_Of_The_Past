@@ -1,0 +1,7 @@
+[gd_resource type="SphereMesh" load_steps=2 format=3 uid="uid://ldymt1a0wjgx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cl5al"]
+
+[resource]
+lightmap_size_hint = Vector2i(17, 9)
+material = SubResource("ShaderMaterial_cl5al")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://0ft6wn2pxu0l"]
+[gd_scene load_steps=37 format=3 uid="uid://0ft6wn2pxu0l"]
 
 [ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://Scripts/gridmap_blocks/world_obj_lib.meshlib" id="1_a2h3d"]
 [ext_resource type="Script" path="res://Scripts/Demo/demo_environment.gd" id="1_ivdn3"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://caywlopemv63v" path="res://assets/images/874898150658134d8f3b33a13ff2b247_images_jpeg.webp" id="5_yv3ao"]
 [ext_resource type="PackedScene" uid="uid://cwhg5dt7uh11x" path="res://scenes/environment/tree_3.tscn" id="6_ced4g"]
 [ext_resource type="PackedScene" uid="uid://hqh15shxywyx" path="res://scenes/Characters/Thorinn.tscn" id="6_dd3lb"]
-[ext_resource type="Shader" path="res://assets/shaders/restrictionFog.gdshader" id="6_qykmj"]
 [ext_resource type="PackedScene" uid="uid://cju7mir2fyt65" path="res://scenes/environment/tree_2.tscn" id="7_jfi5y"]
 [ext_resource type="PackedScene" uid="uid://b5rxeqhdmkkkj" path="res://scenes/environment/tree_4.tscn" id="8_vdqgb"]
 [ext_resource type="PackedScene" uid="uid://bvy7tlferryk5" path="res://scenes/environment/tree_trunk.tscn" id="9_cyinu"]
@@ -24,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://dn4vjb5x6o1yr" path="res://scenes/Characters/companion.tscn" id="20_7nc36"]
 [ext_resource type="PackedScene" uid="uid://bx461jbnpm1h7" path="res://scenes/ui/spooky.tscn" id="20_xasyh"]
 [ext_resource type="PackedScene" uid="uid://doja1555vib8p" path="res://scenes/ui/Player_Camera.tscn" id="24_18fqv"]
+[ext_resource type="PackedScene" uid="uid://u08d6vo5c344" path="res://assets/shaders/shader_nick/Scene's/fire_flies.tscn" id="25_2wcrm"]
 [ext_resource type="Script" path="res://Scripts/Camera/player_camera.gd" id="25_0880s"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lfbac"]
@@ -44,13 +44,31 @@ volumetric_fog_density = 0.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_ah4qg"]
 size = Vector3(88.1207, 18.0792, 7.76953)
 
+[sub_resource type="Shader" id="Shader_y8r1q"]
+code = "shader_type fog;
+
+uniform sampler2D noise_texture:repeat_enable;
+uniform float noise_scale = 1.0;
+
+void fog() {
+	vec2 movement = vec2(0.05, 0.0) * TIME;
+	float noise = texture(noise_texture, WORLD_POSITION.z * noise_scale + movement).r;
+	DENSITY = noise - 0.2;
+	//DENSITY = step(0.0, sdf);
+	ALBEDO = vec3(1,0.8,0.8);
+	// Called once for every froxel that is touched by an axis-aligned bounding box
+	// of the associated FogVolume. This means that froxels that just barely touch
+	// a given FogVolume will still be used.
+}
+"
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_1of0i"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_syuyu"]
 noise = SubResource("FastNoiseLite_1of0i")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y1wvd"]
-shader = ExtResource("6_qykmj")
+shader = SubResource("Shader_y8r1q")
 shader_parameter/noise_scale = 0.2
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_syuyu")
 
@@ -1770,3 +1788,6 @@ transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.748247, 2.3, 65)
 libraries = {
 "": SubResource("AnimationLibrary_hvhb7")
 }
+
+[node name="FireFlies" parent="." instance=ExtResource("25_2wcrm")]
+transform = Transform3D(2.37983, 0, 0, 0, 1, 0, 0, 0, 2.10923, -14.8674, 6.11313, 8.25848)

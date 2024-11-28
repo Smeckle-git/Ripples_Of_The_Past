@@ -33,6 +33,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "DEMO_interaction": "res://gui/Dialog/Timelines/DEMO_interaction.dtl",
+"quest1_end": "res://gui/Dialog/Timelines/quest1_end.dtl",
+"quest1_start": "res://gui/Dialog/Timelines/quest1_start.dtl",
 "thorinn_hugo_forest": "res://gui/Dialog/Timelines/thorinn_hugo_forest.dtl",
 "thorinn_meets_whiskers": "res://gui/Dialog/Timelines/thorinn_meets_whiskers.dtl",
 "thorinn_whiskers_forest": "res://gui/Dialog/Timelines/thorinn_whiskers_forest.dtl"

@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://ptw1eh1ttwmp"]
+
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/Highlight.gdshader" id="1_0f3oc"]
+[ext_resource type="Texture2D" uid="uid://drqx8ttv7t5gw" path="res://assets/shaders/shader_nick/Assets/Wood_1.png" id="2_qllxm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aeuyc"]
+render_priority = 0
+shader = ExtResource("1_0f3oc")
+shader_parameter/color_test = Color(0, 1, 1, 1)
+shader_parameter/texture2d = ExtResource("2_qllxm")
+
+[sub_resource type="QuadMesh" id="QuadMesh_2ajod"]
+material = SubResource("ShaderMaterial_aeuyc")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_elfb6"]
+render_priority = 0
+shader = ExtResource("1_0f3oc")
+shader_parameter/color_test = Color(1, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xg8he"]
+render_priority = 0
+shader = ExtResource("1_0f3oc")
+shader_parameter/color_test = Color(1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgfsn"]
+next_pass = SubResource("ShaderMaterial_xg8he")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6fs7x"]
+material = SubResource("StandardMaterial3D_cgfsn")
+top_radius = 0.0
+height = 1.0
+
+[node name="Highlight" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3779, -0.0187731, -0.00342596)
+mesh = SubResource("QuadMesh_2ajod")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.784029, 0.620724, 0, -0.620724, 0.784029, 0.204588, 1.40644, 1.72484)
+fov = 58.1368
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.505719, 0, 0)
+material_overlay = SubResource("ShaderMaterial_elfb6")
+mesh = SubResource("CylinderMesh_6fs7x")

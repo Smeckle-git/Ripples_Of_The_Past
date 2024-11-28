@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://ddu443etw7oh2"]
+
+[node name="Journal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="JournalBox" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ContentContainer" type="VBoxContainer" parent="MarginContainer/JournalBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/JournalBox/ContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/JournalBox/ContentContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/JournalBox/ContentContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "QuestList
+
+Allooo
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+ when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+ It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+
+[node name="SelectContainer" type="VBoxContainer" parent="MarginContainer/JournalBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OptionContainer" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/JournalBox/SelectContainer/OptionContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/OptionContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Button" type="Button" parent="MarginContainer/JournalBox/SelectContainer/OptionContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Testing1"
+
+[node name="Button2" type="Button" parent="MarginContainer/JournalBox/SelectContainer/OptionContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Testing2"
+
+[node name="Button3" type="Button" parent="MarginContainer/JournalBox/SelectContainer/OptionContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Testing3"
+
+[node name="Button4" type="Button" parent="MarginContainer/JournalBox/SelectContainer/OptionContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Testing4"
+
+[node name="PromotionContainer" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/JournalBox/SelectContainer/PromotionContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/PromotionContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/JournalBox/SelectContainer/PromotionContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+expand_mode = 5

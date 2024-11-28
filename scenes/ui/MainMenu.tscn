@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cgyt23pysau0k"]
 
 [ext_resource type="Script" path="res://Scripts/ui/MainMenu/MainMenu.gd" id="1_283wr"]
-[ext_resource type="Texture2D" uid="uid://5wmpsam0pl8l" path="res://assets/images/MainMenu/GoDotBanner.png" id="1_ne5gb"]
 [ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="2_rem4v"]
+[ext_resource type="Texture2D" uid="uid://dbmwr7csns6ws" path="res://assets/images/Promotion/promotion_logo_light_banner.jpg" id="3_d2ckj"]
 
 [sub_resource type="SystemFont" id="SystemFont_iwrgx"]
 
@@ -27,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_283wr")
 
-[node name="TextureRect" type="TextureRect" parent="MainMenu"]
+[node name="Background" type="TextureRect" parent="MainMenu"]
 layout_mode = 2
 texture = ExtResource("2_rem4v")
 expand_mode = 2
@@ -41,19 +41,27 @@ size_flags_stretch_ratio = 12.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
+theme_override_constants/separation = 24
 alignment = 1
 
 [node name="LogoContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/separation = 24
 alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
 
-[node name="TextureRect" type="TextureRect" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer/CenterContainer"]
+[node name="TextureRect" type="TextureRect" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("1_ne5gb")
+texture = ExtResource("3_d2ckj")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="MainContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer"]
 layout_mode = 2

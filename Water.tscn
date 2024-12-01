@@ -1,7 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://ni5gbas6ab3d"]
+[gd_scene load_steps=12 format=3 uid="uid://ni5gbas6ab3d"]
 
 [ext_resource type="Shader" path="res://Water_shader.gdshader" id="1_2rlpa"]
-[ext_resource type="QuadMesh" uid="uid://d138ua7el5jn3" path="res://Water.tres" id="1_yedyn"]
+[ext_resource type="PackedScene" uid="uid://c7a4hff06ccjb" path="res://water2.tscn" id="2_yfblj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bx8rm"]
+size = Vector3(5, 1, 5)
+subdivide_width = 20
+subdivide_depth = 20
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_2up0s"]
 noise_type = 3
@@ -42,7 +47,7 @@ shader_parameter/metallic = 0.0
 shader_parameter/roughness = 0.0
 shader_parameter/wave_direction_1 = Vector2(2, 0)
 shader_parameter/wave_direction_2 = Vector2(0, 1)
-shader_parameter/speed_waves = 0.045
+shader_parameter/speed_waves = 0.06
 shader_parameter/noise_scale = 10.0
 shader_parameter/height_scale = 0.25
 shader_parameter/color_deep = Color(0.105882, 0.294118, 0.329412, 1)
@@ -53,64 +58,16 @@ shader_parameter/noise_text1 = SubResource("NoiseTexture2D_ukxtk")
 shader_parameter/noise_text2 = SubResource("NoiseTexture2D_x27od")
 shader_parameter/wave = SubResource("NoiseTexture2D_3ci7v")
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_56a7h"]
-noise_type = 3
-fractal_type = 2
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lwk2n"]
-seamless = true
-as_normal_map = true
-bump_strength = 17.7
-noise = SubResource("FastNoiseLite_56a7h")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_8xxtw"]
-noise_type = 3
-seed = 5
-fractal_type = 2
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_j0472"]
-seamless = true
-as_normal_map = true
-bump_strength = 18.4
-noise = SubResource("FastNoiseLite_8xxtw")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_2ovba"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6jhnb"]
-seamless = true
-noise = SubResource("FastNoiseLite_2ovba")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_n4u4w"]
-render_priority = 0
-shader = ExtResource("1_2rlpa")
-shader_parameter/color = Color(0, 0.760784, 0.815686, 1)
-shader_parameter/color2 = Color(1, 1, 1, 1)
-shader_parameter/metallic = 0.0
-shader_parameter/roughness = 0.02
-shader_parameter/wave_direction_1 = Vector2(2, 0)
-shader_parameter/wave_direction_2 = Vector2(0, 1.1)
-shader_parameter/speed_waves = 0.025
-shader_parameter/noise_scale = 10.0
-shader_parameter/height_scale = 0.15
-shader_parameter/color_deep = Color(0, 0, 0.952941, 1)
-shader_parameter/color_shallow = Color(0, 0.505882, 1, 1)
-shader_parameter/beers_law = 2.0
-shader_parameter/depth_offset = -0.75
-shader_parameter/noise_text1 = SubResource("NoiseTexture2D_lwk2n")
-shader_parameter/noise_text2 = SubResource("NoiseTexture2D_j0472")
-shader_parameter/wave = SubResource("NoiseTexture2D_6jhnb")
-
-[sub_resource type="BoxMesh" id="BoxMesh_en4hk"]
-material = SubResource("ShaderMaterial_n4u4w")
-subdivide_width = 200
-subdivide_depth = 200
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_x7oor"]
 
 [node name="Node3D" type="MeshInstance3D"]
 transform = Transform3D(1.00214, 0, 0, 0, 1.00214, 0, 0, 0, 1.00214, 0.0106678, 0.100472, -0.00917864)
 cast_shadow = 0
-mesh = ExtResource("1_yedyn")
+mesh = SubResource("BoxMesh_bx8rm")
 surface_material_override/0 = SubResource("ShaderMaterial_31d5x")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75194, 0)
-mesh = SubResource("BoxMesh_en4hk")
+[node name="MeshInstance3D" parent="." instance=ExtResource("2_yfblj")]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.906193, -0.214577)
+mesh = SubResource("CapsuleMesh_x7oor")

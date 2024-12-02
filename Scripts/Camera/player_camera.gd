@@ -32,7 +32,7 @@ func _process(_delta: float) -> void:
 		self.global_position = move_to_global_position
 
 func _physics_process(_delta: float) -> void:
-	var direction_x = Input.get_axis("ui_left", "ui_right")
+	var direction_x = Input.get_axis("Walk left", "Walk right")
 	if direction_x == 1:
 		if time_step_x < time_step_max:
 			time_step_x += 1
@@ -47,7 +47,7 @@ func _physics_process(_delta: float) -> void:
 	position.x = default_position.x + (3 * time_step_x)/time_step_max
 	#print_debug(time_step_x, " ", position.x)
 	#
-	var direction_y = Input.get_axis("ui_up", "ui_down")
+	var direction_y = Input.get_axis("Walk forward", "Walk backwards")
 	if direction_y == 1:
 		if time_step_y < time_step_max and time_step_y > -time_step_max:
 			time_step_y += direction_y

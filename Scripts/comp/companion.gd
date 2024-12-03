@@ -5,9 +5,12 @@ extends CharacterBody3D
 
 @onready var interaction_area: InteractionArea = $InteractionArea2
 @onready var area_3d: CollisionShape3D = $InteractionArea2/Area3D
+@onready var timer: Timer = $Timer
 
 const SPEED = 10.0
 @export var following := false
+@export var sitting = false
+
 @export var move_to_location : Vector3 = Vector3(0,0,0)
 
 
@@ -39,8 +42,10 @@ func _physics_process(delta: float) -> void:
 		
 		if direction.length() > 6:
 			companion.velocity = direction.normalized() * SPEED
+			sitting = false
 		elif direction.length() > 1:
 			companion.velocity = direction.normalized() * SPEED / 2
+			sitting = false
 		else:
 			companion.velocity = Vector3(0,0,0)
 
@@ -51,8 +56,13 @@ func _physics_process(delta: float) -> void:
 			move_to_location = Vector3(0,0,0)
 			last_direction = Vector2(0,1)
 			companion.velocity = Vector3(0,0,0)
-
-
+	
+	if companion.velocity == Vector3.ZERO:
+		if timer.is_stopped():
+			timer.start()
+	else:
+		timer.stop()
+	print(last_direction)
 
 
 
@@ -63,3 +73,8 @@ func manage_animations():
 	
 	animation_tree.set("parameters/Idle/blend_position", last_direction)
 	animation_tree.set("parameters/Walking/blend_position", last_direction)
+	animation_tree.set("parameters/Sitting/blend_position", last_direction)
+
+
+func _on_timer_timeout() -> void:
+	sitting = true

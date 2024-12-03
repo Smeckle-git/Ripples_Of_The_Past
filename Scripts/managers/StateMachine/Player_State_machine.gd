@@ -51,8 +51,8 @@ func change_state(new_state_name : String):
 var last_direction := Vector2(0, 1)
 func manage_animations():
 	var input_direction := Vector2(
-		Input.get_axis("ui_left", "ui_right"),
-		Input.get_axis("ui_up", "ui_down")
+		Input.get_axis("Walk left", "Walk right"),
+		Input.get_axis("Walk forward", "Walk backwards")
 	)
 	
 	if input_direction != Vector2.ZERO:

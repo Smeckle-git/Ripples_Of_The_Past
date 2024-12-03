@@ -1,3 +1,4 @@
+[style name="Interaction_Style"]
 join Thorinn leftmost [animation="Fade In Up" wait="true"]
 join Whiskers rightmost [animation="Fade In Up" wait="true"]
 if {Whiskers.Forest_Interaction_phase} == 1:

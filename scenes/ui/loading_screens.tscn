@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://ffev2w8k4gak"]
+
+[ext_resource type="Script" path="res://Scripts/ui/loading_screens/loading_screens.gd" id="1_6qtkl"]
+[ext_resource type="PackedScene" uid="uid://0ft6wn2pxu0l" path="res://scenes/Levels/world.tscn" id="2_ek6qs"]
+[ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="3_v0jp5"]
+[ext_resource type="Texture2D" uid="uid://c1o55c1hyduvb" path="res://assets/images/Product_page.jpg" id="4_hshnu"]
+[ext_resource type="Texture2D" uid="uid://yqpgh6crvp22" path="res://assets/images/Official_studio_logo.png" id="5_5nat0"]
+[ext_resource type="Texture2D" uid="uid://b8dtk3o257yym" path="res://assets/images/Promotion/promotion_logo_light.jpg" id="5_gib04"]
+[ext_resource type="Texture2D" uid="uid://fbm46rjo2rxs" path="res://assets/images/sprites/Companion/cat_sprite.png" id="6_mnv2f"]
+[ext_resource type="Texture2D" uid="uid://krseffdqxmue" path="res://assets/images/sprites/thorinn/WalkingDown.png" id="7_287va"]
+
+[node name="Loading_screen" type="Control" node_paths=PackedStringArray("sprite_group")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6qtkl")
+game_scene = ExtResource("2_ek6qs")
+sprite_group = NodePath("sprite_group")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect_background_main_menu" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("3_v0jp5")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect_background_poster" type="TextureRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_hshnu")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect_studio_logo" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 1200.0
+texture = ExtResource("5_5nat0")
+stretch_mode = 4
+
+[node name="TextureRect_game_logo" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_gib04")
+
+[node name="sprite_group" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D_cat" type="Sprite2D" parent="sprite_group"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_mnv2f")
+centered = false
+hframes = 3
+vframes = 3
+
+[node name="Sprite2D_Thorrin" type="Sprite2D" parent="sprite_group"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_287va")
+centered = false
+hframes = 4
+frame = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

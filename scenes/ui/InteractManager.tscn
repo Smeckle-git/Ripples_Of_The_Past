@@ -7,4 +7,4 @@ script = ExtResource("1_a7am0")
 
 [node name="Label" type="Label3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0)
-text = "Press [E] to intreact"
+text = "Press [E] to interact"

@@ -1,11 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvspudvr601ie"]
+[gd_scene load_steps=4 format=3 uid="uid://dvspudvr601ie"]
 
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/wind_tree.gdshader" id="1_4w5so"]
 [ext_resource type="Texture2D" uid="uid://nf3bwtxxtvnh" path="res://assets/Objects/Prototypes/foilage/bush_3.png" id="1_08qhk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s6lws"]
+render_priority = 0
+shader = ExtResource("1_4w5so")
+shader_parameter/WindStrength = 0.449
+shader_parameter/speed = 5.0
+shader_parameter/sprite = ExtResource("1_08qhk")
 
 [node name="bush" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.75, 0)
+material_override = SubResource("ShaderMaterial_s6lws")
 billboard = 1
 shaded = true
 alpha_cut = 1

@@ -25,11 +25,11 @@ void fragment() {
 		border_size + glow_border_smoothness,
 		disolve_noise
 	);
-	
+
 	vec3 surface_emmision = mix(vec3(0.0), glow_color, border_mask); // glow/border color of disolve
 
 	vec3 surface_color = mix(base_color, vec3(0.0), border_mask); // color of outside
-	
+
 	if(!FRONT_FACING){
 		surface_color = inside_color;
 	}

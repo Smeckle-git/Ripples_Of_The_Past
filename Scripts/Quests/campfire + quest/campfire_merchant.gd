@@ -11,6 +11,9 @@ var night_triggered = false
 @onready var directional_light_3d: DirectionalLight3D = $"../Environment/DirectionalLight3D"
 @onready var progression_block: StaticBody3D = $"../Environment/Progression_block"
 @onready var fire_flies: Node3D = $"../FireFlies"
+@onready var sparkles: Node3D = $Sparkles
+
+
 
 
 # variables for campfire quest
@@ -41,6 +44,7 @@ func _on_interact():
 #	dit is voor het op pakken van een element van de quest 
 	if quest.quest_status == quest.QuestStatus.reached_goal:
 		quest.finish_quest()
+		sparkles.get_child(0).emitting = true
 		Dialogic.start("quest1_end")
 		campfire_on = true
 		progression_block.queue_free()

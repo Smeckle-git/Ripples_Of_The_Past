@@ -1791,3 +1791,4 @@ libraries = {
 
 [node name="FireFlies" parent="." instance=ExtResource("25_2wcrm")]
 transform = Transform3D(2.37983, 0, 0, 0, 1, 0, 0, 0, 2.10923, -14.8674, 6.11313, 8.25848)
+visible = false

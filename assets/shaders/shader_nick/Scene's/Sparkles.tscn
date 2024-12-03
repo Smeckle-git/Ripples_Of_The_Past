@@ -65,13 +65,15 @@ emission_curve = SubResource("CurveTexture_wlu8b")
 
 [sub_resource type="QuadMesh" id="QuadMesh_el2fn"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Sparkles" type="Node3D"]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.281199, 0)
 material_override = SubResource("ShaderMaterial_nuw5m")
+emitting = false
 amount = 20
 lifetime = 3.0
+one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_3ad0j")
 draw_pass_1 = SubResource("QuadMesh_el2fn")

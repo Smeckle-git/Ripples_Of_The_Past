@@ -1,11 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbobc1jori2it"]
+[gd_scene load_steps=4 format=3 uid="uid://cbobc1jori2it"]
 
 [ext_resource type="Texture2D" uid="uid://bbn2xxluv7pom" path="res://assets/Objects/Prototypes/foilage/grass_2.png" id="1_3i2ye"]
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/wind_tree.gdshader" id="1_iy450"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bi867"]
+render_priority = 0
+shader = ExtResource("1_iy450")
+shader_parameter/WindStrength = 0.279
+shader_parameter/speed = 4.612
+shader_parameter/sprite = ExtResource("1_3i2ye")
 
 [node name="grass" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1, 0)
+material_override = SubResource("ShaderMaterial_bi867")
 billboard = 1
 shaded = true
 alpha_cut = 1

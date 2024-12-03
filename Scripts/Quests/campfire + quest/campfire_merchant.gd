@@ -10,6 +10,10 @@ var time_passed := 0.0
 var night_triggered = false
 @onready var directional_light_3d: DirectionalLight3D = $"../Environment/DirectionalLight3D"
 @onready var progression_block: StaticBody3D = $"../Environment/Progression_block"
+@onready var fire_flies: Node3D = $"../FireFlies"
+@onready var sparkles: Node3D = $Sparkles
+
+
 
 
 # variables for campfire quest
@@ -28,6 +32,7 @@ func _ready() -> void:
 # starts the quest whenever the player interacts with the campfire
 func _on_interact():
 	if quest.quest_status == quest.QuestStatus.available:
+		Dialogic.start("quest1_start")
 		quest.start_quest()
 		
 		var wood1_position = $Wood_1_marker.position
@@ -39,6 +44,8 @@ func _on_interact():
 #	dit is voor het op pakken van een element van de quest 
 	if quest.quest_status == quest.QuestStatus.reached_goal:
 		quest.finish_quest()
+		sparkles.get_child(0).emitting = true
+		Dialogic.start("quest1_end")
 		campfire_on = true
 		progression_block.queue_free()
 
@@ -72,6 +79,7 @@ func _process(delta: float) -> void:
 		if !night_triggered:
 			trigger_nightfall()
 			night_triggered = true
+			fire_flies.visible = true
 	else :
 		animated_sprite_3d_2.visible = false
 		omni_light_3d.light_energy = 0

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cauj3j4t58bip"]
+
+[ext_resource type="Material" uid="uid://dyrko8vx41ppw" path="res://assets/shaders/shader_nick/Assets/tree.tres" id="1_ela6m"]
+[ext_resource type="Texture2D" uid="uid://b3rj4tl2r61hv" path="res://assets/shaders/shader_nick/Assets/Tree.png" id="2_lc5xf"]
+
+[node name="Tree" type="Node3D"]
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.66919, 0)
+material_override = ExtResource("1_ela6m")
+texture = ExtResource("2_lc5xf")

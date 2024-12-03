@@ -1,0 +1,79 @@
+[gd_scene load_steps=16 format=3 uid="uid://bjm41api02wy2"]
+
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/Sparkles.gdshader" id="1_largs"]
+[ext_resource type="Texture2D" uid="uid://suni44416x8w" path="res://assets/shaders/shader_nick/Assets/sparkle-lights-stars-vector-23848922.jpg" id="2_o7crs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nuw5m"]
+render_priority = 0
+shader = ExtResource("1_largs")
+shader_parameter/texture2d = ExtResource("2_o7crs")
+
+[sub_resource type="Curve" id="Curve_1jehx"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.678899, 1), -0.0772776, -0.0772776, 0, 0, Vector2(1, 0.010989), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_2t1t1"]
+texture_mode = 1
+curve = SubResource("Curve_1jehx")
+
+[sub_resource type="Curve" id="Curve_pv6k1"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, -360), 0.0, 0.0, 0, 0, Vector2(1, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_1mwfp"]
+curve = SubResource("Curve_pv6k1")
+
+[sub_resource type="Gradient" id="Gradient_spkke"]
+colors = PackedColorArray(0.996078, 1, 0, 1, 0.999999, 0.99769, 0.804537, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_747dj"]
+gradient = SubResource("Gradient_spkke")
+
+[sub_resource type="Curve" id="Curve_cl7ih"]
+max_value = 50.0
+_data = [Vector2(0, 50), 0.0, 0.0, 0, 0, Vector2(1, 0.763359), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wlu8b"]
+curve = SubResource("Curve_cl7ih")
+
+[sub_resource type="Curve" id="Curve_qqb7m"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.733441, 0.763359), -1.28255, -1.28255, 0, 0, Vector2(1, 0.0659341), -4.826, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ibhp7"]
+curve = SubResource("Curve_qqb7m")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3ad0j"]
+lifetime_randomness = 0.5
+emission_shape_scale = Vector3(1, 0, 1)
+emission_shape = 1
+emission_sphere_radius = 5.0
+angle_curve = SubResource("CurveTexture_1mwfp")
+velocity_pivot = Vector3(-0.43, 0, 0)
+direction = Vector3(0, 1, 0)
+spread = 50.0
+initial_velocity_min = 1.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_ibhp7")
+color_ramp = SubResource("GradientTexture1D_747dj")
+alpha_curve = SubResource("CurveTexture_2t1t1")
+emission_curve = SubResource("CurveTexture_wlu8b")
+
+[sub_resource type="QuadMesh" id="QuadMesh_el2fn"]
+
+[node name="Sparkles" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.281199, 0)
+material_override = SubResource("ShaderMaterial_nuw5m")
+emitting = false
+amount = 20
+lifetime = 3.0
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_3ad0j")
+draw_pass_1 = SubResource("QuadMesh_el2fn")

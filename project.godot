@@ -34,22 +34,21 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "DEMO_interaction": "res://gui/Dialog/Timelines/DEMO_interaction.dtl",
+"quest1_end": "res://gui/Dialog/Timelines/quest1_end.dtl",
+"quest1_start": "res://gui/Dialog/Timelines/quest1_start.dtl",
 "thorinn_hugo_forest": "res://gui/Dialog/Timelines/thorinn_hugo_forest.dtl",
 "thorinn_meets_whiskers": "res://gui/Dialog/Timelines/thorinn_meets_whiskers.dtl",
-"thorinn_whiskers_forest": "res://gui/Dialog/Timelines/thorinn_whiskers_forest.dtl"
+"thorinn_whiskers_forest": "res://gui/Dialog/Timelines/thorinn_whiskers_forest.dtl",
+"wiskers_start_campfire_quest": "res://gui/Dialog/Timelines/wiskers_start_campfire_quest.dtl"
 }
 variables={
 "Whiskers": {
 "Forest_Interaction_phase": 1,
 "New_Dialog": true,
 "Selected_Option": 0
-},
-"mage": {
-"Accepted quest": false,
-"Phase 1": false
 }
 }
-layout/style_list=["res://Dialog/Interaction_Style.tres"]
+layout/style_list=["res://gui/Dialog/Interaction_Style.tres"]
 layout/default_style="Default"
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"

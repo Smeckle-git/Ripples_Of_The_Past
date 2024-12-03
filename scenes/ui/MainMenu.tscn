@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cgyt23pysau0k"]
 
 [ext_resource type="Script" path="res://Scripts/ui/MainMenu/MainMenu.gd" id="1_283wr"]
-[ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="2_rem4v"]
-[ext_resource type="Texture2D" uid="uid://dbmwr7csns6ws" path="res://assets/images/Promotion/promotion_logo_light_banner.jpg" id="3_d2ckj"]
+[ext_resource type="Texture2D" uid="uid://bysyn2h28hcc8" path="res://assets/images/MainMenu/Product_page.jpg" id="2_8fwgx"]
+[ext_resource type="Texture2D" uid="uid://ca5frnce0aedr" path="res://assets/images/Promotion/logo.png" id="3_uqq2b"]
 
 [sub_resource type="SystemFont" id="SystemFont_iwrgx"]
 
@@ -29,7 +29,7 @@ script = ExtResource("1_283wr")
 
 [node name="Background" type="TextureRect" parent="MainMenu"]
 layout_mode = 2
-texture = ExtResource("2_rem4v")
+texture = ExtResource("2_8fwgx")
 expand_mode = 2
 flip_h = true
 
@@ -52,15 +52,15 @@ alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="TextureRect" type="TextureRect" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("3_d2ckj")
-expand_mode = 3
+texture = ExtResource("3_uqq2b")
+expand_mode = 2
 stretch_mode = 5
 
 [node name="MainContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer"]

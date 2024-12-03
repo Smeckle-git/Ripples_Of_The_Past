@@ -1,12 +1,13 @@
 shader_type spatial;
-uniform sampler2D text2d;
+uniform sampler2D sprite;
 void vertex() {
 	// Called for every vertex the material is visible on.
 }
 
 void fragment() {
-	vec4 img = texture(text2d, UV);
+	vec4 img = texture(sprite, UV);
 	ALBEDO = img.rgb;
+	ALPHA = img.a;
 	// Called for every pixel the material is visible on.
 }
 

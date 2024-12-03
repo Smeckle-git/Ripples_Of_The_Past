@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://1uo3hr8qpo6e"]
+
+[ext_resource type="Shader" path="res://assets/shaders/test.gdshader" id="1_o7q0o"]
+[ext_resource type="Texture2D" uid="uid://bi2wicskkq0qq" path="res://assets/images/roads/Sand_textured_.png" id="2_lg5m7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2icj5"]
+render_priority = 0
+shader = ExtResource("1_o7q0o")
+shader_parameter/sprite = ExtResource("2_lg5m7")
+
+[sub_resource type="BoxMesh" id="BoxMesh_2omkm"]
+material = SubResource("ShaderMaterial_2icj5")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3w8me"]
+
+[node name="sand" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_2omkm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_3w8me")

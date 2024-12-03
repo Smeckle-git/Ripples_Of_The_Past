@@ -4,6 +4,7 @@ uniform sampler2D sprite;
 
 uniform float WindStrength: hint_range(0.0, 5.0) = 3.0;
 uniform float speed: hint_range(1.0, 5.0) = 2.0;
+
 void vertex() {
 	float vec_scaler = (1.0  - UV.y) * WindStrength;
 	float time = TIME * speed;

@@ -470,7 +470,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Thorinn" type="CharacterBody3D"]
+[node name="Thorinn" type="CharacterBody3D" groups=["Player"]]
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("1_hag26")

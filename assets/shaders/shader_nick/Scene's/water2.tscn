@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c7a4hff06ccjb"]
 
-[ext_resource type="Shader" path="res://Water.gdshader" id="1_4188n"]
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/Water.gdshader" id="1_4188n"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_t6360"]
 

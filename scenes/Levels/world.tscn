@@ -1764,7 +1764,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 [node name="Spooky" parent="foilage/ScaryNode" instance=ExtResource("20_xasyh")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -62.3827, 4.31573, -52.6872)
 
-[node name="Thorinn" parent="." node_paths=PackedStringArray("camera") groups=["Player"] instance=ExtResource("6_dd3lb")]
+[node name="Thorinn" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("6_dd3lb")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 3, 71.0657)
 camera = NodePath("PlayerCamera")
 

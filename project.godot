@@ -43,7 +43,7 @@ directories/dtl_directory={
 }
 variables={
 "Whiskers": {
-"Forest_Interaction_phase": 3,
+"Forest_Interaction_phase": 1,
 "New_Dialog": true,
 "Selected_Option": 0
 }

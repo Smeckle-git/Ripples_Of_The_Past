@@ -8,7 +8,7 @@ const base_text = "[E] to "
 
 var active_areas = []
 var can_interact = true
-
+	
 func register_area(area: InteractionArea):
 	active_areas.push_back(area)
 	
@@ -32,6 +32,8 @@ func _process(delta: float) -> void:
 		label.hide()
 
 func _sort_by_distance_to_player(area1, area2):
+	player = get_tree().get_first_node_in_group("Player")
+	print(player)
 	var area1_to_player = player.global_position.distance_to(area1.global_position)
 	var area2_to_player = player.global_position.distance_to(area2.global_position)
 	return area1_to_player < area2_to_player

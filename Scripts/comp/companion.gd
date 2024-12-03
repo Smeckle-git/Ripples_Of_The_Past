@@ -21,7 +21,7 @@ func _ready() -> void:
 
 func _on_interact():
 	interaction_area.show_label = false
-	Dialogic.start("thorinn_meets_whiskers")
+	Dialogic.start("wiskers_start_campfire_quest")
 	area_3d.scale = Vector3(0.5, 1, 0.5)
 	following = true
 
@@ -62,7 +62,6 @@ func _physics_process(delta: float) -> void:
 			timer.start()
 	else:
 		timer.stop()
-	print(last_direction)
 
 
 

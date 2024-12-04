@@ -1,15 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://ffev2w8k4gak"]
+[gd_scene load_steps=12 format=3 uid="uid://ffev2w8k4gak"]
 
 [ext_resource type="Script" path="res://Scripts/ui/loading_screens/loading_screens.gd" id="1_6qtkl"]
 [ext_resource type="PackedScene" uid="uid://0ft6wn2pxu0l" path="res://scenes/Levels/world.tscn" id="2_ek6qs"]
 [ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="3_v0jp5"]
-[ext_resource type="Texture2D" uid="uid://c1o55c1hyduvb" path="res://assets/images/Product_page.jpg" id="4_hshnu"]
-[ext_resource type="Texture2D" uid="uid://yqpgh6crvp22" path="res://assets/images/Official_studio_logo.png" id="5_5nat0"]
-[ext_resource type="Texture2D" uid="uid://b8dtk3o257yym" path="res://assets/images/Promotion/promotion_logo_light.jpg" id="5_gib04"]
-[ext_resource type="Texture2D" uid="uid://fbm46rjo2rxs" path="res://assets/images/sprites/Companion/cat_sprite.png" id="6_mnv2f"]
-[ext_resource type="Texture2D" uid="uid://krseffdqxmue" path="res://assets/images/sprites/thorinn/WalkingDown.png" id="7_287va"]
+[ext_resource type="Texture2D" uid="uid://c1o55c1hyduvb" path="res://assets/images/Others/Product_page.jpg" id="4_hshnu"]
+[ext_resource type="Texture2D" uid="uid://yqpgh6crvp22" path="res://assets/images/Others/Official_studio_logo.png" id="5_5nat0"]
+[ext_resource type="Texture2D" uid="uid://vtqgcrn8sw2x" path="res://assets/images/Others/Untitled_88.png" id="6_viqs6"]
+[ext_resource type="Texture2D" uid="uid://nk150htnpde4" path="res://assets/images/sprites/Hugo/Untitled14.png" id="9_ge7fn"]
+[ext_resource type="Texture2D" uid="uid://bpsnxhcabw0c8" path="res://assets/images/sprites/Ian/Untitled13.png" id="10_7vkkg"]
+[ext_resource type="Texture2D" uid="uid://cm5m13l0wab8k" path="res://gui/Dialog/Characters/dialog_whiskers.png" id="10_lpelj"]
+[ext_resource type="Texture2D" uid="uid://c85175kr7jlkg" path="res://assets/images/sprites/thorinn/Untitled10_2.png" id="11_k6it5"]
 
-[node name="Loading_screen" type="Control" node_paths=PackedStringArray("sprite_group")]
+[sub_resource type="LabelSettings" id="LabelSettings_gg5tw"]
+font_size = 48
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+
+[node name="Loading_screen" type="Control" node_paths=PackedStringArray("sprite_group", "background_group")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,9 +25,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6qtkl")
 game_scene = ExtResource("2_ek6qs")
-sprite_group = NodePath("sprite_group")
+sprite_group = NodePath("HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group")
+background_group = NodePath("background_group/MarginContainer_background")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="background_group" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,73 +36,180 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect_background_main_menu" type="TextureRect" parent="MarginContainer"]
+[node name="MarginContainer_background" type="MarginContainer" parent="background_group"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect_background_main_menu" type="TextureRect" parent="background_group/MarginContainer_background"]
+visible = false
 layout_mode = 2
 texture = ExtResource("3_v0jp5")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="TextureRect_background_poster" type="TextureRect" parent="MarginContainer"]
+[node name="TextureRect_background_poster" type="TextureRect" parent="background_group/MarginContainer_background"]
 visible = false
 layout_mode = 2
 texture = ExtResource("4_hshnu")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="TextureRect_studio_logo" type="TextureRect" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Relive your past, change your fate"
+label_settings = SubResource("LabelSettings_gg5tw")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
 visible = false
-layout_mode = 0
-offset_right = 1200.0
-offset_bottom = 1200.0
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer_logo" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+alignment = 2
+
+[node name="MarginContainer_studio" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer_logo"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer/HBoxContainer_logo/MarginContainer_studio"]
+layout_mode = 2
+color = Color(1, 1, 1, 0.25098)
+
+[node name="TextureRect_studio_logo" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer_logo/MarginContainer_studio"]
+layout_mode = 2
 texture = ExtResource("5_5nat0")
+expand_mode = 5
 stretch_mode = 4
 
-[node name="TextureRect_game_logo" type="TextureRect" parent="."]
+[node name="MarginContainer_game" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer_logo"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer/HBoxContainer_logo/MarginContainer_game"]
+layout_mode = 2
+color = Color(1, 1, 1, 0.25098)
+
+[node name="TextureRect_game_logo" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer_logo/MarginContainer_game"]
+layout_mode = 2
+texture = ExtResource("6_viqs6")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="VBoxContainer_sprite" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/VBoxContainer_sprite"]
+visible = false
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer_sprite/CenterContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer_sprite"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="sprite_group" type="Control" parent="HBoxContainer/VBoxContainer_sprite/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer_Hugo" type="MarginContainer" parent="HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group"]
 visible = false
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -363.0
 grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_gib04")
+grow_vertical = 0
 
-[node name="sprite_group" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureRect_Hugo" type="TextureRect" parent="HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group/MarginContainer_Hugo"]
+layout_mode = 2
+texture = ExtResource("9_ge7fn")
+expand_mode = 4
+stretch_mode = 4
 
-[node name="Sprite2D_cat" type="Sprite2D" parent="sprite_group"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_mnv2f")
-centered = false
-hframes = 3
-vframes = 3
-
-[node name="Sprite2D_Thorrin" type="Sprite2D" parent="sprite_group"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("7_287va")
-centered = false
-hframes = 4
-frame = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="MarginContainer_Thorrin" type="MarginContainer" parent="HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group"]
 visible = false
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -522.366
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="TextureRect_Thorrin" type="TextureRect" parent="HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group/MarginContainer_Thorrin"]
+layout_mode = 2
+texture = ExtResource("11_k6it5")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="MarginContainer_Cat" type="MarginContainer" parent="HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group"]
 visible = false
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -250.116
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+
+[node name="TextureRect_Cat" type="TextureRect" parent="HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group/MarginContainer_Cat"]
+layout_mode = 2
+texture = ExtResource("10_lpelj")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="sprites_unused" type="Control" parent="HBoxContainer/VBoxContainer_sprite/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer_Ian" type="MarginContainer" parent="HBoxContainer/VBoxContainer_sprite/MarginContainer/sprites_unused"]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 397.884
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect_Ian" type="TextureRect" parent="HBoxContainer/VBoxContainer_sprite/MarginContainer/sprites_unused/MarginContainer_Ian"]
+layout_mode = 2
+texture = ExtResource("10_7vkkg")
+expand_mode = 5
+stretch_mode = 4

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgyt23pysau0k"]
+[gd_scene load_steps=7 format=3 uid="uid://cgyt23pysau0k"]
 
 [ext_resource type="Script" path="res://Scripts/ui/MainMenu/MainMenu.gd" id="1_283wr"]
+[ext_resource type="PackedScene" uid="uid://ffev2w8k4gak" path="res://scenes/ui/loading_screens.tscn" id="2_pv75a"]
 [ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="2_rem4v"]
 [ext_resource type="Texture2D" uid="uid://dbmwr7csns6ws" path="res://assets/images/Promotion/promotion_logo_light_banner.jpg" id="3_d2ckj"]
 
@@ -26,6 +27,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_283wr")
+loading_screen = ExtResource("2_pv75a")
 
 [node name="Background" type="TextureRect" parent="MainMenu"]
 layout_mode = 2

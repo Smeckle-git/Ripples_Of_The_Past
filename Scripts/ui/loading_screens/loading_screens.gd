@@ -10,13 +10,13 @@ func _ready() -> void:
 	#random sprite
 	var count = sprite_group.get_child_count()
 	var i = randi_range(0, count - 1)
-	print_debug("sprite number ", i)
+	#print_debug("sprite number ", i)
 	sprite_group.get_child(i).visible = true
 	#
 	#random background
 	count = background_group.get_child_count()
 	i = randi_range(0, count - 1)
-	print_debug("background number ", i)
+	#print_debug("background number ", i)
 	background_group.get_child(i).visible = true
 	#
 	#load game scene and wait

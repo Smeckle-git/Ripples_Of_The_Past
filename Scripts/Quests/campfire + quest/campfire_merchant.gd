@@ -1,4 +1,5 @@
 extends Area3D
+class_name Campfire_merchant
 
 # variables for campfire animation
 @onready var animated_sprite_3d_2: AnimatedSprite3D = $AnimatedSprite3D2
@@ -24,10 +25,6 @@ var night_triggered = false
 
 #load items to collect
 var wood_1 := load("res://scenes/environment/Wood_1.tscn")
-
-#link interact signal to function
-func _ready() -> void:
-	interaction_area.interact = Callable(self, "_on_interact")
 
 # starts the quest whenever the player interacts with the campfire
 func _on_interact():

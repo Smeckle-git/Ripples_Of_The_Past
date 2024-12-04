@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7a4hff06ccjb"]
+
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/Water.gdshader" id="1_4188n"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_t6360"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3afhy"]
+seamless = true
+noise = SubResource("FastNoiseLite_t6360")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iynxw"]
+render_priority = 0
+shader = ExtResource("1_4188n")
+shader_parameter/absorption_color = Color(1, 0.35, 0, 1)
+shader_parameter/fresnel_radius = 2.35
+shader_parameter/fresnel_color = Color(0, 0.57, 0.72, 1)
+shader_parameter/roughness = 0.15
+shader_parameter/specular = 0.25
+shader_parameter/depth_distance = 25.0
+shader_parameter/beers_law = 4.5
+shader_parameter/displacement_strength = 0.3
+shader_parameter/displacement_scroll_speed = 0.1
+shader_parameter/displacement_scroll_offset = Vector2(-0.2, 0.3)
+shader_parameter/displacement_scale_offset = 0.5
+shader_parameter/displacement_scale = Vector2(0.04, 0.04)
+shader_parameter/edge_thickness = 0.3
+shader_parameter/edge_speed = 0.35
+shader_parameter/edge_noise_scale = Vector2(0.4, 0.4)
+shader_parameter/edge_noise = SubResource("NoiseTexture2D_3afhy")
+shader_parameter/influence_size = 1.0
+shader_parameter/player_wave_frequenzy = 10.0
+shader_parameter/player_wave_speed = 5.0
+shader_parameter/caustic_size = 2.0
+shader_parameter/caustic_range = 40.0
+shader_parameter/caustic_strength = 0.08
+shader_parameter/ssr_mix_strength = 0.65
+shader_parameter/ssr_travel = 100.0
+shader_parameter/ssr_resolution_near = 1.0
+shader_parameter/ssr_resolution_far = 5.0
+shader_parameter/ssr_tolerance = 1.0
+shader_parameter/refraction_strength = 1.25
+shader_parameter/normal_map_strength = 1.0
+shader_parameter/scroll_speed = 0.3
+shader_parameter/scroll_offset = Vector2(0.1, -0.3)
+shader_parameter/scale_offset = 0.5
+shader_parameter/normal_map_scale = Vector2(0.1, 0.1)
+shader_parameter/wind_intensity = null
+shader_parameter/wind_direction = null
+shader_parameter/player_position = null
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kyjdh"]
+material = SubResource("ShaderMaterial_iynxw")
+size = Vector2(10, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42131, 0)
+mesh = SubResource("PlaneMesh_kyjdh")

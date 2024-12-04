@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode cull_disabled;
+render_mode cull_disabled, depth_prepass_alpha;
 uniform sampler2D sprite;
 
 uniform float WindStrength: hint_range(0.0, 5.0) = 3.0;

@@ -34,6 +34,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "DEMO_interaction": "res://gui/Dialog/Timelines/DEMO_interaction.dtl",
+"Fish_quest_completion": "res://gui/Dialog/Timelines/Fish_quest_completion.dtl",
 "quest1_end": "res://gui/Dialog/Timelines/quest1_end.dtl",
 "quest1_start": "res://gui/Dialog/Timelines/quest1_start.dtl",
 "thorinn_hugo_forest": "res://gui/Dialog/Timelines/thorinn_hugo_forest.dtl",

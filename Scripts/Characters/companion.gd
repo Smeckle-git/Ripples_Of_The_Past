@@ -3,10 +3,8 @@ class_name Companion
 
 @onready var thorinn: CharacterBody3D = $"../Thorinn"
 @onready var animation_tree: AnimationTree = $AnimationTree
-
-@onready var interaction_area: InteractionArea = $InteractionArea2
-@onready var area_3d: CollisionShape3D = $InteractionArea2/Area3D
 @onready var timer: Timer = $Timer
+@onready var interaction_area: InteractionArea = $InteractionArea2
 
 const SPEED = 10.0
 @export var following := false

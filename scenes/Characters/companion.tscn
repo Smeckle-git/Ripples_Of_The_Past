@@ -649,6 +649,6 @@ parameters/Walking/blend_position = Vector2(-0.0014782, 0.893204)
 shape = SubResource("CylinderShape3D_4bp0j")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 2.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

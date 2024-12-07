@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c43be3tlcmwyt" path="res://scenes/environment/tree_1.tscn" id="2_8om2v"]
 [ext_resource type="Terrain3DStorage" uid="uid://dptuy4g7tymh8" path="res://resources/terrain3d_resources/storage.res" id="2_lua6u"]
 [ext_resource type="Terrain3DMaterial" uid="uid://brujfmh3hlv2p" path="res://resources/terrain3d_resources/material.res" id="3_37hop"]
-[ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://scenes/gridmap_blocks/world_obj_lib.meshlib" id="4_8mhh3"]
+[ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://Scripts/gridmap_blocks/world_obj_lib.meshlib" id="4_8mhh3"]
 [ext_resource type="Terrain3DAssets" uid="uid://cth7u6ivq71xo" path="res://resources/terrain3d_resources/assets.res" id="4_fws5c"]
 [ext_resource type="Texture2D" uid="uid://caywlopemv63v" path="res://assets/images/874898150658134d8f3b33a13ff2b247_images_jpeg.webp" id="5_yv3ao"]
 [ext_resource type="PackedScene" uid="uid://cwhg5dt7uh11x" path="res://scenes/environment/tree_3.tscn" id="6_ced4g"]
@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://doja1555vib8p" path="res://scenes/ui/Player_Camera.tscn" id="24_18fqv"]
 [ext_resource type="PackedScene" uid="uid://u08d6vo5c344" path="res://assets/shaders/shader_nick/Scene's/fire_flies.tscn" id="25_2wcrm"]
 [ext_resource type="Script" path="res://Scripts/Camera/player_camera.gd" id="25_0880s"]
-[ext_resource type="PackedScene" uid="uid://knbahi2pgrbe" path="res://scenes/Characters/hugo.tscn" id="27_17q3d"]
+[ext_resource type="PackedScene" path="res://scenes/Characters/hugo.tscn" id="27_17q3d"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lfbac"]
 panorama = ExtResource("5_yv3ao")

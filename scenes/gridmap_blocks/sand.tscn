@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxar3ajpfoube"]
 
-[ext_resource type="Texture2D" uid="uid://b3ao0hjq15itn" path="res://assets/images/roads/Path_left_textured.png" id="2_3dyb6"]
+[ext_resource type="Texture2D" uid="uid://d2mvp6ocok3a5" path="res://assets/images/roads/crossing.jpg" id="1_lgud2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_681jd"]
-albedo_texture = ExtResource("2_3dyb6")
+albedo_texture = ExtResource("1_lgud2")
+uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_2omkm"]
 material = SubResource("StandardMaterial3D_681jd")

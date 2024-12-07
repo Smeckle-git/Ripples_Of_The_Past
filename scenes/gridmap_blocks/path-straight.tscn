@@ -1,15 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://1uo3hr8qpo6e"]
+[gd_scene load_steps=5 format=3 uid="uid://1uo3hr8qpo6e"]
 
-[ext_resource type="Shader" path="res://assets/shaders/test.gdshader" id="1_o7q0o"]
-[ext_resource type="Texture2D" uid="uid://bi2wicskkq0qq" path="res://assets/images/roads/Sand_textured_.png" id="2_lg5m7"]
+[ext_resource type="Texture2D" uid="uid://b057sqth0c5hn" path="res://assets/images/roads/Sand_textured_.jpg" id="1_cgtrt"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2icj5"]
-render_priority = 0
-shader = ExtResource("1_o7q0o")
-shader_parameter/sprite = ExtResource("2_lg5m7")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f8cpy"]
+albedo_texture = ExtResource("1_cgtrt")
 
 [sub_resource type="BoxMesh" id="BoxMesh_2omkm"]
-material = SubResource("ShaderMaterial_2icj5")
+material = SubResource("StandardMaterial3D_f8cpy")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3w8me"]
 

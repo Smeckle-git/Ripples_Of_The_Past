@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5u81oqqrdl76"
-path="res://.godot/imported/Top_right_textured.png-2599675b36ad4d7cbf33a569c6eecde4.ctex"
+uid="uid://bjj6kdgqwekx2"
+path="res://.godot/imported/Path_left_and_bottom_left_textured_.jpg-b64435121bed5f31816a4995d88096b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/roads/Top_right_textured.png"
-dest_files=["res://.godot/imported/Top_right_textured.png-2599675b36ad4d7cbf33a569c6eecde4.ctex"]
+source_file="res://assets/images/roads/Path_left_and_bottom_left_textured_.jpg"
+dest_files=["res://.godot/imported/Path_left_and_bottom_left_textured_.jpg-b64435121bed5f31816a4995d88096b7.ctex"]
 
 [params]
 

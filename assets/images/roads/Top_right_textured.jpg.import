@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi2wicskkq0qq"
-path.s3tc="res://.godot/imported/Sand_textured_.png-44176badf25fc3cc2720705d057b0ce6.s3tc.ctex"
-path.etc2="res://.godot/imported/Sand_textured_.png-44176badf25fc3cc2720705d057b0ce6.etc2.ctex"
+uid="uid://dnflglqih3mhg"
+path.s3tc="res://.godot/imported/Top_right_textured.jpg-d18744512d2449ff1197d7ed9044dfe5.s3tc.ctex"
+path.etc2="res://.godot/imported/Top_right_textured.jpg-d18744512d2449ff1197d7ed9044dfe5.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/roads/Sand_textured_.png"
-dest_files=["res://.godot/imported/Sand_textured_.png-44176badf25fc3cc2720705d057b0ce6.s3tc.ctex", "res://.godot/imported/Sand_textured_.png-44176badf25fc3cc2720705d057b0ce6.etc2.ctex"]
+source_file="res://assets/images/roads/Top_right_textured.jpg"
+dest_files=["res://.godot/imported/Top_right_textured.jpg-d18744512d2449ff1197d7ed9044dfe5.s3tc.ctex", "res://.godot/imported/Top_right_textured.jpg-d18744512d2449ff1197d7ed9044dfe5.etc2.ctex"]
 
 [params]
 

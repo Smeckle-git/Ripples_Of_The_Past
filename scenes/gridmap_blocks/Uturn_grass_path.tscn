@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://2kgwaej6bpt2"]
 
-[ext_resource type="Texture2D" uid="uid://dfgtbuug7u8an" path="res://resources/TEXT/U_turn_textured.png" id="1_prihv"]
+[ext_resource type="Texture2D" uid="uid://634r2viqjwxv" path="res://assets/images/roads/U_turn_textured.jpg" id="1_m3hex"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ij56"]
-albedo_texture = ExtResource("1_prihv")
+albedo_texture = ExtResource("1_m3hex")
 uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_725jr"]

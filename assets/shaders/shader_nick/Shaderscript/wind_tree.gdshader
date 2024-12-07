@@ -1,7 +1,7 @@
 shader_type spatial;
 render_mode depth_prepass_alpha, cull_disabled;
 uniform sampler2D sprite;
-uniform vec3 test: source_color = vec3(1.0,1.0,1.0);
+uniform vec3 test: source_color = vec3(0.7);
 uniform float WindStrength: hint_range(0.0, 5.0) = 3.0;
 uniform float speed: hint_range(1.0, 5.0) = 2.0;
 void vertex() {

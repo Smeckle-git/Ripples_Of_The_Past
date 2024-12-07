@@ -1,6 +1,6 @@
 [gd_scene load_steps=37 format=3 uid="uid://0ft6wn2pxu0l"]
 
-[ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://scenes/gridmap_blocks/world_obj_lib.meshlib" id="1_a2h3d"]
+[ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://Scripts/gridmap_blocks/world_obj_lib.meshlib" id="1_a2h3d"]
 [ext_resource type="Script" path="res://Scripts/Demo/demo_environment.gd" id="1_ivdn3"]
 [ext_resource type="PackedScene" uid="uid://c43be3tlcmwyt" path="res://scenes/environment/tree_1.tscn" id="2_8om2v"]
 [ext_resource type="Terrain3DStorage" uid="uid://dptuy4g7tymh8" path="res://resources/terrain3d_resources/storage.res" id="2_lua6u"]
@@ -44,7 +44,7 @@ volumetric_fog_density = 0.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_ah4qg"]
 size = Vector3(88.1207, 18.0792, 7.76953)
 
-[sub_resource type="Shader" id="Shader_y8r1q"]
+[sub_resource type="Shader" id="Shader_joleu"]
 code = "shader_type fog;
 
 uniform sampler2D noise_texture:repeat_enable;
@@ -64,13 +64,13 @@ void fog() {
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_1of0i"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_syuyu"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_10gse"]
 noise = SubResource("FastNoiseLite_1of0i")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y1wvd"]
-shader = SubResource("Shader_y8r1q")
+shader = SubResource("Shader_joleu")
 shader_parameter/noise_scale = 0.2
-shader_parameter/noise_texture = SubResource("NoiseTexture2D_syuyu")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_10gse")
 
 [sub_resource type="Animation" id="Animation_wy1vq"]
 resource_name = "Cat_intro"

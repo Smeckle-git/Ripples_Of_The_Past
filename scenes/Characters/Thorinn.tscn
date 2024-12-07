@@ -306,7 +306,7 @@ states/Start/position = Vector2(199.333, 100)
 states/Walking/node = SubResource("AnimationNodeBlendSpace2D_b0dps")
 states/Walking/position = Vector2(706, 99.7778)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_iobuu"), "Idle", "Walking", SubResource("AnimationNodeStateMachineTransition_r84fy"), "Walking", "Idle", SubResource("AnimationNodeStateMachineTransition_behpf")]
-graph_offset = Vector2(-67, -27)
+graph_offset = Vector2(-72, -37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_527bi"]
 atlas = ExtResource("6_6yypu")

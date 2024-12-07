@@ -3,7 +3,7 @@ if {Whiskers.Forest_Interaction_phase} == 1:
 	join Thorinn leftmost
 	join Whiskers rightmost
 	if {Whiskers.New_Dialog} == true:
-		Thorinn: Hey kitty, what are you doing in there?
+		Thorinn: Hey kitty, what are you doing all the way out here?
 		Whiskers: **shivering** Me-me-meow
 		Thorinn: Looks like you’re really cold.
 		Thorinn: It is starting to get dark. I’ll make a campfire to warm you up.
@@ -17,7 +17,7 @@ elif {Whiskers.Forest_Interaction_phase} == 2:
 	if {Whiskers.New_Dialog} == true:
 		Thorinn: Look at you! For such a small animal you have really big Whiskers!
 		Thorinn: Hmm I like that! I think I will call you Whisker.
-		Thorinn: You know what is funny?
+		Thorinn: You know what's funny?
 		Thorinn: Even though I just met you, I feel like I’ve known you forever.
 		Whiskers: I know, right!
 		Thorinn: AAAAAAAAAAH!
@@ -25,10 +25,10 @@ elif {Whiskers.Forest_Interaction_phase} == 2:
 		Whiskers: No Thorinn, you're not! Don’t be scared.
 		Whiskers: I can only communicate with you, you are the only one that will understand me when I talk. But I am not able to reveal why. At least not now...
 		Whiskers: Don’t worry, I will be your friend, I will keep you company on this journey.
-		Thorinn: Well, are you feeling better? Now that you’re warmed up.
-		Whiskers: Thanks for asking. I’m not cold anymore, but I’m a little hungry. Can you find me some food and cook it on the fire?
+		Thorinn: Are you feeling better, now that you’re warmed up? And how do you know my name?
+		Whiskers: Thanks for asking. I’m not cold anymore, but I’m a little hungry. Can you find me some food and cook it over the fire?
 		- Yes, search for some fish.
-			Whiskers: There should be river up ahead. see if you can catch a meal for us there.
+			Whiskers: There should be a river up ahead. See if you can catch a fish for us there.
 			[signal arg="start_fish_quest"]
 			set {Whiskers.New_Dialog} = false
 		- No, ignore Whiskers.
@@ -40,7 +40,7 @@ elif {Whiskers.Forest_Interaction_phase} == 2:
 			[signal arg="cat_leaves"]
 			[signal arg="hugo_encounter"]
 	else:
-		Whiskers: There should be river up ahead. see if you can catch a meal for us there.
+		Whiskers: There should be a river up ahead. See if you can catch a fish for us there.
 elif {Whiskers.Forest_Interaction_phase} == 3:
 	join Thorinn leftmost
 	Hey!
@@ -49,13 +49,17 @@ elif {Whiskers.Forest_Interaction_phase} == 3:
 	[wait time="3.0"]
 	join Hugo rightmost
 	Hugo: What are you doing here traveler?
-	Thorinn: I’ve lost my way as soon as it got darker.  What about you? Why are you here and who are you?
-	Hugo: I’m Hugo. I saw your campfire while going on my daily evening walk.
+	Thorinn: I'm trying to find my way to a small village called Rockfall. But I've lost my way as soon as it got darker. What about you? Why are you here and who are you?
+	Hugo: I’m Hugo. I saw your campfire while collecting my ingredients for supper at my inn.
 	Hugo: I’ve lived in Rockfall my whole life, so I know this forest by heart.
-	Hugo: Can I help you reach Rockfall? The town is not that far anymore.
+	Hugo: Can I help you get there? The village is not that far anymore.
 	- Yes
+		Hugo: Then come along traveller, you must be tired from your journey.
+		Hugo: I'll show you to my inn.
 		[signal arg="follow_hugo"]
 	- No
+		Hugo: You will have your reasons. Then I'll be on my way.
+		Hugo: You're welcome to stay at my inn once you arrive.
 		[signal arg="leave_hugo"]
 		leave Hugo
 		[wait time="4.0"]

@@ -1,0 +1,6 @@
+join Thorinn leftmost
+join Whiskers rightmost
+Thorinn: Here you go buddy, enjoy!
+[wait time="2.0"]
+leave Whiskers
+[signal arg="hugo_encounter"]

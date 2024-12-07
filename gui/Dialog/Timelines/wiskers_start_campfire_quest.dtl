@@ -12,8 +12,8 @@ if {Whiskers.Forest_Interaction_phase} == 1:
 		Whiskers: **shivers**
 		Thorinn: I should hurry up and get this campfire going.
 elif {Whiskers.Forest_Interaction_phase} == 2:
-	join Thorinn left
-	join Whiskers right
+	join Thorinn leftmost
+	join Whiskers rightmost
 	if {Whiskers.New_Dialog} == true:
 		Thorinn: Look at you! For such a small animal you have really big Whiskers!
 		Thorinn: Hmm I like that! I think I will call you Whisker.
@@ -21,32 +21,41 @@ elif {Whiskers.Forest_Interaction_phase} == 2:
 		Thorinn: Even though I just met you, I feel like I’ve known you forever.
 		Whiskers: I know, right!
 		Thorinn: AAAAAAAAAAH!
-		Whiskers: You can talk? I think I am hallucinating!
+		Thorinn: You can talk? I think I am hallucinating!
 		Whiskers: No Thorinn, you're not! Don’t be scared.
 		Whiskers: I can only communicate with you, you are the only one that will understand me when I talk. But I am not able to reveal why. At least not now...
 		Whiskers: Don’t worry, I will be your friend, I will keep you company on this journey.
 		Thorinn: Well, are you feeling better? Now that you’re warmed up.
-		Whiskers: Thanks for asking. Well, I’m not cold anymore, but I’m a little hungry. Can you find me\
-some fish and cook it on the fire?
+		Whiskers: Thanks for asking. I’m not cold anymore, but I’m a little hungry. Can you find me some food and cook it on the fire?
 		- Yes, search for some fish.
+			Whiskers: There should be river up ahead. see if you can catch a meal for us there.
 			[signal arg="start_fish_quest"]
+			set {Whiskers.New_Dialog} = false
 		- No, ignore Whiskers.
+			leave Whiskers
 			[signal arg="hugo_encounter"]
 		- No, you try to scare Whiskers away.
+			Whiskers: Fine I'll go and find my own food.
+			leave Whiskers
 			[signal arg="cat_leaves"]
-			[wait time="3.0"]
 			[signal arg="hugo_encounter"]
-		set {Whiskers.Forest_Interaction_phase} = 3
 	else:
+		Whiskers: There should be river up ahead. see if you can catch a meal for us there.
 elif {Whiskers.Forest_Interaction_phase} == 3:
 	join Thorinn leftmost
-	Hugo: hey, what are you doing here traveler?
+	Hey!
+	[signal arg="thorinn_looks_right"]
+	Thorinn: !!!
+	[wait time="3.0"]
 	join Hugo rightmost
+	Hugo: What are you doing here traveler?
 	Thorinn: I’ve lost my way as soon as it got darker.  What about you? Why are you here and who are you?
 	Hugo: I’m Hugo. I saw your campfire while going on my daily evening walk.
-	Hugo:  I’ve lived in Rockfall my whole life, so I know this forest by heart.
+	Hugo: I’ve lived in Rockfall my whole life, so I know this forest by heart.
 	Hugo: Can I help you reach Rockfall? The town is not that far anymore.
 	- Yes
 		[signal arg="follow_hugo"]
 	- No
 		[signal arg="leave_hugo"]
+		leave Hugo
+		[wait time="4.0"]

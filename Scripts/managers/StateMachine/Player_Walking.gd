@@ -4,6 +4,8 @@ class_name PlayerWalking
 func Update(_delta:float):
 	if not target.is_on_floor():
 		state_transition.emit("falling")
+	elif Dialogic.current_timeline:
+		state_transition.emit("dialogue")
 	elif Input.get_axis("Walk left", "Walk right") == 0.0 and Input.get_axis("Walk forward", "Walk backwards") == 0.0:
 		state_transition.emit("idle")
 

@@ -55,7 +55,7 @@ func manage_animations():
 		Input.get_axis("Walk forward", "Walk backwards")
 	)
 	
-	if input_direction != Vector2.ZERO:
+	if input_direction != Vector2.ZERO and current_state.name != "Dialogue":
 		last_direction = input_direction
 	
 	animation_tree.set("parameters/Idle/blend_position", last_direction)

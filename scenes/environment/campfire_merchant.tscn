@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://dkwevn51pv8k7"]
+[gd_scene load_steps=21 format=3 uid="uid://dkwevn51pv8k7"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/campfire_merchant.gd" id="1_chvg5"]
 [ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://scenes/ui/interaction_area.tscn" id="1_sro3d"]
 [ext_resource type="Script" path="res://Scripts/Quests/quest.gd" id="3_dgjng"]
 [ext_resource type="Texture2D" uid="uid://502u5vibnp3o" path="res://assets/images/sprites/Campfire/Campfire_base.png" id="4_ohopf"]
 [ext_resource type="Texture2D" uid="uid://xshew6f2edu4" path="res://assets/images/sprites/Campfire/Campfire_flames.png" id="5_v4fmy"]
+[ext_resource type="PackedScene" uid="uid://bjm41api02wy2" path="res://assets/shaders/shader_nick/Scene's/Sparkles.tscn" id="6_dt40w"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_cpt7j"]
 
@@ -90,12 +91,13 @@ animations = [{
 "speed": 6.0
 }]
 
-[node name="Campfire_merchant" type="Area3D" node_paths=PackedStringArray("quest")]
+[node name="Campfire_merchant" type="Area3D" node_paths=PackedStringArray("find_materials_quest", "find_fish_quest")]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_chvg5")
 noise = SubResource("NoiseTexture3D_mghm6")
-quest = NodePath("Quest")
+find_materials_quest = NodePath("Find_materials_quest")
+find_fish_quest = NodePath("Find_fish_quest")
 
 [node name="InteractionArea" parent="." instance=ExtResource("1_sro3d")]
 
@@ -103,10 +105,17 @@ quest = NodePath("Quest")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.236827, 0)
 shape = SubResource("CylinderShape3D_4honw")
 
-[node name="Quest" type="Node3D" parent="."]
+[node name="Find_materials_quest" type="Node3D" parent="."]
 script = ExtResource("3_dgjng")
 quest_name = "Make a campfire"
-quest_description = "Find wood to start a campfire"
+quest_description = "Find sticks and stones to start a campfire"
+reached_goal_text = "Go back to the campfire"
+amount_obj = 8
+
+[node name="Find_fish_quest" type="Node3D" parent="."]
+script = ExtResource("3_dgjng")
+quest_name = "Feed whiskers "
+quest_description = "Find some fish"
 reached_goal_text = "Go back to the campfire"
 amount_obj = 2
 
@@ -127,7 +136,7 @@ sprite_frames = SubResource("SpriteFrames_c7vvp")
 autoplay = "default"
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="AnimatedSprite3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00067091, -0.862459, 0.0419978)
+transform = Transform3D(0.99992, 0.0125197, -0.00191675, -0.0125217, 0.999921, -0.0009959, 0.00190413, 0.00101982, 0.999998, 0.001, -0.862, 0)
 billboard = 2
 render_priority = 1
 sprite_frames = SubResource("SpriteFrames_rxmlo")
@@ -138,3 +147,6 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.00715923, 0.0072099,
 light_color = Color(0.975171, 0.565438, 1.92523e-06, 1)
 light_energy = 4.254
 shadow_enabled = true
+
+[node name="Sparkles" parent="." instance=ExtResource("6_dt40w")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

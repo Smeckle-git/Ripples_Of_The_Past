@@ -30,9 +30,19 @@ overrides = {}
 script = ExtResource("1_j6ee5")
 scene = ExtResource("5_fxo1f")
 overrides = {
-"box_color_custom": "Color(0.439216, 0.270588, 0.0509804, 0.72549)",
+"box_color_custom": "Color(0.439216, 0.270588, 0.0509804, 0)",
 "box_color_use_global": "false",
-"box_panel": "\"vn_textbox_default_panel.tres\""
+"box_panel": "\"vn_textbox_default_panel.tres\"",
+"name_label_box_modulate": "Color(0, 0, 0, 0)",
+"name_label_box_panel": "\"vn_textbox_name_label_panel.tres\"",
+"name_label_box_use_global_color": "false",
+"text_custom_color": "Color(0.282353, 0.235294, 0.196078, 1)",
+"text_size": "25.0",
+"text_use_global_color": "false",
+"text_use_global_size": "false",
+"typing_sounds_every_nths_character": "10.0",
+"typing_sounds_mode": "1",
+"typing_sounds_sounds_folder": "\"res://assets/Sounds/Dialogue_Sounds\""
 }
 
 [sub_resource type="Resource" id="Resource_jy72x"]
@@ -65,4 +75,4 @@ base_overrides = {
 "global_font_size": "24.0"
 }
 layers = Array[ExtResource("1_j6ee5")]([SubResource("Resource_22i6e"), SubResource("Resource_jmsae"), SubResource("Resource_4g2ki"), SubResource("Resource_foxml"), SubResource("Resource_jy72x"), SubResource("Resource_rtni5"), SubResource("Resource_x76xj"), SubResource("Resource_5728u")])
-metadata/_latest_layer = 5
+metadata/_latest_layer = 3

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3co2ahqamj7i"]
+
+[ext_resource type="SphereMesh" uid="uid://ldymt1a0wjgx" path="res://assets/shaders/shader_nick/Shaderscript/smoke_cloud_mesh.tres" id="1_jge4g"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_svr21"]
+lifetime_randomness = 0.61
+particle_flag_align_y = true
+particle_flag_rotate_y = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 1, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+inherit_velocity_ratio = 0.7
+velocity_pivot = Vector3(1, 0, 0)
+spread = 180.0
+flatness = 1.0
+
+[node name="Smoke cloud" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_jge4g")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.62136)
+visible = false
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_svr21")
+draw_pass_1 = ExtResource("1_jge4g")

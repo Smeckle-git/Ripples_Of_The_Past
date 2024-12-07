@@ -17,11 +17,20 @@
 "portraits": {
 "normal": {
 "export_overrides": {
-"image": ""
+"image": "\"res://gui/Dialog/Characters/dialog_hugo_laura.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(-20, 120),
+"scale": 1.0,
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
+},
+"old": {
+"export_overrides": {
+"image": "\"res://gui/Dialog/Characters/dialog_hugo.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 120),
+"scale": 1.1,
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 }
 },

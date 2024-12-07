@@ -31,7 +31,7 @@ loading_screen = ExtResource("2_pv75a")
 
 [node name="Background" type="TextureRect" parent="MainMenu"]
 layout_mode = 2
-texture = ExtResource("2_rem4v")
+texture = ExtResource("2_8fwgx")
 expand_mode = 2
 flip_h = true
 
@@ -54,15 +54,15 @@ alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="TextureRect" type="TextureRect" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("3_d2ckj")
-expand_mode = 3
+texture = ExtResource("3_uqq2b")
+expand_mode = 2
 stretch_mode = 5
 
 [node name="MainContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer"]

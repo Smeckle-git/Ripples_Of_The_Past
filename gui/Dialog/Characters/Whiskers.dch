@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(0.6, 0.552941, 0.521569, 1),
+"color": Color(0.85, 0.7837, 0.7395, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
@@ -12,16 +12,16 @@
 "description": "",
 "display_name": "Whiskers",
 "mirror": false,
-"nicknames": [""],
+"nicknames": ["Cat"],
 "offset": Vector2(0, 0),
 "portraits": {
 "Looking_left": {
 "export_overrides": {
-"image": "\"res://Dialog/Characters/dialog_whiskers.png\""
+"image": "\"res://gui/Dialog/Characters/dialog_whiskers.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 200),
-"scale": 1,
+"scale": 1.0,
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 }
 },

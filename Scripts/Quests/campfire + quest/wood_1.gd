@@ -12,5 +12,5 @@ func _on_body_entered(body: Node3D) -> void:
 		#get_tree().get_root().get_child(2).play("anim/Disolve")
 		get_child(2).play("anim/Disolve")
 		#print(get_child(2))
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(1).timeout
 		queue_free()

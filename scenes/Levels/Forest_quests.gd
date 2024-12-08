@@ -34,6 +34,8 @@ func _on_dialogic_signal(argument:String):
 	elif argument == "thorinn_looks_right":
 		thorinn.state_machine.last_direction = Vector2(1,0)
 	elif argument == "follow_hugo":
-		pass
+		thorinn.state_machine.follow_target = hugo
+		thorinn.state_machine.change_state("follow")
+		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]
 	elif argument == "leave_hugo":
 		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]

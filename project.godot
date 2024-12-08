@@ -22,6 +22,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GameHudManager="*res://scenes/ui/game_hud_manager.tscn"
 InteractManager="*res://scenes/ui/InteractManager.tscn"
 GameSettingsManager="*res://autoload/GameSettingsManager.gd"
+SceneManager="*res://scenes/Levels/scene_manager.tscn"
 
 [dialogic]
 

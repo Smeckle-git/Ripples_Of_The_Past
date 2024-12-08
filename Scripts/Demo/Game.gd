@@ -3,9 +3,6 @@ extends Node
 @onready var pause_menu : MarginContainer = $PauseMenu
 
 
-func _ready() -> void:
-	pass
-
 func _process(delta: float) -> void:
 	# pause logic
 	if Input.is_action_just_pressed("Pause"):

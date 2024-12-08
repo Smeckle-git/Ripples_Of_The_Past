@@ -4,7 +4,7 @@ extends MarginContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Main_divide_Slice/MainContainer/VBoxContainer2/HBoxContainer/ChoiceContainer2/Continue.grab_focus()
+	$Main_divide_Slice/MainContainer/VBoxContainer2/VBoxContainer/Continue.grab_focus()
 
 
 func _on_continue_pressed() -> void:

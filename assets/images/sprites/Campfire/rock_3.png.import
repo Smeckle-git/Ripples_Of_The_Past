@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl10pkup7pl56"
-path.s3tc="res://.godot/imported/rock_1.png-d0342dc0ca9b650f54cb2103755b0e36.s3tc.ctex"
-path.etc2="res://.godot/imported/rock_1.png-d0342dc0ca9b650f54cb2103755b0e36.etc2.ctex"
+uid="uid://o0i7mxdjxbha"
+path.s3tc="res://.godot/imported/rock_3.png-79d8e86c0780a0d6312f1a23ff786586.s3tc.ctex"
+path.etc2="res://.godot/imported/rock_3.png-79d8e86c0780a0d6312f1a23ff786586.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Objects/Prototypes/Campfire/rock_1.png"
-dest_files=["res://.godot/imported/rock_1.png-d0342dc0ca9b650f54cb2103755b0e36.s3tc.ctex", "res://.godot/imported/rock_1.png-d0342dc0ca9b650f54cb2103755b0e36.etc2.ctex"]
+source_file="res://assets/images/sprites/Campfire/rock_3.png"
+dest_files=["res://.godot/imported/rock_3.png-79d8e86c0780a0d6312f1a23ff786586.s3tc.ctex", "res://.godot/imported/rock_3.png-79d8e86c0780a0d6312f1a23ff786586.etc2.ctex"]
 
 [params]
 

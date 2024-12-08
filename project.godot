@@ -43,6 +43,9 @@ directories/dtl_directory={
 "wiskers_start_campfire_quest": "res://gui/Dialog/Timelines/wiskers_start_campfire_quest.dtl"
 }
 variables={
+"Hugo": {
+"Followed_to_rockfall": false
+},
 "Whiskers": {
 "Forest_Interaction_phase": 1,
 "New_Dialog": true,

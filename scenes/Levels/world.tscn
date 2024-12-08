@@ -6,7 +6,7 @@
 [ext_resource type="Terrain3DStorage" uid="uid://dptuy4g7tymh8" path="res://resources/terrain3d_resources/storage.res" id="2_lua6u"]
 [ext_resource type="Terrain3DMaterial" uid="uid://brujfmh3hlv2p" path="res://resources/terrain3d_resources/material.res" id="3_37hop"]
 [ext_resource type="Terrain3DAssets" uid="uid://cth7u6ivq71xo" path="res://resources/terrain3d_resources/assets.res" id="4_fws5c"]
-[ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://scenes/gridmap_blocks/world_obj_lib.meshlib" id="4_yemm0"]
+[ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://Scripts/gridmap_blocks/world_obj_lib.meshlib" id="4_yemm0"]
 [ext_resource type="Texture2D" uid="uid://caywlopemv63v" path="res://assets/images/874898150658134d8f3b33a13ff2b247_images_jpeg.webp" id="5_yv3ao"]
 [ext_resource type="PackedScene" uid="uid://cwhg5dt7uh11x" path="res://scenes/environment/tree_3.tscn" id="6_ced4g"]
 [ext_resource type="PackedScene" uid="uid://hqh15shxywyx" path="res://scenes/Characters/Thorinn.tscn" id="6_dd3lb"]
@@ -122,6 +122,7 @@ size = Vector3(88.12, 18.08, 11.3319)
 material = SubResource("ShaderMaterial_y1wvd")
 
 [node name="trees" type="Node3D" parent="."]
+visible = false
 
 [node name="tree_collection_border" type="Node3D" parent="trees"]
 
@@ -1247,6 +1248,7 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -66, 1, -98)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.6927, 1, -53.927)
 
 [node name="foilage" type="Node3D" parent="."]
+visible = false
 
 [node name="foilage_collection_forest" type="Node3D" parent="foilage"]
 

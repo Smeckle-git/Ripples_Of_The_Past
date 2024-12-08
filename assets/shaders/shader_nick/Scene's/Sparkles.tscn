@@ -40,8 +40,8 @@ point_count = 2
 curve = SubResource("Curve_cl7ih")
 
 [sub_resource type="Curve" id="Curve_qqb7m"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.733441, 0.763359), -1.28255, -1.28255, 0, 0, Vector2(1, 0.0659341), -4.826, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0, 0.538462), 0.0, 0.0, 0, 0, Vector2(1, 0.0659341), -1.57714, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_ibhp7"]
 curve = SubResource("Curve_qqb7m")
@@ -58,6 +58,8 @@ spread = 50.0
 initial_velocity_min = 1.0
 initial_velocity_max = 10.0
 gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 0.5
 scale_curve = SubResource("CurveTexture_ibhp7")
 color_ramp = SubResource("GradientTexture1D_747dj")
 alpha_curve = SubResource("CurveTexture_2t1t1")

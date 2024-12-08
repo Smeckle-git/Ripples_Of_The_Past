@@ -1,0 +1,17 @@
+extends Node
+@onready var thorinn: Thorinn = $Character/Thorinn
+@onready var flower_girl: Vivian = $Character/FlowerGirl
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	flower_girl.interaction_area_2.interact = Callable(self, "_on_Vivian_interact")
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _on_Vivian_interact():
+	Dialogic.start("flower_girl_quest")
+
+func _on_dialogic_signal(argument:String):
+	if argument == "Accept_flower_quest":
+		flower_girl.Flower_quest()

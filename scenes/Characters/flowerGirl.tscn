@@ -384,6 +384,9 @@ shape = SubResource("SphereShape3D_vm1pk")
 
 [node name="Collect_flowersQuest" type="Node3D" parent="."]
 script = ExtResource("4_60y1p")
+quest_name = "Collect flowers"
+quest_description = "Help Vivian find the herbal flowers"
+reached_goal_text = "Return to Vivian"
 amount_obj = 4
 
 [node name="Sparkles" parent="." instance=ExtResource("5_tr3lq")]

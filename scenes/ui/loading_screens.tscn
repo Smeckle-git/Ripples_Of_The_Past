@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://ffev2w8k4gak"]
+[gd_scene load_steps=26 format=3 uid="uid://ffev2w8k4gak"]
 
 [ext_resource type="Script" path="res://Scripts/ui/loading_screens/loading_screens.gd" id="1_6qtkl"]
 [ext_resource type="PackedScene" uid="uid://0ft6wn2pxu0l" path="res://scenes/Levels/world.tscn" id="2_ek6qs"]
 [ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="3_v0jp5"]
 [ext_resource type="Texture2D" uid="uid://c1o55c1hyduvb" path="res://assets/images/Others/Product_page.jpg" id="4_hshnu"]
 [ext_resource type="Texture2D" uid="uid://yqpgh6crvp22" path="res://assets/images/Others/Official_studio_logo.png" id="5_5nat0"]
+[ext_resource type="Texture2D" uid="uid://b567xswdx55eq" path="res://assets/images/Others/Product_page_blurry.jpg" id="5_y1jxe"]
 [ext_resource type="Texture2D" uid="uid://vtqgcrn8sw2x" path="res://assets/images/Others/Untitled_88.png" id="6_viqs6"]
 [ext_resource type="Texture2D" uid="uid://nk150htnpde4" path="res://assets/images/sprites/Hugo/Untitled14.png" id="9_ge7fn"]
 [ext_resource type="Texture2D" uid="uid://bpsnxhcabw0c8" path="res://assets/images/sprites/Ian/Untitled13.png" id="10_7vkkg"]
@@ -143,10 +144,16 @@ texture = ExtResource("3_v0jp5")
 expand_mode = 5
 stretch_mode = 6
 
-[node name="TextureRect_background_poster" type="TextureRect" parent="background_group/MarginContainer_background"]
+[node name="TextureRect_background_product_page" type="TextureRect" parent="background_group/MarginContainer_background"]
 visible = false
 layout_mode = 2
 texture = ExtResource("4_hshnu")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="TextureRect_background_product_page_blurry" type="TextureRect" parent="background_group/MarginContainer_background"]
+layout_mode = 2
+texture = ExtResource("5_y1jxe")
 expand_mode = 5
 stretch_mode = 6
 
@@ -163,6 +170,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
@@ -224,6 +232,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -297,18 +306,21 @@ texture = ExtResource("10_7vkkg")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/CenterContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/CenterContainer2"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/CenterContainer/CenterContainer2"]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_0uaxy")
 autoplay = "default"
-centered = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/CenterContainer2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/CenterContainer/CenterContainer2"]
 libraries = {
 "": SubResource("AnimationLibrary_20drh")
 }
@@ -317,3 +329,4 @@ libraries = {
 layout_mode = 2
 text = "Press any key to continue..."
 label_settings = SubResource("LabelSettings_mocmq")
+horizontal_alignment = 1

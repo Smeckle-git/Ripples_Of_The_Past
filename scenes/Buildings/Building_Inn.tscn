@@ -9,6 +9,7 @@ size = Vector3(21.7255, 15.5447, 5.53369)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 flip_h = true
+shaded = true
 texture = ExtResource("1_kd5iv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -8,6 +8,7 @@ size = Vector3(16, 15.5447, 4)
 [node name="BuildingInn" type="StaticBody3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+shaded = true
 texture = ExtResource("1_yuqab")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

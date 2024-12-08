@@ -9,6 +9,7 @@ size = Vector3(15.0055, 20.3312, 4)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0, 1, 0, 0, 0)
+shaded = true
 texture = ExtResource("1_43tu6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

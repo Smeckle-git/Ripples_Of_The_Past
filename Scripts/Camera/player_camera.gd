@@ -7,7 +7,7 @@ class_name Player_camera
 
 var player_camera_position
 
-const default_position : Vector3 = Vector3(0, 8, 10)
+const default_position : Vector3 = Vector3(-0.75, 20, 17)
 #const default_rotation_degrees : Vector3 = Vector3(-30, 0, 0)
 
 

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7b6teigcewmi"]
+
+[ext_resource type="Texture2D" uid="uid://cuhlq8dvigqbj" path="res://assets/images/Village/Buildings/Buildings_House4.png" id="1_epwg8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wfdg"]
+size = Vector3(15.0488, 15.8191, 4)
+
+[node name="BuildingInn" type="StaticBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_epwg8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.526556, 0.3944, -1.35655)
+shape = SubResource("BoxShape3D_5wfdg")

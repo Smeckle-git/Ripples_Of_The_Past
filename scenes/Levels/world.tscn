@@ -1638,10 +1638,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.0919, 1.23203, -21.7862)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.8411, 1.23203, -23.6781)
 
 [node name="Fish_1_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8411, 0.150293, -53.6781)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -138.492, -10.743, -772.001)
 
 [node name="Fish_2_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.8411, 0.433537, -48.205)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.7194, -9.36007, -752.429)
 
 [node name="Companion" parent="." instance=ExtResource("20_7nc36")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 7.28822, 2.3, 58.698)

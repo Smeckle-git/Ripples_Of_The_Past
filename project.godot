@@ -99,6 +99,10 @@ project/assembly_name="Ripples_Of_The_Past"
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 Interact={

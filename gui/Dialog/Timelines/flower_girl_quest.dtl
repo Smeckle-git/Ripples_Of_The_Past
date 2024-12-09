@@ -48,6 +48,7 @@ elif {Vivian.Interaction_phase} == 3:
 			Thorinn: I'm looking for the pharmacist. Do you know where he lives?
 			vivian: Yes, I do! He lives in the house just past the bridge, right above his pharmacy.
 			[signal arg="start_find_ian_quest"]
+			set {Ian.can_talk_to_ian} = true
 		- Good luck with courting your friend
 			set {Vivian.New_Dialog} = false
 			set {Ian.find_ian_quest_avalible} = true

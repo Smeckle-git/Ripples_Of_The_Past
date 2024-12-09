@@ -1614,28 +1614,28 @@ default_position = Vector3(0, 20, 17)
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.0136, 2.59892, 56.3487)
 
 [node name="Wood_1_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.119, -0.964409, -16.2421)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.8737, 1, -42.3538)
 
 [node name="Wood_2_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.8573, 1.23203, 1.41263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.1229, 1, 86.0124)
 
 [node name="Wood_3_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.2821, 1.23203, -13.0186)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.417809, 1, -243.281)
 
 [node name="Stone_1_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.8035, 1.23203, -37.7713)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.20742, 1, 58.3049)
 
 [node name="Stone_2_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0505, 1.23203, -13.0186)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.6013, 1, -217.061)
 
 [node name="Stone_3_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.5666, 1.23203, 2.2879)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.7231, 1, 2.2879)
 
 [node name="Stone_4_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.0919, 1.23203, -21.7862)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.86681, 1, -355.085)
 
 [node name="Stone_5_marker" type="Marker3D" parent="Campfire_merchant"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.8411, 1.23203, -23.6781)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8144, 1, -23.6781)
 
 [node name="Fish_1_marker" type="Marker3D" parent="Campfire_merchant"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -138.492, -10.743, -772.001)

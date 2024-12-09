@@ -37,6 +37,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "DEMO_interaction": "res://gui/Dialog/Timelines/DEMO_interaction.dtl",
 "Fish_quest_completion": "res://gui/Dialog/Timelines/Fish_quest_completion.dtl",
+"Iann_interaction": "res://gui/Dialog/Timelines/Iann_interaction.dtl",
+"ask_for_ian_location": "res://gui/Dialog/Timelines/ask_for_ian_location.dtl",
 "flower_girl_quest": "res://gui/Dialog/Timelines/flower_girl_quest.dtl",
 "quest1_end": "res://gui/Dialog/Timelines/quest1_end.dtl",
 "quest1_start": "res://gui/Dialog/Timelines/quest1_start.dtl",
@@ -49,6 +51,10 @@ variables={
 "Hugo": {
 "Followed_to_rockfall": false
 },
+"Ian": {
+"can_talk_to_ian": false,
+"find_ian_quest_avalible": false
+},
 "Vivian": {
 "Interaction_phase": 1,
 "New_Dialog": true,
@@ -58,7 +64,8 @@ variables={
 "Forest_Interaction_phase": 1,
 "New_Dialog": true,
 "Selected_Option": 0
-}
+},
+"temp_variable": 0
 }
 layout/style_list=["res://gui/Dialog/Interaction_Style.tres"]
 layout/default_style="Default"

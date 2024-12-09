@@ -10,7 +10,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_Vivian_interact():
-	flower_girl.Flower_quest()
+	if Dialogic.VAR.Vivian.flower_quest_accepted:
+		flower_girl.Flower_quest()
+	else:
+		Dialogic.start("flower_girl_quest")
 
 func _on_dialogic_signal(argument:String):
 	if argument == "Accept_flower_quest":

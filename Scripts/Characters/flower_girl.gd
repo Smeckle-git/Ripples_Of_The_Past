@@ -10,7 +10,6 @@ var flower_nr = 0
 
 func Flower_quest():
 	if collect_flowers_quest.quest_status == collect_flowers_quest.QuestStatus.available:
-		Dialogic.start("flower_girl_quest")
 		collect_flowers_quest.start_quest()
 		
 		for child in get_children():
@@ -27,7 +26,9 @@ func Flower_quest():
 		
 		sparkles.get_child(0).emitting = true
 	else:
-		print("whut?")
+		Dialogic.start("flower_girl_quest")
+	
+
 
 func spawn_flower(position : Vector3, quest : Quest) -> void: 
 	var flower = flowers[flower_nr].instantiate()

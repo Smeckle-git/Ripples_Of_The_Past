@@ -14,6 +14,7 @@ if {Vivian.Interaction_phase} == 1:
 		- Get out of my way, kid.
 			vivian: I'm sorry I didn't mean to bother you, sir.
 			set {Vivian.New_Dialog} = false
+			set {Ian.find_ian_quest_avalible} = true
 	else:
 		Thorinn: Just passing by, never mind.
 		vivian: That's allright, I hope someone else will help me.
@@ -21,7 +22,7 @@ elif {Vivian.Interaction_phase} == 2:
 	if {Vivian.New_Dialog} == true:
 		vivian: I need to court this guy. He’s the love of my life, but he’s been struggling lately. He can’t sleep well and has frequent stomach pain.
 		vivian: I heard that certain herbal flowers can help with these issues, but I have trouble identifying them.
-		vivian:  I also can’t seem to find our physician. If you could gather them for me, I’d be so grateful!
+		vivian: I also can’t seem to find our physician. If you could gather them for me, I’d be so grateful!
 		- Sure, any idea where I can find these herbs?
 			vivian: Yes! You can find them near the pharmacy, the mountain, or the nearby forest. They’re scattered all around town.
 			set {Vivian.flower_quest_accepted} = true
@@ -30,6 +31,7 @@ elif {Vivian.Interaction_phase} == 2:
 		- No, I don’t have time to waste gathering herbs.
 			vivian: That's allright, I hope someone else will help me.
 			set {Vivian.New_Dialog} = false
+			set {Ian.find_ian_quest_avalible} = true
 	elif {Vivian.flower_quest_accepted} == true:
 		vivian: Have you found the herbs yet?
 		Thorinn: No, I’m still working on it.
@@ -45,5 +47,7 @@ elif {Vivian.Interaction_phase} == 3:
 		- Actually can you help me?
 			Thorinn: I'm looking for the pharmacist. Do you know where he lives?
 			vivian: Yes, I do! He lives in the house just past the bridge, right above his pharmacy.
+			[signal arg="start_find_ian_quest"]
 		- Good luck with courting your friend
-		set {Vivian.New_Dialog} = false
+			set {Vivian.New_Dialog} = false
+			set {Ian.find_ian_quest_avalible} = true

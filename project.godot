@@ -29,6 +29,7 @@ SceneManager="*res://scenes/Levels/scene_manager.tscn"
 directories/dch_directory={
 "Barbarian": "res://gui/Dialog/Characters/Barbarian.dch",
 "Hugo": "res://gui/Dialog/Characters/Hugo.dch",
+"Ian": "res://gui/Dialog/Characters/Ian.dch",
 "Mage": "res://gui/Dialog/Characters/Mage.dch",
 "Thorinn": "res://gui/Dialog/Characters/Thorinn.dch",
 "Whiskers": "res://gui/Dialog/Characters/Whiskers.dch",
@@ -97,6 +98,10 @@ project/assembly_name="Ripples_Of_The_Past"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 

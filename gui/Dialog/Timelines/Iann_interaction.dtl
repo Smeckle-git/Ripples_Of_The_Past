@@ -1,5 +1,4 @@
 if {Ian.can_talk_to_ian} == false:
-	join Thorinn leftmost
 	Hugo: *knocks* Hello?
 	[wait time="2.0"]
 	Hugo: The lights are on but no one seems to open te door.
@@ -8,6 +7,6 @@ elif {Ian.can_talk_to_ian} == true:
 	Thorinn: *knocks* Hello?
 	Thorinn: I'm looking for the local pharmacist. I've been told he lives here.
 	[wait time="2.0"]
-	join Barbarian rightmost
-	Barbarian: What is it? we're closed for the day.
+	join Ian rightmost
+	Ian: What is it? we're closed for the day.
 	- End of playtest 2. thanks for playing!

@@ -1,6 +1,6 @@
 extends Node
-@onready var thorinn: Thorinn = $Character/Thorinn
 @onready var flower_girl: Vivian = $Character/FlowerGirl
+@onready var thorinn: Thorinn = $Character/Thorinn
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_Vivian_interact():
-	Dialogic.start("flower_girl_quest")
+	flower_girl.Flower_quest()
 
 func _on_dialogic_signal(argument:String):
 	if argument == "Accept_flower_quest":

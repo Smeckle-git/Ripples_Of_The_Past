@@ -9,7 +9,6 @@ var interact: Callable = func():
 
 
 func _on_body_entered(body: Node3D) -> void:
-	print(body)
 	InteractManager.register_area(self)
 	
 

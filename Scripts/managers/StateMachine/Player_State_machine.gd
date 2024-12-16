@@ -4,6 +4,7 @@ class_name PlayerStateMachine
 @export var target : CharacterBody3D
 @export var animation_tree : AnimationTree
 
+@export var follow_target : CharacterBody3D
 
 # Dict of possible states that are assigned to this state machine
 var states : Dictionary = {} 
@@ -50,13 +51,8 @@ func change_state(new_state_name : String):
 
 var last_direction := Vector2(0, 1)
 func manage_animations():
-	var input_direction := Vector2(
-		Input.get_axis("Walk left", "Walk right"),
-		Input.get_axis("Walk forward", "Walk backwards")
-	)
-	
-	if input_direction != Vector2.ZERO and current_state.name != "Dialogue":
-		last_direction = input_direction
+	if target.velocity != Vector3.ZERO and current_state.name != "Dialogue":
+		last_direction = Vector2(target.velocity.x, target.velocity.z) 
 	
 	animation_tree.set("parameters/Idle/blend_position", last_direction)
 	animation_tree.set("parameters/Walking/blend_position", last_direction)

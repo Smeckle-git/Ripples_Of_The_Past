@@ -5,12 +5,19 @@ extends Node3D
 @onready var thorinn: Thorinn = $Thorinn
 @onready var campfire_merchant: Campfire_merchant = $Campfire_merchant
 @onready var hugo: CharacterBody3D = $Hugo
+@onready var player_camera: Player_camera = $Thorinn/PlayerCamera
+
 
 func _ready() -> void:
+	player_camera.default_position = Vector3(0, 11, 9)
+	
 	companion.interaction_area.interact = Callable(self, "_on_companion_interact")
 	campfire_merchant.interaction_area.interact = Callable(campfire_merchant, "_on_interact")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
+func _process(delta: float) -> void:
+	if Input.is_key_pressed(KEY_I):
+		get_tree().change_scene_to_file("res://scenes/Levels/Game_2.tscn")
 
 func _on_companion_interact():
 	companion.interaction_area.show_label = false
@@ -34,6 +41,12 @@ func _on_dialogic_signal(argument:String):
 	elif argument == "thorinn_looks_right":
 		thorinn.state_machine.last_direction = Vector2(1,0)
 	elif argument == "follow_hugo":
-		pass
+		thorinn.state_machine.follow_target = hugo
+		thorinn.state_machine.change_state("follow")
+		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]
+		
+		await  get_tree().create_timer(2.0).timeout
+		get_tree().change_scene_to_file("res://scenes/Levels/Game_2.tscn")
+		
 	elif argument == "leave_hugo":
 		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]

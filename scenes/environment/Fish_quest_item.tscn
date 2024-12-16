@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://8xvmlr5gf2rf"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/fish_quest_item.gd" id="1_dj3gj"]
-[ext_resource type="Texture2D" uid="uid://by1w1m2vgoset" path="res://assets/images/icon.svg" id="2_f7ods"]
+[ext_resource type="PackedScene" uid="uid://l0ehhhc6p1m" path="res://scenes/environment/gpu_particles_fish.tscn" id="2_2nvl2"]
 [ext_resource type="Script" path="res://Scripts/ui/interaction_area.gd" id="3_ecu2y"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_mavfm"]
@@ -10,10 +10,8 @@ radius = 5.0
 [node name="FishQuestItem" type="Node3D"]
 script = ExtResource("1_dj3gj")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-billboard = 1
-shaded = true
-texture = ExtResource("2_f7ods")
+[node name="GPUParticles3D" parent="." instance=ExtResource("2_2nvl2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
 [node name="InteractionArea" type="Area3D" parent="."]
 collision_layer = 3

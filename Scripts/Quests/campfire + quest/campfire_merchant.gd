@@ -109,6 +109,7 @@ func spawn_Fish(position : Vector3, quest : Quest) -> void:
 # quest progression
 func collected() ->void:
 	find_materials_quest.update_goal()
+	
 	queue_free()
 	
 

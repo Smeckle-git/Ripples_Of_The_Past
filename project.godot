@@ -22,19 +22,25 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GameHudManager="*res://scenes/ui/game_hud_manager.tscn"
 InteractManager="*res://scenes/ui/InteractManager.tscn"
 GameSettingsManager="*res://autoload/GameSettingsManager.gd"
+SceneManager="*res://scenes/Levels/scene_manager.tscn"
 
 [dialogic]
 
 directories/dch_directory={
 "Barbarian": "res://gui/Dialog/Characters/Barbarian.dch",
 "Hugo": "res://gui/Dialog/Characters/Hugo.dch",
+"Ian": "res://gui/Dialog/Characters/Ian.dch",
 "Mage": "res://gui/Dialog/Characters/Mage.dch",
 "Thorinn": "res://gui/Dialog/Characters/Thorinn.dch",
-"Whiskers": "res://gui/Dialog/Characters/Whiskers.dch"
+"Whiskers": "res://gui/Dialog/Characters/Whiskers.dch",
+"vivian": "res://gui/Dialog/Timelines/vivian.dch"
 }
 directories/dtl_directory={
 "DEMO_interaction": "res://gui/Dialog/Timelines/DEMO_interaction.dtl",
 "Fish_quest_completion": "res://gui/Dialog/Timelines/Fish_quest_completion.dtl",
+"Iann_interaction": "res://gui/Dialog/Timelines/Iann_interaction.dtl",
+"ask_for_ian_location": "res://gui/Dialog/Timelines/ask_for_ian_location.dtl",
+"flower_girl_quest": "res://gui/Dialog/Timelines/flower_girl_quest.dtl",
 "quest1_end": "res://gui/Dialog/Timelines/quest1_end.dtl",
 "quest1_start": "res://gui/Dialog/Timelines/quest1_start.dtl",
 "thorinn_hugo_forest": "res://gui/Dialog/Timelines/thorinn_hugo_forest.dtl",
@@ -43,11 +49,24 @@ directories/dtl_directory={
 "wiskers_start_campfire_quest": "res://gui/Dialog/Timelines/wiskers_start_campfire_quest.dtl"
 }
 variables={
+"Hugo": {
+"Followed_to_rockfall": false
+},
+"Ian": {
+"can_talk_to_ian": false,
+"find_ian_quest_avalible": false
+},
+"Vivian": {
+"Interaction_phase": 1,
+"New_Dialog": true,
+"flower_quest_accepted": false
+},
 "Whiskers": {
 "Forest_Interaction_phase": 1,
 "New_Dialog": true,
 "Selected_Option": 0
-}
+},
+"temp_variable": 0
 }
 layout/style_list=["res://gui/Dialog/Interaction_Style.tres"]
 layout/default_style="Default"
@@ -79,6 +98,10 @@ project/assembly_name="Ripples_Of_The_Past"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 
@@ -141,3 +164,5 @@ Pause={
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=1
+anti_aliasing/quality/use_taa=true

@@ -1,8 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://jlbndjk3brxr"]
+[gd_scene load_steps=10 format=3 uid="uid://jlbndjk3brxr"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/wood_1.gd" id="1_mrkdp"]
-[ext_resource type="Texture2D" uid="uid://o0i7mxdjxbha" path="res://assets/Objects/Prototypes/Campfire/rock_3.png" id="2_fr6qm"]
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/disolve.gdshader" id="2_vyquu"]
+[ext_resource type="Texture2D" uid="uid://dl10pkup7pl56" path="res://assets/images/sprites/Campfire/rock_1.png" id="3_07dma"]
 [ext_resource type="Animation" uid="uid://d26axq4ie70l" path="res://assets/shaders/shader_nick/Scene's/Disolve.res" id="4_neld4"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8ual7"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_n1ysd"]
+seamless = true
+noise = SubResource("FastNoiseLite_8ual7")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0icfy"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("2_vyquu")
+shader_parameter/base_color = Color(0, 0, 0, 1)
+shader_parameter/inside_color = Color(0, 0, 0, 1)
+shader_parameter/disolve_amount = 0.105
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_n1ysd")
+shader_parameter/glow_color = Color(1, 0, 0, 1)
+shader_parameter/glow_intensity = 0.0
+shader_parameter/glow_border_wit = 0.0
+shader_parameter/glow_border_smoothness = 0.1
+shader_parameter/text2d = ExtResource("3_07dma")
+
+[sub_resource type="QuadMesh" id="QuadMesh_wonkk"]
+resource_local_to_scene = true
+material = SubResource("ShaderMaterial_0icfy")
+size = Vector2(16, 20)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5gwji"]
 _data = {
@@ -15,9 +41,9 @@ collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_mrkdp")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Sprite3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-texture = ExtResource("2_fr6qm")
+mesh = SubResource("QuadMesh_wonkk")
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="."]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -2.29558e-05, -0.0487906, -0.000938533)

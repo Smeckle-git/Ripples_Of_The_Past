@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgyt23pysau0k"]
+[gd_scene load_steps=8 format=3 uid="uid://cgyt23pysau0k"]
 
 [ext_resource type="Script" path="res://Scripts/ui/MainMenu/MainMenu.gd" id="1_283wr"]
-[ext_resource type="PackedScene" uid="uid://ffev2w8k4gak" path="res://scenes/ui/loading_screens.tscn" id="2_pv75a"]
-[ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="2_rem4v"]
-[ext_resource type="Texture2D" uid="uid://dbmwr7csns6ws" path="res://assets/images/Promotion/promotion_logo_light_banner.jpg" id="3_d2ckj"]
+[ext_resource type="Texture2D" uid="uid://bysyn2h28hcc8" path="res://assets/images/MainMenu/Product_page.jpg" id="2_8fwgx"]
+[ext_resource type="AudioStream" uid="uid://b32kplhywilof" path="res://assets/Sounds/themes/main_theme.mp3" id="2_qpaks"]
+[ext_resource type="Script" path="res://scenes/ui/main_menu_thememanager.gd" id="3_c3bv2"]
+[ext_resource type="Texture2D" uid="uid://ca5frnce0aedr" path="res://assets/images/Promotion/logo.png" id="3_uqq2b"]
 
 [sub_resource type="SystemFont" id="SystemFont_iwrgx"]
 
@@ -28,6 +29,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_283wr")
 loading_screen = ExtResource("2_pv75a")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MainMenu"]
+stream = ExtResource("2_qpaks")
+autoplay = true
+script = ExtResource("3_c3bv2")
 
 [node name="Background" type="TextureRect" parent="MainMenu"]
 layout_mode = 2

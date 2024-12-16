@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ydr85i4u3sto"]
 
 [ext_resource type="Script" path="res://Scripts/ui/SettingsMenu/return_buton.gd" id="1_3lp24"]
-[ext_resource type="Script" path="res://scenes/ui/setting_menu.gd" id="1_haik7"]
+[ext_resource type="Script" path="res://Scripts/ui/SettingsMenu/setting_menu.gd" id="1_haik7"]
 [ext_resource type="Script" path="res://Scripts/ui/SettingsMenu/settings_sound_control_container.gd" id="2_2kfok"]
 
 [node name="SettingsMenu" type="Control"]

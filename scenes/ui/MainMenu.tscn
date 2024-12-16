@@ -28,6 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_283wr")
+loading_screen = ExtResource("2_pv75a")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MainMenu"]
 stream = ExtResource("2_qpaks")
@@ -36,7 +37,7 @@ script = ExtResource("3_c3bv2")
 
 [node name="Background" type="TextureRect" parent="MainMenu"]
 layout_mode = 2
-texture = ExtResource("2_8fwgx")
+texture = ExtResource("2_rem4v")
 expand_mode = 2
 flip_h = true
 
@@ -66,7 +67,7 @@ theme_override_constants/margin_bottom = 16
 
 [node name="TextureRect" type="TextureRect" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("3_uqq2b")
+texture = ExtResource("3_d2ckj")
 expand_mode = 2
 stretch_mode = 5
 

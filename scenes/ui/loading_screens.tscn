@@ -1,10 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://ffev2w8k4gak"]
+[gd_scene load_steps=31 format=3 uid="uid://ffev2w8k4gak"]
 
 [ext_resource type="Script" path="res://Scripts/ui/loading_screens/loading_screens.gd" id="1_6qtkl"]
-[ext_resource type="PackedScene" uid="uid://0ft6wn2pxu0l" path="res://scenes/Levels/world.tscn" id="2_ek6qs"]
+[ext_resource type="Script" path="res://scenes/ui/scene_manager.gd" id="1_c3uvd"]
 [ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="3_v0jp5"]
 [ext_resource type="Texture2D" uid="uid://c1o55c1hyduvb" path="res://assets/images/Others/Product_page.jpg" id="4_hshnu"]
 [ext_resource type="Texture2D" uid="uid://yqpgh6crvp22" path="res://assets/images/Others/Official_studio_logo.png" id="5_5nat0"]
+[ext_resource type="Shader" path="res://assets/shaders/diamon sweep.gdshader" id="5_30yax"]
 [ext_resource type="Texture2D" uid="uid://b567xswdx55eq" path="res://assets/images/Others/Product_page_blurry.jpg" id="5_y1jxe"]
 [ext_resource type="Texture2D" uid="uid://vtqgcrn8sw2x" path="res://assets/images/Others/Untitled_88.png" id="6_viqs6"]
 [ext_resource type="Texture2D" uid="uid://nk150htnpde4" path="res://assets/images/sprites/Hugo/Untitled14.png" id="9_ge7fn"]
@@ -20,6 +21,12 @@
 [ext_resource type="Texture2D" uid="uid://dqysu7vuice1a" path="res://assets/images/loading_icon/Scale_2.png" id="17_1at7i"]
 [ext_resource type="Texture2D" uid="uid://bkx16df06l7tw" path="res://assets/images/loading_icon/Scale_3.png" id="18_waqpn"]
 [ext_resource type="Texture2D" uid="uid://b7p40vfg8guil" path="res://assets/images/loading_icon/Scale_4.png" id="19_ue8dg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1f4r6"]
+shader = ExtResource("5_30yax")
+shader_parameter/progress = 0.0
+shader_parameter/size = 40.0
+shader_parameter/fill = true
 
 [sub_resource type="LabelSettings" id="LabelSettings_gg5tw"]
 font_size = 48
@@ -79,36 +86,196 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 4.0
+"speed": 6.0
 }]
 
-[sub_resource type="Animation" id="Animation_cgqtq"]
-resource_name = "new_animation"
-step = 0.1
+[sub_resource type="Animation" id="Animation_lw4jo"]
+resource_name = "Loading_in"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../CenterContainer/MarginContainer/AnimatedSprite2D:frame")
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0.8333),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": []
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.833333),
+"transitions": PackedFloat32Array(1, 2.37841),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../../../background_group/MarginContainer_background/TextureRect_background_product_page_blurry:material:shader_parameter/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.2667),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../../../Label:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.833333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_pphut"]
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../../../Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../../../background_group/MarginContainer_background/TextureRect_background_product_page_blurry:material:shader_parameter/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_00rtc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../../../background_group/MarginContainer_background/TextureRect_background_product_page_blurry:material:shader_parameter/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../../../Label:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../../../../Label:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kksq6"]
+resource_name = "pulsing_text"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../../../Label:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.733333, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_20drh"]
 _data = {
-"new_animation": SubResource("Animation_cgqtq")
+"Loading_in": SubResource("Animation_lw4jo"),
+"Loading_out": SubResource("Animation_pphut"),
+"RESET": SubResource("Animation_00rtc"),
+"pulsing_text": SubResource("Animation_kksq6")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_mocmq"]
-font_size = 24
-font_color = Color(0, 0, 0, 1)
-outline_size = 2
+font_size = 32
+outline_size = 3
 
-[node name="Loading_screen" type="Control" node_paths=PackedStringArray("continue_lable", "sprite_group", "background_group")]
+[node name="Loading" type="CanvasLayer"]
+script = ExtResource("1_c3uvd")
+
+[node name="Loading_screen" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -116,12 +283,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6qtkl")
-continue_lable = NodePath("VBoxContainer/HBoxContainer/VBoxContainer_sprite/Label")
-destination_scene = ExtResource("2_ek6qs")
-sprite_group = NodePath("VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group")
-background_group = NodePath("background_group/MarginContainer_background")
 
-[node name="background_group" type="Control" parent="."]
+[node name="background_group" type="Control" parent="Loading_screen"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -129,7 +292,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer_background" type="MarginContainer" parent="background_group"]
+[node name="MarginContainer_background" type="MarginContainer" parent="Loading_screen/background_group"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -137,27 +300,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect_background_main_menu" type="TextureRect" parent="background_group/MarginContainer_background"]
+[node name="TextureRect_background_main_menu" type="TextureRect" parent="Loading_screen/background_group/MarginContainer_background"]
 visible = false
 layout_mode = 2
 texture = ExtResource("3_v0jp5")
 expand_mode = 5
 stretch_mode = 6
 
-[node name="TextureRect_background_product_page" type="TextureRect" parent="background_group/MarginContainer_background"]
+[node name="TextureRect_background_product_page" type="TextureRect" parent="Loading_screen/background_group/MarginContainer_background"]
 visible = false
 layout_mode = 2
 texture = ExtResource("4_hshnu")
 expand_mode = 5
 stretch_mode = 6
 
-[node name="TextureRect_background_product_page_blurry" type="TextureRect" parent="background_group/MarginContainer_background"]
+[node name="TextureRect_background_product_page_blurry" type="TextureRect" parent="Loading_screen/background_group/MarginContainer_background"]
+material = SubResource("ShaderMaterial_1f4r6")
 layout_mode = 2
 texture = ExtResource("5_y1jxe")
 expand_mode = 5
 stretch_mode = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="Loading_screen"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -165,81 +329,82 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Loading_screen/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="Logo + text" type="VBoxContainer" parent="Loading_screen/VBoxContainer/HBoxContainer"]
 visible = false
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/CenterContainer"]
+[node name="Label" type="Label" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/CenterContainer"]
 layout_mode = 2
 size_flags_vertical = 1
 text = "Relive your past, change your fate"
 label_settings = SubResource("LabelSettings_gg5tw")
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer"]
+[node name="ColorRect" type="ColorRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/MarginContainer"]
 layout_mode = 2
 color = Color(1, 1, 1, 0)
 
-[node name="HBoxContainer_logo" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Logo\'s" type="HBoxContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 10
 alignment = 2
 
-[node name="MarginContainer_studio" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer_logo"]
+[node name="MarginContainer_studio" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer_logo/MarginContainer_studio"]
+[node name="ColorRect" type="ColorRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s/MarginContainer_studio"]
 layout_mode = 2
 color = Color(1, 1, 1, 0.25098)
 
-[node name="TextureRect_studio_logo" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer_logo/MarginContainer_studio"]
+[node name="TextureRect_studio_logo" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s/MarginContainer_studio"]
 layout_mode = 2
 texture = ExtResource("5_5nat0")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="MarginContainer_game" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer_logo"]
+[node name="MarginContainer_game" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer_logo/MarginContainer_game"]
+[node name="ColorRect" type="ColorRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s/MarginContainer_game"]
 layout_mode = 2
 color = Color(1, 1, 1, 0.25098)
 
-[node name="TextureRect_game_logo" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer_logo/MarginContainer_game"]
+[node name="TextureRect_game_logo" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s/MarginContainer_game"]
 layout_mode = 2
 texture = ExtResource("6_viqs6")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="VBoxContainer_sprite" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer_sprite" type="VBoxContainer" parent="Loading_screen/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
+[node name="Character sprites" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="sprite_group" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer"]
+[node name="sprite_group" type="Control" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites"]
 layout_mode = 2
 
-[node name="MarginContainer_Hugo" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group"]
+[node name="MarginContainer_Hugo" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -248,13 +413,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect_Hugo" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group/MarginContainer_Hugo"]
+[node name="TextureRect_Hugo" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group/MarginContainer_Hugo"]
 layout_mode = 2
 texture = ExtResource("9_ge7fn")
 expand_mode = 4
 stretch_mode = 4
 
-[node name="MarginContainer_Thorrin" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group"]
+[node name="MarginContainer_Thorrin" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -263,13 +428,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect_Thorrin" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group/MarginContainer_Thorrin"]
+[node name="TextureRect_Thorrin" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group/MarginContainer_Thorrin"]
 layout_mode = 2
 texture = ExtResource("11_k6it5")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="MarginContainer_Cat" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group"]
+[node name="MarginContainer_Cat" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -278,18 +443,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect_Cat" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group/MarginContainer_Cat"]
+[node name="TextureRect_Cat" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group/MarginContainer_Cat"]
 layout_mode = 2
 texture = ExtResource("10_lpelj")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="sprites_unused" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer"]
+[node name="sprites_unused" type="Control" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites"]
 visible = false
 layout_mode = 2
 
-[node name="MarginContainer_Ian" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprites_unused"]
-visible = false
+[node name="MarginContainer_Ian" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprites_unused"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -300,33 +464,43 @@ offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="TextureRect_Ian" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprites_unused/MarginContainer_Ian"]
+[node name="TextureRect_Ian" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprites_unused/MarginContainer_Ian"]
 layout_mode = 2
 texture = ExtResource("10_7vkkg")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
+[node name="Loading animation" type="CenterContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/CenterContainer"]
+[node name="CenterContainer2" type="CenterContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Loading animation"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/CenterContainer/CenterContainer2"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Loading animation/CenterContainer2"]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_0uaxy")
 autoplay = "default"
+frame_progress = 0.690415
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/CenterContainer/CenterContainer2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Loading_screen"]
+root_node = NodePath("../VBoxContainer/HBoxContainer/VBoxContainer_sprite/Loading animation/CenterContainer2")
 libraries = {
 "": SubResource("AnimationLibrary_20drh")
 }
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
-layout_mode = 2
-text = "Press any key to continue..."
+[node name="Label" type="Label" parent="Loading_screen"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 596.0
+offset_right = 645.0
+offset_bottom = 641.0
+text = "Loading...
+"
 label_settings = SubResource("LabelSettings_mocmq")
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="animation_finished" from="Loading_screen/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

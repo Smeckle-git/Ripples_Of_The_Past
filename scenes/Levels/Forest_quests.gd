@@ -15,9 +15,9 @@ func _ready() -> void:
 	campfire_merchant.interaction_area.interact = Callable(campfire_merchant, "_on_interact")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
-func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_I):
-		get_tree().change_scene_to_file("res://scenes/Levels/Game_2.tscn")
+#func _process(delta: float) -> void:
+	#if Input.is_key_pressed(KEY_I):
+		#get_tree().change_scene_to_file("res://scenes/Levels/Game_2.tscn")
 
 func _on_companion_interact():
 	companion.interaction_area.show_label = false

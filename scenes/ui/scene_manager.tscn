@@ -1,0 +1,512 @@
+[gd_scene load_steps=31 format=3 uid="uid://bqwphc3rxic5f"]
+
+[ext_resource type="Script" path="res://scenes/ui/scene_manager.gd" id="1_qw4a1"]
+[ext_resource type="Script" path="res://Scripts/ui/loading_screens/loading_screens.gd" id="2_32j5e"]
+[ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="3_8qem1"]
+[ext_resource type="Texture2D" uid="uid://c1o55c1hyduvb" path="res://assets/images/Others/Product_page.jpg" id="4_llb0r"]
+[ext_resource type="Shader" path="res://assets/shaders/diamon sweep.gdshader" id="5_s7hi6"]
+[ext_resource type="Texture2D" uid="uid://b567xswdx55eq" path="res://assets/images/Others/Product_page_blurry.jpg" id="6_tvynn"]
+[ext_resource type="Texture2D" uid="uid://yqpgh6crvp22" path="res://assets/images/Others/Official_studio_logo.png" id="7_bmatd"]
+[ext_resource type="Texture2D" uid="uid://vtqgcrn8sw2x" path="res://assets/images/Others/Untitled_88.png" id="8_f21mc"]
+[ext_resource type="Texture2D" uid="uid://nk150htnpde4" path="res://assets/images/sprites/Hugo/Untitled14.png" id="9_xagsj"]
+[ext_resource type="Texture2D" uid="uid://c85175kr7jlkg" path="res://assets/images/sprites/thorinn/Untitled10_2.png" id="10_v7bsr"]
+[ext_resource type="Texture2D" uid="uid://cm5m13l0wab8k" path="res://gui/Dialog/Characters/dialog_whiskers.png" id="11_ekwm0"]
+[ext_resource type="Texture2D" uid="uid://bpsnxhcabw0c8" path="res://assets/images/sprites/Ian/Untitled13.png" id="12_4o75y"]
+[ext_resource type="Texture2D" uid="uid://cdrfoogy5e2h0" path="res://assets/images/loading_icon/Scale.png" id="13_evl1c"]
+[ext_resource type="Texture2D" uid="uid://dfoj68sifng63" path="res://assets/images/loading_icon/Scale-1.png" id="14_4j2cw"]
+[ext_resource type="Texture2D" uid="uid://4fwnrbw6ksv0" path="res://assets/images/loading_icon/Scale-2.png" id="15_08m8o"]
+[ext_resource type="Texture2D" uid="uid://c6o204fxr8vik" path="res://assets/images/loading_icon/Scale-_3.png" id="16_6fdob"]
+[ext_resource type="Texture2D" uid="uid://3ycoymrx4ait" path="res://assets/images/loading_icon/Scale-4.png" id="17_culpl"]
+[ext_resource type="Texture2D" uid="uid://buetxq8ttj4s7" path="res://assets/images/loading_icon/Scale_1.png" id="18_504ys"]
+[ext_resource type="Texture2D" uid="uid://dqysu7vuice1a" path="res://assets/images/loading_icon/Scale_2.png" id="19_iyce1"]
+[ext_resource type="Texture2D" uid="uid://bkx16df06l7tw" path="res://assets/images/loading_icon/Scale_3.png" id="20_3jxwi"]
+[ext_resource type="Texture2D" uid="uid://b7p40vfg8guil" path="res://assets/images/loading_icon/Scale_4.png" id="21_2ka43"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1f4r6"]
+shader = ExtResource("5_s7hi6")
+shader_parameter/progress = 0.0
+shader_parameter/size = 40.0
+shader_parameter/fill = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_gg5tw"]
+font_size = 48
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0uaxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_evl1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4j2cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_08m8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6fdob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_culpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6fdob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_08m8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4j2cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_evl1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_504ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_iyce1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3jxwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2ka43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3jxwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_iyce1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_504ys")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_lw4jo"]
+resource_name = "Loading_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.8333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.833333),
+"transitions": PackedFloat32Array(1, 2.37841),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../../../background_group/MarginContainer_background/TextureRect_background_product_page_blurry:material:shader_parameter/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.2667),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../../../Label:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.833333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_pphut"]
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../../../Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../../../background_group/MarginContainer_background/TextureRect_background_product_page_blurry:material:shader_parameter/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_00rtc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../../../background_group/MarginContainer_background/TextureRect_background_product_page_blurry:material:shader_parameter/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../../../Label:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../../../../Label:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kksq6"]
+resource_name = "pulsing_text"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../../../Label:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.733333, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_20drh"]
+_data = {
+"Loading_in": SubResource("Animation_lw4jo"),
+"Loading_out": SubResource("Animation_pphut"),
+"RESET": SubResource("Animation_00rtc"),
+"pulsing_text": SubResource("Animation_kksq6")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_mocmq"]
+font_size = 32
+outline_size = 3
+
+[node name="scene_manager" type="CanvasLayer"]
+script = ExtResource("1_qw4a1")
+
+[node name="Loading_screen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_32j5e")
+
+[node name="background_group" type="Control" parent="Loading_screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer_background" type="MarginContainer" parent="Loading_screen/background_group"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect_background_main_menu" type="TextureRect" parent="Loading_screen/background_group/MarginContainer_background"]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_8qem1")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="TextureRect_background_product_page" type="TextureRect" parent="Loading_screen/background_group/MarginContainer_background"]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_llb0r")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="TextureRect_background_product_page_blurry" type="TextureRect" parent="Loading_screen/background_group/MarginContainer_background"]
+material = SubResource("ShaderMaterial_1f4r6")
+layout_mode = 2
+texture = ExtResource("6_tvynn")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Loading_screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Loading_screen/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Logo + text" type="VBoxContainer" parent="Loading_screen/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/CenterContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Relive your past, change your fate"
+label_settings = SubResource("LabelSettings_gg5tw")
+
+[node name="MarginContainer" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/MarginContainer"]
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Logo\'s" type="HBoxContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+alignment = 2
+
+[node name="MarginContainer_studio" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect" type="ColorRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s/MarginContainer_studio"]
+layout_mode = 2
+color = Color(1, 1, 1, 0.25098)
+
+[node name="TextureRect_studio_logo" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s/MarginContainer_studio"]
+layout_mode = 2
+texture = ExtResource("7_bmatd")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="MarginContainer_game" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="ColorRect" type="ColorRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s/MarginContainer_game"]
+layout_mode = 2
+color = Color(1, 1, 1, 0.25098)
+
+[node name="TextureRect_game_logo" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s/MarginContainer_game"]
+layout_mode = 2
+texture = ExtResource("8_f21mc")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="VBoxContainer_sprite" type="VBoxContainer" parent="Loading_screen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Character sprites" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="sprite_group" type="Control" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites"]
+layout_mode = 2
+
+[node name="MarginContainer_Hugo" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect_Hugo" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group/MarginContainer_Hugo"]
+layout_mode = 2
+texture = ExtResource("9_xagsj")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="MarginContainer_Thorrin" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect_Thorrin" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group/MarginContainer_Thorrin"]
+layout_mode = 2
+texture = ExtResource("10_v7bsr")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="MarginContainer_Cat" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect_Cat" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group/MarginContainer_Cat"]
+layout_mode = 2
+texture = ExtResource("11_ekwm0")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="sprites_unused" type="Control" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer_Ian" type="MarginContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprites_unused"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 397.884
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect_Ian" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprites_unused/MarginContainer_Ian"]
+layout_mode = 2
+texture = ExtResource("12_4o75y")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Loading animation" type="CenterContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer2" type="CenterContainer" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Loading animation"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Loading animation/CenterContainer2"]
+visible = false
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_0uaxy")
+autoplay = "default"
+frame_progress = 0.283898
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Loading_screen"]
+root_node = NodePath("../VBoxContainer/HBoxContainer/VBoxContainer_sprite/Loading animation/CenterContainer2")
+libraries = {
+"": SubResource("AnimationLibrary_20drh")
+}
+
+[node name="Label" type="Label" parent="Loading_screen"]
+visible = false
+layout_mode = 0
+offset_left = 496.0
+offset_top = 596.0
+offset_right = 645.0
+offset_bottom = 641.0
+text = "Loading...
+"
+label_settings = SubResource("LabelSettings_mocmq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="animation_finished" from="Loading_screen/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -2,15 +2,14 @@ extends Node
 signal loaded()
 
 @export var emit_loading_signal: bool = true
-@export_file("*.tscn") var first_scene: String
 @export_file("*.tscn") var next_scene: String
 
 var is_starting_scene : bool = true
 
 @onready var pause_menu : MarginContainer = $PauseMenu
 
-func _ready() -> void:
-	SceneManager.transition_to(first_scene)
+#func _ready() -> void:
+	#SceneManager.transition_to(first_scene)
 
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_I):

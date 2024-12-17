@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://0ft6wn2pxu0l"]
+[gd_scene load_steps=37 format=3 uid="uid://0ft6wn2pxu0l"]
 
 [ext_resource type="Script" path="res://scenes/Levels/Forest_quests.gd" id="1_eo63n"]
 [ext_resource type="Script" path="res://Scripts/Demo/demo_environment.gd" id="1_ivdn3"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://u08d6vo5c344" path="res://assets/shaders/shader_nick/Scene's/fire_flies.tscn" id="25_2wcrm"]
 [ext_resource type="Script" path="res://Scripts/Camera/player_camera.gd" id="25_0880s"]
 [ext_resource type="PackedScene" uid="uid://knbahi2pgrbe" path="res://scenes/Characters/hugo.tscn" id="27_17q3d"]
+[ext_resource type="Script" path="res://scenes/Levels/scene_loader.gd" id="28_5gmbn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lfbac"]
 panorama = ExtResource("5_yv3ao")
@@ -1656,3 +1657,7 @@ visible = false
 [node name="Hugo" parent="." instance=ExtResource("27_17q3d")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -45.3302, 2.6, 71.211)
 collision_mask = 0
+
+[node name="Node3D" type="Node3D" parent="."]
+script = ExtResource("28_5gmbn")
+next_scene = "res://scenes/Levels/Game_2.tscn"

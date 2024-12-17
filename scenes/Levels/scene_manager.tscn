@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://mtvbjni3c81r"]
+[gd_scene load_steps=9 format=3 uid="uid://mtvbjni3c81r"]
 
 [ext_resource type="Script" path="res://Scripts/managers/scene_manager.gd" id="1_37tv2"]
 [ext_resource type="Shader" path="res://assets/shaders/diamon sweep.gdshader" id="2_2kjsj"]
+[ext_resource type="PackedScene" uid="uid://ffev2w8k4gak" path="res://scenes/ui/loading_screens.tscn" id="2_u27ho"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_flxhu"]
 shader = ExtResource("2_2kjsj")
-shader_parameter/progress = 0.0
+shader_parameter/progress = 1.0
 shader_parameter/size = 40.0
 shader_parameter/fill = true
 
@@ -66,7 +67,10 @@ _data = {
 [node name="SceneManager" type="CanvasLayer"]
 script = ExtResource("1_37tv2")
 
+[node name="Loading_screen" parent="." instance=ExtResource("2_u27ho")]
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_flxhu")
 anchors_preset = 15
 anchor_right = 1.0

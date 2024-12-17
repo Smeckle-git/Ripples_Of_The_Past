@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cosse50xvmw37"]
+
+[ext_resource type="Script" path="res://scenes/ui/scene_loader.gd" id="1_8nrf0"]
+
+[node name="SceneLoader" type="Node"]
+script = ExtResource("1_8nrf0")
+next_scene = "res://scenes/Levels/test_scene_trans.tscn"
+
+[connection signal="loaded" from="." to="." method="_on_loaded"]

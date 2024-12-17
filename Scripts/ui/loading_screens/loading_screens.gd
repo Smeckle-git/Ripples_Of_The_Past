@@ -31,13 +31,14 @@ func _ready() -> void:
 		continue_lable.text = "Loading, please wait"
 		await get_tree().create_timer(minimum_wait_time).timeout
 		#get_tree().call_deferred("change_scene_to_packed", destination_scene)
+		print_debug()
 		get_tree().call_deferred("change_scene_to_packed", destination)
 		#randomness test
 		#get_tree().call_deferred("change_scene_to_file", "res://scenes/ui/loading_screens.tscn")
 #
-func _process(_delta: float) -> void:
-	if automatic_scene_change == false and Input.is_anything_pressed():
-		#get_tree().call_deferred("change_scene_to_packed", destination_scene)
-		get_tree().call_deferred("change_scene_to_packed", destination)
+#func _process(_delta: float) -> void:
+	#if automatic_scene_change == false and Input.is_anything_pressed():
+		##get_tree().call_deferred("change_scene_to_packed", destination_scene)
+		#get_tree().call_deferred("change_scene_to_packed", destination)
 		#randomness test
 		#get_tree().call_deferred("change_scene_to_file", "res://scenes/ui/loading_screens.tscn")

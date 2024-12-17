@@ -20,7 +20,6 @@ func _on_new_game_pressed() -> void:
 	
 	$"../../../..".visible = false  # Hide the main menu but don't unload it
 	var game_scene = NewGameScene.instantiate()
-	print(game_scene)
 	get_tree().root.add_child(game_scene)  # Add the game scene to the scene tree
 	
 

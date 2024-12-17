@@ -4,7 +4,8 @@ signal transitioned_in()
 signal transitioned_out()
 
 var current_scene: Node: set= set_current_scene
-@onready var scene_loader: Node = $"."
+
+#@onready var scene_loader: Node = get_node("res://scenes/ui/Scene_loader.tscn")
 @onready var color_rect: ColorRect = $ColorRect
 @onready var animation_player: AnimationPlayer = $Loading_screen/AnimationPlayer
 @onready var label: Label = $Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Label
@@ -19,7 +20,7 @@ func set_current_scene(value:Node) -> void:
 	current_scene = value
 	var root: Window = get_tree().get_root()
 	
-	root.get_child(root.get_child_count() - 1 ).free()
+	#root.get_child(root.get_child_count() - 1 ).free()
 	root.add_child(value)
 
 func transition_in() -> void:
@@ -28,7 +29,7 @@ func transition_in() -> void:
 func transition_out():
 	animation_player.play("Loading_out")
 
-func transition_to(scene: String)-> void:
+func transition_to(scene: String, scene_loader: Node)-> void:
 	transition_in()
 	await transitioned_in
 	var new_scene = load(scene).instantiate()
@@ -38,7 +39,7 @@ func transition_to(scene: String)-> void:
 	
 	if scene_loader.emit_loading_signal:
 		await scene_loader.loaded
-		
+	print_debug()
 	transition_out()
 	await transitioned_out
 	new_scene.activate()

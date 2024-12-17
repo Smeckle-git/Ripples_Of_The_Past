@@ -1,4 +1,5 @@
 extends Node
+
 signal loaded()
 
 @export var emit_loading_signal: bool = true
@@ -12,8 +13,9 @@ var is_starting_scene : bool = true
 	#SceneManager.transition_to(first_scene)
 
 func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_I):
-		SceneManager.transition_to(next_scene)	
+	if Input.is_action_just_pressed("ui_accept"):
+		print_debug("test")
+		SceneManager.transition_to(next_scene, self)	
 
 func activate() -> void:
 	pass

@@ -27,7 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://u08d6vo5c344" path="res://assets/shaders/shader_nick/Scene's/fire_flies.tscn" id="25_2wcrm"]
 [ext_resource type="Script" path="res://Scripts/Camera/player_camera.gd" id="25_0880s"]
 [ext_resource type="PackedScene" uid="uid://knbahi2pgrbe" path="res://scenes/Characters/hugo.tscn" id="27_17q3d"]
-[ext_resource type="Script" path="res://scenes/Levels/scene_loader.gd" id="28_5gmbn"]
+[ext_resource type="Script" path="res://scenes/ui/scene_loader.gd" id="28_5gmbn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lfbac"]
 panorama = ExtResource("5_yv3ao")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://di55lv8a6ufmb"]
+[gd_scene load_steps=23 format=3 uid="uid://di55lv8a6ufmb"]
 
 [ext_resource type="PackedScene" uid="uid://duf26uu2tvh8" path="res://scenes/gridmap_blocks/ground_grass.tscn" id="1_qt4il"]
 [ext_resource type="PackedScene" uid="uid://nyml7y4ttuo2" path="res://scenes/gridmap_blocks/ground_grass_slope.tscn" id="2_rj6bb"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bwnkhynmrhmmw" path="res://scenes/gridmap_blocks/grass_path_texture.tscn" id="18_w2lth"]
 [ext_resource type="PackedScene" uid="uid://clpc84coflxwp" path="res://scenes/gridmap_blocks/Corner_texture.tscn" id="19_mim8b"]
 [ext_resource type="PackedScene" uid="uid://cfyguj42mhujx" path="res://scenes/gridmap_blocks/Corner_grass_path.tscn" id="20_ageyc"]
+[ext_resource type="PackedScene" uid="uid://b5m6h0qggqryo" path="res://scenes/gridmap_blocks/GodRoom_Tile.tscn" id="22_he2tl"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -65,3 +66,5 @@
 [node name="Ground17" parent="." instance=ExtResource("12_oe2b1")]
 
 [node name="Ground18" parent="." instance=ExtResource("11_16360")]
+
+[node name="Ground19" parent="." instance=ExtResource("22_he2tl")]

@@ -26,5 +26,7 @@ func finish_quest() -> void:
 		quest_status = QuestStatus.finished
 		QuestLog.visible = false
 		GameHudManager.reputation += Reputation_amount 
+		update_karma()
+		print_debug(KarmaGlobal.KARMA_SCORE)
 
 # create function that update the amount of picked up parts

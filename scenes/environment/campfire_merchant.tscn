@@ -118,6 +118,7 @@ quest_name = "Make a campfire"
 quest_description = "Find sticks and stones to start a campfire"
 reached_goal_text = "Go back to the campfire"
 amount_obj = 8
+Karma_Gained = 5
 
 [node name="Find_fish_quest" type="Node3D" parent="."]
 script = ExtResource("3_dgjng")
@@ -125,6 +126,7 @@ quest_name = "Feed whiskers "
 quest_description = "Find some fish"
 reached_goal_text = "Go back to the campfire"
 amount_obj = 2
+Karma_Gained = 3
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 billboard = 2

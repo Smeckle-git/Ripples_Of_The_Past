@@ -12,6 +12,9 @@ func _ready() -> void:
 	player_camera.default_position = Vector3(0, 11, 9)
 	
 	companion.interaction_area.interact = Callable(self, "_on_companion_interact")
+	#
+	#companion.interaction_area.interact = Callable(companion, "_on_interact")
+	#
 	campfire_merchant.interaction_area.interact = Callable(campfire_merchant, "_on_interact")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 

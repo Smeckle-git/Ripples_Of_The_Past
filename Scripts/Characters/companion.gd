@@ -5,6 +5,7 @@ class_name Companion
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var timer: Timer = $Timer
 @onready var interaction_area: InteractionArea = $InteractionArea2
+@onready var pet_cat_animation: AnimatedSprite3D = $Node3D_petting/AnimatedSprite3D
 
 const SPEED = 10.0
 @export var following := false
@@ -13,7 +14,7 @@ const SPEED = 10.0
 @export var move_to_location : Vector3 = Vector3(0,0,0)	
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	manage_animations()
 	move_and_slide()	
 	var direction
@@ -57,3 +58,18 @@ func manage_animations():
 
 func _on_timer_timeout() -> void:
 	sitting = true
+
+func _on_interact() -> void:
+	print_debug("Whiskers interacted")
+	pet_cat()
+	#pass
+
+func pet_cat() -> void:
+	print_debug("pet cat")
+	var random: int = randi_range(0, pet_cat_animation.sprite_frames.get_frame_count("default"))
+	pet_cat_animation.frame = random
+	pet_cat_animation.visible = true
+	await get_tree().create_timer(3).timeout
+	pet_cat_animation.visible = false
+	
+	pass

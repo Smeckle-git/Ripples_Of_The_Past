@@ -4,7 +4,7 @@ signal transitioned_in()
 signal transitioned_out()
 
 var current_scene: Node: set= set_current_scene
-
+#@onready var scene_loader = get_node("res://scenes/ui/scene_loader.gd ")
 #@onready var scene_loader: Node = get_node("res://scenes/ui/Scene_loader.tscn")
 @onready var color_rect: ColorRect = $ColorRect
 @onready var animation_player: AnimationPlayer = $Loading_screen/AnimationPlayer
@@ -29,20 +29,25 @@ func transition_in() -> void:
 func transition_out():
 	animation_player.play("Loading_out")
 
-func transition_to(scene: String, scene_loader: Node)-> void:
+func transition_to(scene: String, previous_scene: String, scene_loader: Node)-> void:
+	self.visible = true
+	print_debug(scene)
 	transition_in()
 	await transitioned_in
+	scene_loader.set_current_scene(scene)
 	var new_scene = load(scene).instantiate()
-	current_scene = new_scene
-
-	scene_loader.load_scene()
+	add_child(new_scene)
+	
+	
 	
 	if scene_loader.emit_loading_signal:
+		scene_loader.load_scene()
 		await scene_loader.loaded
-	print_debug()
+
 	transition_out()
 	await transitioned_out
-	new_scene.activate()
+	self.visible = false
+	scene_loader.activate()
 
 func _on_animation_player_animation_finished(anim_name: String) -> void:
 	if anim_name == "Loading_in":

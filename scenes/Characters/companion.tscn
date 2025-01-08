@@ -675,9 +675,9 @@ shape = SubResource("CylinderShape3D_4bp0j")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 
-[node name="Node3D_petting" type="Node3D" parent="."]
+[node name="Node3D_pet_cat" type="Node3D" parent="."]
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Node3D_petting"]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Node3D_pet_cat"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 visible = false
 billboard = 1

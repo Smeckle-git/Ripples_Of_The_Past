@@ -387,5 +387,6 @@ quest_name = "Collect flowers"
 quest_description = "Help Vivian find the herbal flowers"
 reached_goal_text = "Return to Vivian"
 amount_obj = 4
+Karma_Gained = 5
 
 [node name="Sparkles" parent="." instance=ExtResource("5_tr3lq")]

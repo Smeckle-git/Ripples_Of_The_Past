@@ -3,6 +3,7 @@ if {Whiskers.Forest_Interaction_phase} == 1:
 	join Thorinn leftmost
 	join Whiskers rightmost
 	if {Whiskers.New_Dialog} == true:
+		set {Whiskers.New_Dialog} = false
 		Thorinn: Hey kitty, what are you doing all the way out here?
 		Whiskers: **shivering** Me-me-meow
 		Thorinn: Looks like you’re really cold.

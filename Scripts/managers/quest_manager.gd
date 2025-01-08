@@ -10,6 +10,7 @@ class_name QuestManager extends Node3D
 @export var quest_description: String
 @export var reached_goal_text: String
 @export var amount_obj: int
+@export var Karma_Gained: int 
 var collect_obj: int = 0
 #All quest statuses
 enum QuestStatus{
@@ -23,3 +24,6 @@ enum QuestStatus{
 @export var quest_status: QuestStatus = QuestStatus.available
 @export_group("Reward Settings")
 @export var Reputation_amount: int # amount of rep gained or lost
+
+func update_karma():
+	KarmaGlobal.KARMA_SCORE += Karma_Gained

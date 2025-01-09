@@ -23,7 +23,10 @@ func _process(delta: float) -> void:
 		if active_areas[0].show_label:
 			label.text = base_text + active_areas[0].action_name
 			label.global_position = active_areas[0].global_position
-			label.global_position.y = 3
+			label.global_position.y += 1
+			#
+			#print_debug("active_areas[0].global_position: ", active_areas[0].global_position, "\nlabel.global_position: ", label.global_position)
+			#
 			label.scale = Vector3(3,3,3) 
 			label.show()
 		else:

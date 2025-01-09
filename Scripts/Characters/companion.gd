@@ -70,7 +70,7 @@ func pet_cat() -> void:
 		print_debug("pat pat pat")
 		return
 	#
-	print_debug("pet cat")
+	print_debug("pat cat")
 	petting = true
 	var random: int = randi_range(0, pet_cat_animation.sprite_frames.get_frame_count("default"))
 	pet_cat_animation.frame = random
@@ -78,5 +78,5 @@ func pet_cat() -> void:
 	await get_tree().create_timer(3).timeout
 	pet_cat_animation.visible = false
 	petting = false
-	print_debug("no pet cat")
+	print_debug("no pat cat")
 	#pass

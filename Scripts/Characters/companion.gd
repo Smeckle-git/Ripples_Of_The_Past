@@ -63,7 +63,6 @@ func _on_timer_timeout() -> void:
 func _on_interact() -> void:
 	print_debug("Whiskers interacted")
 	pet_cat()
-	#pass
 
 func pet_cat() -> void:
 	if petting:
@@ -72,11 +71,18 @@ func pet_cat() -> void:
 	#
 	print_debug("pat cat")
 	petting = true
+	#
+	var position_temp = pet_cat_animation.position
 	var random: int = randi_range(0, pet_cat_animation.sprite_frames.get_frame_count("default"))
+	var tween = get_tree().create_tween()
+	#
 	pet_cat_animation.frame = random
 	pet_cat_animation.visible = true
-	await get_tree().create_timer(3).timeout
+	#
+	tween.tween_property(pet_cat_animation, "position", Vector3(0, 20, -10), 2)
+	await tween.finished
+	#
 	pet_cat_animation.visible = false
+	pet_cat_animation.position = position_temp
 	petting = false
 	print_debug("no pat cat")
-	#pass

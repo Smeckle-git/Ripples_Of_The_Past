@@ -1,13 +1,15 @@
-[gd_scene load_steps=60 format=3 uid="uid://dn4vjb5x6o1yr"]
+[gd_scene load_steps=62 format=3 uid="uid://dn4vjb5x6o1yr"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/companion.gd" id="1_dmbtv"]
 [ext_resource type="Texture2D" uid="uid://fbm46rjo2rxs" path="res://assets/images/sprites/Companion/cat_sprite.png" id="2_cyqeb"]
 [ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://scenes/ui/interaction_area.tscn" id="3_oq3e6"]
 [ext_resource type="Texture2D" uid="uid://5nf8aaowoibi" path="res://assets/images/sprites/Companion/CAT_sprites_2.png" id="3_vt1gb"]
-[ext_resource type="Texture2D" uid="uid://bnjxlo01s1dn4" path="res://assets/images/sprites/hearts/Cat_heart_1.png" id="5_m441p"]
-[ext_resource type="Texture2D" uid="uid://c8vytyymochl0" path="res://assets/images/sprites/hearts/Cat_heart_2.png" id="6_rxq6r"]
-[ext_resource type="Texture2D" uid="uid://cn1y0rdfqhi8g" path="res://assets/images/sprites/hearts/Cat_heart_3.png" id="7_c64cb"]
-[ext_resource type="Texture2D" uid="uid://dykwtsl8hfa2w" path="res://assets/images/sprites/hearts/Cat_heart_4.png" id="8_1cy44"]
+[ext_resource type="Texture2D" uid="uid://fuexb8fhhc24" path="res://assets/images/sprites/hearts/Untitled_162.png" id="5_3dnrf"]
+[ext_resource type="Texture2D" uid="uid://dxwbmhgtsa50j" path="res://assets/images/sprites/hearts/Untitled_163.png" id="6_3q6tv"]
+[ext_resource type="Texture2D" uid="uid://dv7634qknspg6" path="res://assets/images/sprites/hearts/Untitled_164.png" id="7_1w5tm"]
+[ext_resource type="Texture2D" uid="uid://cdkiln4k746xq" path="res://assets/images/sprites/hearts/Untitled_165.png" id="8_svki4"]
+[ext_resource type="Texture2D" uid="uid://cmpwqlkpucdin" path="res://assets/images/sprites/hearts/Untitled_166.png" id="9_wcxe6"]
+[ext_resource type="Texture2D" uid="uid://cpaoklc3rqlph" path="res://assets/images/sprites/hearts/Untitled_167.png" id="10_pn01d"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_m20or"]
 radius = 0.155276
@@ -619,16 +621,22 @@ radius = 20.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_m441p")
+"texture": ExtResource("5_3dnrf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_rxq6r")
+"texture": ExtResource("6_3q6tv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_c64cb")
+"texture": ExtResource("7_1w5tm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_1cy44")
+"texture": ExtResource("8_svki4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wcxe6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pn01d")
 }],
 "loop": false,
 "name": &"default",
@@ -678,7 +686,7 @@ wait_time = 2.0
 [node name="Node3D_pet_cat" type="Node3D" parent="."]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Node3D_pet_cat"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 10, 0)
 visible = false
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_xa28i")

@@ -19,6 +19,19 @@ func _on_back_to_main_pressed() -> void:
 func _on_exit_pressed() -> void:
 	get_tree().quit()
 
-
 func _on_continue_pressed() -> void:
-	game.pauseMenu()
+	get_tree().paused = false
+	$AnimationPlayer.play_backwards("blur")
+
+func pause():
+	get_tree().paused = true
+	$AnimationPlayer.play("blur")
+
+func testFunc():
+	if Input.is_action_just_pressed("Journal") and !get_tree().paused:
+		pause()
+	elif Input.is_action_just_pressed("Journal") and get_tree().paused:
+		_on_continue_pressed()
+		
+func _process(delta: float) -> void:
+	testFunc()

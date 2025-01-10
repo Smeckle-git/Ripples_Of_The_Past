@@ -1,12 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dx2ui4o1f3nb8"]
+[gd_scene load_steps=7 format=3 uid="uid://dx2ui4o1f3nb8"]
 
-[ext_resource type="Texture2D" uid="uid://by1w1m2vgoset" path="res://assets/images/icon.svg" id="1_lwslo"]
-[ext_resource type="Shader" path="res://assets/shaders/quest_log.gdshader" id="1_nd81k"]
 [ext_resource type="Script" path="res://Scripts/ui/hud.gd" id="1_rfbj8"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hgbee"]
-shader = ExtResource("1_nd81k")
-shader_parameter/color = Color(0.236137, 0.0485338, 0, 0.470588)
+[ext_resource type="Texture2D" uid="uid://ctxpm0njrn3u4" path="res://assets/images/enviroment/leaf_1_orange.png" id="2_ojncg"]
 
 [sub_resource type="FontFile" id="FontFile_i8kvp"]
 subpixel_positioning = 0
@@ -207,6 +202,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Quest"]
+clip_contents = true
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -215,9 +211,8 @@ offset_right = -4.0
 offset_bottom = 5.59999
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/Quest/MarginContainer"]
-material = SubResource("ShaderMaterial_hgbee")
-scale = Vector2(2.71094, 2.57813)
-texture = ExtResource("1_lwslo")
+scale = Vector2(0.117672, 0.0971223)
+texture = ExtResource("2_ojncg")
 centered = false
 
 [node name="quest title" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Quest/MarginContainer"]

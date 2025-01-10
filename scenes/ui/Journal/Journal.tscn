@@ -1,4 +1,11 @@
-[gd_scene format=3 uid="uid://ddu443etw7oh2"]
+[gd_scene load_steps=6 format=3 uid="uid://ddu443etw7oh2"]
+
+[ext_resource type="Script" path="res://scenes/ui/Journal/journal.gd" id="1_kjdks"]
+[ext_resource type="PackedScene" uid="uid://ydr85i4u3sto" path="res://scenes/ui/SettingMenu.tscn" id="1_p0a1d"]
+[ext_resource type="PackedScene" uid="uid://dx2ui4o1f3nb8" path="res://scenes/ui/hud.tscn" id="2_bp2ha"]
+[ext_resource type="Texture2D" uid="uid://cs74uktpya26q" path="res://assets/images/Maps/Screenshot 2025-01-09 152925.png" id="2_upwfn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a4wxo"]
 
 [node name="Journal" type="Control"]
 layout_mode = 3
@@ -9,151 +16,94 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_kjdks")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="JournalBox" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="ContentContainer" type="VBoxContainer" parent="MarginContainer/JournalBox"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/JournalBox/ContentContainer"]
-layout_mode = 2
+anchors_preset = -1
+offset_left = 116.0
+offset_right = 1060.0
+offset_bottom = 563.0
 size_flags_vertical = 3
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/JournalBox/ContentContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
 
-[node name="TextEdit" type="TextEdit" parent="MarginContainer/JournalBox/ContentContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "QuestList
-
-Allooo
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
- when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
- It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-
-[node name="SelectContainer" type="VBoxContainer" parent="MarginContainer/JournalBox"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/JournalBox/SelectContainer"]
+[node name="TabContainer" type="TabContainer" parent="MarginContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
+current_tab = 4
 
-[node name="PromotionContainer" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2"]
+[node name="Map" type="TextEdit" parent="MarginContainer2/VBoxContainer/TabContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="OptionContainer" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/OptionContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/OptionContainer/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 8
-
-[node name="TabContainer" type="TabContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/OptionContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-current_tab = 0
-
-[node name="Quests" type="TabBar" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/OptionContainer/MarginContainer/VBoxContainer/TabContainer"]
-layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Characters" type="TabBar" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/OptionContainer/MarginContainer/VBoxContainer/TabContainer"]
+[node name="Screenshot2025-01-09152925" type="Sprite2D" parent="MarginContainer2/VBoxContainer/TabContainer/Map"]
+material = SubResource("ShaderMaterial_a4wxo")
+position = Vector2(200, 252)
+scale = Vector2(0.936544, 0.792781)
+texture = ExtResource("2_upwfn")
+
+[node name="Quests" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="Lore" type="TabBar" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/OptionContainer/MarginContainer/VBoxContainer/TabContainer"]
+[node name="HUD" parent="MarginContainer2/VBoxContainer/TabContainer/Quests" instance=ExtResource("2_bp2ha")]
+offset_right = 914.0
+offset_bottom = 503.0
+
+[node name="Characters" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer"]
+[node name="Lore" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
+visible = false
 layout_mode = 2
-size_flags_vertical = 4
+metadata/_tab_index = 3
+
+[node name="Settings" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="SettingsMenu" parent="MarginContainer2/VBoxContainer/TabContainer/Settings" instance=ExtResource("1_p0a1d")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.33
+anchor_right = 0.522
+anchor_bottom = 0.0
+offset_left = 169.04
+offset_top = 14.0
+offset_right = 424.936
+offset_bottom = 486.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/VBoxContainer/TabContainer/Settings"]
+layout_mode = 2
+offset_left = 75.0
+offset_top = 367.0
+offset_right = 415.0
+offset_bottom = 476.0
 theme_override_constants/separation = 8
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/margin_left = 64
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 64
-theme_override_constants/margin_bottom = 16
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2/MarginContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2/MarginContainer/VBoxContainer2"]
-layout_mode = 2
-theme_override_constants/separation = 8
-
-[node name="Settings" type="Button" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2/MarginContainer/VBoxContainer2/VBoxContainer"]
-layout_mode = 2
-text = "Settings"
-
-[node name="BackToMain" type="Button" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2/MarginContainer/VBoxContainer2/VBoxContainer"]
+[node name="BackToMain" type="Button" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/VBoxContainer"]
 layout_mode = 2
 text = "Back To Main Menu"
 
-[node name="Exit" type="Button" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2/MarginContainer/VBoxContainer2/VBoxContainer"]
+[node name="Exit" type="Button" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/VBoxContainer"]
 layout_mode = 2
 text = "Exit To Desktop"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2/MarginContainer/VBoxContainer2"]
-layout_mode = 2
-
-[node name="ChoiceContainer2" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2/MarginContainer/VBoxContainer2/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 3.0
-
-[node name="Continue" type="Button" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2/MarginContainer/VBoxContainer2/HBoxContainer/ChoiceContainer2"]
+[node name="Continue" type="Button" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/VBoxContainer"]
 layout_mode = 2
 text = "Continue Game"
 
-[node name="ChoiceContainer1" type="VBoxContainer" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2/MarginContainer/VBoxContainer2/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 3.0
-
-[node name="Load" type="Button" parent="MarginContainer/JournalBox/SelectContainer/MarginContainer2/PromotionContainer/VBoxContainer2/MarginContainer/VBoxContainer2/HBoxContainer/ChoiceContainer1"]
-layout_mode = 2
-text = "Load Game"
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/JournalBox/SelectContainer"]
-layout_mode = 2
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/VBoxContainer/BackToMain" to="." method="_on_back_to_main_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/VBoxContainer/Continue" to="." method="_on_continue_pressed"]

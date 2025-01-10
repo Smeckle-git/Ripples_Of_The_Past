@@ -11,6 +11,9 @@ var player_camera_position
 @export var default_rotation_degrees : Vector3 = Vector3(-30, 0, 0)
 
 @export var camera_movement_time : float = 0.40
+
+@export var backwards_walking_zoom_out: float = 3
+
 @warning_ignore("narrowing_conversion")
 var time_step_max : int = camera_movement_time * Engine.physics_ticks_per_second
 var time_step_x : float = 0
@@ -19,8 +22,9 @@ var time_step_y : float = 0
 var rotation_step_max: float = 15#degrees, 45 - default_rotation_degrees.x
 var rotation_step: float = 0
 
-#func _ready() -> void:
-#	pass
+func _ready() -> void:
+	position = default_position
+	#pass
 
 func _process(_delta: float) -> void:
 	if return_to_player:
@@ -58,6 +62,7 @@ func _physics_process(_delta: float) -> void:
 		#
 		if rotation_step < rotation_step_max:
 			rotation_step += 0.5
+			#pass
 	else:
 		if time_step_y > 0:
 			time_step_y -= 1
@@ -67,8 +72,9 @@ func _physics_process(_delta: float) -> void:
 		if rotation_step > 0:
 			rotation_step -= 1
 		#
-	position.y = default_position.y + (6 * time_step_y) / time_step_max
-	position.z = default_position.z + (7.5 * time_step_y) / time_step_max
+	#position.y = default_position.y# + (default_position.y * time_step_y) / time_step_max
+	position.z = default_position.z + (backwards_walking_zoom_out \
+	* default_position.z * time_step_y) / time_step_max
 	#
 	rotation_degrees.x = default_rotation_degrees.x - rotation_step
 	#print_debug(time_step_y, " ", position.y, " ", position.z)

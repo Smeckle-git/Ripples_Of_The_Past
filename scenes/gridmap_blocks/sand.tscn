@@ -5,11 +5,12 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_681jd"]
 albedo_texture = ExtResource("1_lgud2")
 uv1_scale = Vector3(3, 2, 1)
+texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_2omkm"]
 material = SubResource("StandardMaterial3D_681jd")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3w8me"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_je4se"]
 
 [node name="sand" type="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -18,4 +19,4 @@ mesh = SubResource("BoxMesh_2omkm")
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_3w8me")
+shape = SubResource("BoxShape3D_je4se")

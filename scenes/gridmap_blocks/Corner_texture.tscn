@@ -2,14 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://detqldcanbxqu" path="res://assets/images/roads/Corner_textured.jpg" id="1_51qpc"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ij56"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5fs6v"]
 albedo_texture = ExtResource("1_51qpc")
 uv1_scale = Vector3(3, 2, 1)
+texture_filter = 2
+texture_repeat = false
 
 [sub_resource type="BoxMesh" id="BoxMesh_725jr"]
-material = SubResource("StandardMaterial3D_5ij56")
+material = SubResource("StandardMaterial3D_5fs6v")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_o4ah8"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vdu3b"]
 
 [node name="Ground" type="MeshInstance3D"]
 mesh = SubResource("BoxMesh_725jr")
@@ -17,4 +19,4 @@ mesh = SubResource("BoxMesh_725jr")
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_o4ah8")
+shape = SubResource("BoxShape3D_vdu3b")

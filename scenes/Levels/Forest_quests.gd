@@ -5,12 +5,11 @@ extends Node3D
 @onready var thorinn: Thorinn = $Thorinn
 @onready var campfire_merchant: Campfire_merchant = $Campfire_merchant
 @onready var hugo: CharacterBody3D = $Hugo
-@onready var player_camera: Player_camera = $Thorinn/PlayerCamera
+#@onready var player_camera: Player_camera = $Thorinn/PlayerCamera
 
 
 func _ready() -> void:
-	player_camera.default_position = Vector3(0, 11, 9)
-	
+	#player_camera.default_position = Vector3(0, 11, 9)
 	companion.interaction_area.interact = Callable(self, "_on_companion_interact")
 	campfire_merchant.interaction_area.interact = Callable(campfire_merchant, "_on_interact")
 	Dialogic.signal_event.connect(_on_dialogic_signal)

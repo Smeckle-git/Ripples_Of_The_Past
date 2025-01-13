@@ -1607,7 +1607,6 @@ transform = Transform3D(10, 0, 0, 0, 8.66026, 5, 0, -5, 8.66026, -0.75, 20, 17)
 fov = 80.0
 script = ExtResource("25_0880s")
 move_to_global_position = Vector3(-4, 4, 50)
-backwards_walking_zoom_out = 6.0
 
 [node name="Campfire_merchant" parent="." instance=ExtResource("20_0xhrj")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.0136, 2.59892, 56.3487)

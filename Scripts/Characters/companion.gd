@@ -61,7 +61,7 @@ func _on_timer_timeout() -> void:
 	sitting = true
 
 func _on_interact() -> void:
-	print_debug("Whiskers interacted")
+	#print_debug("Whiskers interacted")
 	pet_cat()
 
 func pet_cat() -> void:
@@ -85,4 +85,4 @@ func pet_cat() -> void:
 	pet_cat_animation.visible = false
 	pet_cat_animation.position = position_temp
 	petting = false
-	print_debug("no pat cat")
+	print_debug("pat cat finished")

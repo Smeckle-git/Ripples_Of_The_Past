@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cihbcq67tmutc"
-path.s3tc="res://.godot/imported/Bridge_post_top.png-449c74e656d1f4f77005e1a8a9ee3b8b.s3tc.ctex"
-path.etc2="res://.godot/imported/Bridge_post_top.png-449c74e656d1f4f77005e1a8a9ee3b8b.etc2.ctex"
+uid="uid://c5p7n26h2gntc"
+path.s3tc="res://.godot/imported/Pole.png-ac276895459d0bceab5a1540a9c90ac7.s3tc.ctex"
+path.etc2="res://.godot/imported/Pole.png-ac276895459d0bceab5a1540a9c90ac7.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/Village/Bridge/Bridge_post_top.png"
-dest_files=["res://.godot/imported/Bridge_post_top.png-449c74e656d1f4f77005e1a8a9ee3b8b.s3tc.ctex", "res://.godot/imported/Bridge_post_top.png-449c74e656d1f4f77005e1a8a9ee3b8b.etc2.ctex"]
+source_file="res://assets/images/Village/Bridge/Pole.png"
+dest_files=["res://.godot/imported/Pole.png-ac276895459d0bceab5a1540a9c90ac7.s3tc.ctex", "res://.godot/imported/Pole.png-ac276895459d0bceab5a1540a9c90ac7.etc2.ctex"]
 
 [params]
 

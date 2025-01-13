@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://xpfdbmrrffng"]
+[gd_scene load_steps=5 format=3 uid="uid://xpfdbmrrffng"]
 
 [ext_resource type="Texture2D" uid="uid://b2v1n07qemr71" path="res://assets/images/Village/Buildings/Buildings_House2.png" id="1_t1x5w"]
+[ext_resource type="Texture2D" uid="uid://ctt41u8002gwo" path="res://assets/images/Village/Buildings/e6588f10-561c-498c-a914-1f285821c663.png" id="2_ftjok"]
+[ext_resource type="Texture2D" uid="uid://q7oa2jgomuo7" path="res://assets/images/Village/Buildings/a878cb1f-3139-43cb-8c77-d7bc464f46b1.png" id="3_aafdd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5wfdg"]
 size = Vector3(10.9573, 15.5447, 4)
@@ -11,6 +13,30 @@ size = Vector3(10.9573, 15.5447, 4)
 shaded = true
 texture = ExtResource("1_t1x5w")
 
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-5.7699e-08, 0, 1.32, 0, 1.32, 0, -1.32, 0, -5.7699e-08, 5.93621, 0, 5.88721)
+shaded = true
+double_sided = false
+texture = ExtResource("2_ftjok")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(-5.7699e-08, 0, -1.32, 0, 1.32, 0, 1.32, 0, -5.7699e-08, -5.02789, 0, 5.08243)
+shaded = true
+double_sided = false
+texture = ExtResource("2_ftjok")
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(-1.20526e-08, -0.730527, 0.743617, -2.55563e-08, 1.05301, 0.515884, -0.646418, -2.80103e-08, -3.42606e-08, 8.47011, -5.0858, 5.65089)
+shaded = true
+double_sided = false
+texture = ExtResource("3_aafdd")
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform3D(-2.82558e-08, 0.731428, -0.743175, 0, 1.05239, 0.51652, 0.646418, 3.19717e-08, -3.24852e-08, -7.98579, -5.52044, 5.67019)
+shaded = true
+double_sided = false
+texture = ExtResource("3_aafdd")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.397112, -0.626587, -1.50001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.75282, -0.397112, -0.626587, 5.21206)
 shape = SubResource("BoxShape3D_5wfdg")

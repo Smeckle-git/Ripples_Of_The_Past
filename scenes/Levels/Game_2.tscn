@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dbarnxy52abmx" path="res://scenes/ui/PauseMenu.tscn" id="1_mb7hb"]
 [ext_resource type="Script" path="res://Scripts/Demo/Game.gd" id="1_onfik"]
-[ext_resource type="PackedScene" uid="uid://cbewddi7nlylt" path="res://scenes/Levels/Village.tscn" id="2_fouv5"]
+[ext_resource type="PackedScene" uid="uid://cbewddi7nlylt" path="res://scenes/Levels/Destinations/Village.tscn" id="2_fouv5"]
 
 [node name="Game2" type="Node"]
 process_mode = 3

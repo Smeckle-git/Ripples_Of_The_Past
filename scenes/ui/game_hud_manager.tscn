@@ -10,5 +10,7 @@ script = ExtResource("1_tlg8r")
 visible = false
 
 [node name="HUD" parent="QuestLog" instance=ExtResource("2_7am0y")]
+offset_right = 228.0
+offset_bottom = 177.0
 
 [node name="Reputation bar" type="CanvasLayer" parent="."]

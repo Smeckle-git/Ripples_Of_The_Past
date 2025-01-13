@@ -35,3 +35,9 @@ func testFunc():
 		
 func _process(delta: float) -> void:
 	testFunc()
+
+func map():
+	pass
+	#checks if the current map/node is forrst
+		#if its true enable the forest minimap and disable the village minimap
+# else if the current map/node is village enable the forest minimap and disable the forest minimap

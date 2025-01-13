@@ -98,3 +98,8 @@ func load_keybinding():
 		
 		keybindings[key] = input_event
 	return keybindings
+
+func get_keybinding(binding : String) -> String:
+	if config.get_value("keybinding", binding):
+		return str(config.get_value("keybinding", binding))
+	return "{Invalid Keybinding}"

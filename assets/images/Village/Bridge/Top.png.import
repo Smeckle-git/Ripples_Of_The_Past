@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fh47uwan8bq3"
-path.s3tc="res://.godot/imported/Bridge_post_side.png-506af2eb74789f8143edd1fb2e45b31f.s3tc.ctex"
-path.etc2="res://.godot/imported/Bridge_post_side.png-506af2eb74789f8143edd1fb2e45b31f.etc2.ctex"
+uid="uid://bbhollmq46plq"
+path.s3tc="res://.godot/imported/Top.png-b8476324204fabefa458ea9e600f88fe.s3tc.ctex"
+path.etc2="res://.godot/imported/Top.png-b8476324204fabefa458ea9e600f88fe.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/Village/Bridge/Bridge_post_side.png"
-dest_files=["res://.godot/imported/Bridge_post_side.png-506af2eb74789f8143edd1fb2e45b31f.s3tc.ctex", "res://.godot/imported/Bridge_post_side.png-506af2eb74789f8143edd1fb2e45b31f.etc2.ctex"]
+source_file="res://assets/images/Village/Bridge/Top.png"
+dest_files=["res://.godot/imported/Top.png-b8476324204fabefa458ea9e600f88fe.s3tc.ctex", "res://.godot/imported/Top.png-b8476324204fabefa458ea9e600f88fe.etc2.ctex"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cnletcqrtpx0a"]
 
 [ext_resource type="Texture2D" uid="uid://dfncmvgjjftsc" path="res://assets/images/Village/Bridge/bridge_floor.png" id="1_0kbvd"]
-[ext_resource type="Texture2D" uid="uid://fh47uwan8bq3" path="res://assets/images/Village/Bridge/Bridge_post_side.png" id="2_4ih3m"]
-[ext_resource type="Texture2D" uid="uid://cihbcq67tmutc" path="res://assets/images/Village/Bridge/Bridge_post_top.png" id="3_tjo4c"]
+[ext_resource type="Texture2D" uid="uid://bbhollmq46plq" path="res://assets/images/Village/Bridge/Top.png" id="3_icfau"]
+[ext_resource type="Texture2D" uid="uid://c5p7n26h2gntc" path="res://assets/images/Village/Bridge/Pole.png" id="4_q66fx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5wfdg"]
 size = Vector3(26.1848, 1.07337, 12.0739)
@@ -38,174 +38,178 @@ transform = Transform3D(-5.72493e-09, 0.51475, 5.20384e-07, -5.0049e-16, 2.25004
 shaded = true
 double_sided = false
 texture_filter = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side4" type="Sprite3D" parent="Floor"]
 transform = Transform3D(-5.72493e-09, -0.51475, -5.20384e-07, 0, -2.25004e-08, 11.905, -0.130971, 2.25004e-08, 2.27467e-14, -0.052, 13.172, 0.486)
 shaded = true
 double_sided = false
 texture_filter = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Poast" type="Sprite3D" parent="."]
-transform = Transform3D(0.09, 0, 0, 0, -3.93403e-09, 0.09, 0, -0.09, -3.93403e-09, 12.6091, 5.863, 5.70455)
+transform = Transform3D(0.0913919, 0, 0, 0, -3.93316e-09, 0.0899802, 0, -0.0899802, -3.93316e-09, -12.5501, 5.9379, 5.70138)
+flip_v = true
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("3_tjo4c")
+texture = ExtResource("3_icfau")
 
 [node name="Side" type="Sprite3D" parent="Poast"]
-transform = Transform3D(-1.38889, 3.13611e-10, -0.00358729, 0.00179365, 3.64261e-07, -2.77778, 7.84028e-11, -2.77778, -3.64261e-07, 0.232727, -3.56441, -32.358)
+transform = Transform3D(-1.36774, 3.08835e-10, -0.00353265, 0.00179405, 3.64341e-07, -2.77839, 7.84201e-11, -2.77839, -3.64341e-07, -0.41507, -3.60546, -33.1975)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side2" type="Sprite3D" parent="Poast"]
-transform = Transform3D(-0.00156784, -1.2142e-07, -2.77778, -1.21404, -1.21264e-07, 0.00358729, -5.30672e-08, 2.77778, -1.21264e-07, -5.28819, 1.01872, -32.6695)
+transform = Transform3D(-0.00154396, -1.19571e-07, -2.73547, -1.21431, -1.21291e-07, 0.00358808, -5.30789e-08, 2.77839, -1.21291e-07, -5.85188, 1.48433, -32.839)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side3" type="Sprite3D" parent="Poast"]
-transform = Transform3D(1.38889, 2.71262e-10, 0.000969205, -0.000484602, 2.42841e-07, 2.77778, 9.32626e-11, -2.77778, 2.42841e-07, 0.184082, 5.67594, -32.358)
+transform = Transform3D(1.36774, 2.67131e-10, 0.000954444, -0.000484709, 2.42894e-07, 2.77839, 9.32831e-11, -2.77839, 2.42894e-07, -0.462967, 6.11311, -33.1975)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side4" type="Sprite3D" parent="Poast"]
-transform = Transform3D(0.00156784, 1.2142e-07, 2.77778, 1.21404, -1.21577e-07, -0.00358729, 5.30672e-08, 2.77778, -1.21577e-07, 5.71513, 1.10505, -32.6696)
+transform = Transform3D(0.00154396, 1.19571e-07, 2.73547, 1.21431, -1.21604e-07, -0.00358808, 5.30789e-08, 2.77839, -1.21604e-07, 5.30206, 1.35572, -32.8586)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Poast2" type="Sprite3D" parent="."]
-transform = Transform3D(0.09, 0, 0, 0, -3.93403e-09, 0.09, 0, -0.09, -3.93403e-09, -12.609, 5.863, 5.705)
+transform = Transform3D(0.0913919, 0, 0, 0, -3.93316e-09, 0.0899802, 0, -0.0899802, -3.93316e-09, -12.55, 5.938, -5.701)
+flip_v = true
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("3_tjo4c")
+texture = ExtResource("3_icfau")
 
 [node name="Side" type="Sprite3D" parent="Poast2"]
-transform = Transform3D(-1.38889, 3.13611e-10, -0.00358729, 0.00179365, 3.64261e-07, -2.77778, 7.84028e-11, -2.77778, -3.64261e-07, 0.232727, -3.56441, -32.358)
+transform = Transform3D(-1.36774, 3.08835e-10, -0.00353265, 0.00179405, 3.64341e-07, -2.77839, 7.84201e-11, -2.77839, -3.64341e-07, -0.41507, -3.60546, -33.1975)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side2" type="Sprite3D" parent="Poast2"]
-transform = Transform3D(-0.00156784, -1.2142e-07, -2.77778, -1.21404, -1.21264e-07, 0.00358729, -5.30672e-08, 2.77778, -1.21264e-07, -5.28819, 1.01872, -32.6695)
+transform = Transform3D(-0.00154396, -1.19571e-07, -2.73547, -1.21431, -1.21291e-07, 0.00358808, -5.30789e-08, 2.77839, -1.21291e-07, -5.85188, 1.48433, -32.839)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side3" type="Sprite3D" parent="Poast2"]
-transform = Transform3D(1.38889, 2.71262e-10, 0.000969205, -0.000484602, 2.42841e-07, 2.77778, 9.32626e-11, -2.77778, 2.42841e-07, 0.184082, 5.67594, -32.358)
+transform = Transform3D(1.36774, 2.67131e-10, 0.000954444, -0.000484709, 2.42894e-07, 2.77839, 9.32831e-11, -2.77839, 2.42894e-07, -0.462967, 6.11311, -33.1975)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side4" type="Sprite3D" parent="Poast2"]
-transform = Transform3D(0.00156784, 1.2142e-07, 2.77778, 1.21404, -1.21577e-07, -0.00358729, 5.30672e-08, 2.77778, -1.21577e-07, 5.71513, 1.10505, -32.6696)
+transform = Transform3D(0.00154396, 1.19571e-07, 2.73547, 1.21431, -1.21604e-07, -0.00358808, 5.30789e-08, 2.77839, -1.21604e-07, 5.30206, 1.35572, -32.8586)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Poast3" type="Sprite3D" parent="."]
-transform = Transform3D(0.09, 0, 0, 0, -3.93403e-09, 0.09, 0, -0.09, -3.93403e-09, 12.6091, 5.863, -5.705)
+transform = Transform3D(0.0913919, 0, 0, 0, -3.93316e-09, 0.0899802, 0, -0.0899802, -3.93316e-09, 12.55, 5.9379, 5.70138)
+flip_v = true
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("3_tjo4c")
+texture = ExtResource("3_icfau")
 
 [node name="Side" type="Sprite3D" parent="Poast3"]
-transform = Transform3D(-1.38889, 3.13611e-10, -0.00358729, 0.00179365, 3.64261e-07, -2.77778, 7.84028e-11, -2.77778, -3.64261e-07, 0.232727, -3.56441, -32.358)
+transform = Transform3D(-1.36774, 3.08835e-10, -0.00353265, 0.00179405, 3.64341e-07, -2.77839, 7.84201e-11, -2.77839, -3.64341e-07, -0.41507, -3.60546, -33.1975)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side2" type="Sprite3D" parent="Poast3"]
-transform = Transform3D(-0.00156784, -1.2142e-07, -2.77778, -1.21404, -1.21264e-07, 0.00358729, -5.30672e-08, 2.77778, -1.21264e-07, -5.28819, 1.01872, -32.6695)
+transform = Transform3D(-0.00154396, -1.19571e-07, -2.73547, -1.21431, -1.21291e-07, 0.00358808, -5.30789e-08, 2.77839, -1.21291e-07, -5.85188, 1.48433, -32.839)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side3" type="Sprite3D" parent="Poast3"]
-transform = Transform3D(1.38889, 2.71262e-10, 0.000969205, -0.000484602, 2.42841e-07, 2.77778, 9.32626e-11, -2.77778, 2.42841e-07, 0.184082, 5.67594, -32.358)
+transform = Transform3D(1.36774, 2.67131e-10, 0.000954444, -0.000484709, 2.42894e-07, 2.77839, 9.32831e-11, -2.77839, 2.42894e-07, -0.462967, 6.11311, -33.1975)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side4" type="Sprite3D" parent="Poast3"]
-transform = Transform3D(0.00156784, 1.2142e-07, 2.77778, 1.21404, -1.21577e-07, -0.00358729, 5.30672e-08, 2.77778, -1.21577e-07, 5.71513, 1.10505, -32.6696)
+transform = Transform3D(0.00154396, 1.19571e-07, 2.73547, 1.21431, -1.21604e-07, -0.00358808, 5.30789e-08, 2.77839, -1.21604e-07, 5.30206, 1.35572, -32.8586)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Poast4" type="Sprite3D" parent="."]
-transform = Transform3D(0.09, 0, 0, 0, -3.93403e-09, 0.09, 0, -0.09, -3.93403e-09, -12.609, 5.863, -5.705)
+transform = Transform3D(0.0913919, 0, 0, 0, -3.93316e-09, 0.0899802, 0, -0.0899802, -3.93316e-09, 12.55, 5.938, -5.701)
+flip_v = true
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("3_tjo4c")
+texture = ExtResource("3_icfau")
 
 [node name="Side" type="Sprite3D" parent="Poast4"]
-transform = Transform3D(-1.38889, 3.13611e-10, -0.00358729, 0.00179365, 3.64261e-07, -2.77778, 7.84028e-11, -2.77778, -3.64261e-07, 0.232727, -3.56441, -32.358)
+transform = Transform3D(-1.36774, 3.08835e-10, -0.00353265, 0.00179405, 3.64341e-07, -2.77839, 7.84201e-11, -2.77839, -3.64341e-07, -0.41507, -3.60546, -33.1975)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side2" type="Sprite3D" parent="Poast4"]
-transform = Transform3D(-0.00156784, -1.2142e-07, -2.77778, -1.21404, -1.21264e-07, 0.00358729, -5.30672e-08, 2.77778, -1.21264e-07, -5.28819, 1.01872, -32.6695)
+transform = Transform3D(-0.00154396, -1.19571e-07, -2.73547, -1.21431, -1.21291e-07, 0.00358808, -5.30789e-08, 2.77839, -1.21291e-07, -5.85188, 1.48433, -32.839)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side3" type="Sprite3D" parent="Poast4"]
-transform = Transform3D(1.38889, 2.71262e-10, 0.000969205, -0.000484602, 2.42841e-07, 2.77778, 9.32626e-11, -2.77778, 2.42841e-07, 0.184082, 5.67594, -32.358)
+transform = Transform3D(1.36774, 2.67131e-10, 0.000954444, -0.000484709, 2.42894e-07, 2.77839, 9.32831e-11, -2.77839, 2.42894e-07, -0.462967, 6.11311, -33.1975)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="Side4" type="Sprite3D" parent="Poast4"]
-transform = Transform3D(0.00156784, 1.2142e-07, 2.77778, 1.21404, -1.21577e-07, -0.00358729, 5.30672e-08, 2.77778, -1.21577e-07, 5.71513, 1.10505, -32.6696)
+transform = Transform3D(0.00154396, 1.19571e-07, 2.73547, 1.21431, -1.21604e-07, -0.00358808, 5.30789e-08, 2.77839, -1.21604e-07, 5.30206, 1.35572, -32.8586)
 shaded = true
 double_sided = false
 texture_filter = 1
 render_priority = 1
-texture = ExtResource("2_4ih3m")
+texture = ExtResource("4_q66fx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0193372, -0.464423, -0.105534)

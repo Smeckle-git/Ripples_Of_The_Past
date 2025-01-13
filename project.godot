@@ -20,10 +20,10 @@ config/icon="res://assets/images/icon.svg"
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GameHudManager="*res://scenes/ui/game_hud_manager.tscn"
-InteractManager="*res://scenes/ui/InteractManager.tscn"
 GameSettingsManager="*res://autoload/GameSettingsManager.gd"
 SceneManager="*res://scenes/Levels/scene_manager.tscn"
 KarmaGlobal="*res://Scripts/Karma_global.gd"
+InteractManager="*res://scenes/ui/InteractManager.tscn"
 
 [dialogic]
 
@@ -63,9 +63,9 @@ variables={
 "flower_quest_accepted": false
 },
 "Whiskers": {
+"Accepted_Fish_Quest": false,
 "Forest_Interaction_phase": 1,
-"New_Dialog": true,
-"Selected_Option": 0
+"New_Dialog": true
 },
 "temp_variable": 0
 }
@@ -91,6 +91,10 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+
+[display]
+
+window/stretch/mode="viewport"
 
 [dotnet]
 

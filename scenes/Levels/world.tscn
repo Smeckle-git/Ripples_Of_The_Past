@@ -123,7 +123,6 @@ size = Vector3(88.12, 18.08, 11.3319)
 material = SubResource("ShaderMaterial_y1wvd")
 
 [node name="trees" type="Node3D" parent="."]
-visible = false
 
 [node name="tree_collection_border" type="Node3D" parent="trees"]
 
@@ -1586,14 +1585,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.3311, 0.999998, -71.5973)
 
 [node name="tree_trunk4" parent="foilage/foilage_collection_tutorial/tree trunks" instance=ExtResource("9_cyinu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.3525, 1.00001, -85.9894)
-
-[node name="foilage_collection_village" type="Node3D" parent="foilage"]
-
-[node name="bushes" type="Node3D" parent="foilage/foilage_collection_village"]
-
-[node name="grass" type="Node3D" parent="foilage/foilage_collection_village"]
-
-[node name="tree trunks" type="Node3D" parent="foilage/foilage_collection_village"]
 
 [node name="ScaryNode" type="Node3D" parent="foilage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)

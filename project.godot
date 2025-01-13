@@ -29,6 +29,7 @@ InteractManager="*res://scenes/ui/InteractManager.tscn"
 
 directories/dch_directory={
 "Barbarian": "res://gui/Dialog/Characters/Barbarian.dch",
+"God": "res://gui/Dialog/Timelines/God.dch",
 "Hugo": "res://gui/Dialog/Characters/Hugo.dch",
 "Ian": "res://gui/Dialog/Characters/Ian.dch",
 "Mage": "res://gui/Dialog/Characters/Mage.dch",
@@ -40,6 +41,7 @@ directories/dtl_directory={
 "DEMO_interaction": "res://gui/Dialog/Timelines/DEMO_interaction.dtl",
 "Fish_quest_completion": "res://gui/Dialog/Timelines/Fish_quest_completion.dtl",
 "Iann_interaction": "res://gui/Dialog/Timelines/Iann_interaction.dtl",
+"IntroTimeline": "res://gui/Dialog/Timelines/IntroTimeline.dtl",
 "ask_for_ian_location": "res://gui/Dialog/Timelines/ask_for_ian_location.dtl",
 "flower_girl_quest": "res://gui/Dialog/Timelines/flower_girl_quest.dtl",
 "quest1_end": "res://gui/Dialog/Timelines/quest1_end.dtl",

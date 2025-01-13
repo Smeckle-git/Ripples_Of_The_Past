@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=3 uid="uid://0ft6wn2pxu0l"]
 
-[ext_resource type="Script" path="res://scenes/Levels/Forest_quests.gd" id="1_eo63n"]
+[ext_resource type="Script" path="res://Scripts/Forest_quests.gd" id="1_eo63n"]
 [ext_resource type="Script" path="res://Scripts/Demo/demo_environment.gd" id="1_ivdn3"]
 [ext_resource type="PackedScene" uid="uid://c43be3tlcmwyt" path="res://scenes/environment/tree_1.tscn" id="2_8om2v"]
 [ext_resource type="Terrain3DStorage" uid="uid://dptuy4g7tymh8" path="res://resources/terrain3d_resources/storage.res" id="2_lua6u"]

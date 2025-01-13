@@ -274,7 +274,6 @@ font_size = 32
 outline_size = 3
 
 [node name="Loading" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_8l0k0")
 
 [node name="Loading_screen" type="Control" parent="."]

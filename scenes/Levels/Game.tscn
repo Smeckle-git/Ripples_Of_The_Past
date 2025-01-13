@@ -10,6 +10,7 @@ process_mode = 3
 script = ExtResource("1_qyr1s")
 
 [node name="Loading" parent="." instance=ExtResource("2_dflw8")]
+visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource("2_0r4c8")]
 visible = false

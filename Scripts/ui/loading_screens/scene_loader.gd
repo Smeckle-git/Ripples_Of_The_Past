@@ -7,21 +7,27 @@ signal loaded()
 @export var emit_loading_signal: bool = true
 var target_folder = "res://scenes/Levels/nodes/"
 var target_scene: String = "Village"
-var current_scene: String = "Level"
+var current_scene: String
 
 
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") :
 		#print_debug(target_scene)
-		change_scene(current_scene,target_scene)
+		change_scene(target_scene)
 
-func change_scene(old_scene:String, new_scene:String):
-	if old_scene == new_scene:
+func change_scene(new_scene:String):
+	print(current_scene)
+	if current_scene == "":
+		current_scene = "Level"
+		print("test")
+		
+	if current_scene == new_scene:
 		print("Is the same scene")
 	else:	
-		LoadingScreens.transition_to(target_folder + new_scene + ".tscn",old_scene)
-		current_scene = target_scene
+		LoadingScreens.transition_to(target_folder + new_scene + ".tscn", current_scene)
+		current_scene = new_scene
+		print(current_scene)
 		
 func activate() -> void:
 	pass

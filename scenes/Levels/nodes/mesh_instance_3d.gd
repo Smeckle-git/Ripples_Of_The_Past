@@ -8,5 +8,5 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_object_int():
-	root.scene_loader.change_scene("Village","Level")
+	root.scene_loader.change_scene("Level")
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,29 +1,29 @@
 [gd_scene load_steps=31 format=3 uid="uid://bgofflk61vtx8"]
 
-[ext_resource type="Script" path="res://Scripts/ui/loading_screens/loading_screens.gd" id="1_6qtkl"]
-[ext_resource type="Script" path="res://scenes/ui/scene_manager.gd" id="1_c3uvd"]
-[ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="3_v0jp5"]
-[ext_resource type="Texture2D" uid="uid://c1o55c1hyduvb" path="res://assets/images/Others/Product_page.jpg" id="4_hshnu"]
-[ext_resource type="Texture2D" uid="uid://yqpgh6crvp22" path="res://assets/images/Others/Official_studio_logo.png" id="5_5nat0"]
-[ext_resource type="Shader" path="res://assets/shaders/diamon sweep.gdshader" id="5_30yax"]
-[ext_resource type="Texture2D" uid="uid://b567xswdx55eq" path="res://assets/images/Others/Product_page_blurry.jpg" id="5_y1jxe"]
-[ext_resource type="Texture2D" uid="uid://vtqgcrn8sw2x" path="res://assets/images/Others/Untitled_88.png" id="6_viqs6"]
-[ext_resource type="Texture2D" uid="uid://nk150htnpde4" path="res://assets/images/sprites/Hugo/Untitled14.png" id="9_ge7fn"]
-[ext_resource type="Texture2D" uid="uid://bpsnxhcabw0c8" path="res://assets/images/sprites/Ian/Untitled13.png" id="10_7vkkg"]
-[ext_resource type="Texture2D" uid="uid://cm5m13l0wab8k" path="res://gui/Dialog/Characters/dialog_whiskers.png" id="10_lpelj"]
-[ext_resource type="Texture2D" uid="uid://c85175kr7jlkg" path="res://assets/images/sprites/thorinn/Untitled10_2.png" id="11_k6it5"]
-[ext_resource type="Texture2D" uid="uid://dfoj68sifng63" path="res://assets/images/loading_icon/Scale-1.png" id="11_kr0b7"]
-[ext_resource type="Texture2D" uid="uid://4fwnrbw6ksv0" path="res://assets/images/loading_icon/Scale-2.png" id="12_qqgpx"]
-[ext_resource type="Texture2D" uid="uid://3ycoymrx4ait" path="res://assets/images/loading_icon/Scale-4.png" id="13_d6a4j"]
-[ext_resource type="Texture2D" uid="uid://c6o204fxr8vik" path="res://assets/images/loading_icon/Scale-_3.png" id="14_ed5qo"]
-[ext_resource type="Texture2D" uid="uid://cdrfoogy5e2h0" path="res://assets/images/loading_icon/Scale.png" id="15_k41nn"]
-[ext_resource type="Texture2D" uid="uid://buetxq8ttj4s7" path="res://assets/images/loading_icon/Scale_1.png" id="16_slrfx"]
-[ext_resource type="Texture2D" uid="uid://dqysu7vuice1a" path="res://assets/images/loading_icon/Scale_2.png" id="17_1at7i"]
-[ext_resource type="Texture2D" uid="uid://bkx16df06l7tw" path="res://assets/images/loading_icon/Scale_3.png" id="18_waqpn"]
-[ext_resource type="Texture2D" uid="uid://b7p40vfg8guil" path="res://assets/images/loading_icon/Scale_4.png" id="19_ue8dg"]
+[ext_resource type="Script" path="res://Scripts/ui/loading_screens/scene_manager.gd" id="1_8l0k0"]
+[ext_resource type="Script" path="res://Scripts/ui/loading_screens/loading_screens.gd" id="2_slby2"]
+[ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="3_5vwvy"]
+[ext_resource type="Texture2D" uid="uid://c1o55c1hyduvb" path="res://assets/images/Others/Product_page.jpg" id="4_mxioi"]
+[ext_resource type="Shader" path="res://assets/shaders/diamon sweep.gdshader" id="5_vowey"]
+[ext_resource type="Texture2D" uid="uid://b567xswdx55eq" path="res://assets/images/Others/Product_page_blurry.jpg" id="6_65u8g"]
+[ext_resource type="Texture2D" uid="uid://yqpgh6crvp22" path="res://assets/images/Others/Official_studio_logo.png" id="7_8omx1"]
+[ext_resource type="Texture2D" uid="uid://vtqgcrn8sw2x" path="res://assets/images/Others/Untitled_88.png" id="8_p1327"]
+[ext_resource type="Texture2D" uid="uid://nk150htnpde4" path="res://assets/images/sprites/Hugo/Untitled14.png" id="9_nr4fw"]
+[ext_resource type="Texture2D" uid="uid://c85175kr7jlkg" path="res://assets/images/sprites/thorinn/Untitled10_2.png" id="10_2dlyi"]
+[ext_resource type="Texture2D" uid="uid://cm5m13l0wab8k" path="res://gui/Dialog/Characters/dialog_whiskers.png" id="11_w7j46"]
+[ext_resource type="Texture2D" uid="uid://bpsnxhcabw0c8" path="res://assets/images/sprites/Ian/Untitled13.png" id="12_toik6"]
+[ext_resource type="Texture2D" uid="uid://cdrfoogy5e2h0" path="res://assets/images/loading_icon/Scale.png" id="13_aoxsq"]
+[ext_resource type="Texture2D" uid="uid://dfoj68sifng63" path="res://assets/images/loading_icon/Scale-1.png" id="14_4mlu7"]
+[ext_resource type="Texture2D" uid="uid://4fwnrbw6ksv0" path="res://assets/images/loading_icon/Scale-2.png" id="15_128ti"]
+[ext_resource type="Texture2D" uid="uid://c6o204fxr8vik" path="res://assets/images/loading_icon/Scale-_3.png" id="16_dqpvt"]
+[ext_resource type="Texture2D" uid="uid://3ycoymrx4ait" path="res://assets/images/loading_icon/Scale-4.png" id="17_k6s15"]
+[ext_resource type="Texture2D" uid="uid://buetxq8ttj4s7" path="res://assets/images/loading_icon/Scale_1.png" id="18_p1gnb"]
+[ext_resource type="Texture2D" uid="uid://dqysu7vuice1a" path="res://assets/images/loading_icon/Scale_2.png" id="19_tyntl"]
+[ext_resource type="Texture2D" uid="uid://bkx16df06l7tw" path="res://assets/images/loading_icon/Scale_3.png" id="20_qc6d4"]
+[ext_resource type="Texture2D" uid="uid://b7p40vfg8guil" path="res://assets/images/loading_icon/Scale_4.png" id="21_15xgu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1f4r6"]
-shader = ExtResource("5_30yax")
+shader = ExtResource("5_vowey")
 shader_parameter/progress = 0.0
 shader_parameter/size = 40.0
 shader_parameter/fill = true
@@ -37,52 +37,52 @@ outline_size = 3
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("15_k41nn")
+"texture": ExtResource("13_aoxsq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_kr0b7")
+"texture": ExtResource("14_4mlu7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_qqgpx")
+"texture": ExtResource("15_128ti")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_ed5qo")
+"texture": ExtResource("16_dqpvt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_d6a4j")
+"texture": ExtResource("17_k6s15")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_ed5qo")
+"texture": ExtResource("16_dqpvt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_qqgpx")
+"texture": ExtResource("15_128ti")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_kr0b7")
+"texture": ExtResource("14_4mlu7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_k41nn")
+"texture": ExtResource("13_aoxsq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_slrfx")
+"texture": ExtResource("18_p1gnb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_1at7i")
+"texture": ExtResource("19_tyntl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_waqpn")
+"texture": ExtResource("20_qc6d4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_ue8dg")
+"texture": ExtResource("21_15xgu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_waqpn")
+"texture": ExtResource("20_qc6d4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_1at7i")
+"texture": ExtResource("19_tyntl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_slrfx")
+"texture": ExtResource("18_p1gnb")
 }],
 "loop": true,
 "name": &"default",
@@ -273,7 +273,8 @@ font_size = 32
 outline_size = 3
 
 [node name="Loading" type="CanvasLayer"]
-script = ExtResource("1_c3uvd")
+visible = false
+script = ExtResource("1_8l0k0")
 
 [node name="Loading_screen" type="Control" parent="."]
 layout_mode = 3
@@ -282,7 +283,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6qtkl")
+script = ExtResource("2_slby2")
 
 [node name="background_group" type="Control" parent="Loading_screen"]
 layout_mode = 1
@@ -303,21 +304,21 @@ grow_vertical = 2
 [node name="TextureRect_background_main_menu" type="TextureRect" parent="Loading_screen/background_group/MarginContainer_background"]
 visible = false
 layout_mode = 2
-texture = ExtResource("3_v0jp5")
+texture = ExtResource("3_5vwvy")
 expand_mode = 5
 stretch_mode = 6
 
 [node name="TextureRect_background_product_page" type="TextureRect" parent="Loading_screen/background_group/MarginContainer_background"]
 visible = false
 layout_mode = 2
-texture = ExtResource("4_hshnu")
+texture = ExtResource("4_mxioi")
 expand_mode = 5
 stretch_mode = 6
 
 [node name="TextureRect_background_product_page_blurry" type="TextureRect" parent="Loading_screen/background_group/MarginContainer_background"]
 material = SubResource("ShaderMaterial_1f4r6")
 layout_mode = 2
-texture = ExtResource("5_y1jxe")
+texture = ExtResource("6_65u8g")
 expand_mode = 5
 stretch_mode = 6
 
@@ -373,7 +374,7 @@ color = Color(1, 1, 1, 0.25098)
 
 [node name="TextureRect_studio_logo" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s/MarginContainer_studio"]
 layout_mode = 2
-texture = ExtResource("5_5nat0")
+texture = ExtResource("7_8omx1")
 expand_mode = 5
 stretch_mode = 4
 
@@ -388,7 +389,7 @@ color = Color(1, 1, 1, 0.25098)
 
 [node name="TextureRect_game_logo" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/Logo + text/Logo\'s/MarginContainer_game"]
 layout_mode = 2
-texture = ExtResource("6_viqs6")
+texture = ExtResource("8_p1327")
 expand_mode = 5
 stretch_mode = 4
 
@@ -415,7 +416,7 @@ grow_vertical = 2
 
 [node name="TextureRect_Hugo" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group/MarginContainer_Hugo"]
 layout_mode = 2
-texture = ExtResource("9_ge7fn")
+texture = ExtResource("9_nr4fw")
 expand_mode = 4
 stretch_mode = 4
 
@@ -430,7 +431,7 @@ grow_vertical = 2
 
 [node name="TextureRect_Thorrin" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group/MarginContainer_Thorrin"]
 layout_mode = 2
-texture = ExtResource("11_k6it5")
+texture = ExtResource("10_2dlyi")
 expand_mode = 5
 stretch_mode = 4
 
@@ -445,7 +446,7 @@ grow_vertical = 2
 
 [node name="TextureRect_Cat" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprite_group/MarginContainer_Cat"]
 layout_mode = 2
-texture = ExtResource("10_lpelj")
+texture = ExtResource("11_w7j46")
 expand_mode = 5
 stretch_mode = 4
 
@@ -466,7 +467,7 @@ grow_vertical = 0
 
 [node name="TextureRect_Ian" type="TextureRect" parent="Loading_screen/VBoxContainer/HBoxContainer/VBoxContainer_sprite/Character sprites/sprites_unused/MarginContainer_Ian"]
 layout_mode = 2
-texture = ExtResource("10_7vkkg")
+texture = ExtResource("12_toik6")
 expand_mode = 5
 stretch_mode = 4
 

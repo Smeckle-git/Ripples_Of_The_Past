@@ -14,8 +14,8 @@ script = ExtResource("1_dj3gj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
 [node name="InteractionArea" type="Area3D" parent="."]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("3_ecu2y")
 
 [node name="Area3D" type="CollisionShape3D" parent="InteractionArea"]

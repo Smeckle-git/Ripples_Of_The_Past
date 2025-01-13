@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Demo/Game.gd" id="1_qyr1s"]
 [ext_resource type="PackedScene" uid="uid://dbarnxy52abmx" path="res://scenes/ui/PauseMenu.tscn" id="2_0r4c8"]
 [ext_resource type="PackedScene" uid="uid://bgofflk61vtx8" path="res://scenes/ui/scene_manager/loading_screens.tscn" id="2_dflw8"]
-[ext_resource type="PackedScene" uid="uid://0ft6wn2pxu0l" path="res://scenes/Levels/nodes/world.tscn" id="3_xwloq"]
+[ext_resource type="PackedScene" uid="uid://0ft6wn2pxu0l" path="res://scenes/Levels/nodes/level.tscn" id="3_xwloq"]
 
 [node name="Game" type="Node"]
 process_mode = 3

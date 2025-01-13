@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://cbewddi7nlylt"]
+[gd_scene load_steps=55 format=3 uid="uid://cbewddi7nlylt"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/Town-quests.gd" id="1_olynm"]
 [ext_resource type="Script" path="res://Scripts/managers/village_environment.gd" id="2_qae02"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" path="res://Scripts/Quests/find_hugo_quest.gd" id="22_2f61i"]
 [ext_resource type="Script" path="res://Scripts/Quests/quest.gd" id="23_jlhl3"]
 [ext_resource type="Script" path="res://Scripts/ui/interaction_area.gd" id="24_eyqkl"]
+[ext_resource type="Script" path="res://scenes/Levels/nodes/mesh_instance_3d.gd" id="25_v3h01"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_47r1e"]
 panorama = ExtResource("3_85q0k")
@@ -165,6 +166,11 @@ radius = 10.0
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_i8lr6"]
 radius = 10.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wxnxf"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rx3ak"]
+radius = 1.991
 
 [node name="Village" type="Node3D"]
 script = ExtResource("1_olynm")
@@ -841,6 +847,21 @@ script = ExtResource("24_eyqkl")
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 shape = SubResource("CylinderShape3D_i8lr6")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.1344, 2.08897, 68.2608)
+layers = 2
+mesh = SubResource("CylinderMesh_wxnxf")
+script = ExtResource("25_v3h01")
+
+[node name="InteractionArea" type="Area3D" parent="MeshInstance3D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("24_eyqkl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122337, 0.00404882, -0.000282288)
+shape = SubResource("CylinderShape3D_rx3ak")
+
 [connection signal="body_entered" from="find_Ian_quest/InteractionArea3" to="find_Ian_quest/InteractionArea3" method="_on_body_entered"]
 [connection signal="body_exited" from="find_Ian_quest/InteractionArea3" to="find_Ian_quest/InteractionArea3" method="_on_body_exited"]
 [connection signal="body_entered" from="find_Ian_quest/InteractionArea5" to="find_Ian_quest/InteractionArea5" method="_on_body_entered"]
@@ -849,3 +870,5 @@ shape = SubResource("CylinderShape3D_i8lr6")
 [connection signal="body_exited" from="find_Ian_quest/InteractionArea4" to="find_Ian_quest/InteractionArea4" method="_on_body_exited"]
 [connection signal="body_entered" from="find_Ian_quest/InteractionArea2" to="find_Ian_quest/InteractionArea2" method="_on_body_entered"]
 [connection signal="body_exited" from="find_Ian_quest/InteractionArea2" to="find_Ian_quest/InteractionArea2" method="_on_body_exited"]
+[connection signal="body_entered" from="MeshInstance3D/InteractionArea" to="MeshInstance3D/InteractionArea" method="_on_body_entered"]
+[connection signal="body_exited" from="MeshInstance3D/InteractionArea" to="MeshInstance3D/InteractionArea" method="_on_body_exited"]

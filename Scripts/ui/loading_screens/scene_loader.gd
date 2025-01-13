@@ -14,7 +14,6 @@ var current_scene: String = "Level"
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") :
 		#print_debug(target_scene)
-		
 		change_scene(current_scene,target_scene)
 
 func change_scene(old_scene:String, new_scene:String):

@@ -482,7 +482,7 @@ collision_mask = 15
 script = ExtResource("1_2m2tc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(3.24979, 0, 0, 0, 5.09185, 0, 0, 0, 1.00143, 0, 0, 0)
+transform = Transform3D(-1.42053e-07, 0, 1.00143, 0, 5.09185, 0, -3.24979, 0, -4.37739e-08, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ulyrf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

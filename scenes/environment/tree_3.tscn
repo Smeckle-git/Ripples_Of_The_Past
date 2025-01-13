@@ -6,7 +6,8 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ucw78"]
 render_priority = 0
 shader = ExtResource("1_mc14k")
-shader_parameter/WindStrength = 1.83
+shader_parameter/test = Color(0.7, 0.7, 0.7, 1)
+shader_parameter/WindStrength = 0.129
 shader_parameter/speed = 1.183
 shader_parameter/sprite = ExtResource("1_a2b1o")
 

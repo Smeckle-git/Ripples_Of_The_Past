@@ -1,0 +1,220 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnletcqrtpx0a"]
+
+[ext_resource type="Texture2D" uid="uid://dfncmvgjjftsc" path="res://assets/images/Village/Bridge/bridge_floor.png" id="1_0kbvd"]
+[ext_resource type="Texture2D" uid="uid://fh47uwan8bq3" path="res://assets/images/Village/Bridge/Bridge_post_side.png" id="2_4ih3m"]
+[ext_resource type="Texture2D" uid="uid://cihbcq67tmutc" path="res://assets/images/Village/Bridge/Bridge_post_top.png" id="3_tjo4c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wfdg"]
+size = Vector3(26.1848, 1.07337, 12.0739)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_s256r"]
+points = PackedVector3Array(0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1)
+
+[node name="Bridge" type="StaticBody3D"]
+
+[node name="Floor" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, -1, 1, -4.37114e-08, -4.37114e-08, 0, 0, 0)
+flip_h = true
+shaded = true
+texture = ExtResource("1_0kbvd")
+
+[node name="Side1" type="Sprite3D" parent="Floor"]
+transform = Transform3D(-3.67176e-09, 4.37114e-08, -1, -3.67176e-09, 1, 4.37114e-08, -0.084, -4.37114e-08, 4.37114e-08, -6.10565, 0.0244658, 0.52)
+flip_h = true
+shaded = true
+double_sided = false
+texture_filter = 1
+texture = ExtResource("1_0kbvd")
+
+[node name="Side2" type="Sprite3D" parent="Floor"]
+transform = Transform3D(3.67176e-09, 8.74228e-08, 1, 0, 1, -8.74228e-08, 0.084, -3.82137e-15, -4.37114e-08, 6.01318, -0.0206366, 0.486073)
+shaded = true
+double_sided = false
+texture_filter = 1
+texture = ExtResource("1_0kbvd")
+
+[node name="Side3" type="Sprite3D" parent="Floor"]
+transform = Transform3D(-5.72493e-09, 0.51475, 5.20384e-07, -5.0049e-16, 2.25004e-08, -11.905, -0.130971, -2.25004e-08, 2.27467e-14, -0.0515913, -13.1724, 0.486)
+shaded = true
+double_sided = false
+texture_filter = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side4" type="Sprite3D" parent="Floor"]
+transform = Transform3D(-5.72493e-09, -0.51475, -5.20384e-07, 0, -2.25004e-08, 11.905, -0.130971, 2.25004e-08, 2.27467e-14, -0.052, 13.172, 0.486)
+shaded = true
+double_sided = false
+texture_filter = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Poast" type="Sprite3D" parent="."]
+transform = Transform3D(0.09, 0, 0, 0, -3.93403e-09, 0.09, 0, -0.09, -3.93403e-09, 12.6091, 5.863, 5.70455)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("3_tjo4c")
+
+[node name="Side" type="Sprite3D" parent="Poast"]
+transform = Transform3D(-1.38889, 3.13611e-10, -0.00358729, 0.00179365, 3.64261e-07, -2.77778, 7.84028e-11, -2.77778, -3.64261e-07, 0.232727, -3.56441, -32.358)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side2" type="Sprite3D" parent="Poast"]
+transform = Transform3D(-0.00156784, -1.2142e-07, -2.77778, -1.21404, -1.21264e-07, 0.00358729, -5.30672e-08, 2.77778, -1.21264e-07, -5.28819, 1.01872, -32.6695)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side3" type="Sprite3D" parent="Poast"]
+transform = Transform3D(1.38889, 2.71262e-10, 0.000969205, -0.000484602, 2.42841e-07, 2.77778, 9.32626e-11, -2.77778, 2.42841e-07, 0.184082, 5.67594, -32.358)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side4" type="Sprite3D" parent="Poast"]
+transform = Transform3D(0.00156784, 1.2142e-07, 2.77778, 1.21404, -1.21577e-07, -0.00358729, 5.30672e-08, 2.77778, -1.21577e-07, 5.71513, 1.10505, -32.6696)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Poast2" type="Sprite3D" parent="."]
+transform = Transform3D(0.09, 0, 0, 0, -3.93403e-09, 0.09, 0, -0.09, -3.93403e-09, -12.609, 5.863, 5.705)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("3_tjo4c")
+
+[node name="Side" type="Sprite3D" parent="Poast2"]
+transform = Transform3D(-1.38889, 3.13611e-10, -0.00358729, 0.00179365, 3.64261e-07, -2.77778, 7.84028e-11, -2.77778, -3.64261e-07, 0.232727, -3.56441, -32.358)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side2" type="Sprite3D" parent="Poast2"]
+transform = Transform3D(-0.00156784, -1.2142e-07, -2.77778, -1.21404, -1.21264e-07, 0.00358729, -5.30672e-08, 2.77778, -1.21264e-07, -5.28819, 1.01872, -32.6695)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side3" type="Sprite3D" parent="Poast2"]
+transform = Transform3D(1.38889, 2.71262e-10, 0.000969205, -0.000484602, 2.42841e-07, 2.77778, 9.32626e-11, -2.77778, 2.42841e-07, 0.184082, 5.67594, -32.358)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side4" type="Sprite3D" parent="Poast2"]
+transform = Transform3D(0.00156784, 1.2142e-07, 2.77778, 1.21404, -1.21577e-07, -0.00358729, 5.30672e-08, 2.77778, -1.21577e-07, 5.71513, 1.10505, -32.6696)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Poast3" type="Sprite3D" parent="."]
+transform = Transform3D(0.09, 0, 0, 0, -3.93403e-09, 0.09, 0, -0.09, -3.93403e-09, 12.6091, 5.863, -5.705)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("3_tjo4c")
+
+[node name="Side" type="Sprite3D" parent="Poast3"]
+transform = Transform3D(-1.38889, 3.13611e-10, -0.00358729, 0.00179365, 3.64261e-07, -2.77778, 7.84028e-11, -2.77778, -3.64261e-07, 0.232727, -3.56441, -32.358)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side2" type="Sprite3D" parent="Poast3"]
+transform = Transform3D(-0.00156784, -1.2142e-07, -2.77778, -1.21404, -1.21264e-07, 0.00358729, -5.30672e-08, 2.77778, -1.21264e-07, -5.28819, 1.01872, -32.6695)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side3" type="Sprite3D" parent="Poast3"]
+transform = Transform3D(1.38889, 2.71262e-10, 0.000969205, -0.000484602, 2.42841e-07, 2.77778, 9.32626e-11, -2.77778, 2.42841e-07, 0.184082, 5.67594, -32.358)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side4" type="Sprite3D" parent="Poast3"]
+transform = Transform3D(0.00156784, 1.2142e-07, 2.77778, 1.21404, -1.21577e-07, -0.00358729, 5.30672e-08, 2.77778, -1.21577e-07, 5.71513, 1.10505, -32.6696)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Poast4" type="Sprite3D" parent="."]
+transform = Transform3D(0.09, 0, 0, 0, -3.93403e-09, 0.09, 0, -0.09, -3.93403e-09, -12.609, 5.863, -5.705)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("3_tjo4c")
+
+[node name="Side" type="Sprite3D" parent="Poast4"]
+transform = Transform3D(-1.38889, 3.13611e-10, -0.00358729, 0.00179365, 3.64261e-07, -2.77778, 7.84028e-11, -2.77778, -3.64261e-07, 0.232727, -3.56441, -32.358)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side2" type="Sprite3D" parent="Poast4"]
+transform = Transform3D(-0.00156784, -1.2142e-07, -2.77778, -1.21404, -1.21264e-07, 0.00358729, -5.30672e-08, 2.77778, -1.21264e-07, -5.28819, 1.01872, -32.6695)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side3" type="Sprite3D" parent="Poast4"]
+transform = Transform3D(1.38889, 2.71262e-10, 0.000969205, -0.000484602, 2.42841e-07, 2.77778, 9.32626e-11, -2.77778, 2.42841e-07, 0.184082, 5.67594, -32.358)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="Side4" type="Sprite3D" parent="Poast4"]
+transform = Transform3D(0.00156784, 1.2142e-07, 2.77778, 1.21404, -1.21577e-07, -0.00358729, 5.30672e-08, 2.77778, -1.21577e-07, 5.71513, 1.10505, -32.6696)
+shaded = true
+double_sided = false
+texture_filter = 1
+render_priority = 1
+texture = ExtResource("2_4ih3m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0193372, -0.464423, -0.105534)
+shape = SubResource("BoxShape3D_5wfdg")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.08257, 0, 0, 0, 12, -14.074, -1.01344, -6.1422)
+shape = SubResource("ConvexPolygonShape3D_s256r")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, 0, -1.04907e-06, 0, 1.08257, 0, 8.74228e-08, 0, -12, 14.074, -1.013, 6.142)
+shape = SubResource("ConvexPolygonShape3D_s256r")

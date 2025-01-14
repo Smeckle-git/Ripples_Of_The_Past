@@ -90,6 +90,7 @@ func spawn_wood(position : Vector3, quest : Quest) -> void:
 	add_child(wood)
 	
 	wood.position = position
+	wood.scale *= 0.5
 	wood.quest = quest
 
 func spawn_Stone(position : Vector3, quest : Quest) -> void: 
@@ -97,6 +98,7 @@ func spawn_Stone(position : Vector3, quest : Quest) -> void:
 	add_child(stone)
 	
 	stone.position = position
+	stone.scale *= 0.5
 	stone.quest = quest
 
 func spawn_Fish(position : Vector3, quest : Quest) -> void: 

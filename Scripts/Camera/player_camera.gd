@@ -24,7 +24,7 @@ var rotation_step: float = 0
 
 func _ready() -> void:
 	position = default_position
-	print_debug(position)
+	#print_debug(position)
 
 func _process(_delta: float) -> void:
 	if return_to_player:
@@ -60,7 +60,7 @@ func _physics_process(_delta: float) -> void:
 			time_step_y += direction_y
 		#
 		if rotation_step < rotation_step_max:
-			rotation_step += 0.5
+			rotation_step += 0.25
 	else:
 		if time_step_y > 0:
 			time_step_y -= 1
@@ -69,11 +69,10 @@ func _physics_process(_delta: float) -> void:
 		#
 		if rotation_step > 0:
 			rotation_step -= 0.5
-		#
 	#position.y = default_position.y# + (default_position.y * time_step_y) / time_step_max
 	position.z = default_position.z + (backwards_walking_zoom_out \
 	* default_position.z * time_step_y) / time_step_max
 	#
 	rotation_degrees.x = default_rotation_degrees.x - rotation_step
 	#print_debug(time_step_y, " ", position.y, " ", position.z)
-	print_debug("position.z: ", position.z, ", rotation_degrees.x: ", rotation_degrees.x)
+	#print_debug("position.z: ", position.z, ", rotation_degrees.x: ", rotation_degrees.x)

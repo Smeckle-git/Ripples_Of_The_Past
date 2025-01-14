@@ -11,8 +11,7 @@ func _ready() -> void:
 	#
 	companion.following = true
 	companion.interaction_area.interact = Callable(companion, "_on_interact")
-	companion.interaction_area.action_name = "to pet"
-	#companion.interaction_area.show_label = true
+	companion.interaction_area.action_name = "pat"
 
 func _on_Vivian_interact():
 	if Dialogic.VAR.Vivian.flower_quest_accepted:

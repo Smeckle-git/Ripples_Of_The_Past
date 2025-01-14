@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://ddu443etw7oh2"]
 
 [ext_resource type="Script" path="res://scenes/ui/Journal/journal.gd" id="1_kjdks"]
-[ext_resource type="Shader" path="res://scenes/ui/Journal/Journal.gdshader" id="2_nbn3k"]
+[ext_resource type="Shader" path="res://assets/shaders/journal/Journal.gdshader" id="2_nbn3k"]
 [ext_resource type="Texture2D" uid="uid://cs74uktpya26q" path="res://assets/images/Maps/Screenshot 2025-01-09 152925.png" id="2_upwfn"]
 [ext_resource type="Texture2D" uid="uid://bqm13825nhivp" path="res://assets/images/Maps/Screenshot 2025-01-13 155922.png" id="4_r1nb6"]
 [ext_resource type="PackedScene" uid="uid://ydr85i4u3sto" path="res://scenes/ui/SettingMenu.tscn" id="5_cj7n3"]

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dstjjtkthuhr3"
-path.s3tc="res://.godot/imported/Thorinn_walking_down_1.png-f1e8a57f2dafbf0699e4bf5cb59734f0.s3tc.ctex"
-path.etc2="res://.godot/imported/Thorinn_walking_down_1.png-f1e8a57f2dafbf0699e4bf5cb59734f0.etc2.ctex"
+uid="uid://c415n267uklhg"
+path.s3tc="res://.godot/imported/Grass1042_laura.png-bb59e42ff1521c692612b9e807e84c6f.s3tc.ctex"
+path.etc2="res://.godot/imported/Grass1042_laura.png-bb59e42ff1521c692612b9e807e84c6f.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/sprites/thorinn/Thorinn_walking_down_1.png"
-dest_files=["res://.godot/imported/Thorinn_walking_down_1.png-f1e8a57f2dafbf0699e4bf5cb59734f0.s3tc.ctex", "res://.godot/imported/Thorinn_walking_down_1.png-f1e8a57f2dafbf0699e4bf5cb59734f0.etc2.ctex"]
+source_file="res://assets/images/roads/Grass1042_laura.png"
+dest_files=["res://.godot/imported/Grass1042_laura.png-bb59e42ff1521c692612b9e807e84c6f.s3tc.ctex", "res://.godot/imported/Grass1042_laura.png-bb59e42ff1521c692612b9e807e84c6f.etc2.ctex"]
 
 [params]
 

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxh6heux4dyq0"
-path.s3tc="res://.godot/imported/Thorinn_walking_right_3.png-fa238de2e4559a5dd869418bcd38b609.s3tc.ctex"
-path.etc2="res://.godot/imported/Thorinn_walking_right_3.png-fa238de2e4559a5dd869418bcd38b609.etc2.ctex"
+uid="uid://md40adet2xb2"
+path.s3tc="res://.godot/imported/Thorinn_walk_right_blue_3.png-70c78275376fc565f95bb13946240b83.s3tc.ctex"
+path.etc2="res://.godot/imported/Thorinn_walk_right_blue_3.png-70c78275376fc565f95bb13946240b83.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/sprites/thorinn/Thorinn_walking_right_3.png"
-dest_files=["res://.godot/imported/Thorinn_walking_right_3.png-fa238de2e4559a5dd869418bcd38b609.s3tc.ctex", "res://.godot/imported/Thorinn_walking_right_3.png-fa238de2e4559a5dd869418bcd38b609.etc2.ctex"]
+source_file="res://assets/images/sprites/thorinn/Thorinn_walk_right_blue_3.png"
+dest_files=["res://.godot/imported/Thorinn_walk_right_blue_3.png-70c78275376fc565f95bb13946240b83.s3tc.ctex", "res://.godot/imported/Thorinn_walk_right_blue_3.png-70c78275376fc565f95bb13946240b83.etc2.ctex"]
 
 [params]
 

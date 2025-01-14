@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://caywlopemv63v" path="res://assets/images/874898150658134d8f3b33a13ff2b247_images_jpeg.webp" id="1_kmf6u"]
 [ext_resource type="Texture2D" uid="uid://cjsmah0eyomnh" path="res://assets/Objects/Prototypes/Rock022_1K-PNG/Rock022_1K-PNG_Color.png" id="1_p02ch"]
 [ext_resource type="Script" path="res://Scripts/managers/village_environment.gd" id="1_ramwx"]
-[ext_resource type="Script" path="res://Scripts/Town-quests.gd" id="1_rox1a"]
+[ext_resource type="Script" path="res://Scripts/Quests/Town-quests.gd" id="1_rox1a"]
 [ext_resource type="MeshLibrary" uid="uid://lj2lte0mdauc" path="res://scenes/gridmap_blocks/world_obj_lib.meshlib" id="3_od0h7"]
 [ext_resource type="PackedScene" uid="uid://c43be3tlcmwyt" path="res://scenes/environment/tree_1.tscn" id="5_0tfvw"]
 [ext_resource type="PackedScene" uid="uid://de8pr30ne14cm" path="res://scenes/Buildings/Building_Hospital.tscn" id="5_j24n8"]
@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://btwaj2bepu0pl" path="res://scenes/Characters/Thorinn_village.tscn" id="19_1426d"]
 [ext_resource type="PackedScene" uid="uid://lgl6e0bmf5e2" path="res://scenes/Characters/flowerGirl.tscn" id="20_afve5"]
 [ext_resource type="PackedScene" uid="uid://dn4vjb5x6o1yr" path="res://scenes/Characters/companion.tscn" id="22_3lmn6"]
-[ext_resource type="Script" path="res://Scripts/find_hugo_quest.gd" id="23_r67va"]
+[ext_resource type="Script" path="res://Scripts/Quests/find_hugo_quest.gd" id="23_r67va"]
 [ext_resource type="Script" path="res://Scripts/Quests/quest.gd" id="24_qub7u"]
 [ext_resource type="Script" path="res://Scripts/ui/interaction_area.gd" id="25_uxtpi"]
 

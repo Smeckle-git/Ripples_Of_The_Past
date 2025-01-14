@@ -21,7 +21,7 @@ config/icon="res://assets/images/icon.svg"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GameHudManager="*res://scenes/ui/game_hud_manager.tscn"
 GameSettingsManager="*res://autoload/GameSettingsManager.gd"
-KarmaGlobal="*res://Scripts/Karma_global.gd"
+KarmaGlobal="*res://Scripts/Quests/Karma_global.gd"
 InteractManager="*res://scenes/ui/InteractManager.tscn"
 
 [dialogic]

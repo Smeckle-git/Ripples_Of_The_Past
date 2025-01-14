@@ -98,17 +98,8 @@ func load_keybinding():
 		
 		keybindings[key] = input_event
 	return keybindings
-	
-#func get_keybinding(binding : String) -> String:
-	#var keys = config.get_section_keys("keybinding")
-	#for key in keys:
-		#if key.strip_edges() == binding.strip_edges():
-			#var keybinding = config.get_value("keybinding", binding)
-			#return keybinding
-	#return "{Invalid Keybinding}"
 
 func get_keybinding(binding : String) -> String:
 	if config.get_value("keybinding", binding):
 		return str(config.get_value("keybinding", binding))
 	return "{Invalid Keybinding}"
-	

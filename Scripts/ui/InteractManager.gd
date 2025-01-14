@@ -10,10 +10,12 @@ var base_text
 var active_areas = []
 var can_interact = true
 
+
 func _ready() -> void:
 	interact_key = GameSettingsManager.get_keybinding("Interact")
 	base_text = "[" + interact_key + "]" + " to "
 
+	
 func register_area(area: InteractionArea):
 	active_areas.push_back(area)
 	
@@ -26,6 +28,8 @@ func _process(delta: float) -> void:
 	if active_areas.size() > 0 && can_interact:
 		active_areas.sort_custom(_sort_by_distance_to_player)
 		if active_areas[0].show_label:
+			interact_key = GameSettingsManager.get_keybinding("Interact")
+			base_text = "[" + interact_key + "]" + " to "
 			label.text = base_text + active_areas[0].action_name
 			label.global_position = active_areas[0].global_position
 			label.global_position.y += 1

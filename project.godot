@@ -32,6 +32,7 @@ directories/dch_directory={
 "God": "res://gui/Dialog/Timelines/God.dch",
 "Hugo": "res://gui/Dialog/Characters/Hugo.dch",
 "Ian": "res://gui/Dialog/Characters/Ian.dch",
+"Ludix": "res://gui/Dialog/Timelines/Ludix.dch",
 "Mage": "res://gui/Dialog/Characters/Mage.dch",
 "Thorinn": "res://gui/Dialog/Characters/Thorinn.dch",
 "Whiskers": "res://gui/Dialog/Characters/Whiskers.dch",

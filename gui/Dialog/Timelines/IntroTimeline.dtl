@@ -1,23 +1,21 @@
 [style name="Interaction_Style"]
-Thorinn: Ouch, ugh my head. Where am I?
+Thorinn once a brilliant doctor awakens, disoriented and surrounded by darkness.
+As his vision slowly returns, he realizes he’s in an unfamiliar room. 
 [signal arg="proceed_intro_background"]
-Thorinn: Who TF are you?!
-Im god you dumbass!
-Thorinn: Oh Shit!
-God: Thats right bitch you dead!
-Thorinn: No im not!
-God: TF you mean no you are not, YES you are!!
-Thorinn: Nuh Uh
-God: Yes you are
-Thorinn: Nuh Uh
-God: Yuh Uh
-Thorinn: Nuh Uh
-God: Yuh Uh
-Thorinn: Nuh Uh
-God: Yuh Uh
-Thorinn: Nuh Uh
-God: Yuh Uh
-Thorinn: Nuh Uh
-God: Yuh Uh
-Thorinn: Nuh Uh
-God: Yuh Uh
+Dizzy and confused, he stands up, only to be confronted by a towering creature.
+“I am Iudix, God of Judgment,” the creature declares.
+Ludix: Your mortal life has ended... 
+Ludix: To determine the the passing of ones soul it must now be judged.
+Thorinn is shocked as Iudix commands him to retrieve his own soul. 
+Hesitantly, he reaches into his chest and pulls out a glowing orb of light.
+[signal arg="proceed_intro_background"]
+But when Iudix weighs the soul against the Feather of Fate, the scale does something it never has before\: it balances perfectly.
+[signal arg="proceed_intro_background"]
+Ludix: !!!
+[signal arg="proceed_intro_background"]
+Ludix: This is a first...
+Ludix: It seems your soul is in perfect balance.
+Ludix: There is but only one solution for this.
+Ludix: You must relive pivotal moments of your life.
+Ludix: Your choices WILL decide your fate. Don’t fail this time.
+[signal arg="proceed_into_demo"]

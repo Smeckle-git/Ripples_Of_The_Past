@@ -53,3 +53,6 @@ func _update_visibility():
 func _on_dialogic_event(argument : String):
 	if argument == "proceed_intro_background":
 		_next_background()
+	if argument == "proceed_into_demo":
+		#TODO logic to load in the forest 
+		pass

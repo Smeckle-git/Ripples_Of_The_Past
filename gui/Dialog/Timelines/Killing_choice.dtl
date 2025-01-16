@@ -1,0 +1,26 @@
+[style name="Interaction_Style"]
+join Thorinn leftmost
+join Malrik rightmost
+Malrik: Who will be sacrificed?
+Malrik: ...
+leave Malrik
+- Vivian
+	join left_Malrik left [z_index="-1"]
+	join vivian rightmost
+	Thorinn (agitated): I’m sorry, Vivian.
+	set {Dead_person_choice} = 1
+- Nick
+	join left_Malrik left [z_index="-1"]
+	join Nick rightmost
+	Thorinn: This ends tonight!
+	set {Dead_person_choice} = 2
+- Alinora
+	join left_Malrik left [z_index="-1"]
+	join Alinora rightmost
+	Alinora: What are you doing here in the middle of the night?
+	Thorinn (agitated): I’m sorry, I don't have any other choice.
+	set {Dead_person_choice} = 3
+- Don’t kill anyone
+	Thorinn: I can’t do this. There must be another way.
+	Malrik: Let it be your way then.
+	set {Dead_person_choice} = 4

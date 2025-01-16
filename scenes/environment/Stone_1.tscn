@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://jlbndjk3brxr"]
+[gd_scene load_steps=12 format=3 uid="uid://jlbndjk3brxr"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/wood_1.gd" id="1_mrkdp"]
 [ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/disolve.gdshader" id="2_vyquu"]
@@ -30,10 +30,31 @@ resource_local_to_scene = true
 material = SubResource("ShaderMaterial_0icfy")
 size = Vector2(16, 20)
 
+[sub_resource type="Animation" id="Animation_s1c1d"]
+resource_name = "Idle"
+length = 0.75
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.695524, 0.602966, 1), Vector3(0.416259, 0.417211, 0.755556)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5gwji"]
 _data = {
-"Disolve": ExtResource("4_neld4")
+"Disolve": ExtResource("4_neld4"),
+"Idle": SubResource("Animation_s1c1d")
 }
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o23tc"]
+load_path = "res://.godot/imported/exclamation_mark.png-972816187b9e1e89f111765585cfa681.s3tc.ctex"
 
 [node name="Stone_1" type="Area3D"]
 collision_layer = 2
@@ -52,5 +73,11 @@ polygon = PackedVector2Array(-0.64263, -0.559824, -0.711636, -0.439226, -0.75171
 libraries = {
 "anim": SubResource("AnimationLibrary_5gwji")
 }
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.695524, 0, 0, 0, 0.602966, 0, 0, 0, 1, -0.0237924, 4.50811, 0.000147586)
+billboard = 2
+double_sided = false
+texture = SubResource("CompressedTexture2D_o23tc")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

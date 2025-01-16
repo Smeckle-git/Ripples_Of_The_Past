@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://0ft6wn2pxu0l"]
+[gd_scene load_steps=40 format=3 uid="uid://0ft6wn2pxu0l"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/Forest_quests.gd" id="1_eo63n"]
 [ext_resource type="Script" path="res://Scripts/Demo/demo_environment.gd" id="1_ivdn3"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cwhg5dt7uh11x" path="res://scenes/environment/tree_3.tscn" id="6_ced4g"]
 [ext_resource type="PackedScene" uid="uid://hqh15shxywyx" path="res://scenes/Characters/Thorinn.tscn" id="6_dd3lb"]
 [ext_resource type="PackedScene" uid="uid://cju7mir2fyt65" path="res://scenes/environment/tree_2.tscn" id="7_jfi5y"]
+[ext_resource type="PackedScene" uid="uid://bufar747dxh1b" path="res://scenes/village_door.tscn" id="8_upw2j"]
 [ext_resource type="PackedScene" uid="uid://b5rxeqhdmkkkj" path="res://scenes/environment/tree_4.tscn" id="8_vdqgb"]
 [ext_resource type="PackedScene" uid="uid://bvy7tlferryk5" path="res://scenes/environment/tree_trunk.tscn" id="9_cyinu"]
 [ext_resource type="PackedScene" uid="uid://b1cu2ipgkr85v" path="res://scenes/environment/bush_1.tscn" id="9_eu7qi"]
@@ -114,7 +115,6 @@ shadow_blur = 6.0
 
 [node name="Progression_block" type="StaticBody3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.26, 3.609, -19.3771)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Progression_block"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25544, 0)
@@ -124,6 +124,9 @@ shape = SubResource("BoxShape3D_ah4qg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.255, -0.334045)
 size = Vector3(88.12, 18.08, 11.3319)
 material = SubResource("ShaderMaterial_y1wvd")
+
+[node name="Village_door" parent="Environment" instance=ExtResource("8_upw2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.488194, 2.06884, 47.1706)
 
 [node name="trees" type="Node3D" parent="."]
 
@@ -1610,7 +1613,7 @@ script = ExtResource("25_0880s")
 move_to_global_position = Vector3(-4, 4, 50)
 
 [node name="Campfire_merchant" parent="." instance=ExtResource("20_0xhrj")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8, 2.5, 56.349)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -7.38522, 2.53237, 63.6615)
 
 [node name="Wood_1_marker" type="Marker3D" parent="Campfire_merchant"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.8737, -1.5, -47.3538)

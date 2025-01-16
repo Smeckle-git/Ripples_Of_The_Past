@@ -1,0 +1,7 @@
+[style name="Interaction_Style"]
+if {Vivian.killing_viv} == 1:
+	join Thorinn (normal) leftmost
+	join vivian center
+	Thorinn: Vivian. You’re out late.
+	vivian: The night is peaceful. It clears my mind.
+	Thorinn studies her, thinkinng she might be a pure soul for the cure.

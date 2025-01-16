@@ -1,28 +1,34 @@
 [style name="Interaction_Style"]
 if {selected_character} == 1:
+	join Thorinn leftmost
+	join vivian rightmost
 	if {Vivian.killing_viv} == false:
 		*Vivian hums softly, picking flowers.*
 		Thorinn: You must be Vivian. But say why are you out so late?
 		vivian: I am, you must be the traveling doctor Thorinn. And the night is peaceful. It clears my mind.
 		set {Vivian.killing_viv} = true
-	if {Vivian.killing_viv} == true:
+	elif {Vivian.killing_viv} == true:
 		*Vivian is still looking at flowers.*
 		vivian: Hello Mister Doctor. Aren't these flowers just  so pretty?
 		Thorinn: You're right, they are indeed.
 elif {selected_character} == 2:
+	join Thorinn leftmost
+	join Alinora rightmost
 	if {Alinora¨.killing_Alin} == false:
 		*Alinora is closing up the store, tired but content.*
 		Thorinn: Long day?
 		Alinora: Books don’t sell themselves. But it’s honest work. Now good night.
 		set {Alinora¨.killing_Alin} = true
-	if {Alinora¨.killing_Alin} == true:
+	elif {Alinora¨.killing_Alin} == true:
 		*Standing in front of the darkened shop of Alinora, Thorinn realises she must've gone to sleep.*
 elif {selected_character} == 3:
+	join Thorinn (agitated) leftmost
+	join Nick rightmost
 	if {Nick.killing_nick} == false:
 		*Nick crouches, inspecting traps, smirking.*
 		Thorinn: Hunting out of season, are we?
 		Nick: Laws are for fools. A man’s gotta eat.
 		set {Nick.killing_nick} = true
-	if {Nick.killing_nick} == true:
-		Nick: Leave! You will shoo away all my prey! 
+	elif {Nick.killing_nick} == true:
+		Nick: Leave! You will shoo away all my prey!
 		Thorinn (agitated): ...

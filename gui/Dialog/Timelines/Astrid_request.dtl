@@ -1,4 +1,4 @@
-[style]
+[style name="Interaction_Style"]
 if {Astrid.ask_for_help} == 1:
 	[background arg="res://gui/Dialog/styles/Screenshot 2025-01-16 at 14.26.00.png" fade="10.0"]
 	[wait_input]

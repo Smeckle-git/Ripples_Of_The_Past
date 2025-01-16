@@ -1,7 +1,7 @@
 extends CharacterBody3D
 class_name Hugo
 
-const SPEED = 3.0
+const SPEED = 4.0
 @export var move_to_location : Array = []
 @onready var interaction_area: InteractionArea = $InteractionArea2
 @onready var animation_tree: AnimationTree = $AnimationTree
@@ -14,8 +14,10 @@ func _physics_process(delta: float) -> void:
 	
 	if move_to_location.size() > 0:
 		var current_target = move_to_location[0]
-		var direction = current_target - position
-		velocity = direction.normalized() * SPEED
+		var direction = Vector3(current_target.x - position.x,0,current_target.z - position.z)
+		velocity.x = direction.normalized().x * SPEED
+		velocity.z = direction.normalized().z * SPEED
+		velocity.y = -0.01
 
 		if direction.length() <= 0.1:
 			move_to_location.pop_front()

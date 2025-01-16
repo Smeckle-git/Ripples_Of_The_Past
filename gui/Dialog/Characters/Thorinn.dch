@@ -17,7 +17,7 @@
 "portraits": {
 "agitated": {
 "export_overrides": {
-"image": "\"Agitated_Thorinn.png\""
+"image": "\"res://gui/Dialog/Characters/Agitated_Thorinn.png\""
 },
 "mirror": false,
 "offset": Vector2(20, 280),

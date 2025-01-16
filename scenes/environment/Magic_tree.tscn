@@ -9,7 +9,7 @@ height = 28.166
 radius = 3.0
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_saokk"]
-radius = 15.0
+radius = 9.0
 
 [node name="Tree" type="StaticBody3D"]
 

@@ -1,12 +1,14 @@
 extends Node
-@onready var flower_girl: Vivian = $Character/FlowerGirl
 @onready var thorinn: Thorinn = $Character/Thorinn
-@onready var find_ian_quest: find_ian = $find_Ian_quest
+@onready var find_ian_quest = $Quests/Find_ian_quest
 @onready var hugo: Hugo = $Character/Hugo
 @onready var animation_player: AnimationPlayer = $CanvasLayer/AnimationPlayer
+@onready var Hospital: InteractionArea = $Buildings/BuildingHospital/InteractionArea
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	
+	Hospital.interact = Callable(self, "_on_hospital_interaction")
 	
 	thorinn.state_machine.follow_target = hugo
 	thorinn.state_machine.change_state("follow")
@@ -20,9 +22,14 @@ func _on_dialogic_signal(argument:String):
 		animation_player.play("Time warp in")
 	elif argument == "end-night":
 		animation_player.play("Time warp out")
+	elif argument == "": #dialogic signal from end of morning <-------------------
+		find_ian_quest.start_find_ian_quest()
 
+func _on_hospital_interaction():
+	find_ian_quest.end_find_ian_quest()
+	Dialogic.start("") #interaction with Ian <-------------------
 
 func _on_hugo_destination_reached() -> void:
-	pass
+	Dialogic.start("first morning")
 	#dialg for entering the inn
 	#dailog for start new find ian quest

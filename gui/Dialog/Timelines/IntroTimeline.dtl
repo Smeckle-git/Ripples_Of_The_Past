@@ -1,21 +1,37 @@
 [style name="Interaction_Style"]
-Thorinn once a brilliant doctor awakens, disoriented and surrounded by darkness.
-As his vision slowly returns, he realizes he’s in an unfamiliar room. 
+Thorinn wakes up in confusion, his vision is blurry. He can’t make out anything at first, but slowly, it\
+clears. He’s in a strange room, one he doesn’t recognize. 
+He can’t make out anything at first, but slowly, it clears. He’s in a strange room, one he doesn’t recognize. 
 [signal arg="proceed_intro_background"]
-Dizzy and confused, he stands up, only to be confronted by a towering creature.
-“I am Iudix, God of Judgment,” the creature declares.
-Ludix: Your mortal life has ended... 
-Ludix: To determine the the passing of ones soul it must now be judged.
-Thorinn is shocked as Iudix commands him to retrieve his own soul. 
-Hesitantly, he reaches into his chest and pulls out a glowing orb of light.
+Oh, good. You’re awake. Been waiting for you, Thorinn.
+Thorinn: What... where am I? What’s going on?
+Ludix: I’m Iudix, God of Judgment. We’ve crossed paths because your mortal life ended in tragedy.
+Ludix: Now, fate’s got a decision to make. 
+Ludix: But first... I need your soul.”
 [signal arg="proceed_intro_background"]
-But when Iudix weighs the soul against the Feather of Fate, the scale does something it never has before\: it balances perfectly.
+Ludix: Perfect. Now, let’s see how you measure up.
+Ludix: This is the Scale of Fate. It’s gonna decide if you go up... or down.
+Thorinn: Wait, what?  
+Thorinn: This... How does this work? 
+Thorinn: Who decides?
+Thorinn: I—uh, I don’t even know what’s happening
+Ludix: Relax, Thorinn. We’re almost done. Just a little weight and balance...”
 [signal arg="proceed_intro_background"]
-Ludix: !!!
+Ludix: This... this can’t be.  
+Ludix: This has never happened before.
+Ludix: What... WHAT?!”
 [signal arg="proceed_intro_background"]
-Ludix: This is a first...
-Ludix: It seems your soul is in perfect balance.
-Ludix: There is but only one solution for this.
-Ludix: You must relive pivotal moments of your life.
-Ludix: Your choices WILL decide your fate. Don’t fail this time.
+Thorinn: Uh... Iudix? You sound... worried. 
+Thorinn: What’s going on? I’m... scared.”
+Ludix: It’s nothing, nothing.
+Ludix: Forget it.
+Ludix: Listen, there’s one last thing you need to do for me, mortal.
+Thorinn: What now?
+Ludix: The scale... it’s perfectly balanced. But that means there's only one way to determine your fate. 
+Ludix: I’m sending you back. 
+Ludix: You’ll relive your most important memories.
+Ludix: Back in time. 
+Ludix: Every choice you make will shape your future... whether it’s heaven or hell.
+Thorinn: Uh, okay... I guess?
+Ludix: Don’t screw it up this time, mortal.
 [signal arg="proceed_into_demo"]

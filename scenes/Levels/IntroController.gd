@@ -10,11 +10,10 @@ var IntroBackgrounds: Array = []
 var current_background_index: int = 0
 
 # disables the devkeys
-# TODO: as a late fix, make a global viarable for devmode to enable / disable all the debug keys!!!
+# TODO: as a late fix, make a global variable for devmode to enable / disable all the debug keys!!!
 var devMode : bool = 0
 
 func _ready():
-	# Populate the IntroBackgrounds array dynamically in _ready()
 	IntroBackgrounds = [
 		IntroBackground1, 
 		IntroBackground2, 
@@ -23,13 +22,12 @@ func _ready():
 		IntroBackground5
 	]
 	
-	# Ensure only the first background is visible at the start
 	_update_visibility()
 	Dialogic.start("IntroTimeline")
 	Dialogic.signal_event.connect(_on_dialogic_event)
 
 func _process(delta: float):
-	# Check for arrow key inputs
+	# for Debug functionality only
 	if Input.is_action_just_pressed("ui_right"):
 		if devMode:
 			_next_background()

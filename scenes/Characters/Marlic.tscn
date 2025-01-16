@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://4hefs8wa8ir0"]
+
+[ext_resource type="Texture2D" uid="uid://c8r4uv7wr068d" path="res://assets/images/sprites/Marlic_sprite.png" id="2_jlkvj"]
+[ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://scenes/ui/interaction_area.tscn" id="3_60e16"]
+[ext_resource type="PackedScene" uid="uid://bjm41api02wy2" path="res://assets/shaders/shader_nick/Scene's/Sparkles.tscn" id="5_8ropq"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hwo1s"]
+radius = 20.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vm1pk"]
+radius = 0.155276
+
+[node name="Marlic" type="CharacterBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+billboard = 1
+shaded = true
+alpha_cut = 2
+texture = ExtResource("2_jlkvj")
+
+[node name="InteractionArea2" parent="." instance=ExtResource("3_60e16")]
+
+[node name="Area3D" type="CollisionShape3D" parent="InteractionArea2"]
+shape = SubResource("CylinderShape3D_hwo1s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.420316, 0)
+shape = SubResource("SphereShape3D_vm1pk")
+
+[node name="Sparkles" parent="." instance=ExtResource("5_8ropq")]

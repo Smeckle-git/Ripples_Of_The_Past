@@ -6,6 +6,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5ki5m"]
 render_priority = 0
 shader = ExtResource("1_3twdj")
+shader_parameter/test = Color(0.7, 0.7, 0.7, 1)
 shader_parameter/WindStrength = 0.32
 shader_parameter/speed = 2.0
 shader_parameter/sprite = ExtResource("1_o6yc2")

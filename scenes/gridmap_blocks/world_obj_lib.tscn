@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://di55lv8a6ufmb"]
+[gd_scene load_steps=27 format=3 uid="uid://di55lv8a6ufmb"]
 
 [ext_resource type="PackedScene" uid="uid://duf26uu2tvh8" path="res://scenes/gridmap_blocks/ground_grass.tscn" id="1_qt4il"]
 [ext_resource type="PackedScene" uid="uid://nyml7y4ttuo2" path="res://scenes/gridmap_blocks/ground_grass_slope.tscn" id="2_rj6bb"]
@@ -22,6 +22,10 @@
 [ext_resource type="PackedScene" uid="uid://clpc84coflxwp" path="res://scenes/gridmap_blocks/Corner_texture.tscn" id="19_mim8b"]
 [ext_resource type="PackedScene" uid="uid://cfyguj42mhujx" path="res://scenes/gridmap_blocks/Corner_grass_path.tscn" id="20_ageyc"]
 [ext_resource type="PackedScene" uid="uid://b5m6h0qggqryo" path="res://scenes/gridmap_blocks/GodRoom_Tile.tscn" id="22_he2tl"]
+[ext_resource type="PackedScene" uid="uid://dlckajgc6aiiu" path="res://scenes/gridmap_blocks/new_grass_slope.tscn" id="23_2yj1n"]
+[ext_resource type="PackedScene" uid="uid://bo2dx4ynfvoht" path="res://scenes/gridmap_blocks/new_path_slope.tscn" id="24_rkjqs"]
+[ext_resource type="PackedScene" uid="uid://cfrd2aodhx8qa" path="res://scenes/gridmap_blocks/new_grass_slope_corner_inside.tscn" id="25_5tuuh"]
+[ext_resource type="PackedScene" uid="uid://ykk6pnf13i7v" path="res://scenes/gridmap_blocks/new_grass_slope_corner_outside.tscn" id="26_v6tur"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -64,7 +68,16 @@
 [node name="Ground16" parent="." instance=ExtResource("13_cp8r2")]
 
 [node name="Ground17" parent="." instance=ExtResource("12_oe2b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00173831, -0.00625068, 0.000382304)
 
 [node name="Ground18" parent="." instance=ExtResource("11_16360")]
 
 [node name="Ground19" parent="." instance=ExtResource("22_he2tl")]
+
+[node name="Ground20" parent="." instance=ExtResource("23_2yj1n")]
+
+[node name="Ground21" parent="." instance=ExtResource("24_rkjqs")]
+
+[node name="Ground22" parent="." instance=ExtResource("25_5tuuh")]
+
+[node name="Ground23" parent="." instance=ExtResource("26_v6tur")]

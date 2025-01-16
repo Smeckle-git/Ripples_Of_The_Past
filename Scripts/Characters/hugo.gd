@@ -6,6 +6,8 @@ const SPEED = 3.0
 @onready var interaction_area: InteractionArea = $InteractionArea2
 @onready var animation_tree: AnimationTree = $AnimationTree
 
+signal destination_reached
+
 func _physics_process(delta: float) -> void:
 	manage_animations()
 	move_and_slide()
@@ -18,6 +20,10 @@ func _physics_process(delta: float) -> void:
 		if direction.length() <= 0.1:
 			move_to_location.pop_front()
 			velocity = Vector3.ZERO
+		
+		if move_to_location.size() == 0:
+			emit_signal("destination_reached")
+		
 	else:
 		velocity = Vector3.ZERO
 

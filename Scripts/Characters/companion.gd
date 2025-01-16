@@ -13,11 +13,11 @@ const SPEED = 10.0
 
 @export var move_to_location : Vector3 = Vector3(0,0,0)	
 #
-var petting: bool = false
+@export var patting: bool = false
 #
 func _physics_process(_delta: float) -> void:
 	manage_animations()
-	move_and_slide()	
+	move_and_slide()
 	var direction
 	if following:
 		direction = thorinn.global_position - global_position
@@ -48,7 +48,7 @@ func _physics_process(_delta: float) -> void:
 
 
 @export var last_direction := Vector2(0, 1)
-func manage_animations():	
+func manage_animations():
 	if velocity != Vector3.ZERO:
 		last_direction = Vector2(velocity.x, velocity.z)
 	
@@ -56,21 +56,20 @@ func manage_animations():
 	animation_tree.set("parameters/Walking/blend_position", last_direction)
 	animation_tree.set("parameters/Sitting/blend_position", last_direction)
 
-
 func _on_timer_timeout() -> void:
 	sitting = true
 
 func _on_interact() -> void:
-	#print_debug("Whiskers interacted")
 	pet_cat()
 
 func pet_cat() -> void:
-	if petting:
-		print_debug("pat pat pat")
+	if patting:
+		print_debug("pat pat pat, get happy get happy get happy")
 		return
 	#
 	print_debug("pat cat")
-	petting = true
+	patting = true
+	animation_tree.set("parameters/Patting", patting)
 	#
 	var position_temp = pet_cat_animation.position
 	var random: int = randi_range(0, pet_cat_animation.sprite_frames.get_frame_count("default"))
@@ -84,5 +83,6 @@ func pet_cat() -> void:
 	#
 	pet_cat_animation.visible = false
 	pet_cat_animation.position = position_temp
-	petting = false
+	animation_tree
+	patting = false
 	print_debug("pat cat finished")

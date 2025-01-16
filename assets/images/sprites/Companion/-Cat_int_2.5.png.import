@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnjxlo01s1dn4"
-path.s3tc="res://.godot/imported/Cat_heart_1.png-c35fa95ec8ddc32cafc3aadf81280a4c.s3tc.ctex"
-path.etc2="res://.godot/imported/Cat_heart_1.png-c35fa95ec8ddc32cafc3aadf81280a4c.etc2.ctex"
+uid="uid://7ds6i6pg7uyo"
+path.s3tc="res://.godot/imported/-Cat_int_2.5.png-43f4525fa0764e144115b454a8edea7d.s3tc.ctex"
+path.etc2="res://.godot/imported/-Cat_int_2.5.png-43f4525fa0764e144115b454a8edea7d.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/sprites/hearts/Cat_heart_1.png"
-dest_files=["res://.godot/imported/Cat_heart_1.png-c35fa95ec8ddc32cafc3aadf81280a4c.s3tc.ctex", "res://.godot/imported/Cat_heart_1.png-c35fa95ec8ddc32cafc3aadf81280a4c.etc2.ctex"]
+source_file="res://assets/images/sprites/Companion/-Cat_int_2.5.png"
+dest_files=["res://.godot/imported/-Cat_int_2.5.png-43f4525fa0764e144115b454a8edea7d.s3tc.ctex", "res://.godot/imported/-Cat_int_2.5.png-43f4525fa0764e144115b454a8edea7d.etc2.ctex"]
 
 [params]
 

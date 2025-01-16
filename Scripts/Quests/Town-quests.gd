@@ -4,6 +4,7 @@ extends Node
 @onready var hugo: Hugo = $Character/Hugo
 @onready var animation_player: AnimationPlayer = $CanvasLayer/AnimationPlayer
 @onready var Hospital: InteractionArea = $Buildings/BuildingHospital/InteractionArea
+@onready var directional_light_3d: DirectionalLight3D = $Environment/WorldEnvironment/DirectionalLight3D
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -22,6 +23,8 @@ func _on_dialogic_signal(argument:String):
 		animation_player.play("Time warp in")
 	elif argument == "end-night":
 		animation_player.play("Time warp out")
+	elif argument == "change_to_day_light":
+		directional_light_3d.light_color = Color("#8b8042")
 	elif argument == "": #dialogic signal from end of morning <-------------------
 		find_ian_quest.start_find_ian_quest()
 
@@ -30,6 +33,4 @@ func _on_hospital_interaction():
 	Dialogic.start("") #interaction with Ian <-------------------
 
 func _on_hugo_destination_reached() -> void:
-	Dialogic.start("first morning")
-	#dialg for entering the inn
-	#dailog for start new find ian quest
+	Dialogic.start("first_morning")

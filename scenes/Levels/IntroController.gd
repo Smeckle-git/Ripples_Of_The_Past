@@ -9,6 +9,10 @@ extends Control
 var IntroBackgrounds: Array = []
 var current_background_index: int = 0
 
+# disables the devkeys
+# TODO: as a late fix, make a global viarable for devmode to enable / disable all the debug keys!!!
+var devMode : bool = 0
+
 func _ready():
 	# Populate the IntroBackgrounds array dynamically in _ready()
 	IntroBackgrounds = [
@@ -27,9 +31,11 @@ func _ready():
 func _process(delta: float):
 	# Check for arrow key inputs
 	if Input.is_action_just_pressed("ui_right"):
-		_next_background()
+		if devMode:
+			_next_background()
 	elif Input.is_action_just_pressed("ui_left"):
-		_previous_background()
+		if devMode:
+			_previous_background()
 
 func _next_background():
 	# Move to the next background in the list

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2ujcrgpry35o"
-path.s3tc="res://.godot/imported/Flower_blue.png-76f229d5019b2e99fcae313807f8aa87.s3tc.ctex"
-path.etc2="res://.godot/imported/Flower_blue.png-76f229d5019b2e99fcae313807f8aa87.etc2.ctex"
+uid="uid://cjkcorsalji8j"
+path.s3tc="res://.godot/imported/Flower_pink.png-11c19b9e9c1b3693f3b6e1b6f67d4253.s3tc.ctex"
+path.etc2="res://.godot/imported/Flower_pink.png-11c19b9e9c1b3693f3b6e1b6f67d4253.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/enviroment/Flower_blue.png"
-dest_files=["res://.godot/imported/Flower_blue.png-76f229d5019b2e99fcae313807f8aa87.s3tc.ctex", "res://.godot/imported/Flower_blue.png-76f229d5019b2e99fcae313807f8aa87.etc2.ctex"]
+source_file="res://assets/images/enviroment/flowers/Flower_pink.png"
+dest_files=["res://.godot/imported/Flower_pink.png-11c19b9e9c1b3693f3b6e1b6f67d4253.s3tc.ctex", "res://.godot/imported/Flower_pink.png-11c19b9e9c1b3693f3b6e1b6f67d4253.etc2.ctex"]
 
 [params]
 

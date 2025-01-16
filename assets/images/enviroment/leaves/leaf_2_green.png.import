@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjkcorsalji8j"
-path.s3tc="res://.godot/imported/Flower_pink.png-f8ffb010b4f714e8399300a63031ea48.s3tc.ctex"
-path.etc2="res://.godot/imported/Flower_pink.png-f8ffb010b4f714e8399300a63031ea48.etc2.ctex"
+uid="uid://byarmklsdbl5t"
+path.s3tc="res://.godot/imported/leaf_2_green.png-bdb2f8e76f49b273de8eb6b3ed7d29d4.s3tc.ctex"
+path.etc2="res://.godot/imported/leaf_2_green.png-bdb2f8e76f49b273de8eb6b3ed7d29d4.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/enviroment/Flower_pink.png"
-dest_files=["res://.godot/imported/Flower_pink.png-f8ffb010b4f714e8399300a63031ea48.s3tc.ctex", "res://.godot/imported/Flower_pink.png-f8ffb010b4f714e8399300a63031ea48.etc2.ctex"]
+source_file="res://assets/images/enviroment/leaves/leaf_2_green.png"
+dest_files=["res://.godot/imported/leaf_2_green.png-bdb2f8e76f49b273de8eb6b3ed7d29d4.s3tc.ctex", "res://.godot/imported/leaf_2_green.png-bdb2f8e76f49b273de8eb6b3ed7d29d4.etc2.ctex"]
 
 [params]
 

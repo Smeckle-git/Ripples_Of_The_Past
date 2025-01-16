@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bybrcbkodcmii"
-path.s3tc="res://.godot/imported/Flower_magenta.png-382fa1261150c103592c2b8ca05ff6e1.s3tc.ctex"
-path.etc2="res://.godot/imported/Flower_magenta.png-382fa1261150c103592c2b8ca05ff6e1.etc2.ctex"
+uid="uid://deph3mcxhs0ut"
+path.s3tc="res://.godot/imported/Purple_flower.png-4601759a994e6fee49287bc5cfcac0dd.s3tc.ctex"
+path.etc2="res://.godot/imported/Purple_flower.png-4601759a994e6fee49287bc5cfcac0dd.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/enviroment/Flower_magenta.png"
-dest_files=["res://.godot/imported/Flower_magenta.png-382fa1261150c103592c2b8ca05ff6e1.s3tc.ctex", "res://.godot/imported/Flower_magenta.png-382fa1261150c103592c2b8ca05ff6e1.etc2.ctex"]
+source_file="res://assets/images/enviroment/flowers/Purple_flower.png"
+dest_files=["res://.godot/imported/Purple_flower.png-4601759a994e6fee49287bc5cfcac0dd.s3tc.ctex", "res://.godot/imported/Purple_flower.png-4601759a994e6fee49287bc5cfcac0dd.etc2.ctex"]
 
 [params]
 

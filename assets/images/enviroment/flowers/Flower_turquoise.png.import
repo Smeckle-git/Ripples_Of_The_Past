@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpra5dc8vsjni"
-path="res://.godot/imported/leaf_4_yellow.png-ce50c9e82b56a3f70e87f6e1ff6e3453.ctex"
+uid="uid://dnjkatq673fhe"
+path="res://.godot/imported/Flower_turquoise.png-728164f3a909da3485acf0293d171402.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/enviroment/leaf_4_yellow.png"
-dest_files=["res://.godot/imported/leaf_4_yellow.png-ce50c9e82b56a3f70e87f6e1ff6e3453.ctex"]
+source_file="res://assets/images/enviroment/flowers/Flower_turquoise.png"
+dest_files=["res://.godot/imported/Flower_turquoise.png-728164f3a909da3485acf0293d171402.ctex"]
 
 [params]
 

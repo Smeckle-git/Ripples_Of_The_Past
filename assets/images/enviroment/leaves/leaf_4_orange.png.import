@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnae0iv232cya"
-path="res://.godot/imported/Flower_green.png-c5165632881895b0a282353d9eae8e2f.ctex"
+uid="uid://b3h2c1npyosji"
+path="res://.godot/imported/leaf_4_orange.png-3de80684c951d37fc6f90d0dbc59a8c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/enviroment/Flower_green.png"
-dest_files=["res://.godot/imported/Flower_green.png-c5165632881895b0a282353d9eae8e2f.ctex"]
+source_file="res://assets/images/enviroment/leaves/leaf_4_orange.png"
+dest_files=["res://.godot/imported/leaf_4_orange.png-3de80684c951d37fc6f90d0dbc59a8c0.ctex"]
 
 [params]
 

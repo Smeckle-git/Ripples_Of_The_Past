@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvjvbtpng1bs8"
-path="res://.godot/imported/barbarian_texture.png-a0a273b0ffcf5c4b58da27434f8aa8c9.ctex"
+uid="uid://bnae0iv232cya"
+path="res://.godot/imported/Flower_green.png-3987b1b0db8ccf9b9a51f846481ba97f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Objects/Prototypes/Player/barbarian_texture.png"
-dest_files=["res://.godot/imported/barbarian_texture.png-a0a273b0ffcf5c4b58da27434f8aa8c9.ctex"]
+source_file="res://assets/images/enviroment/flowers/Flower_green.png"
+dest_files=["res://.godot/imported/Flower_green.png-3987b1b0db8ccf9b9a51f846481ba97f.ctex"]
 
 [params]
 

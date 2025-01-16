@@ -2,21 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dey0fgk5ojitw"
-path.s3tc="res://.godot/imported/Mage_mage_texture.png-7ebe7b2125c80e22fa129491d282ee4c.s3tc.ctex"
-path.etc2="res://.godot/imported/Mage_mage_texture.png-7ebe7b2125c80e22fa129491d282ee4c.etc2.ctex"
+uid="uid://dpfrd1jn7e7su"
+path.s3tc="res://.godot/imported/Flower_Red.png-55290e1d3660e7de55f7a17ffc1ea86d.s3tc.ctex"
+path.etc2="res://.godot/imported/Flower_Red.png-55290e1d3660e7de55f7a17ffc1ea86d.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "4929e1d8419d602df7a7be89ce778863"
-}
 
 [deps]
 
-source_file="res://assets/Objects/Prototypes/Player/Mage_mage_texture.png"
-dest_files=["res://.godot/imported/Mage_mage_texture.png-7ebe7b2125c80e22fa129491d282ee4c.s3tc.ctex", "res://.godot/imported/Mage_mage_texture.png-7ebe7b2125c80e22fa129491d282ee4c.etc2.ctex"]
+source_file="res://assets/images/enviroment/flowers/Flower_Red.png"
+dest_files=["res://.godot/imported/Flower_Red.png-55290e1d3660e7de55f7a17ffc1ea86d.s3tc.ctex", "res://.godot/imported/Flower_Red.png-55290e1d3660e7de55f7a17ffc1ea86d.etc2.ctex"]
 
 [params]
 

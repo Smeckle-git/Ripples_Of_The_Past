@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cq5ewrlhp6rus"]
 
 [ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/wind_tree.gdshader" id="1_bbmnq"]
-[ext_resource type="Texture2D" uid="uid://bnae0iv232cya" path="res://assets/images/enviroment/Flower_green.png" id="1_vjjh1"]
-[ext_resource type="Texture2D" uid="uid://dnjkatq673fhe" path="res://assets/images/enviroment/Flower_turquoise.png" id="3_4g52i"]
+[ext_resource type="Texture2D" uid="uid://bnae0iv232cya" path="res://assets/images/enviroment/flowers/Flower_green.png" id="1_vjjh1"]
+[ext_resource type="Texture2D" uid="uid://dnjkatq673fhe" path="res://assets/images/enviroment/flowers/Flower_turquoise.png" id="3_4g52i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bjulb"]
 render_priority = 0

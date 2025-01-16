@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byarmklsdbl5t"
-path.s3tc="res://.godot/imported/leaf_2_green.png-08e69c478b1a14e969619611a061c6db.s3tc.ctex"
-path.etc2="res://.godot/imported/leaf_2_green.png-08e69c478b1a14e969619611a061c6db.etc2.ctex"
+uid="uid://cn4urkvqvfykt"
+path.s3tc="res://.godot/imported/leaf_1_green.png-17f7fa1ce375031a11b485299f21dfba.s3tc.ctex"
+path.etc2="res://.godot/imported/leaf_1_green.png-17f7fa1ce375031a11b485299f21dfba.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/enviroment/leaf_2_green.png"
-dest_files=["res://.godot/imported/leaf_2_green.png-08e69c478b1a14e969619611a061c6db.s3tc.ctex", "res://.godot/imported/leaf_2_green.png-08e69c478b1a14e969619611a061c6db.etc2.ctex"]
+source_file="res://assets/images/enviroment/leaves/leaf_1_green.png"
+dest_files=["res://.godot/imported/leaf_1_green.png-17f7fa1ce375031a11b485299f21dfba.s3tc.ctex", "res://.godot/imported/leaf_1_green.png-17f7fa1ce375031a11b485299f21dfba.etc2.ctex"]
 
 [params]
 

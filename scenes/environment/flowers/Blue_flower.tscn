@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/wood_1.gd" id="1_is5ae"]
 [ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/disolve.gdshader" id="2_rx23k"]
-[ext_resource type="Texture2D" uid="uid://b2ujcrgpry35o" path="res://assets/images/enviroment/Flower_blue.png" id="3_ff4gv"]
+[ext_resource type="Texture2D" uid="uid://b2ujcrgpry35o" path="res://assets/images/enviroment/flowers/Flower_blue.png" id="3_ff4gv"]
 [ext_resource type="Animation" uid="uid://d26axq4ie70l" path="res://assets/shaders/shader_nick/Scene's/Disolve.res" id="4_h2w7k"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_8ual7"]

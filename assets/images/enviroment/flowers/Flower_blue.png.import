@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn4urkvqvfykt"
-path.s3tc="res://.godot/imported/leaf_1_green.png-0e8b49d28c45f30713797334e2ded032.s3tc.ctex"
-path.etc2="res://.godot/imported/leaf_1_green.png-0e8b49d28c45f30713797334e2ded032.etc2.ctex"
+uid="uid://b2ujcrgpry35o"
+path.s3tc="res://.godot/imported/Flower_blue.png-c5a0bc196701d65c64d0fc6d852ceddd.s3tc.ctex"
+path.etc2="res://.godot/imported/Flower_blue.png-c5a0bc196701d65c64d0fc6d852ceddd.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/images/enviroment/leaf_1_green.png"
-dest_files=["res://.godot/imported/leaf_1_green.png-0e8b49d28c45f30713797334e2ded032.s3tc.ctex", "res://.godot/imported/leaf_1_green.png-0e8b49d28c45f30713797334e2ded032.etc2.ctex"]
+source_file="res://assets/images/enviroment/flowers/Flower_blue.png"
+dest_files=["res://.godot/imported/Flower_blue.png-c5a0bc196701d65c64d0fc6d852ceddd.s3tc.ctex", "res://.godot/imported/Flower_blue.png-c5a0bc196701d65c64d0fc6d852ceddd.etc2.ctex"]
 
 [params]
 

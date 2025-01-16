@@ -2,7 +2,6 @@ extends Node3D
 
 @onready var directional_light_3d: DirectionalLight3D = $DirectionalLight3D
 
-
 var daylight_color : Color
 var night_color : Color = Color("#02758F") # color in hex
 var is_night : bool = false
@@ -10,7 +9,7 @@ var is_night : bool = false
 func _ready() -> void:
 	daylight_color = directional_light_3d.light_color
 	
-	print_debug(daylight_color)
+	#print_debug(daylight_color)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

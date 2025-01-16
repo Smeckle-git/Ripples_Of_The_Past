@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0up23hgw1usx"
-path="res://.godot/imported/CAT_sprites_2.png-0359acf956aabb14e39d9d4b8f3b3466.ctex"
+uid="uid://dpra5dc8vsjni"
+path="res://.godot/imported/leaf_4_yellow.png-a041ddbc63b43f0827b365086d8f2e69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/TEXT/CAT_sprites_2.png"
-dest_files=["res://.godot/imported/CAT_sprites_2.png-0359acf956aabb14e39d9d4b8f3b3466.ctex"]
+source_file="res://assets/images/enviroment/leaves/leaf_4_yellow.png"
+dest_files=["res://.godot/imported/leaf_4_yellow.png-a041ddbc63b43f0827b365086d8f2e69.ctex"]
 
 [params]
 

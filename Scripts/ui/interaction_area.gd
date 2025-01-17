@@ -7,7 +7,6 @@ class_name InteractionArea
 var interact: Callable = func():
 	pass
 
-
 func _on_body_entered(body: Node3D) -> void:
 	print(body)
 	if body.is_in_group("Player"):

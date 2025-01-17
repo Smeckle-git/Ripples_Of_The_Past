@@ -452,6 +452,7 @@ states/Walking/position = Vector2(592.667, 101.407)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_bf4l5"), "Idle", "Walking", SubResource("AnimationNodeStateMachineTransition_rs2e3"), "Walking", "Idle", SubResource("AnimationNodeStateMachineTransition_dqibj")]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ruc4y"]
+height = 6.33633
 radius = 20.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ropd6"]

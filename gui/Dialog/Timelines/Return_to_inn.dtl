@@ -1,0 +1,12 @@
+[style name="Interaction_Style"]
+if {Ian.Confrontationn_at_home} == 1:
+	join Thorinn leftmost
+	join Hugo rightmost
+	Hugo: Could you check on Ian? He lives in The pharmacy across the river. You will recogise it by the sign by  the door.
+elif {Ian.Confrontationn_at_home} == 2:
+	[signal arg="start_night"]
+	[wait time="2.0"]
+	*A month passes. Thorinn took over the role as town doctor while slowly trying to gain more trust with the villagers*
+	[signal arg="Scene_5_switch"]
+	[wait time="2.0"]
+	[signal arg="start_alinora_interaction"]

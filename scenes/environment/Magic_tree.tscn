@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dprxbfxs6dihv"]
+[gd_scene load_steps=7 format=3 uid="uid://dprxbfxs6dihv"]
 
+[ext_resource type="Script" path="res://scenes/environment/magic_tree.gd" id="1_224ig"]
 [ext_resource type="Texture2D" uid="uid://cwu15gumxr6dd" path="res://assets/Objects/Prototypes/trees/Book_tree_4.png" id="2_pevac"]
 [ext_resource type="Texture2D" uid="uid://dwpwokl5st57y" path="res://assets/Objects/Prototypes/trees/Magic_boom_2.png" id="2_xs7nf"]
 [ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://scenes/ui/interaction_area.tscn" id="3_ki174"]
@@ -12,9 +13,11 @@ radius = 3.0
 radius = 9.0
 
 [node name="Tree" type="StaticBody3D"]
+script = ExtResource("1_224ig")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 3.65981, 0)
+visible = false
 shaded = true
 alpha_cut = 3
 texture_filter = 2
@@ -22,8 +25,6 @@ texture = ExtResource("2_pevac")
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 3.65981, 0)
-visible = false
-billboard = 2
 shaded = true
 alpha_cut = 3
 texture_filter = 2

@@ -3,6 +3,8 @@ if {Ian.Confrontationn_at_home} == 1:
 	join Thorinn (normal) leftmost
 	*Knock knock*
 	Ian: Come in.
+	[signal arg="start_night"]
+	[wait time="2.0" hide_text="false"]
 	[background arg="res://gui/Dialog/styles/Finished_Ian_room.webp" fade="0.0"]
 	join Ian rightmost
 	Thorinn: Good morning. My name is Thorinn, I am a traveling doctor. Hugo sent me, he said you’ve fallen ill.
@@ -10,6 +12,7 @@ if {Ian.Confrontationn_at_home} == 1:
 	Thorinn: I trained in Stoneleaf under Master Galbraith.
 	Ian (angry): Of course. Galbraith never stopped talking about his ‘most promising student.’
 	Thorinn (surprised): So he talked about me? I guess you are lucky to have me then... haha.
+	[sound path="res://assets/Sounds/awkward_crickets.mp3" volume="0.5"]
 	*A moment of awkward silence*
 	Thorinn (normal): That's the reason I'm here. Our master has taught me well, and I’ve saved many lives. Including yours, if you’ll let me.
 	Ian (angry): And why would you want to save me? What is your motive? You could take my place as the trusted healer the moment I’m gone or even help death along a little faster.
@@ -17,6 +20,7 @@ if {Ian.Confrontationn_at_home} == 1:
 	Thorinn: But I came here because it’s what a doctor does. I heal. I leave the rest to fate.
 	Ian (normal): Fate? You talk as though you don’t have a hand in it. You’ve been searching for an opportunity like this, haven’t you? To step in and become the savior of a village.
 	- Try to save Ian
+		set {Ian.Selected_Ian_Choice} = 1
 		Thorinn (agitated): I don’t need to take what’s already slipping from your grasp, Ian. This village doesn’t need someone clinging to old ways. They need someone who can do more...
 		Thorinn: ...someone who can truly save them. They need me. And I will do whatever is necessary to protect them.
 		Ian (sceming): Save them? I’ve cared for these people for years, Thorinn. I know their needs better than you ever will.
@@ -27,8 +31,10 @@ if {Ian.Confrontationn_at_home} == 1:
 		Ian (angry): You arrogant fool. Do you think this will make them trust you? I’ll tell them what kind of man you are. I’ll make sure they see the truth.
 		Thorinn (agitated): We’ll see. Now lie still. You don’t have much time, and I won’t let my first victory here be a failure.
 		leave --All--
-		Thorinn retrieves his medical supplies from the Inn, but by the time he gets back to the pharmacy Ian has already passed.
+		join Thorinn (surprised) leftmost
+		*Thorinn retrieves his medical supplies from the Inn, but by the time he gets back to the pharmacy Ian has already passed.*
 	- End Ian’s Suffering
+		set {Ian.Selected_Ian_Choice} = 2
 		*Thorinn calmly, pulling a small vial from his bag.*
 		Thorinn (normal): But by then, it’ll be too late for you to see it. I’ve prepared something...a final act of mercy from one healer to another. It will ease your pain.
 		Ian (angry): What... what is that?
@@ -42,6 +48,7 @@ if {Ian.Confrontationn_at_home} == 1:
 		Thorinn (agitated): Don’t worry, they’re in good hands. Rest, Ian. You’ll find peace soon.
 		Ian’s body goes limp, his breath slowing until it stops. Thorinn watches for a moment, his face unreadable, before standing and turning away. He leaves the pharmacy without a word, stepping into the quiet streets of the village.
 	- Refuse to Help
+		set {Ian.Selected_Ian_Choice} = 3
 		Thorinn (agitated): Ian, I didn’t come to take anything from you. I just came to help; I came here out of respect.
 		Ian (angry): Respect? Is that what you call this? Do you really wish to say that our master has taught you more and better than me?
 		Thorinn (normal): I was his best student after all, Ian. But that doesn’t make me your enemy. Now tell me, do you wish for me to help you or not?
@@ -54,3 +61,9 @@ if {Ian.Confrontationn_at_home} == 1:
 		leave Ian
 		Thorinn (agitated): Very well, Ian. I’ll leave. The village will remember you...
 		Thorinn leaves Ian to his fate. Ian dies shortly after.
+	set {Ian.Confrontationn_at_home} = 2
+	[signal arg="End_Find_Ian"]
+	[signal arg="end-night"]
+	[wait time="2.0"]
+elif {Ian.Confrontationn_at_home} == 2:
+	Thorinn: I shouldn't disturb the deceased.

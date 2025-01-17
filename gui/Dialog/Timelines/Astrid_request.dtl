@@ -1,5 +1,6 @@
 [style name="Interaction_Style"]
 if {Astrid.ask_for_help} == 1:
+	[background arg="res://gui/Dialog/styles/Finished_Ian_room.webp" fade="0.0"]
 	join Thorinn leftmost
 	join Alinora rightmost
 	Alinora: Thorinn! We need your help! Five villagers... they've fallen very ill, we’re afraid they’re dying. It's like a curse!
@@ -9,3 +10,4 @@ if {Astrid.ask_for_help} == 1:
 	Alinora: The doomed one... Malric. He was exiled to live in the woods. People say he dabbles in dark magic. If anyone knows, it’s him.
 	Thorinn (normal): Malric... Very well. I’ll speak with him.
 	set {Astrid.ask_for_help} = 2
+	[signal arg="end-night"]

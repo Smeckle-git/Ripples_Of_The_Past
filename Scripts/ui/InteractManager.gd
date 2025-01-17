@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 			base_text = "[" + interact_key + "]" + " to "
 			label.text = base_text + active_areas[0].action_name
 			label.global_position = active_areas[0].global_position
-			label.global_position.y = 3
+			label.global_position.y = label.global_position.y + 1
 			label.scale = Vector3(3,3,3) 
 			label.show()
 		else:

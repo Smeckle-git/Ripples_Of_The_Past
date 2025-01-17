@@ -1,0 +1,12 @@
+[style name="Interaction_Style"]
+if {Astrid.ask_for_help} == 1:
+	*A tree different from all the others. Its trunk is shaped to hold something.*
+else:
+	elif {Malrik.Talked_already} == true:
+		[signal arg="change_tree"]
+		join Thorinn leftmost
+		join Magic_book (Closed) center
+		Thorinn (surprised): Well well well, look what we have here.
+		Magic_book (Open): Take 3x different coloured papilora flowers and blood of a pure soul, mix it in a bowl and then eat it after a meal.
+		Thorinn: Blood?! Whose blood? A pure soul's.
+		[signal arg="Start_flower_quest"]

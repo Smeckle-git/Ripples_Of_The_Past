@@ -14,10 +14,10 @@ leave Malrik
 	join Nick rightmost
 	Thorinn: This ends tonight!
 	set {Dead_person_choice} = 2
-- Alinora
+- Astrid
 	join left_Malrik left [z_index="-1"]
-	join Alinora rightmost
-	Alinora: What are you doing here in the middle of the night?
+	join Astrid rightmost
+	Astrid: What are you doing here in the middle of the night?
 	Thorinn (agitated): I’m sorry, I don't have any other choice.
 	set {Dead_person_choice} = 3
 - Don’t kill anyone

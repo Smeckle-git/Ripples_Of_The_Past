@@ -13,14 +13,14 @@ if {selected_character} == 1:
 		Thorinn: You're right, they are indeed.
 elif {selected_character} == 2:
 	join Thorinn leftmost
-	join Alinora rightmost
+	join Astrid rightmost
 	if {Alinora¨.killing_Alin} == false:
-		*Alinora is closing up the store, tired but content.*
+		*Astrid is closing up the store, tired but content.*
 		Thorinn: Long day?
-		Alinora: Books don’t sell themselves. But it’s honest work. Now good night.
+		Astrid: Books don’t sell themselves. But it’s honest work. Now good night.
 		set {Alinora¨.killing_Alin} = true
 	elif {Alinora¨.killing_Alin} == true:
-		*Standing in front of the darkened shop of Alinora, Thorinn realises she must've gone to sleep.*
+		*Standing in front of the darkened shop of Astrid, Thorinn realises she must've gone to sleep.*
 elif {selected_character} == 3:
 	join Thorinn (agitated) leftmost
 	join Nick rightmost

@@ -16,9 +16,6 @@ var time_step_max : int = camera_movement_time * Engine.physics_ticks_per_second
 var time_step_x : float = 0
 var time_step_y : float = 0
 
-func _ready() -> void:
-	#print_debug(time_step_max)
-	pass
 
 func _process(_delta: float) -> void:
 	if return_to_player:

@@ -74,5 +74,10 @@ func cycle_all_nodes(node: Node):
 
 
 func _on_reset_pressed() -> void:
-	get_tree().reload_current_scene()
-	
+	_on_continue_pressed()
+	for child in root.get_children():
+		print("Found node: ",child.name)
+		for n in child.get_children():
+			if n.name == "Thorinn":
+				print_debug("manfound")
+				n.global_transform.origin.z += 5

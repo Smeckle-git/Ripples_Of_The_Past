@@ -13,7 +13,7 @@ const SPEED = 10.0
 @export var move_to_location : Vector3 = Vector3(0,0,0)	
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	manage_animations()
 	move_and_slide()	
 	var direction

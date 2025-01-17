@@ -49,7 +49,7 @@ func testFunc():
 	elif Input.is_action_just_pressed("Pause") and get_tree().paused and !settings.visible:
 		settings.visible = true
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	testFunc()
 	Quest()
 
@@ -70,6 +70,9 @@ func cycle_all_nodes(node: Node):
 			map_village.visible= false
 			map_forest.visible = true
 
+ # Replace with function body.
 
-func _on_settings_pressed() -> void:
-	pass # Replace with function body.
+
+func _on_reset_pressed() -> void:
+	get_tree().reload_current_scene()
+	

@@ -6,7 +6,7 @@ const SPEED = 3.0
 @onready var interaction_area: InteractionArea = $InteractionArea2
 @onready var animation_tree: AnimationTree = $AnimationTree
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	manage_animations()
 	move_and_slide()
 	

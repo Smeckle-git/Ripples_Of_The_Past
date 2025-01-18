@@ -28,7 +28,7 @@ var fish_1 := load("res://scenes/environment/Fish_quest_item.tscn")
 
 # starts the quest whenever the player interacts with the campfire
 func _on_interact():
-	print_debug("campfire interacted")
+	#print_debug("campfire interacted")
 	if find_fish_quest.quest_status == find_fish_quest.QuestStatus.reached_goal:
 		find_fish_quest.finish_quest()
 		sparkles.get_child(0).emitting = true

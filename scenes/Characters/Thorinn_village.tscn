@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://3ewrf4xj24mt" path="res://assets/images/sprites/thorinn/Thorinn_walking_up_3.png" id="19_khffe"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ulyrf"]
+radius = 1.0
 
 [sub_resource type="Animation" id="Animation_7n61x"]
 resource_name = "Idle_Down"

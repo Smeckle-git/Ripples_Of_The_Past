@@ -33,6 +33,7 @@ directories/dch_directory={
 "Hugo": "res://gui/Dialog/Characters/Hugo.dch",
 "Ian": "res://gui/Dialog/Characters/Ian.dch",
 "Mage": "res://gui/Dialog/Characters/Mage.dch",
+"Magic_book": "res://gui/Dialog/Characters/Magic_book.dch",
 "Malrik": "res://gui/Dialog/Characters/Malrik.dch",
 "Nick": "res://gui/Dialog/Characters/Nick.dch",
 "Thorinn": "res://gui/Dialog/Characters/Thorinn.dch",
@@ -50,7 +51,9 @@ directories/dtl_directory={
 "Killing_choice": "res://gui/Dialog/Timelines/Killing_choice.dtl",
 "Malrik_Cure": "res://gui/Dialog/Timelines/Malrik_Cure.dtl",
 "Morning_of_killig": "res://gui/Dialog/Timelines/Morning_of_killig.dtl",
+"Return_to_inn": "res://gui/Dialog/Timelines/Return_to_inn.dtl",
 "Reveal_of_dead": "res://gui/Dialog/Timelines/Reveal_of_dead.dtl",
+"Tree_interaction": "res://gui/Dialog/Timelines/Tree_interaction.dtl",
 "first_morning": "res://gui/Dialog/Timelines/first_morning.dtl",
 "flower_girl_quest": "res://gui/Dialog/Timelines/flower_girl_quest.dtl",
 "non_malric_Killing_choice": "res://gui/Dialog/Timelines/non_malric_Killing_choice.dtl",
@@ -71,17 +74,16 @@ variables={
 },
 "Dead_person_choice": 0,
 "Hugo": {
-"Followed_to_rockfall": false
+"Followed_to_rockfall": true
 },
 "Ian": {
 "Confrontationn_at_home": 1,
-"can_talk_to_ian": false,
-"find_ian_quest_avalible": false,
-"ian_interaction_phase": 1
+"Selected_Ian_Choice": 0
 },
 "Malrik": {
 "Cure": 1,
-"Talked_already": false
+"Talked_already": false,
+"Trusted_malric": false
 },
 "Nick": {
 "killing_nick": false

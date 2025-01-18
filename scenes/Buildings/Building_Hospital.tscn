@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dhelistioasb1" path="res://assets/images/Village/Buildings/Pharmacy_right.png" id="4_2k787"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5wfdg"]
-size = Vector3(17.772, 11.8362, 3.30762)
+size = Vector3(17.772, 11.8362, 8.22913)
 
 [node name="BuildingInn" type="StaticBody3D"]
 
@@ -53,5 +53,5 @@ double_sided = false
 texture = ExtResource("4_2k787")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.871111, 0.0473961, -1.15382)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.871111, 0.0473961, 3.94153)
 shape = SubResource("BoxShape3D_5wfdg")

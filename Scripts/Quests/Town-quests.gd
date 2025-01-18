@@ -1,15 +1,25 @@
 extends Node
 @onready var thorinn: Thorinn = $Character/Thorinn
-@onready var find_ian_quest = $Quests/Find_ian_quest
+@onready var find_ian_quest: Quest = $Quests/Find_ian_quest
 @onready var hugo: Hugo = $Character/Hugo
 @onready var animation_player: AnimationPlayer = $CanvasLayer/AnimationPlayer
-@onready var Hospital: InteractionArea = $Buildings/BuildingHospital/InteractionArea
 @onready var directional_light_3d: DirectionalLight3D = $Environment/WorldEnvironment/DirectionalLight3D
+@onready var Hospital: InteractionArea = $Buildings/BuildingHospital/InteractionArea
+@onready var return_to_inn: Quest = $Quests/Return_to_inn
+@onready var alinora: CharacterBody3D = $Character/Alinora
+@onready var marlic: NPC = $Character/Marlic
+@onready var tree: Magic_tree = $Buildings/Tree
+@onready var find_flowers_quest: Quest = $Quests/Find_flowers_quest
+@onready var find_book_quest: Quest = $Quests/Find_book_quest
+
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	
 	Hospital.interact = Callable(self, "_on_hospital_interaction")
+	hugo.interaction_area.interact = Callable(self, "_on_inn_interaction")
+	marlic.interaction_area.interact = Callable(self, "_on_marlic_interaction")
+	tree.interaction_area.interact = Callable(self, "_on_tree_interact")
 	
 	thorinn.state_machine.follow_target = hugo
 	thorinn.state_machine.change_state("follow")
@@ -25,12 +35,39 @@ func _on_dialogic_signal(argument:String):
 		animation_player.play("Time warp out")
 	elif argument == "change_to_day_light":
 		directional_light_3d.light_color = Color("#8b8042")
-	elif argument == "": #dialogic signal from end of morning <-------------------
-		find_ian_quest.start_find_ian_quest()
+	elif argument == "Start_Find_Ian":
+		hugo.interaction_area.show_label = true
+		thorinn.state_machine.change_state("Idle")
+		find_ian_quest.start_quest()
+	elif argument == "End_Find_Ian":
+		directional_light_3d.light_color = Color("#02758f")
+		return_to_inn.start_quest()
+		hugo.visible = false
+	elif argument == "Scene_5_switch":
+		return_to_inn.finish_quest()
+		thorinn.global_position = Vector3(42,1.6,-4)
+		alinora.visible = true
+		marlic.visible = true
+		tree.switch_sprite()
+	elif argument == "start_alinora_interaction":
+		Dialogic.start("Astrid_request")
+	elif argument == "Start_find_another_way_quest":
+		find_book_quest.start_quest()
+		
+func _on_tree_interact():
+	Dialogic.start("Tree_interaction")
+
+func _on_marlic_interaction():
+	Dialogic.start("Malrik_Cure")
+
+func _on_inn_interaction():
+	Dialogic.start("Return_to_inn")
 
 func _on_hospital_interaction():
-	find_ian_quest.end_find_ian_quest()
-	Dialogic.start("") #interaction with Ian <-------------------
+	find_ian_quest.finish_quest()
+	Dialogic.start("pharmacy_location")
 
 func _on_hugo_destination_reached() -> void:
 	Dialogic.start("first_morning")
+	hugo.visible = true
+	pass

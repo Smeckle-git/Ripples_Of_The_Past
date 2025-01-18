@@ -8,7 +8,7 @@ if {Dead_person_choice} == 1:
 	- Publicly credit Malric
 		Thorinn: This cure wasn’t mine alone. Malric’s knowledge made this possible.
 		Town_Leader: Malric...?
-	- Accept the Credit
+	- Accept the credit
 		Thorinn (normal): I just did what had to be done.
 	- Thank Malric in private
 		Thorinn: I just did what had to be done.

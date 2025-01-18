@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://canq4iy2hdxme"]
+
+[ext_resource type="Texture2D" uid="uid://c767c1un6wn8r" path="res://assets/images/sprites/Laura_low_res.png" id="1_rm2mq"]
+[ext_resource type="PackedScene" uid="uid://bjm41api02wy2" path="res://assets/shaders/shader_nick/Scene's/Sparkles.tscn" id="3_js47l"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vm1pk"]
+radius = 0.155276
+
+[node name="Alinora" type="CharacterBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-5.24537e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.24537e-08, -3.64879, 0, 3.94107)
+billboard = 1
+shaded = true
+alpha_cut = 2
+texture = ExtResource("1_rm2mq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.420316, 0)
+shape = SubResource("SphereShape3D_vm1pk")
+
+[node name="Sparkles" parent="." instance=ExtResource("3_js47l")]

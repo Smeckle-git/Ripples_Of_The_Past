@@ -5,8 +5,11 @@ class_name Companion
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var timer: Timer = $Timer
 @onready var interaction_area: InteractionArea = $InteractionArea2
+#
 @onready var pet_cat_animation: AnimatedSprite3D = $Node3D_pet_cat/AnimatedSprite3D
-
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var animated_sprite: AnimatedSprite3D = $AnimatedSprite3D
+#
 const SPEED = 10.0
 @export var following := false
 @export var sitting = false
@@ -69,7 +72,10 @@ func pet_cat() -> void:
 	#
 	print_debug("pat cat")
 	patting = true
-	animation_tree.set("parameters/Patting", patting)
+	var scale_temp = animated_sprite.scale
+	animated_sprite.scale *= 0.5
+	animation_tree.active = false
+	animation_player.play("Patting")
 	#
 	var position_temp = pet_cat_animation.position
 	var random: int = randi_range(0, pet_cat_animation.sprite_frames.get_frame_count("default"))
@@ -83,6 +89,8 @@ func pet_cat() -> void:
 	#
 	pet_cat_animation.visible = false
 	pet_cat_animation.position = position_temp
-	animation_tree
+	animation_tree.active = true
+	await get_tree().process_frame
+	animated_sprite.scale = scale_temp
 	patting = false
 	print_debug("pat cat finished")

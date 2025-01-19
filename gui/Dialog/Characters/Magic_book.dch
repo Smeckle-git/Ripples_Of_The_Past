@@ -26,7 +26,7 @@
 },
 "Open": {
 "export_overrides": {
-"image": "\"res://gui/Dialog/Characters/Book_receipt.png\""
+"image": "\"res://gui/Dialog/Characters/Book_2.5.png\""
 },
 "mirror": false,
 "offset": Vector2(0, -40),

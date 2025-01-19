@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bl11klm4ug37q" path="res://assets/images/Village/Buildings/stone_wall.png" id="4_sml7w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5wfdg"]
-size = Vector3(21.7255, 15.5447, 5.53369)
+size = Vector3(21.7255, 15.5447, 8.82007)
 
 [node name="BuildingInn" type="StaticBody3D"]
 
@@ -21,11 +21,10 @@ transform = Transform3D(-4.28267e-08, 0, 1, 0, 1.64328, 0, -0.979761, 0, -4.3711
 flip_h = true
 shaded = true
 double_sided = false
-render_priority = -1
 texture = ExtResource("2_8pnjh")
 
 [node name="Sprite3D4" type="Sprite3D" parent="."]
-transform = Transform3D(-1.74248e-08, -0.64079, 0.85026, -1.0787e-08, 1.0351, 0.526362, -0.468836, -3.56652e-15, -4.37114e-08, 11.9815, -3.33322, -3.92865)
+transform = Transform3D(-1.74965e-08, -0.633857, 0.853759, -1.06703e-08, 1.03936, 0.520667, -0.468836, 4.22614e-15, -4.37114e-08, 11.9815, -3.33322, -3.92865)
 flip_h = true
 shaded = true
 double_sided = false
@@ -48,7 +47,7 @@ render_priority = -1
 texture = ExtResource("3_i5cpl")
 
 [node name="Sprite3D6" type="Sprite3D" parent="."]
-transform = Transform3D(-2.01261e-08, 0.301274, -0.14203, 6.33646e-09, 0.259356, 0.164985, 0.482711, 9.15675e-09, -8.08747e-09, -13.2554, -1.89007, -3.88536)
+transform = Transform3D(-2.04764e-08, 0.284826, -0.151867, 5.09204e-09, 0.277319, 0.155977, 0.482711, 9.15675e-09, -8.08747e-09, -12.5754, -2.12922, -3.88536)
 flip_h = true
 shaded = true
 double_sided = false
@@ -64,9 +63,8 @@ texture = ExtResource("4_sml7w")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.7978, 7.40758, -4.27255)
 shaded = true
 double_sided = false
-render_priority = -1
 texture = ExtResource("2_8pnjh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.960754, -0.626587, 2.04025)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.960754, -0.626587, -4.04805)
 shape = SubResource("BoxShape3D_5wfdg")

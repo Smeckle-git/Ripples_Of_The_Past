@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://k81mqcov26ny"]
 
-[ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/wood_1.gd" id="1_o3wa7"]
-[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/disolve.gdshader" id="2_ogvhe"]
-[ext_resource type="Texture2D" uid="uid://dpfrd1jn7e7su" path="res://assets/images/enviroment/Flower_Red.png" id="3_n6qy4"]
-[ext_resource type="Animation" uid="uid://d26axq4ie70l" path="res://assets/shaders/shader_nick/Scene's/Disolve.res" id="4_2q1h1"]
+[ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/wood_1.gd" id="1_kflcv"]
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/disolve.gdshader" id="2_ffuj1"]
+[ext_resource type="Texture2D" uid="uid://f8x65h4ingfa" path="res://assets/images/enviroment/Flower_orange.png" id="3_rhvsv"]
+[ext_resource type="Animation" uid="uid://d26axq4ie70l" path="res://assets/shaders/shader_nick/Scene's/Disolve.res" id="4_kwtbf"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_8ual7"]
 
@@ -14,7 +14,7 @@ noise = SubResource("FastNoiseLite_8ual7")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0icfy"]
 resource_local_to_scene = true
 render_priority = 0
-shader = ExtResource("2_ogvhe")
+shader = ExtResource("2_ffuj1")
 shader_parameter/base_color = Color(0, 0, 0, 1)
 shader_parameter/inside_color = Color(0, 0, 0, 1)
 shader_parameter/disolve_amount = 0.105
@@ -23,7 +23,7 @@ shader_parameter/glow_color = Color(1, 0, 0, 1)
 shader_parameter/glow_intensity = 0.0
 shader_parameter/glow_border_wit = 0.0
 shader_parameter/glow_border_smoothness = 0.1
-shader_parameter/text2d = ExtResource("3_n6qy4")
+shader_parameter/text2d = ExtResource("3_rhvsv")
 
 [sub_resource type="QuadMesh" id="QuadMesh_wonkk"]
 resource_local_to_scene = true
@@ -32,17 +32,17 @@ size = Vector2(16, 20)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5gwji"]
 _data = {
-"Disolve": ExtResource("4_2q1h1")
+"Disolve": ExtResource("4_kwtbf")
 }
 
 [node name="Flower" type="Area3D"]
-transform = Transform3D(0.998351, 0, 0, 0, 0.998351, 0, 0, 0, 0.998351, 0, 0, 0)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_o3wa7")
+script = ExtResource("1_kflcv")
 
 [node name="Sprite3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0, 0, 0)
 mesh = SubResource("QuadMesh_wonkk")
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="."]

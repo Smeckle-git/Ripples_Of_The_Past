@@ -39,5 +39,4 @@ func spawn_flower(position : Vector3, quest : Quest) -> void:
 
 func collected() ->void:
 	collect_flowers_quest.update_goal()
-	
 	queue_free()

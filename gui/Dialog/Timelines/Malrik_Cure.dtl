@@ -4,12 +4,12 @@ if {Astrid.ask_for_help} == 2:
 		if {Malrik.Talked_already} == false:
 			join Thorinn leftmost
 			join Malrik rightmost
-			Malrik: The doctor comes seeking answers. What is it you want?
-			Thorinn (surprised): Five villagers are dying. They say it’s a curse. Do you know how to lift it?
+			Malrik: So it has finally come to this. The doctor seeking help from an outcast.
+			Thorinn (surprised): Five villagers are dying. They say it’s a curse. I've been told you might know how to lift it?
 			Malrik: Perhaps. My books know everything, but knowledge has its price. Trust me, and I will help you.
 			- Refuse to Trust Malric
 				Thorinn (agitated): I won’t play your games. I’ll find another way.
-				Malrik: Then good luck finding out the cure! But know this—knowledge taken by force often leads to ruin.
+				Malrik: Then good luck finding the cure! But know this, knowledge taken by force often leads to ruin.
 				[signal arg="Start_find_another_way_quest"]
 			- Trust Malric
 				Thorinn (normal): I’ll trust you. What must I do?

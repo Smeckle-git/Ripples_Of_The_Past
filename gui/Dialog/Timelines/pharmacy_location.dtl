@@ -65,5 +65,6 @@ if {Ian.Confrontationn_at_home} == 1:
 	[signal arg="End_Find_Ian"]
 	[signal arg="end-night"]
 	[wait time="2.0"]
+elif {Astrid.ask_for_help} == 2:
 elif {Ian.Confrontationn_at_home} == 2:
 	Thorinn: I shouldn't disturb the deceased.

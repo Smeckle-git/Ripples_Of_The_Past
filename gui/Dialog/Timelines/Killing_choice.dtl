@@ -1,20 +1,26 @@
 [style name="Interaction_Style"]
 join Thorinn leftmost
 join Malrik rightmost
-Malrik: Who will be sacrificed?
-Malrik: ...
-leave Malrik
+if {Malrik.Trusted_malric} == false:
+	Malrik: Even after all those troubles you've gone through, we've come full circle. You're back asking me for help.
+	Malrik: I can see that you've managed to get your hands on my book, you must've figured out the price of the antidote. I'm curious which path the righteous doctor takes.
+elif {Malrik.Trusted_malric} == true:
+	Malrik: I see you've managed to collect all the papilora flowers. You've only half succeeded because that's only the easy part of the antidote.
+Malrik: Now, who will you sacrifice?
 - Vivian
+	leave Malrik
 	join left_Malrik left [z_index="-1"]
 	join vivian rightmost
 	Thorinn (agitated): I’m sorry, Vivian.
 	set {Dead_person_choice} = 1
 - Nick
+	leave Malrik
 	join left_Malrik left [z_index="-1"]
 	join Nick rightmost
 	Thorinn: This ends tonight!
 	set {Dead_person_choice} = 2
 - Astrid
+	leave Malrik
 	join left_Malrik left [z_index="-1"]
 	join Astrid rightmost
 	Astrid: What are you doing here in the middle of the night?

@@ -7,6 +7,7 @@ else:
 		join Thorinn leftmost
 		join Magic_book (Closed) center
 		Thorinn (surprised): Well well well, look what we have here.
-		Magic_book (Open): Take 3x different coloured papilora flowers and blood of a pure soul, mix it in a bowl and then eat it after a meal.
-		Thorinn: Blood?! Whose blood? A pure soul's.
+		Magic_book (Open): Take 3x different coloured papilora flowers and blood of a ???? soul, mix it in a bowl and then eat it after a meal.
+		Thorinn: Blood?! What kind of cure demands blood?
+		Thorinn: It's the only option I've got. But is the price for salvation really worth it?
 		[signal arg="Start_flower_quest"]

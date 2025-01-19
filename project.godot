@@ -28,23 +28,37 @@ InteractManager="*res://scenes/ui/InteractManager.tscn"
 [dialogic]
 
 directories/dch_directory={
+"Alinora": "res://gui/Dialog/Characters/Alinora.dch",
+"Astrid": "res://gui/Dialog/Characters/Astrid.dch",
 "Barbarian": "res://gui/Dialog/Characters/Barbarian.dch",
 "God": "res://gui/Dialog/Timelines/God.dch",
 "Hugo": "res://gui/Dialog/Characters/Hugo.dch",
 "Ian": "res://gui/Dialog/Characters/Ian.dch",
 "Ludix": "res://gui/Dialog/Timelines/Ludix.dch",
 "Mage": "res://gui/Dialog/Characters/Mage.dch",
+"Malrik": "res://gui/Dialog/Characters/Malrik.dch",
+"Nick": "res://gui/Dialog/Characters/Nick.dch",
 "Thorinn": "res://gui/Dialog/Characters/Thorinn.dch",
+"Town_Leader": "res://gui/Dialog/Characters/Town_Leader.dch",
 "Whiskers": "res://gui/Dialog/Characters/Whiskers.dch",
+"left_Malrik": "res://gui/Dialog/Characters/left_Malrik.dch",
 "vivian": "res://gui/Dialog/Timelines/vivian.dch"
 }
 directories/dtl_directory={
+"Astrid_request": "res://gui/Dialog/Timelines/Astrid_request.dtl",
+"Choose_which_villager_to_kill": "res://gui/Dialog/Timelines/Choose_which_villager_to_kill.dtl",
 "DEMO_interaction": "res://gui/Dialog/Timelines/DEMO_interaction.dtl",
 "Fish_quest_completion": "res://gui/Dialog/Timelines/Fish_quest_completion.dtl",
 "Iann_interaction": "res://gui/Dialog/Timelines/Iann_interaction.dtl",
 "IntroTimeline": "res://gui/Dialog/Timelines/IntroTimeline.dtl",
-"ask_for_ian_location": "res://gui/Dialog/Timelines/ask_for_ian_location.dtl",
+"Killing_choice": "res://gui/Dialog/Timelines/Killing_choice.dtl",
+"Malrik_Cure": "res://gui/Dialog/Timelines/Malrik_Cure.dtl",
+"Morning_of_killig": "res://gui/Dialog/Timelines/Morning_of_killig.dtl",
+"Reveal_of_dead": "res://gui/Dialog/Timelines/Reveal_of_dead.dtl",
+"first_morning": "res://gui/Dialog/Timelines/first_morning.dtl",
 "flower_girl_quest": "res://gui/Dialog/Timelines/flower_girl_quest.dtl",
+"non_malric_Killing_choice": "res://gui/Dialog/Timelines/non_malric_Killing_choice.dtl",
+"pharmacy_location": "res://gui/Dialog/Timelines/pharmacy_location.dtl",
 "quest1_end": "res://gui/Dialog/Timelines/quest1_end.dtl",
 "quest1_start": "res://gui/Dialog/Timelines/quest1_start.dtl",
 "thorinn_hugo_forest": "res://gui/Dialog/Timelines/thorinn_hugo_forest.dtl",
@@ -53,24 +67,41 @@ directories/dtl_directory={
 "wiskers_start_campfire_quest": "res://gui/Dialog/Timelines/wiskers_start_campfire_quest.dtl"
 }
 variables={
+"Alinora¨": {
+"killing_Alin": false
+},
+"Astrid": {
+"ask_for_help": 1
+},
+"Dead_person_choice": 0,
 "Hugo": {
 "Followed_to_rockfall": false
 },
 "Ian": {
+"Confrontationn_at_home": 1,
 "can_talk_to_ian": false,
-"find_ian_quest_avalible": false
+"find_ian_quest_avalible": false,
+"ian_interaction_phase": 1
+},
+"Malrik": {
+"Cure": 1,
+"Talked_already": false
+},
+"Nick": {
+"killing_nick": false
 },
 "Vivian": {
 "Interaction_phase": 1,
 "New_Dialog": true,
-"flower_quest_accepted": false
+"flower_quest_accepted": false,
+"killing_viv": false
 },
 "Whiskers": {
 "Accepted_Fish_Quest": false,
 "Forest_Interaction_phase": 1,
 "New_Dialog": true
 },
-"temp_variable": 0
+"selected_character": 0
 }
 layout/style_list=["res://gui/Dialog/Interaction_Style.tres"]
 layout/default_style="Default"

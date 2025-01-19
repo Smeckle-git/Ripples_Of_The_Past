@@ -12,7 +12,7 @@ if {Whiskers.Forest_Interaction_phase} == 1:
 		Whiskers: *shivers*
 		Thorinn: I should hurry up and get this campfire going.
 elif {Whiskers.Forest_Interaction_phase} == 2:
-	join Thorinn leftmost
+	join Thorinn (normal) leftmost
 	join Whiskers rightmost
 	if {Whiskers.New_Dialog} == true:
 		Thorinn: There you go, buddy. Bet that feels better, huh?
@@ -21,7 +21,7 @@ elif {Whiskers.Forest_Interaction_phase} == 2:
 		Thorinn (normal): Yeah, I think I’ll call you Whiskers. What do you think?
 		Whiskers: I like it! Fits me, don’t you think?
 		Thorinn (surprised): Wait, WHAT?! You can TALK?
-		Thorinn (surprised): Am I losing my mind? Two days in the woods, no food... yeah, this can’t be. I’m definitely hallucinating.
+		Thorinn: Am I losing my mind? Two days in the woods, no food... yeah, this can’t be. I’m definitely hallucinating.
 		Whiskers: Relax, Thorinn! You’re not crazy. I can talk, but only to you. Why?  Well...
 		Whiskers: Let’s just say, it’s complicated. For now, you’ll just have to trust me. And don’t worry, I’m on your side.
 		Whiskers: Let it be known... your choices matter. Big time. Call it karma, fate,\

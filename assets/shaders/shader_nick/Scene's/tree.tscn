@@ -1,11 +1,60 @@
-[gd_scene load_steps=3 format=3 uid="uid://cauj3j4t58bip"]
+[gd_scene load_steps=11 format=3 uid="uid://cauj3j4t58bip"]
 
 [ext_resource type="Material" uid="uid://dyrko8vx41ppw" path="res://assets/shaders/shader_nick/Assets/tree.tres" id="1_ela6m"]
 [ext_resource type="Texture2D" uid="uid://b3rj4tl2r61hv" path="res://assets/shaders/shader_nick/Assets/Tree.png" id="2_lc5xf"]
+[ext_resource type="Texture2D" uid="uid://c007dlqolwmyl" path="res://assets/Objects/tree_bark.png" id="3_8fnyw"]
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/wind_tree.gdshader" id="4_cvo3j"]
+[ext_resource type="Texture2D" uid="uid://cqqjmkokwe10e" path="res://assets/Objects/tree_leaves_1.png" id="5_uwfku"]
+[ext_resource type="Texture2D" uid="uid://b7l8yvnujn6vh" path="res://assets/Objects/tree_leaves_2.png" id="6_vi8kx"]
+[ext_resource type="Texture2D" uid="uid://blvksja55aegh" path="res://assets/Objects/tree_leaves_3.png" id="7_enbd4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8a84l"]
+render_priority = 0
+shader = ExtResource("4_cvo3j")
+shader_parameter/test = Color(0.7, 0.7, 0.7, 1)
+shader_parameter/WindStrength = 0.05
+shader_parameter/speed = 3.0
+shader_parameter/sprite = ExtResource("5_uwfku")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mnteu"]
+render_priority = 0
+shader = ExtResource("4_cvo3j")
+shader_parameter/test = Color(0.7, 0.7, 0.7, 1)
+shader_parameter/WindStrength = 0.05
+shader_parameter/speed = 3.0
+shader_parameter/sprite = ExtResource("6_vi8kx")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8nbq1"]
+render_priority = 0
+shader = ExtResource("4_cvo3j")
+shader_parameter/test = Color(0.7, 0.7, 0.7, 1)
+shader_parameter/WindStrength = 0.051
+shader_parameter/speed = 3.0
+shader_parameter/sprite = ExtResource("7_enbd4")
 
 [node name="Tree" type="Node3D"]
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.66919, 0)
+visible = false
 material_override = ExtResource("1_ela6m")
 texture = ExtResource("2_lc5xf")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.08547, 0, 0, 0, 1, -0.00440216, 0.914176, 0.666088)
+texture = ExtResource("3_8fnyw")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sprite3D"]
+transform = Transform3D(1.01326, 0, 0, 0, 1.01326, 0, 0, 0, 1.01326, -0.273478, 3.19686, 0.0114164)
+material_override = SubResource("ShaderMaterial_8a84l")
+texture = ExtResource("5_uwfku")
+
+[node name="Sprite3D" type="Sprite3D" parent="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55027, 2.07019, 0.222597)
+material_override = SubResource("ShaderMaterial_mnteu")
+texture = ExtResource("6_vi8kx")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14369, 2.34963, 0.147362)
+material_override = SubResource("ShaderMaterial_8nbq1")
+texture = ExtResource("7_enbd4")

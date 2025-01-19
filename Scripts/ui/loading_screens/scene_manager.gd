@@ -4,8 +4,8 @@ signal transitioned_in()
 signal transitioned_out()
 signal loaded()
 @onready var LoadingScreens: CanvasLayer = $"."
-@onready var animation_player: AnimationPlayer = $Loading_screen/AnimationPlayer
 @onready var scene_loader: Node = $SceneLoader
+@onready var animation_player: AnimationPlayer = $Loading_screen/AnimationPlayer2
 
 func transition_to(scene: String, previous_scene: String)-> void:
 	if previous_scene == null || scene == null:
@@ -42,9 +42,14 @@ func load_scene() ->void:
 	await get_tree().create_timer(1.0).timeout
 	loaded.emit()
 
-func _on_animation_player_animation_finished(anim_name: String) -> void:
+#func _on_animation_player_animation_finished(anim_name: String) -> void:
+
+
+
+func _on_animation_player_2_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Loading_in":
 		animation_player.play("pulsing_text")
 		transitioned_in.emit()
 	if anim_name == "Loading_out":
 		transitioned_out.emit()
+	pass # Replace with function body.

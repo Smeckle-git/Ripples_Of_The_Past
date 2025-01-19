@@ -24,11 +24,12 @@ void vertex(){
 		__mvm = __mvm * mat4(vec4(length(MODEL_MATRIX[0].xyz), 0.0, 0.0, 0.0), vec4(0.0, 1.0, 0.0, 0.0), vec4(0.0, 0.0, length(MODEL_MATRIX[2].xyz), 0.0), vec4(0.0, 0.0, 0.0, 1.0));
 		n_out7p0 = __mvm;
 	}
-	MODELVIEW_MATRIX = n_out7p0;
+	MODELVIEW_MATRIX = n_out7p0;f
 }
 
 
 void fragment() {
+	//textureGather()
 	float disolve_noise = texture(noise_texture,UV).r;
 	vec4 texture_2d = texture(text2d,UV);
 	float border_mask = 0.0;
@@ -44,7 +45,7 @@ void fragment() {
 
 	vec3 surface_emmision = mix(vec3(0.0), glow_color, border_mask); // glow/border color of disolve
 
-	vec3 surface_color = mix(texture_2d.rgb, vec3(0.0), border_mask); // color of outside
+	vec3 surface_color = mix(NORMAL_MAP.rgb, vec3(0.0), border_mask); // color of outside
 
 	if(!FRONT_FACING){
 		surface_color = inside_color;

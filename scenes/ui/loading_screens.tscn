@@ -1,7 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://ffev2w8k4gak"]
+[gd_scene load_steps=25 format=3 uid="uid://ffev2w8k4gak"]
 
 [ext_resource type="Script" path="res://Scripts/ui/loading_screens/loading_screens.gd" id="1_6qtkl"]
-[ext_resource type="PackedScene" uid="uid://0ft6wn2pxu0l" path="res://scenes/Levels/Destinations/level.tscn" id="2_ek6qs"]
 [ext_resource type="Texture2D" uid="uid://dhba8gyv4y60l" path="res://assets/images/MainMenu/mainmenu-bg.jpeg" id="3_v0jp5"]
 [ext_resource type="Texture2D" uid="uid://c1o55c1hyduvb" path="res://assets/images/Others/Product_page.jpg" id="4_hshnu"]
 [ext_resource type="Texture2D" uid="uid://yqpgh6crvp22" path="res://assets/images/Others/Official_studio_logo.png" id="5_5nat0"]
@@ -108,7 +107,7 @@ font_size = 24
 font_color = Color(0, 0, 0, 1)
 outline_size = 2
 
-[node name="Loading_screen" type="Control" node_paths=PackedStringArray("continue_lable", "sprite_group", "background_group")]
+[node name="Loading_screen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -116,10 +115,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6qtkl")
-continue_lable = NodePath("VBoxContainer/HBoxContainer/VBoxContainer_sprite/Label")
-destination_scene = ExtResource("2_ek6qs")
-sprite_group = NodePath("VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group")
-background_group = NodePath("background_group/MarginContainer_background")
 
 [node name="background_group" type="Control" parent="."]
 layout_mode = 1
@@ -228,11 +223,11 @@ expand_mode = 5
 stretch_mode = 4
 
 [node name="VBoxContainer_sprite" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite"]
-visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -240,7 +235,6 @@ size_flags_vertical = 3
 layout_mode = 2
 
 [node name="MarginContainer_Hugo" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -255,7 +249,6 @@ expand_mode = 4
 stretch_mode = 4
 
 [node name="MarginContainer_Thorrin" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -270,7 +263,6 @@ expand_mode = 5
 stretch_mode = 4
 
 [node name="MarginContainer_Cat" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprite_group"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -285,11 +277,9 @@ expand_mode = 5
 stretch_mode = 4
 
 [node name="sprites_unused" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer"]
-visible = false
 layout_mode = 2
 
 [node name="MarginContainer_Ian" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/MarginContainer/sprites_unused"]
-visible = false
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -319,6 +309,8 @@ size_flags_stretch_ratio = 0.5
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_0uaxy")
 autoplay = "default"
+frame = 7
+frame_progress = 0.737027
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer/VBoxContainer_sprite/CenterContainer/CenterContainer2"]
 libraries = {

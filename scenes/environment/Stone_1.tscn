@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://jlbndjk3brxr"]
+[gd_scene load_steps=15 format=3 uid="uid://jlbndjk3brxr"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/wood_1.gd" id="1_mrkdp"]
 [ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/disolve.gdshader" id="2_vyquu"]
 [ext_resource type="Texture2D" uid="uid://dl10pkup7pl56" path="res://assets/images/sprites/Campfire/rock_1.png" id="3_07dma"]
 [ext_resource type="Animation" uid="uid://d26axq4ie70l" path="res://assets/shaders/shader_nick/Scene's/Disolve.res" id="4_neld4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_53kk2"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_8ual7"]
 
@@ -14,10 +16,11 @@ noise = SubResource("FastNoiseLite_8ual7")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0icfy"]
 resource_local_to_scene = true
 render_priority = 0
+next_pass = SubResource("ShaderMaterial_53kk2")
 shader = ExtResource("2_vyquu")
-shader_parameter/base_color = Color(0, 0, 0, 1)
+shader_parameter/base_color = Color(0.878431, 0, 0, 1)
 shader_parameter/inside_color = Color(0, 0, 0, 1)
-shader_parameter/disolve_amount = 0.105
+shader_parameter/disolve_amount = 0.135867
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_n1ysd")
 shader_parameter/glow_color = Color(1, 0, 0, 1)
 shader_parameter/glow_intensity = 0.0
@@ -53,6 +56,40 @@ _data = {
 "Idle": SubResource("Animation_s1c1d")
 }
 
+[sub_resource type="Shader" id="Shader_hyjj7"]
+code = "shader_type canvas_item;
+
+uniform vec4 color: source_color;
+
+const float speed = 700.0;
+const float duration = 3.0;
+const float width = 10.0;
+
+void fragment() {
+	COLOR = texture(TEXTURE, UV);
+	
+	vec2 position = SCREEN_UV / SCREEN_PIXEL_SIZE;
+	
+	vec4 texture_color = texture(TEXTURE, UV);
+	
+	float dist = abs(
+		position.x +
+		position.y +
+		mod(TIME * speed, duration * speed) - duration * speed * 0.5f
+	);
+	
+	if (dist <= width && texture_color.a > 0.0) {
+		float intensity = 1.0 - smoothstep(0.0, width, dist);
+		COLOR += color * texture_color.a * intensity;
+	}
+}
+
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aobgs"]
+shader = SubResource("Shader_hyjj7")
+shader_parameter/color = Color(0, 0, 0.760784, 1)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o23tc"]
 load_path = "res://.godot/imported/exclamation_mark.png-972816187b9e1e89f111765585cfa681.s3tc.ctex"
 
@@ -77,6 +114,7 @@ libraries = {
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.695524, 0, 0, 0, 0.602966, 0, 0, 0, 1, -0.0237924, 4.50811, 0.000147586)
+material_overlay = SubResource("ShaderMaterial_aobgs")
 billboard = 2
 double_sided = false
 texture = SubResource("CompressedTexture2D_o23tc")

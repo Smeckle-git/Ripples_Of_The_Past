@@ -34,6 +34,10 @@ func _process(delta: float):
 	elif Input.is_action_just_pressed("ui_left"):
 		if devMode:
 			_previous_background()
+			
+	elif Input.is_action_just_pressed("Walk backwards"):
+		Dialogic.end_timeline()
+		get_tree().change_scene_to_file("res://scenes/Levels/Game.tscn")
 
 func _next_background():
 	# Move to the next background in the list

@@ -3,7 +3,9 @@ extends Area3D
 var quest : Quest
 var picked_up = false
 #@onready var animation_player: AnimationPlayer = $AnimationPlayer
-
+func _ready() -> void:
+	get_child(2).play("anim/Idle")
+	
 func _on_body_entered(body: Node3D) -> void:
 	print(self)
 	if body.is_in_group("Player") and !picked_up:

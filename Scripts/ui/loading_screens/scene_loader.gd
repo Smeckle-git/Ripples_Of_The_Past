@@ -11,7 +11,7 @@ var current_scene: String
 
 
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("go_to_village") :
 		#print_debug(target_scene)
 		change_scene(target_scene)

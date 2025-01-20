@@ -769,6 +769,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.87623, 2, 27.8977)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.858, 1.51249, -8.81904)
 
 [node name="tree_collection_tutorial" type="Node3D" parent="trees"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 
 [node name="Tree" parent="trees/tree_collection_tutorial" instance=ExtResource("2_8om2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.611, 1, -122.749)

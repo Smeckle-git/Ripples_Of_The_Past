@@ -9,6 +9,9 @@ extends Control
 @onready var quests: TabBar = $MarginContainer2/VBoxContainer/TabContainer/Quests
 @onready var settings: Control = $MarginContainer2/VBoxContainer/TabContainer/Settings
 
+signal reset_keybindings_signal
+signal enable_settings_remap
+signal disable_settings_remap
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,10 +28,12 @@ func _on_exit_pressed() -> void:
 
 func _on_continue_pressed() -> void:
 	get_tree().paused = false
+	disable_settings_remap.emit()
 	$AnimationPlayer.play_backwards("blur")
 
 func pause():
 	get_tree().paused = true
+	enable_settings_remap.emit()
 	$AnimationPlayer.play("blur")
 	
 
@@ -38,7 +43,6 @@ func testFunc():
 		quests.visible = true
 	elif Input.is_action_just_pressed("Journal") and get_tree().paused:
 		_on_continue_pressed()
-		
 	if Input.is_action_just_pressed("Pause") and !get_tree().paused:
 		pause()
 		settings.visible = true
@@ -68,9 +72,6 @@ func Quest():
 			#map_village.visible= false
 			#map_forest.visible = true
 
- # Replace with function body.
-
-
 func _on_reset_pressed() -> void:
 	_on_continue_pressed()
 	for child in root.get_children():
@@ -79,3 +80,8 @@ func _on_reset_pressed() -> void:
 			if n.name == "Thorinn":
 				print_debug("manfound")
 				n.global_transform.origin.z += 5
+
+func _on_reset_keybinding_pressed() -> void:
+	print_debug("reset keybindings")
+	GameSettingsManager.reset_keybinding()
+	reset_keybindings_signal.emit()

@@ -30,7 +30,6 @@ func _ready() -> void:
 		config.set_value("video", "Resoltion", "1024x576")
 		config.set_value("video", "Render distance", 1.0)
 		
-		
 		config.save(SETTINGS_FILE_PATH)
 	else:
 		config.load(SETTINGS_FILE_PATH)
@@ -103,3 +102,31 @@ func get_keybinding(binding : String) -> String:
 	if config.get_value("keybinding", binding):
 		return str(config.get_value("keybinding", binding))
 	return "{Invalid Keybinding}"
+
+func reset_keybinding() -> void:
+	config.set_value("keybinding", "Walk forward", "W")
+	config.set_value("keybinding", "Walk forward2", "Up")
+	config.set_value("keybinding", "Walk backwards", "S")
+	config.set_value("keybinding", "Walk backwards2", "Down")
+	config.set_value("keybinding", "Walk left", "A")
+	config.set_value("keybinding", "Walk left2", "Left")
+	config.set_value("keybinding", "Walk right", "Right")
+	config.set_value("keybinding", "Walk right2", "D")
+	config.set_value("keybinding", "Interact", "E")
+	config.set_value("keybinding", "Interact2", "Space")
+	config.set_value("keybinding", "Journal", "J")
+	config.set_value("keybinding", "Journal2", "")
+	config.set_value("keybinding", "Pause", "Escape")
+	config.set_value("keybinding", "Pause2", "")
+	
+	config.set_value("audio", "Master voume", 1.0)
+	config.set_value("audio", "Music volume", 1.0)
+	config.set_value("audio", "Ambiant sound volume", 1.0)
+	config.set_value("audio", "SFX vulue", 1.0)
+	
+	config.set_value("video", "Fullscreen", 0)
+	config.set_value("video", "Resoltion", "1024x576")
+	config.set_value("video", "Render distance", 1.0)
+	
+	config.save(SETTINGS_FILE_PATH)
+	remap_keys()

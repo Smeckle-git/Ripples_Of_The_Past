@@ -188,6 +188,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
 
 [node name="return-buton" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer"]
 custom_minimum_size = Vector2(250, 0)
@@ -195,6 +196,14 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Back to Menu"
 script = ExtResource("1_3lp24")
+
+[node name="CenterContainer2" type="CenterContainer" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="reset_keybindings" type="Button" parent="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer2"]
+layout_mode = 2
+text = "Reset Keybindings"
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
 visible = false
@@ -329,6 +338,7 @@ text = "Back to Menu"
 script = ExtResource("1_3lp24")
 
 [connection signal="pressed" from="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer/return-buton" to="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer/return-buton" method="_on_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer2/reset_keybindings" to="." method="_on_reset_keybindings_pressed"]
 [connection signal="drag_ended" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="." method="_on_mv_slider_drag_ended"]
 [connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="." method="_on_mv_slider_value_changed"]
 [connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_mv_slider_value_changed"]

@@ -605,28 +605,32 @@ horizontal_alignment = 1
 
 [node name="Continue" type="Button" parent="MarginContainer2/VBoxContainer/TabContainer/Settings"]
 layout_direction = 1
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = -48.0
-offset_right = 254.0
-offset_bottom = -17.0
+layout_mode = 2
+offset_left = 137.0
+offset_top = 506.0
+offset_right = 267.0
+offset_bottom = 546.0
 grow_vertical = 0
 text = "Continue Game"
 
+[node name="reset_keybinding" type="Button" parent="MarginContainer2/VBoxContainer/TabContainer/Settings"]
+layout_direction = 1
+layout_mode = 2
+offset_left = 271.0
+offset_top = 506.0
+offset_right = 419.0
+offset_bottom = 546.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Reset keybindings"
+
 [node name="Reset" type="Button" parent="MarginContainer2/VBoxContainer/TabContainer/Settings"]
 layout_direction = 1
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -234.0
-offset_top = -48.0
-offset_bottom = -17.0
+layout_mode = 2
+offset_left = 423.0
+offset_top = 506.0
+offset_right = 501.0
+offset_bottom = 546.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "I'm Stuck"
@@ -636,9 +640,13 @@ libraries = {
 "": SubResource("AnimationLibrary_g4opo")
 }
 
+[connection signal="disable_settings_remap" from="." to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer" method="disable_buttons"]
+[connection signal="enable_settings_remap" from="." to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer" method="enable_buttons"]
+[connection signal="reset_keybindings_signal" from="." to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer" method="_on_journal_reset_keybindings_signal"]
 [connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_mv_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_ms_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience/AM-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_am_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects/SFX-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/reset_keybinding" to="." method="_on_reset_keybinding_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/Reset" to="." method="_on_reset_pressed"]

@@ -19,7 +19,6 @@ extends Control
 @onready var am_slider: HSlider = $"Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience/AM-Slider"
 @onready var sfx_slider: HSlider = $"Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects/SFX-Slider"
 
-
 func set_value():
 	var keybinds = GameSettingsManager.load_keybinding()
 	forward1.text = keybinds["Walk forward"].as_text()
@@ -79,9 +78,6 @@ func _on_sfx_slider_drag_ended(value_changed: bool) -> void:
 	if value_changed:
 		GameSettingsManager.save_audio_setting("SFX vulue", sfx_slider.value / 100)
 
-
-
-
 var is_remapping = false
 var action_to_remap = null
 var original_action = null
@@ -113,3 +109,58 @@ func _input(event: InputEvent) -> void:
 			original_action = null
 			
 			accept_event()
+
+func _on_journal_reset_keybindings_signal() -> void:
+	print_debug("update keybindings_on_screen")
+	update_text()
+
+func update_text() -> void:
+	var keybinds = GameSettingsManager.load_keybinding()
+	forward1.text = keybinds["Walk forward"].as_text()
+	forward2.text = keybinds["Walk forward2"].as_text()
+	backwards1.text = keybinds["Walk backwards"].as_text()
+	backwards2.text = keybinds["Walk backwards2"].as_text()
+	left1.text = keybinds["Walk left"].as_text()
+	left2.text = keybinds["Walk left2"].as_text()
+	right1.text = keybinds["Walk right"].as_text()
+	right2.text = keybinds["Walk right2"].as_text()
+	interact1.text = keybinds["Interact"].as_text()
+	interact2.text = keybinds["Interact2"].as_text()
+	journal1.text = keybinds["Journal"].as_text()
+	journal2.text = keybinds["Journal2"].as_text()
+	pause1.text = keybinds["Pause"].as_text()
+	pause2.text = keybinds["Pause2"].as_text()
+
+func disable_buttons() -> void:
+	print_debug("buttons disabled")
+	forward1.disabled = true
+	forward2.disabled = true
+	backwards1.disabled = true
+	backwards2.disabled = true
+	left1.disabled = true
+	left2.disabled = true
+	right1.disabled = true
+	right2.disabled = true
+	interact1.disabled = true
+	interact2.disabled = true
+	journal1.disabled = true
+	journal2.disabled = true
+	pause1.disabled = true
+	pause2.disabled = true
+
+func enable_buttons() -> void:
+	print_debug("buttons enabled")
+	forward1.disabled = false
+	forward2.disabled = false
+	backwards1.disabled = false
+	backwards2.disabled = false
+	left1.disabled = false
+	left2.disabled = false
+	right1.disabled = false
+	right2.disabled = false
+	interact1.disabled = false
+	interact2.disabled = false
+	journal1.disabled = false
+	journal2.disabled = false
+	pause1.disabled = false
+	pause2.disabled = false

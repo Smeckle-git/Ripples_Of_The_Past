@@ -113,3 +113,26 @@ func _input(event: InputEvent) -> void:
 			original_action = null
 			
 			accept_event()
+
+
+func _on_reset_keybindings_pressed() -> void:
+	print_debug("reset keybindings")
+	GameSettingsManager.reset_keybinding()
+	update_text()
+
+func update_text() -> void:
+	var keybinds = GameSettingsManager.load_keybinding()
+	forward1.text = keybinds["Walk forward"].as_text()
+	forward2.text = keybinds["Walk forward2"].as_text()
+	backwards1.text = keybinds["Walk backwards"].as_text()
+	backwards2.text = keybinds["Walk backwards2"].as_text()
+	left1.text = keybinds["Walk left"].as_text()
+	left2.text = keybinds["Walk left2"].as_text()
+	right1.text = keybinds["Walk right"].as_text()
+	right2.text = keybinds["Walk right2"].as_text()
+	interact1.text = keybinds["Interact"].as_text()
+	interact2.text = keybinds["Interact2"].as_text()
+	journal1.text = keybinds["Journal"].as_text()
+	journal2.text = keybinds["Journal2"].as_text()
+	pause1.text = keybinds["Pause"].as_text()
+	pause2.text = keybinds["Pause2"].as_text()

@@ -24,7 +24,7 @@ void vertex(){
 		__mvm = __mvm * mat4(vec4(length(MODEL_MATRIX[0].xyz), 0.0, 0.0, 0.0), vec4(0.0, 1.0, 0.0, 0.0), vec4(0.0, 0.0, length(MODEL_MATRIX[2].xyz), 0.0), vec4(0.0, 0.0, 0.0, 1.0));
 		n_out7p0 = __mvm;
 	}
-	MODELVIEW_MATRIX = n_out7p0;f
+	MODELVIEW_MATRIX = n_out7p0;
 }
 
 

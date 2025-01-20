@@ -9,7 +9,7 @@ class_name Companion
 const SPEED = 10.0
 @export var following := false
 @export var sitting = false
-
+@export var petting = false
 @export var move_to_location : Vector3 = Vector3(0,0,0)	
 
 
@@ -57,3 +57,10 @@ func manage_animations():
 
 func _on_timer_timeout() -> void:
 	sitting = true
+	
+
+func _on_interact() -> void:
+	petting = true
+	await get_tree().create_timer(4).timeout
+	petting = false
+	print_debug("Testing")

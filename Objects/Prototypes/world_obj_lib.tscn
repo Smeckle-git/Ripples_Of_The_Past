@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqg2a6l3quf32"]
+
+[ext_resource type="PackedScene" uid="uid://d0hrfljsnvd78" path="res://Objects/Prototypes/ground.tscn" id="1_kd8vx"]
+[ext_resource type="PackedScene" uid="uid://lloi5oeaac6q" path="res://Objects/Prototypes/ground2.tscn" id="2_5odps"]
+[ext_resource type="PackedScene" uid="uid://wt4mn2siykjq" path="res://Objects/Prototypes/ground3.tscn" id="3_fhrtm"]
+[ext_resource type="PackedScene" uid="uid://cqvsffngxa5yu" path="res://Objects/Prototypes/tree.tscn" id="4_mv23o"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_kd8vx")]
+
+[node name="Ground2" parent="." instance=ExtResource("2_5odps")]
+
+[node name="Ground3" parent="." instance=ExtResource("3_fhrtm")]
+
+[node name="Tree" parent="." instance=ExtResource("4_mv23o")]

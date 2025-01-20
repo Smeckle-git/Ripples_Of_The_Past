@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgyt23pysau0k"]
+
+[ext_resource type="Script" path="res://UI_Elements/MainMenu/MainMenu.gd" id="1_buvrl"]
+[ext_resource type="Texture2D" uid="uid://5wmpsam0pl8l" path="res://Resources/Images/MainMenu/GoDotBanner.png" id="1_ne5gb"]
+
+[sub_resource type="SystemFont" id="SystemFont_iwrgx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mrehf"]
+
+[node name="MainMenu" type="MarginContainer"]
+process_mode = 3
+offset_right = 1153.0
+offset_bottom = 648.0
+script = ExtResource("1_buvrl")
+
+[node name="Main_divide_Slice" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="LogoContainer" type="HBoxContainer" parent="Main_divide_Slice"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Main_divide_Slice/LogoContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Main_divide_Slice/LogoContainer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("1_ne5gb")
+
+[node name="LogoContainer2" type="HBoxContainer" parent="Main_divide_Slice"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Main_divide_Slice/LogoContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Main_divide_Slice/LogoContainer2/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_iwrgx")
+theme_override_font_sizes/font_size = 0
+text = "Ripples Of The Past"
+label_settings = SubResource("LabelSettings_mrehf")
+
+[node name="MainContainer" type="HBoxContainer" parent="Main_divide_Slice"]
+layout_mode = 2
+size_flags_vertical = 6
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Main_divide_Slice/MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="Main_divide_Slice/MainContainer/CenterContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.86
+alignment = 1
+
+[node name="ContinueGame" type="Button" parent="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer"]
+layout_mode = 2
+text = "Continue Game / Load Game [WIP]"
+
+[node name="NewGame" type="Button" parent="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer"]
+layout_mode = 2
+text = "New Game"
+
+[node name="Settings" type="Button" parent="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer"]
+layout_mode = 2
+text = "Quit Game"
+
+[node name="CreditsContainer" type="HBoxContainer" parent="Main_divide_Slice"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextContainer" type="VBoxContainer" parent="Main_divide_Slice/CreditsContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Main_divide_Slice/CreditsContainer/TextContainer"]
+layout_mode = 2
+text = "Prototype Version 0.0.1 - Entangled Studios"
+
+[connection signal="pressed" from="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer/ContinueGame" to="." method="_on_continue_game_pressed"]
+[connection signal="pressed" from="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Main_divide_Slice/MainContainer/CenterContainer/ChoiceContainer/Quit" to="." method="_on_quit_pressed"]

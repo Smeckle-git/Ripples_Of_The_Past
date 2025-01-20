@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0hrfljsnvd78"]
+
+[ext_resource type="Texture2D" uid="uid://db07c34tqg824" path="res://Objects/Prototypes/grass_texture_pixelartmaker.png" id="1_x66hu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_725jr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8s5lh"]
+albedo_texture = ExtResource("1_x66hu")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o4ah8"]
+
+[node name="Ground" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_725jr")
+surface_material_override/0 = SubResource("StandardMaterial3D_8s5lh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_o4ah8")

@@ -1,19 +1,36 @@
 extends Node
 @onready var thorinn: Thorinn = $Character/Thorinn
-@onready var find_ian_quest: Quest = $Quests/Find_ian_quest
 @onready var hugo: Hugo = $Character/Hugo
-@onready var animation_player: AnimationPlayer = $CanvasLayer/AnimationPlayer
-@onready var directional_light_3d: DirectionalLight3D = $Environment/WorldEnvironment/DirectionalLight3D
-@onready var Hospital: InteractionArea = $Buildings/BuildingHospital/InteractionArea
-@onready var return_to_inn: Quest = $Quests/Return_to_inn
 @onready var alinora: CharacterBody3D = $Character/Alinora
 @onready var marlic: NPC = $Character/Marlic
-@onready var tree: Magic_tree = $Buildings/Tree
-@onready var find_book_quest: Quest = $Quests/Find_book_quest
-@onready var collectflowers: Flowers = $Quests/Collectflowers
 @onready var astrid: NPC = $Character/Astrid
 @onready var vivian: NPC = $Character/Vivian
 @onready var marcellus: NPC = $Character/marcellus
+@onready var favian: NPC = $Character/Favian
+
+
+@onready var villager_1: NPC = $Character/Villager1
+@onready var villager_2: NPC = $Character/Villager2
+@onready var villager_3: NPC = $Character/Villager3
+@onready var villager_4: NPC = $Character/Villager4
+@onready var villager_5: NPC = $Character/Villager5
+
+@onready var Hospital: InteractionArea = $Buildings/BuildingHospital/InteractionArea
+@onready var tree: Magic_tree = $Buildings/Tree
+
+@onready var return_to_inn: Quest = $Quests/Return_to_inn
+@onready var find_ian_quest: Quest = $Quests/Find_ian_quest
+@onready var find_book_quest: Quest = $Quests/Find_book_quest
+@onready var collectflowers: Flowers = $Quests/Collectflowers
+
+@onready var animation_player: AnimationPlayer = $CanvasLayer/AnimationPlayer
+@onready var directional_light_3d: DirectionalLight3D = $Environment/WorldEnvironment/DirectionalLight3D
+
+
+
+
+
+
 
 
 
@@ -28,6 +45,7 @@ func _ready() -> void:
 	astrid.interaction_area.interact = Callable(self, "_on_astrid_interact")
 	vivian.interaction_area.interact = Callable(self, "_on_vivian_interact")
 	marcellus.interaction_area.interact = Callable(self, "_on_marcellus_interact")
+	favian.interaction_area.interact = Callable(self, "_on_favian_interact")
 	
 	#thorinn.state_machine.follow_target = hugo
 	#thorinn.state_machine.change_state("follow")
@@ -66,8 +84,31 @@ func _on_dialogic_signal(argument:String):
 	elif argument == "Start_find_another_way_quest":
 		find_book_quest.start_quest()
 	elif argument == "Start_flower_quest":
+		tree.switch_sprite()
 		find_book_quest.finish_quest()
 		collectflowers.start()
+	elif argument == "Final_reveal":
+		thorinn.global_position = Vector3(42,1.6,-4)
+		
+		if Dialogic.VAR.Dead_person_choice == 1:
+			pass
+		elif Dialogic.VAR.Dead_person_choice == 2:
+			villager_1.turn_dead()
+			villager_3.turn_dead()
+			villager_4.turn_dead()
+			villager_5.turn_dead()
+		elif Dialogic.VAR.Dead_person_choice == 3:
+			villager_3.turn_dead()
+			villager_4.turn_dead()
+		elif Dialogic.VAR.Dead_person_choice == 4:
+			villager_1.turn_dead()
+			villager_2.turn_dead()
+			villager_3.turn_dead()
+			villager_4.turn_dead()
+			villager_5.turn_dead()
+
+func _on_favian_interact():
+	Dialogic.start("Reveal_of_dead")
 
 func _on_vivian_interact():
 	Dialogic.VAR.selected_character = 1
@@ -85,7 +126,10 @@ func _on_tree_interact():
 	Dialogic.start("Tree_interaction")
 
 func _on_marlic_interaction():
-	Dialogic.start("Malrik_Cure")
+	if collectflowers.find_flowers_quest.quest_status == collectflowers.find_flowers_quest.QuestStatus.reached_goal:
+		Dialogic.start("Killing_choice")
+	else:
+		Dialogic.start("Malrik_Cure")
 
 func _on_inn_interaction():
 	Dialogic.start("Return_to_inn")

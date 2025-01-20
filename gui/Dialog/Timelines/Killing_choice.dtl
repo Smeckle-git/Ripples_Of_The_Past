@@ -3,30 +3,50 @@ join Thorinn leftmost
 join Malrik rightmost
 if {Malrik.Trusted_malric} == false:
 	Malrik: Even after all those troubles you've gone through, we've come full circle. You're back asking me for help.
-	Malrik: I can see that you've managed to get your hands on my book, you must've figured out the price of the antidote. I'm curious which path the righteous doctor takes.
+	Malrik: I can see that you've managed to get your hands on my book, you must've figured out the price of the antidote. You'll see it would've been better to listen to my advice.
+	Malrik: I'm curious what path the glorious doctor will take.
 elif {Malrik.Trusted_malric} == true:
 	Malrik: I see you've managed to collect all the papilora flowers. You've only half succeeded because that's only the easy part of the antidote.
 Malrik: Now, who will you sacrifice?
 - Vivian
-	leave Malrik
+	leave --All--
+	[signal arg="start_night"]
+	[wait time="2.0"]
+	join Thorinn leftmost
 	join left_Malrik left [z_index="-1"]
 	join vivian rightmost
 	Thorinn (agitated): I’m sorry, Vivian.
 	set {Dead_person_choice} = 1
-- Nick
-	leave Malrik
+	leave vivian [animation="Instant Out"]
+- Marcellus
+	leave --All--
+	[signal arg="start_night"]
+	[wait time="2.0"]
+	join Thorinn leftmost
 	join left_Malrik left [z_index="-1"]
 	join Nick rightmost
 	Thorinn: This ends tonight!
 	set {Dead_person_choice} = 2
+	leave Nick [animation="Instant Out"]
 - Astrid
-	leave Malrik
+	leave --All--
+	[signal arg="start_night"]
+	[wait time="2.0"]
+	join Thorinn leftmost
 	join left_Malrik left [z_index="-1"]
 	join Astrid rightmost
 	Astrid: What are you doing here in the middle of the night?
 	Thorinn (agitated): I’m sorry, I don't have any other choice.
 	set {Dead_person_choice} = 3
+	leave Astrid [animation="Instant Out"]
 - Don’t kill anyone
 	Thorinn: I can’t do this. There must be another way.
 	Malrik: Let it be your way then.
 	set {Dead_person_choice} = 4
+[signal arg="Final_reveal"]
+[signal arg="change_to_day_light"]
+[wait time="2.0"]
+leave --All--
+[signal arg="end-night"]
+[wait time="2.0" hide_text="false"]
+Thorinn (surprised): Seems like there's quite some ruckus over at the town square.

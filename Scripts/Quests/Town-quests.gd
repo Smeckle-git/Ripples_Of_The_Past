@@ -47,11 +47,9 @@ func _ready() -> void:
 	marcellus.interaction_area.interact = Callable(self, "_on_marcellus_interact")
 	favian.interaction_area.interact = Callable(self, "_on_favian_interact")
 	
-	#thorinn.state_machine.follow_target = hugo
-	#thorinn.state_machine.change_state("follow")
-	#hugo.move_to_location = [Vector3(78.838, 2.57, 67.381), Vector3(74.978, 2.57, 70.043), Vector3(71.93, 3.52, 71.431), Vector3(64.001, 3.52, 77.358), Vector3(57.87, 3.52, 77.358), Vector3(54.056, 1.957, 75.402), Vector3(46.614, 1.557, 67.844), Vector3(39.94, 1.557, 64.231)]
-	
-	collectflowers.start()
+	thorinn.state_machine.follow_target = hugo
+	thorinn.state_machine.change_state("follow")
+	hugo.move_to_location = [Vector3(78.838, 2.57, 67.381), Vector3(74.978, 2.57, 70.043), Vector3(71.93, 3.52, 71.431), Vector3(64.001, 3.52, 77.358), Vector3(57.87, 3.52, 77.358), Vector3(54.056, 1.957, 75.402), Vector3(46.614, 1.557, 67.844), Vector3(39.94, 1.557, 64.231)]
 	
 	if !Dialogic.VAR.Hugo.Followed_to_rockfall:
 		hugo.visible = false
@@ -78,6 +76,12 @@ func _on_dialogic_signal(argument:String):
 		marlic.visible = true
 		hugo.interaction_area.show_label = false
 		Hospital.show_label = false
+		marcellus.visible = true
+		marcellus.interaction_area.show_label = true
+		vivian.visible = true
+		vivian.interaction_area.show_label = true
+		astrid.visible = true
+		astrid.interaction_area.show_label = true
 		tree.switch_sprite()
 	elif argument == "start_alinora_interaction":
 		Dialogic.start("Astrid_request")

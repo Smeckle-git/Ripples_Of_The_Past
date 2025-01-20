@@ -1,0 +1,20 @@
+[style name="Interaction_Style"]
+if {Ian.ian_interaction_phase} == 1:
+	if {Malrik.Talked_already} == false:
+		join Thorinn leftmost
+		join Malrik rightmost
+		Malrik: The doctor comes seeking answers. What is it you want?
+		Thorinn (surprised): Five villagers are dying. They say it’s a curse. Do you know how to lift it?
+		Malrik: Perhaps. My books know everything, but knowledge has its price. Trust me, and I will help you.
+		- Refuse to Trust Malric
+			Thorinn (agitated): I won’t play your games. I’ll find another way.
+			Malrik: Then good luck finding out the cure! But know this—knowledge taken by force often leads to ruin.
+		- Trust Malric
+			Thorinn (normal): I’ll trust you. What must I do?
+			Malrik: You must brew a potion. It requires three flowers that bloom near the village... and the blood of a pure soul.
+			Thorinn (agitated): Blood? Whose blood?
+			Malrik: That is for you to decide. But choose wisely. The purer the soul, the more potent the potion.
+		set {Malrik.Talked_already} = true
+	else:
+		*Thorinn knocks on the closed door*
+		Malrik: I'm busy, I can't help you further.

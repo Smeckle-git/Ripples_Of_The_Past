@@ -1,0 +1,32 @@
+class_name Quest extends QuestManager
+#base class for making quest
+func start_quest() -> void:
+	if quest_status == QuestStatus.available:
+		quest_status = QuestStatus.started
+		QuestLog.visible = true
+		QuestTitle.text = quest_name
+		QuestDescription.text = str(collect_obj) + "/" + str(amount_obj) +" "+ quest_description
+		
+func update_goal()-> void:
+	if quest_status == QuestStatus.started || quest_status == QuestStatus.update_goal:
+		quest_status = QuestStatus.update_goal
+		collect_obj +=1
+		QuestDescription.text = str(collect_obj) + "/" + str(amount_obj) +" "+ quest_description
+		
+		if collect_obj == amount_obj:
+			reached_goal()
+			
+func reached_goal() -> void:
+	if quest_status == QuestStatus.update_goal:
+		quest_status = QuestStatus.reached_goal
+		QuestDescription.text = reached_goal_text
+
+func finish_quest() -> void:
+	if quest_status == QuestStatus.reached_goal:
+		quest_status = QuestStatus.finished
+		QuestLog.visible = false
+		GameHudManager.reputation += Reputation_amount 
+		update_karma()
+		print_debug(KarmaGlobal.KARMA_SCORE)
+
+# create function that update the amount of picked up parts

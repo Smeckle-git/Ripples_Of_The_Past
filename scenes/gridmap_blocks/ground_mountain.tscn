@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4hfdh5a1t88w"]
+
+[ext_resource type="Texture2D" uid="uid://cjsmah0eyomnh" path="res://assets/Objects/Prototypes/Rock022_1K-PNG/Rock022_1K-PNG_Color.png" id="1_s2rd2"]
+[ext_resource type="Texture2D" uid="uid://dx1kkyy4teoj5" path="res://assets/Objects/Prototypes/Rock022_1K-PNG/Rock022_1K-PNG_AmbientOcclusion.png" id="2_888th"]
+[ext_resource type="Texture2D" uid="uid://gdxls7m26q5s" path="res://assets/Objects/Prototypes/Rock022_1K-PNG/Rock022_1K-PNG_Roughness.png" id="3_lekgc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1sife"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxdyv"]
+albedo_texture = ExtResource("1_s2rd2")
+roughness_texture = ExtResource("3_lekgc")
+ao_enabled = true
+ao_texture = ExtResource("2_888th")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jcufv"]
+
+[node name="Ground2" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_1sife")
+surface_material_override/0 = SubResource("StandardMaterial3D_lxdyv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_jcufv")

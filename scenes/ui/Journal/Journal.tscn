@@ -1,0 +1,290 @@
+[gd_scene load_steps=12 format=3 uid="uid://ddu443etw7oh2"]
+
+[ext_resource type="Script" path="res://scenes/ui/Journal/journal.gd" id="1_kjdks"]
+[ext_resource type="Shader" path="res://assets/shaders/journal/Journal.gdshader" id="2_nbn3k"]
+[ext_resource type="Texture2D" uid="uid://cs74uktpya26q" path="res://assets/images/Maps/Screenshot 2025-01-09 152925.png" id="2_upwfn"]
+[ext_resource type="Texture2D" uid="uid://bqm13825nhivp" path="res://assets/images/Maps/Screenshot 2025-01-13 155922.png" id="4_r1nb6"]
+[ext_resource type="PackedScene" uid="uid://ydr85i4u3sto" path="res://scenes/ui/SettingMenu.tscn" id="5_cj7n3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2losr"]
+shader = ExtResource("2_nbn3k")
+shader_parameter/lod = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a4wxo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_770di"]
+
+[sub_resource type="Animation" id="Animation_6x6j5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5vivi"]
+resource_name = "blur"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.83]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g4opo"]
+_data = {
+"RESET": SubResource("Animation_6x6j5"),
+"blur": SubResource("Animation_5vivi")
+}
+
+[node name="Journal" type="Control"]
+process_mode = 3
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_kjdks")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_2losr")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 116.0
+offset_right = 1060.0
+offset_bottom = 563.0
+size_flags_vertical = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 4
+
+[node name="map" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="map_Forest" type="Sprite2D" parent="MarginContainer2/VBoxContainer/TabContainer/map"]
+material = SubResource("ShaderMaterial_a4wxo")
+position = Vector2(200, 252)
+scale = Vector2(0.936544, 0.792781)
+texture = ExtResource("2_upwfn")
+
+[node name="map_village" type="Sprite2D" parent="MarginContainer2/VBoxContainer/TabContainer/map"]
+visible = false
+position = Vector2(246, 241)
+scale = Vector2(0.756055, 0.784014)
+texture = ExtResource("4_r1nb6")
+
+[node name="Quests" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Control" type="Control" parent="MarginContainer2/VBoxContainer/TabContainer/Quests"]
+anchors_preset = 0
+offset_right = 905.0
+offset_bottom = 497.0
+
+[node name="quest_text" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 75.0
+offset_right = 506.0
+offset_bottom = 343.0
+
+[node name="quest_title" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 13.0
+offset_right = 380.0
+offset_bottom = 53.0
+
+[node name="Characters" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer2/VBoxContainer/TabContainer/Characters"]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 910.0
+offset_bottom = 495.0
+tab_alignment = 1
+current_tab = 1
+
+[node name="Thorin" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer/Thorin"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 146.0
+offset_right = 609.0
+offset_bottom = 450.0
+text = "lorem ipsum
+Wat is Lorem Ipsum?
+Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten"
+label_settings = SubResource("LabelSettings_770di")
+autowrap_mode = 2
+
+[node name="Wiskers" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label2" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer/Wiskers"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 177.0
+offset_right = 609.0
+offset_bottom = 481.0
+text = "lorem ipsum
+Wat is Lorem Ipsum?
+Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten"
+label_settings = SubResource("LabelSettings_770di")
+autowrap_mode = 2
+
+[node name="Hugo" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label3" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer/Hugo"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 177.0
+offset_right = 609.0
+offset_bottom = 481.0
+text = "lorem ipsum
+Wat is Lorem Ipsum?
+Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten"
+label_settings = SubResource("LabelSettings_770di")
+autowrap_mode = 2
+
+[node name="Ian" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label4" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer/Ian"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 146.0
+offset_right = 609.0
+offset_bottom = 450.0
+text = "lorem ipsum
+Wat is Lorem Ipsum?
+Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten"
+label_settings = SubResource("LabelSettings_770di")
+autowrap_mode = 2
+
+[node name="God" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Label5" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer/God"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 146.0
+offset_right = 609.0
+offset_bottom = 450.0
+text = "lorem ipsum
+Wat is Lorem Ipsum?
+Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten"
+label_settings = SubResource("LabelSettings_770di")
+autowrap_mode = 2
+
+[node name="Lore" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Settings" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Settings_menu" parent="MarginContainer2/VBoxContainer/TabContainer/Settings" instance=ExtResource("5_cj7n3")]
+layout_mode = 2
+anchors_preset = 0
+offset_top = 14.0
+
+[node name="Continue" type="Button" parent="MarginContainer2/VBoxContainer/TabContainer/Settings"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -50.0
+offset_right = 254.0
+offset_bottom = -19.0
+grow_vertical = 0
+pivot_offset = Vector2(10, 0)
+text = "Continue Game"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_g4opo")
+}
+
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/Continue" to="." method="_on_continue_pressed"]

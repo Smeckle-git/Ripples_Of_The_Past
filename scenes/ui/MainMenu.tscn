@@ -1,0 +1,150 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgyt23pysau0k"]
+
+[ext_resource type="Script" path="res://Scripts/ui/MainMenu/MainMenu.gd" id="1_283wr"]
+[ext_resource type="Texture2D" uid="uid://bysyn2h28hcc8" path="res://assets/images/MainMenu/Product_page.jpg" id="2_8fwgx"]
+[ext_resource type="PackedScene" uid="uid://ffev2w8k4gak" path="res://scenes/ui/loading_screens.tscn" id="2_eil01"]
+[ext_resource type="AudioStream" uid="uid://b32kplhywilof" path="res://assets/Sounds/themes/main_theme.mp3" id="2_qpaks"]
+[ext_resource type="Script" path="res://Scripts/audio/main_menu_thememanager.gd" id="3_c3bv2"]
+[ext_resource type="Texture2D" uid="uid://ca5frnce0aedr" path="res://assets/images/Promotion/logo.png" id="3_uqq2b"]
+
+[sub_resource type="SystemFont" id="SystemFont_iwrgx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mrehf"]
+
+[node name="MainMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenu" type="MarginContainer" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_283wr")
+loading_screen = ExtResource("2_eil01")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MainMenu"]
+stream = ExtResource("2_qpaks")
+autoplay = true
+script = ExtResource("3_c3bv2")
+
+[node name="Background" type="TextureRect" parent="MainMenu"]
+layout_mode = 2
+texture = ExtResource("2_8fwgx")
+expand_mode = 2
+flip_h = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu"]
+layout_mode = 2
+size_flags_stretch_ratio = 12.0
+
+[node name="MenuContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="LogoContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu/HBoxContainer/MenuContainer/LogoContainer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("3_uqq2b")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MainContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="ContinueGame" type="Button" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer"]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Continue Game / Load Game [WIP]"
+
+[node name="NewGame" type="Button" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+size_flags_vertical = 3
+text = "New Game"
+
+[node name="Settings" type="Button" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+size_flags_vertical = 3
+button_mask = 3
+text = "Quit Game"
+expand_icon = true
+
+[node name="CreditsContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="TextContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer/MenuContainer/CreditsContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MenuContainer/CreditsContainer/TextContainer"]
+layout_mode = 2
+text = "Beta Version 0.2.0 - Entangled Studios"
+
+[node name="LogoContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
+alignment = 1
+
+[node name="TitleContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/LogoContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MainMenu/HBoxContainer/LogoContainer/TitleContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/LogoContainer/TitleContainer/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_iwrgx")
+theme_override_font_sizes/font_size = 0
+text = "Ripples Of The Past"
+label_settings = SubResource("LabelSettings_mrehf")
+
+[connection signal="pressed" from="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer/ContinueGame" to="MainMenu" method="_on_continue_game_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer/NewGame" to="MainMenu" method="_on_new_game_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer/Settings" to="MainMenu" method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer/Quit" to="MainMenu" method="_on_quit_pressed"]

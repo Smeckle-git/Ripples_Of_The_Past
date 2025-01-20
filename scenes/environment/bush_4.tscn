@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://rtbd6iip6wuq"]
+
+[ext_resource type="Texture2D" uid="uid://obam00khyd7f" path="res://assets/Objects/Prototypes/foilage/bush_4.png" id="1_iqpwh"]
+
+[node name="bush" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1.375, 0)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("1_iqpwh")

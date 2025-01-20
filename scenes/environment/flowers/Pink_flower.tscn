@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://dxs7nlr7gkvxu"]
+
+[ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/wood_1.gd" id="1_tofpb"]
+[ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/disolve.gdshader" id="2_rtko1"]
+[ext_resource type="Texture2D" uid="uid://bybrcbkodcmii" path="res://assets/images/enviroment/flowers/Flower_magenta.png" id="3_v7gln"]
+[ext_resource type="Animation" uid="uid://d26axq4ie70l" path="res://assets/shaders/shader_nick/Scene's/Disolve.res" id="4_sk8is"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8ual7"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_n1ysd"]
+seamless = true
+noise = SubResource("FastNoiseLite_8ual7")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0icfy"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("2_rtko1")
+shader_parameter/base_color = Color(0, 0, 0, 1)
+shader_parameter/inside_color = Color(0, 0, 0, 1)
+shader_parameter/disolve_amount = 0.105
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_n1ysd")
+shader_parameter/glow_color = Color(1, 0, 0, 1)
+shader_parameter/glow_intensity = 0.0
+shader_parameter/glow_border_wit = 0.0
+shader_parameter/glow_border_smoothness = 0.1
+shader_parameter/text2d = ExtResource("3_v7gln")
+
+[sub_resource type="QuadMesh" id="QuadMesh_wonkk"]
+resource_local_to_scene = true
+material = SubResource("ShaderMaterial_0icfy")
+size = Vector2(16, 20)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5gwji"]
+_data = {
+"Disolve": ExtResource("4_sk8is")
+}
+
+[node name="Flower" type="Area3D"]
+transform = Transform3D(0.998351, 0, 0, 0, 0.998351, 0, 0, 0, 0.998351, 0, 0, 0)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_tofpb")
+
+[node name="Sprite3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("QuadMesh_wonkk")
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="."]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, -2.29558e-05, -0.0487906, -0.000938533)
+polygon = PackedVector2Array(-0.64263, -0.559824, -0.711636, -0.439226, -0.751712, -0.268813, -0.805902, 0.00557125, -0.910622, 0.567584, -0.564403, 0.856169, 0.23339, 0.868161, 0.347436, 0.652351, 0.541453, 0.536294, 0.960331, -0.0664554, 0.632693, -0.424848, 0.484221, -0.689365, 0.412554, -1.01276, 0.206017, -0.988319, -0.369939, -0.86341, -0.563675, -0.657938)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"anim": SubResource("AnimationLibrary_5gwji")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

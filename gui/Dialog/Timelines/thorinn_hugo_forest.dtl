@@ -1,0 +1,20 @@
+[style name="Interaction_Style"]
+join Thorinn left
+join Whiskers leftmost [mirrored="true"]
+Traveler, what are you dong here?
+join Hugo right
+Thorinn: !!!
+Thorinn: Who are you and why are you here?
+Hugo: Allow me to introduce myself. I’m Hugo, and I saw your campfire when I was doing my daily evening walk.
+Thorinn: Thorinn is the name, and this little guy here is Whiskers.
+Whiskers: *hisses at Hugo*
+Thorinn: We were on our way to Rockfall but we got lost as soon as it got darker.
+Hugo: I’ve lived in Rockfall my whole life, so I know this forest by heart. Do you need any help to get back?
+Hugo: If you accept my help, it will save you some time.
+Are you accepting Hugo’s help?
+- Yes
+	Hugo: The town is not that far anymore. Pack up your things and follow me
+- No thanks
+	Thorinn: Thanks for the offer but we'll be fine on our own.
+	Hugo: Allright, safe travels then.
+	Hugo: i'm the inn keeper of the town, So make sure to come visit me once you arrive.

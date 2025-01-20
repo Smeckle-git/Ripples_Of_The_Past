@@ -1,10 +1,12 @@
-[gd_scene load_steps=64 format=3 uid="uid://dn4vjb5x6o1yr"]
+[gd_scene load_steps=68 format=3 uid="uid://dn4vjb5x6o1yr"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/companion.gd" id="1_dmbtv"]
 [ext_resource type="Texture2D" uid="uid://fbm46rjo2rxs" path="res://assets/images/sprites/Companion/cat_sprite.png" id="2_cyqeb"]
+[ext_resource type="Texture2D" uid="uid://inkm1j5uud1y" path="res://assets/images/sprites/Companion/Cat_pet.png" id="3_2wfhw"]
 [ext_resource type="Texture2D" uid="uid://7ds6i6pg7uyo" path="res://assets/images/sprites/Companion/-Cat_int_2.5.png" id="3_8tl8v"]
 [ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://scenes/ui/interaction_area.tscn" id="3_oq3e6"]
 [ext_resource type="Texture2D" uid="uid://5nf8aaowoibi" path="res://assets/images/sprites/Companion/CAT_sprites_2.png" id="3_vt1gb"]
+[ext_resource type="Texture2D" uid="uid://wat5cer7tgie" path="res://assets/images/sprites/Companion/-_cat_int_1.5.png" id="4_f5hhb"]
 [ext_resource type="Texture2D" uid="uid://fuexb8fhhc24" path="res://assets/images/sprites/hearts/Untitled_162.png" id="5_3dnrf"]
 [ext_resource type="Texture2D" uid="uid://dxwbmhgtsa50j" path="res://assets/images/sprites/hearts/Untitled_163.png" id="6_3q6tv"]
 [ext_resource type="Texture2D" uid="uid://dv7634qknspg6" path="res://assets/images/sprites/hearts/Untitled_164.png" id="7_1w5tm"]
@@ -90,10 +92,16 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 20.0,
+"texture": ExtResource("3_2wfhw")
+}, {
+"duration": 5.0,
+"texture": ExtResource("4_f5hhb")
+}, {
+"duration": 5.0,
 "texture": ExtResource("3_8tl8v")
 }],
-"loop": true,
+"loop": false,
 "name": &"Patting",
 "speed": 5.0
 }, {
@@ -565,6 +573,9 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_jybsg")
 blend_point_3/pos = Vector2(1, 0)
 blend_mode = 1
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f347w"]
+animation = &"Patting"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5083q"]
 animation = &"Sit_up"
 
@@ -630,15 +641,22 @@ advance_expression = "sitting"
 advance_mode = 2
 advance_expression = "velocity"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gw1c6"]
+advance_mode = 2
+advance_expression = "Patting"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_br8ua"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_0ak8m")
-states/Idle/position = Vector2(373.704, 99.9753)
+states/Idle/position = Vector2(373.704, 100)
+states/Patting/node = SubResource("AnimationNodeAnimation_f347w")
+states/Patting/position = Vector2(373.704, 231.667)
 states/Sitting/node = SubResource("AnimationNodeBlendSpace2D_6fu0h")
 states/Sitting/position = Vector2(592.667, 197.667)
+states/Start/position = Vector2(187, 100)
 states/Walking/node = SubResource("AnimationNodeBlendSpace2D_usevg")
 states/Walking/position = Vector2(592.667, 101.407)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_bf4l5"), "Idle", "Walking", SubResource("AnimationNodeStateMachineTransition_rs2e3"), "Walking", "Idle", SubResource("AnimationNodeStateMachineTransition_dqibj"), "Idle", "Sitting", SubResource("AnimationNodeStateMachineTransition_oc1lp"), "Sitting", "Walking", SubResource("AnimationNodeStateMachineTransition_6qdq3")]
-graph_offset = Vector2(90.5517, 53)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_bf4l5"), "Idle", "Walking", SubResource("AnimationNodeStateMachineTransition_rs2e3"), "Walking", "Idle", SubResource("AnimationNodeStateMachineTransition_dqibj"), "Idle", "Sitting", SubResource("AnimationNodeStateMachineTransition_oc1lp"), "Sitting", "Walking", SubResource("AnimationNodeStateMachineTransition_6qdq3"), "Idle", "Patting", SubResource("AnimationNodeStateMachineTransition_gw1c6")]
+graph_offset = Vector2(-195.448, 72)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_4bp0j"]
 radius = 20.0
@@ -699,7 +717,7 @@ advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.00158983, 0.914894)
 parameters/Sitting/blend_position = Vector2(-0.00166392, 0.971223)
-parameters/Walking/blend_position = Vector2(-0.0014782, 0.893204)
+parameters/Walking/blend_position = Vector2(0.99778, 0.0319149)
 
 [node name="InteractionArea2" parent="." instance=ExtResource("3_oq3e6")]
 

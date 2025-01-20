@@ -49,7 +49,7 @@ func testFunc():
 	elif Input.is_action_just_pressed("Pause") and get_tree().paused and !settings.visible:
 		settings.visible = true
 	
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	testFunc()
 	Quest()
 

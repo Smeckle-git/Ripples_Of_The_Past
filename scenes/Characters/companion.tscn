@@ -1,16 +1,9 @@
-[gd_scene load_steps=64 format=3 uid="uid://dn4vjb5x6o1yr"]
+[gd_scene load_steps=55 format=3 uid="uid://dn4vjb5x6o1yr"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/companion.gd" id="1_dmbtv"]
 [ext_resource type="Texture2D" uid="uid://fbm46rjo2rxs" path="res://assets/images/sprites/Companion/cat_sprite.png" id="2_cyqeb"]
-[ext_resource type="Texture2D" uid="uid://7ds6i6pg7uyo" path="res://assets/images/sprites/Companion/-Cat_int_2.5.png" id="3_8tl8v"]
 [ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://scenes/ui/interaction_area.tscn" id="3_oq3e6"]
 [ext_resource type="Texture2D" uid="uid://5nf8aaowoibi" path="res://assets/images/sprites/Companion/CAT_sprites_2.png" id="3_vt1gb"]
-[ext_resource type="Texture2D" uid="uid://fuexb8fhhc24" path="res://assets/images/sprites/hearts/Untitled_162.png" id="5_3dnrf"]
-[ext_resource type="Texture2D" uid="uid://dxwbmhgtsa50j" path="res://assets/images/sprites/hearts/Untitled_163.png" id="6_3q6tv"]
-[ext_resource type="Texture2D" uid="uid://dv7634qknspg6" path="res://assets/images/sprites/hearts/Untitled_164.png" id="7_1w5tm"]
-[ext_resource type="Texture2D" uid="uid://cdkiln4k746xq" path="res://assets/images/sprites/hearts/Untitled_165.png" id="8_svki4"]
-[ext_resource type="Texture2D" uid="uid://cmpwqlkpucdin" path="res://assets/images/sprites/hearts/Untitled_166.png" id="9_wcxe6"]
-[ext_resource type="Texture2D" uid="uid://cpaoklc3rqlph" path="res://assets/images/sprites/hearts/Untitled_167.png" id="10_pn01d"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_m20or"]
 radius = 0.155276
@@ -87,14 +80,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle_up",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_8tl8v")
-}],
-"loop": true,
-"name": &"Patting",
 "speed": 5.0
 }, {
 "frames": [{
@@ -255,22 +240,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"Idle_up"]
-}
-
-[sub_resource type="Animation" id="Animation_f4l2a"]
-resource_name = "new_animation"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite3D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Patting"]
 }
 
 [sub_resource type="Animation" id="Animation_2mndn"]
@@ -530,7 +499,6 @@ _data = {
 "Idle_left": SubResource("Animation_7xbet"),
 "Idle_right": SubResource("Animation_37tjp"),
 "Idle_up": SubResource("Animation_hcb3h"),
-"Patting": SubResource("Animation_f4l2a"),
 "RESET": SubResource("Animation_2mndn"),
 "Sit_down": SubResource("Animation_andms"),
 "Sit_left": SubResource("Animation_wnj8x"),
@@ -634,40 +602,14 @@ advance_expression = "velocity"
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_0ak8m")
 states/Idle/position = Vector2(373.704, 99.9753)
 states/Sitting/node = SubResource("AnimationNodeBlendSpace2D_6fu0h")
-states/Sitting/position = Vector2(592.667, 197.667)
+states/Sitting/position = Vector2(373.877, 184.667)
 states/Walking/node = SubResource("AnimationNodeBlendSpace2D_usevg")
 states/Walking/position = Vector2(592.667, 101.407)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_bf4l5"), "Idle", "Walking", SubResource("AnimationNodeStateMachineTransition_rs2e3"), "Walking", "Idle", SubResource("AnimationNodeStateMachineTransition_dqibj"), "Idle", "Sitting", SubResource("AnimationNodeStateMachineTransition_oc1lp"), "Sitting", "Walking", SubResource("AnimationNodeStateMachineTransition_6qdq3")]
-graph_offset = Vector2(90.5517, 53)
+graph_offset = Vector2(0, 65)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_4bp0j"]
 radius = 20.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xa28i"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_3dnrf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_3q6tv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_1w5tm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_svki4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_wcxe6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_pn01d")
-}],
-"loop": false,
-"name": &"default",
-"speed": 0.0
-}]
 
 [node name="Companion" type="CharacterBody3D"]
 collision_layer = 0
@@ -697,7 +639,7 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_br8ua")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Idle/blend_position = Vector2(-0.00158983, 0.914894)
+parameters/Idle/blend_position = Vector2(0.0014782, 0.907767)
 parameters/Sitting/blend_position = Vector2(-0.00166392, 0.971223)
 parameters/Walking/blend_position = Vector2(-0.0014782, 0.893204)
 
@@ -708,13 +650,5 @@ shape = SubResource("CylinderShape3D_4bp0j")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
-
-[node name="Node3D_pet_cat" type="Node3D" parent="."]
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Node3D_pet_cat"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 10, 0)
-visible = false
-billboard = 1
-sprite_frames = SubResource("SpriteFrames_xa28i")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

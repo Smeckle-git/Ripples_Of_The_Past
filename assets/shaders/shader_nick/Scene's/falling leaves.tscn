@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bludx3tlsqmo3"]
 
 [ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/falling leaves.gdshader" id="1_k7l7h"]
-[ext_resource type="Texture2D" uid="uid://byarmklsdbl5t" path="res://assets/images/enviroment/leaves/leaf_2_green.png" id="2_2a3cp"]
+[ext_resource type="Texture2D" uid="uid://byarmklsdbl5t" path="res://assets/images/enviroment/leaf_2_green.png" id="2_2a3cp"]
 
 [sub_resource type="Curve" id="Curve_yhw5b"]
 _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]

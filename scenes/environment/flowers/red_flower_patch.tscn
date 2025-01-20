@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0occhos2vw36"]
 
 [ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/wind_tree.gdshader" id="1_haxux"]
-[ext_resource type="Texture2D" uid="uid://dpfrd1jn7e7su" path="res://assets/images/enviroment/flowers/Flower_Red.png" id="2_d64g7"]
+[ext_resource type="Texture2D" uid="uid://dpfrd1jn7e7su" path="res://assets/images/enviroment/Flower_Red.png" id="2_d64g7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bjulb"]
 render_priority = 0

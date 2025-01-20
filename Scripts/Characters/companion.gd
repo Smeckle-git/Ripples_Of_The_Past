@@ -5,22 +5,17 @@ class_name Companion
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var timer: Timer = $Timer
 @onready var interaction_area: InteractionArea = $InteractionArea2
-#
-@onready var pet_cat_animation: AnimatedSprite3D = $Node3D_pet_cat/AnimatedSprite3D
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var animated_sprite: AnimatedSprite3D = $AnimatedSprite3D
-#
+
 const SPEED = 10.0
 @export var following := false
 @export var sitting = false
 
 @export var move_to_location : Vector3 = Vector3(0,0,0)	
-#
-@export var patting: bool = false
-#
-func _physics_process(_delta: float) -> void:
+
+
+func _physics_process(delta: float) -> void:
 	manage_animations()
-	move_and_slide()
+	move_and_slide()	
 	var direction
 	if following:
 		direction = thorinn.global_position - global_position
@@ -51,7 +46,7 @@ func _physics_process(_delta: float) -> void:
 
 
 @export var last_direction := Vector2(0, 1)
-func manage_animations():
+func manage_animations():	
 	if velocity != Vector3.ZERO:
 		last_direction = Vector2(velocity.x, velocity.z)
 	
@@ -59,38 +54,6 @@ func manage_animations():
 	animation_tree.set("parameters/Walking/blend_position", last_direction)
 	animation_tree.set("parameters/Sitting/blend_position", last_direction)
 
+
 func _on_timer_timeout() -> void:
 	sitting = true
-
-func _on_interact() -> void:
-	pet_cat()
-
-func pet_cat() -> void:
-	if patting:
-		print_debug("pat pat pat, get happy get happy get happy")
-		return
-	#
-	print_debug("pat cat")
-	patting = true
-	var scale_temp = animated_sprite.scale
-	animated_sprite.scale *= 0.5
-	animation_tree.active = false
-	animation_player.play("Patting")
-	#
-	var position_temp = pet_cat_animation.position
-	var random: int = randi_range(0, pet_cat_animation.sprite_frames.get_frame_count("default"))
-	var tween = get_tree().create_tween()
-	#
-	pet_cat_animation.frame = random
-	pet_cat_animation.visible = true
-	#
-	tween.tween_property(pet_cat_animation, "position", Vector3(0, 20, -10), 2)
-	await tween.finished
-	#
-	pet_cat_animation.visible = false
-	pet_cat_animation.position = position_temp
-	animation_tree.active = true
-	await get_tree().process_frame
-	animated_sprite.scale = scale_temp
-	patting = false
-	print_debug("pat cat finished")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dx2ui4o1f3nb8"]
 
 [ext_resource type="Script" path="res://Scripts/ui/hud.gd" id="1_rfbj8"]
-[ext_resource type="Texture2D" uid="uid://ctxpm0njrn3u4" path="res://assets/images/enviroment/leaves/leaf_1_orange.png" id="2_ojncg"]
+[ext_resource type="Texture2D" uid="uid://ctxpm0njrn3u4" path="res://assets/images/enviroment/leaf_1_orange.png" id="2_ojncg"]
 
 [sub_resource type="FontFile" id="FontFile_i8kvp"]
 subpixel_positioning = 0

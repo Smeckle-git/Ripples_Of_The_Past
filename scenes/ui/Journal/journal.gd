@@ -9,6 +9,9 @@ extends Control
 @onready var quests: TabBar = $MarginContainer2/VBoxContainer/TabContainer/Quests
 @onready var settings: Control = $MarginContainer2/VBoxContainer/TabContainer/Settings
 
+@onready var reset_keybinding: Button = $MarginContainer2/VBoxContainer/TabContainer/Settings/reset_keybinding
+@onready var reset: Button = $MarginContainer2/VBoxContainer/TabContainer/Settings/Reset
+
 signal reset_keybindings_signal
 signal enable_settings_remap
 signal disable_settings_remap
@@ -29,11 +32,17 @@ func _on_exit_pressed() -> void:
 func _on_continue_pressed() -> void:
 	get_tree().paused = false
 	disable_settings_remap.emit()
+	_continue.disabled = true
+	reset_keybinding.disabled = true
+	reset.disabled = true
 	$AnimationPlayer.play_backwards("blur")
 
 func pause():
 	get_tree().paused = true
 	enable_settings_remap.emit()
+	_continue.disabled = false
+	reset_keybinding.disabled = false
+	reset.disabled = false
 	$AnimationPlayer.play("blur")
 	
 

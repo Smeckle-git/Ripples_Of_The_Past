@@ -25,7 +25,6 @@ func _on_back_to_main_pressed() -> void:
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/ui/MainMenu.tscn")
 
-
 func _on_exit_pressed() -> void:
 	get_tree().quit()
 
@@ -44,15 +43,16 @@ func pause():
 	reset_keybinding.disabled = false
 	reset.disabled = false
 	$AnimationPlayer.play("blur")
-	
 
 func testFunc():
 	if Input.is_action_just_pressed("Journal") and !get_tree().paused:
 		pause()
 		quests.visible = true
-	elif Input.is_action_just_pressed("Journal") and get_tree().paused:
+	elif Input.is_action_just_pressed("Journal") and get_tree().paused and quests.visible:
 		_on_continue_pressed()
-	if Input.is_action_just_pressed("Pause") and !get_tree().paused:
+	elif Input.is_action_just_pressed("Journal") and get_tree().paused and !quests.visible:
+		quests.visible = true
+	elif Input.is_action_just_pressed("Pause") and !get_tree().paused:
 		pause()
 		settings.visible = true
 	elif Input.is_action_just_pressed("Pause") and get_tree().paused and settings.visible:

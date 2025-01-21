@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dv7l7w27atsay" path="res://assets/images/Village/Buildings/Witch_hut/Witch_Left_wall.png" id="5_66uiy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5wfdg"]
-size = Vector3(21.7255, 15.5447, 5.53369)
+size = Vector3(11.8855, 15.5447, 8.31811)
 
 [node name="BuildingInn" type="StaticBody3D"]
 
@@ -52,5 +52,5 @@ double_sided = false
 texture = ExtResource("5_66uiy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.960754, -0.626587, 2.04025)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.325474, -0.626587, 3.43246)
 shape = SubResource("BoxShape3D_5wfdg")

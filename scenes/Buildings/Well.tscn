@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtohlq32uxe5r"]
+[gd_scene load_steps=3 format=3 uid="uid://dtohlq32uxe5r"]
 
 [ext_resource type="Texture2D" uid="uid://oic8o3k3kebt" path="res://assets/images/Village/Well_new.png" id="1_86vko"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ukoc0"]
+size = Vector3(2.28955, 4.0885, 1.17529)
 
 [node name="well" type="Node3D"]
 
@@ -11,3 +14,7 @@ shaded = true
 alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("1_86vko")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.128174, 0.904114, 0.0212402)
+shape = SubResource("BoxShape3D_ukoc0")

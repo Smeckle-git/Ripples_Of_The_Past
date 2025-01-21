@@ -5,8 +5,9 @@ class_name Companion
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var timer: Timer = $Timer
 @onready var interaction_area: InteractionArea = $InteractionArea2
-
+@onready var cpu_particles_3d: GPUParticles3D = $CPUParticles3D
 const SPEED = 10.0
+var track = 0.0;
 @export var following := false
 @export var sitting = false
 @export var petting = false
@@ -17,7 +18,7 @@ func _physics_process(delta: float) -> void:
 	manage_animations()
 	move_and_slide()	
 	var direction
-	if following:
+	if following && !petting:
 		direction = thorinn.global_position - global_position
 		
 		if direction.length() > 6:
@@ -60,7 +61,14 @@ func _on_timer_timeout() -> void:
 	
 
 func _on_interact() -> void:
+	
 	petting = true
-	await get_tree().create_timer(4).timeout
+	cpu_particles_3d.emitting = true
+	print_debug(cpu_particles_3d.material_override.get_shader_parameter("tracks"))
+	if track >= 1:
+		track = 0.0
+	cpu_particles_3d.material_override.set_shader_parameter("tracks", track)
+	track = track + 0.2
+	cpu_particles_3d.restart()
+	await get_tree().create_timer(1.5).timeout
 	petting = false
-	print_debug("Testing")

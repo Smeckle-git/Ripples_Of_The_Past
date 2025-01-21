@@ -1,12 +1,11 @@
-[gd_scene load_steps=64 format=3 uid="uid://dsdcn7dj5xb4"]
+[gd_scene load_steps=63 format=3 uid="uid://dsdcn7dj5xb4"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/companion.gd" id="1_o6vyl"]
 [ext_resource type="Texture2D" uid="uid://fbm46rjo2rxs" path="res://assets/images/sprites/Companion/cat_sprite.png" id="1_owu7i"]
 [ext_resource type="Texture2D" uid="uid://5nf8aaowoibi" path="res://assets/images/sprites/Companion/CAT_sprites_2.png" id="2_raj52"]
+[ext_resource type="Texture2D" uid="uid://c4tstrnteqqpc" path="res://assets/images/sprites/Companion/cat_pet.png" id="3_fef25"]
 [ext_resource type="PackedScene" uid="uid://dgple680dtxs5" path="res://scenes/ui/interaction_area.tscn" id="3_vhi5a"]
-[ext_resource type="Texture2D" uid="uid://g7du8jodenyh" path="res://assets/images/sprites/Companion/Cat_8.png" id="3_x2oh0"]
-[ext_resource type="Texture2D" uid="uid://x7tttd7ey6wp" path="res://assets/images/sprites/Companion/-Cat_int_2.5.png" id="4_d8cyh"]
-[ext_resource type="Texture2D" uid="uid://dx3tapcba45b5" path="res://assets/images/sprites/Companion/-_cat_int_1.5.png" id="5_75kmx"]
+[ext_resource type="PackedScene" uid="uid://bhpakprjotu8t" path="res://assets/shaders/Heart_particle.tscn" id="8_rhyvr"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4sv0t"]
 radius = 0.155276
@@ -78,14 +77,8 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 10.0,
-"texture": ExtResource("3_x2oh0")
-}, {
 "duration": 1.0,
-"texture": ExtResource("4_d8cyh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_75kmx")
+"texture": ExtResource("3_fef25")
 }],
 "loop": true,
 "name": &"Petting",
@@ -254,6 +247,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"Idle_up"]
+}
+
+[sub_resource type="Animation" id="Animation_q21oq"]
+resource_name = "Petting"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Petting"]
 }
 
 [sub_resource type="Animation" id="Animation_2mndn"]
@@ -507,21 +515,6 @@ tracks/2/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_q21oq"]
-resource_name = "Petting"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite3D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Petting"]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3tmt6"]
 _data = {
 "Idle_down": SubResource("Animation_1h21q"),
@@ -654,7 +647,7 @@ states/Idle/position = Vector2(373.704, 99.9753)
 states/Petting/node = SubResource("AnimationNodeAnimation_lhrgc")
 states/Petting/position = Vector2(373.704, 211.667)
 states/Sitting/node = SubResource("AnimationNodeBlendSpace2D_6fu0h")
-states/Sitting/position = Vector2(599.877, 211.667)
+states/Sitting/position = Vector2(601.877, 211.667)
 states/Walking/node = SubResource("AnimationNodeBlendSpace2D_usevg")
 states/Walking/position = Vector2(592.667, 101.407)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_bf4l5"), "Idle", "Walking", SubResource("AnimationNodeStateMachineTransition_rs2e3"), "Walking", "Idle", SubResource("AnimationNodeStateMachineTransition_dqibj"), "Idle", "Sitting", SubResource("AnimationNodeStateMachineTransition_oc1lp"), "Sitting", "Walking", SubResource("AnimationNodeStateMachineTransition_6qdq3"), "Idle", "Petting", SubResource("AnimationNodeStateMachineTransition_dpe0f"), "Petting", "Idle", SubResource("AnimationNodeStateMachineTransition_vqweo"), "Sitting", "Petting", SubResource("AnimationNodeStateMachineTransition_y0hqt"), "Petting", "Sitting", SubResource("AnimationNodeStateMachineTransition_2a0rr")]
@@ -692,7 +685,7 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_jxjgv")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Idle/blend_position = Vector2(0.0014782, 0.907767)
+parameters/Idle/blend_position = Vector2(0.00166392, 1)
 parameters/Sitting/blend_position = Vector2(-0.00166392, 0.971223)
 parameters/Walking/blend_position = Vector2(-0.0014782, 0.893204)
 
@@ -703,5 +696,7 @@ shape = SubResource("CylinderShape3D_4bp0j")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="CPUParticles3D" parent="." instance=ExtResource("8_rhyvr")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

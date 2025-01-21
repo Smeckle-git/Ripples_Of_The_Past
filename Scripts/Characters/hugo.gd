@@ -8,7 +8,7 @@ const SPEED = 4.0
 
 signal destination_reached
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	manage_animations()
 	move_and_slide()
 	

@@ -5,8 +5,6 @@ extends Control
 
 @onready var quest_text: RichTextLabel = $MarginContainer2/VBoxContainer/TabContainer/Quests/Control/quest_text
 @onready var quest_title: RichTextLabel = $MarginContainer2/VBoxContainer/TabContainer/Quests/Control/quest_title
-@onready var map_forest: Sprite2D = $MarginContainer2/VBoxContainer/TabContainer/map/map_Forest
-@onready var map_village: Sprite2D = $MarginContainer2/VBoxContainer/TabContainer/map/map_village
 
 @onready var quests: TabBar = $MarginContainer2/VBoxContainer/TabContainer/Quests
 @onready var settings: Control = $MarginContainer2/VBoxContainer/TabContainer/Settings
@@ -15,7 +13,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$MarginContainer2/VBoxContainer/TabContainer/Settings/Continue.grab_focus()
-	cycle_all_nodes(root)
+	#cycle_all_nodes(root)
 
 func _on_back_to_main_pressed() -> void:
 	get_tree().paused = false
@@ -49,7 +47,7 @@ func testFunc():
 	elif Input.is_action_just_pressed("Pause") and get_tree().paused and !settings.visible:
 		settings.visible = true
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	testFunc()
 	Quest()
 
@@ -60,16 +58,24 @@ func Quest():
 	quest_text.text = temp_text.text
 	quest_title.text = temp_title.text
 
-func cycle_all_nodes(node: Node):
-	for child in node.get_children():
+#func cycle_all_nodes(node: Node):
+	#for child in node.get_children():
+		#print("Found node: ",child.name)
+		#if child.name =="Village":
+			#map_village.visible= true
+			#map_forest.visible = false
+		#else:
+			#map_village.visible= false
+			#map_forest.visible = true
+
+ # Replace with function body.
+
+
+func _on_reset_pressed() -> void:
+	_on_continue_pressed()
+	for child in root.get_children():
 		print("Found node: ",child.name)
-		if child.name =="Village":
-			map_village.visible= true
-			map_forest.visible = false
-		else:
-			map_village.visible= false
-			map_forest.visible = true
-
-
-func _on_settings_pressed() -> void:
-	pass # Replace with function body.
+		for n in child.get_children():
+			if n.name == "Thorinn":
+				print_debug("manfound")
+				n.global_transform.origin.z += 5

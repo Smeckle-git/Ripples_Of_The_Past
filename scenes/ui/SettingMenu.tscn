@@ -328,35 +328,6 @@ size_flags_horizontal = 3
 text = "Back to Menu"
 script = ExtResource("1_3lp24")
 
-[node name="VideoSettings" type="TabBar" parent="TabContainer"]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/VideoSettings"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/VideoSettings/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 12
-
-[node name="Label" type="Label" parent="TabContainer/VideoSettings/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Aloo"
-
-[node name="Label2" type="Label" parent="TabContainer/VideoSettings/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Aloo2"
-
 [connection signal="pressed" from="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer/return-buton" to="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer/return-buton" method="_on_pressed"]
 [connection signal="drag_ended" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="." method="_on_mv_slider_drag_ended"]
 [connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="." method="_on_mv_slider_value_changed"]

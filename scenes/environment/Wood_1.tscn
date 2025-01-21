@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dx5vdbk1vh3gh"]
+[gd_scene load_steps=13 format=3 uid="uid://dx5vdbk1vh3gh"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/wood_1.gd" id="1_5sqmb"]
-[ext_resource type="Texture2D" uid="uid://dfscq3l7tat2e" path="res://assets/images/sprites/Campfire/Wood_1.png" id="1_xlm5h"]
 [ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/disolve.gdshader" id="2_g5jah"]
+[ext_resource type="Texture2D" uid="uid://cdf84xqjoxisd" path="res://assets/images/sprites/Campfire/campfire_wood_new.png" id="3_5n1vo"]
 [ext_resource type="Animation" uid="uid://d26axq4ie70l" path="res://assets/shaders/shader_nick/Scene's/Disolve.res" id="4_asdjk"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_83b0i"]
@@ -23,7 +23,7 @@ shader_parameter/glow_color = Color(1, 0, 0, 1)
 shader_parameter/glow_intensity = 0.0
 shader_parameter/glow_border_wit = 0.0
 shader_parameter/glow_border_smoothness = 0.1
-shader_parameter/text2d = ExtResource("1_xlm5h")
+shader_parameter/text2d = ExtResource("3_5n1vo")
 
 [sub_resource type="QuadMesh" id="QuadMesh_xd4r5"]
 resource_local_to_scene = true
@@ -44,15 +44,44 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.01]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ybirh"]
 _data = {
 "RESET": SubResource("Animation_7phkt")
 }
 
+[sub_resource type="Animation" id="Animation_8ywgj"]
+length = 3.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.96667),
+"transitions": PackedFloat32Array(-2, -2, 0),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 2, 0), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5gwji"]
 _data = {
-"Disolve": ExtResource("4_asdjk")
+"Disolve": ExtResource("4_asdjk"),
+"Idle": SubResource("Animation_8ywgj")
 }
 
 [node name="Wood_1" type="Area3D"]
@@ -66,8 +95,8 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("QuadMesh_xd4r5")
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="."]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
-polygon = PackedVector2Array(-0.823426, -0.788624, -0.711636, -0.439226, -0.594349, -0.277788, -0.435678, -0.0873246, -0.333795, 0.0431242, -0.0611245, 0.258382, 0.40309, 0.896702, 0.597162, 0.96943, 0.712387, 0.865895, 0.768781, 0.702453, 0.664834, 0.522733, 0.513706, 0.315925, 0.21412, -0.130678, -0.0428236, -0.587102, -0.1423, -0.713772, -0.410228, -0.733565)
+transform = Transform3D(1.00001, 0, 0, 0, 1.00001, 0, 0, 0, 1.00001, 0, 0, 0)
+polygon = PackedVector2Array(-2.39654, 2.75287, -3.05961, 2.56468, -3.23447, 1.90688, -2.72479, 1.45449, -1.22317, 0.311801, -0.431122, -0.435843, 0.630577, -1.22378, 1.95751, -2.93543, 2.46067, -2.86157, 2.74599, -1.62391, 1.76593, -0.589263, 0.338563, 1.04364, -0.716687, 2.01913)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

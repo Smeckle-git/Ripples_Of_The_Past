@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://jlbndjk3brxr"]
+[gd_scene load_steps=11 format=3 uid="uid://jlbndjk3brxr"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/campfire + quest/wood_1.gd" id="1_mrkdp"]
 [ext_resource type="Shader" path="res://assets/shaders/shader_nick/Shaderscript/disolve.gdshader" id="2_vyquu"]
@@ -30,9 +30,27 @@ resource_local_to_scene = true
 material = SubResource("ShaderMaterial_0icfy")
 size = Vector2(16, 20)
 
+[sub_resource type="Animation" id="Animation_u4n8h"]
+resource_name = "Idle"
+length = 3.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.46667, 2.46667, 3.43334),
+"transitions": PackedFloat32Array(-2, -2, 0),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 2, 0), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5gwji"]
 _data = {
-"Disolve": ExtResource("4_neld4")
+"Disolve": ExtResource("4_neld4"),
+"Idle": SubResource("Animation_u4n8h")
 }
 
 [node name="Stone_1" type="Area3D"]

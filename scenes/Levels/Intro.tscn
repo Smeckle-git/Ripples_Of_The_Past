@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8tg243b5gjro"]
+
+[ext_resource type="Script" path="res://scenes/Levels/IntroController.gd" id="1_7ergw"]
+[ext_resource type="Texture2D" uid="uid://c3jlloipom3r3" path="res://assets/images/Intro/T_horinn_unconscious-IntoScene1.jpg" id="1_p4a60"]
+[ext_resource type="Texture2D" uid="uid://6x3go8nueu7f" path="res://assets/images/Intro/MeetingWGod-IntroScene2.jpg" id="2_d3dit"]
+[ext_resource type="Texture2D" uid="uid://c8gnm1snorgyx" path="res://assets/images/Intro/TheWeighting-IntroScene3.jpg" id="3_kfu3x"]
+[ext_resource type="Texture2D" uid="uid://dkwootyli6ekr" path="res://assets/images/Intro/TheWeighting-IntroScene4.jpg" id="4_vpoj6"]
+
+[node name="CanvasControl" type="Control" node_paths=PackedStringArray("IntroBackground1", "IntroBackground2", "IntroBackground3", "IntroBackground4", "IntroBackground5")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ergw")
+IntroBackground1 = NodePath("MarginContainer/Intro1")
+IntroBackground2 = NodePath("MarginContainer/Intro2")
+IntroBackground3 = NodePath("MarginContainer/Intro3")
+IntroBackground4 = NodePath("MarginContainer/Intro4")
+IntroBackground5 = NodePath("MarginContainer/Intro5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Intro1" type="TextureRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("1_p4a60")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="Intro2" type="TextureRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_d3dit")
+expand_mode = 2
+
+[node name="Intro3" type="TextureRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_kfu3x")
+expand_mode = 2
+
+[node name="Intro4" type="TextureRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_vpoj6")
+expand_mode = 2
+
+[node name="Intro5" type="TextureRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_d3dit")
+expand_mode = 2

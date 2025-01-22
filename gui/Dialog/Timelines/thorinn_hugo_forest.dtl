@@ -13,6 +13,7 @@ Hugo: I’ve lived in Rockfall my whole life, so I know this forest by heart. Do
 Hugo: If you accept my help, it will save you some time.
 Are you accepting Hugo’s help?
 - Yes
+	set {Hugo.Followed_to_rockfall} = true
 	Hugo: The town is not that far anymore. Pack up your things and follow me
 - No thanks
 	Thorinn: Thanks for the offer but we'll be fine on our own.

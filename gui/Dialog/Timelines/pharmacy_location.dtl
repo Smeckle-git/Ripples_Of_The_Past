@@ -35,32 +35,34 @@ if {Ian.Confrontationn_at_home} == 1:
 		*Thorinn retrieves his medical supplies from the Inn, but by the time he gets back to the pharmacy Ian has already passed.*
 	- End Ian’s Suffering
 		set {Ian.Selected_Ian_Choice} = 2
-		*Thorinn calmly, pulling a small vial from his bag.*
+		*Thorinn calmly, pulls a small vial from his bag.*
 		Thorinn (normal): But by then, it’ll be too late for you to see it. I’ve prepared something...a final act of mercy from one healer to another. It will ease your pain.
 		Ian (angry): What... what is that?
-		Thorinn (normal): A blend of rare herbs, taught to me by our master. It will calm your body; let you rest and make your life come to a peaceful end.
+		Thorinn (normal): A blend of rare herbs, taught to me by our master. It will calm your body, let you rest and make your life come to a peaceful end.
 		Ian (angry): That’s pathetic, you think I will just give up now?
-		Thorinn (normal): Drink, Ian. Let it be peaceful.
+		Thorinn (normal): We both know that your condition in this state is inreverable, there is nothing anyone could do. The only thing you have a choice in now is how you die.
+		Thorinn: If you take the potion I'm offering you, it wouldn't be a sign of giving up. It would grant you a chance to take matters into your own hands.
+		Thorinn: You can either be dreadfully waiting for a painfull death, or accept your faith and give yourself a soothing end.
 		Ian (normal): You know Thorinn, you might be right. I think it ends here, but please don’t tell the villagers of my cowardice.
-		Thorinn (surprised): If that’s the cost, so be it. For now, let me end your suffering.
-		Ian, too weak to resist, takes the vial and drinks. His face twists as the liquid burns through him, his breaths becoming shallow and labored.
+		Thorinn (surprised): If that’s the cost, so be it. For now, let this be the end of your suffering.
+		*Ian, too weak to resist, takes the vial and drinks it. His breaths becoming shallow and laboured.*
 		Ian (angry): Treat my people well Thorinn, the village is in your hands now....
-		Thorinn (agitated): Don’t worry, they’re in good hands. Rest, Ian. You’ll find peace soon.
-		Ian’s body goes limp, his breath slowing until it stops. Thorinn watches for a moment, his face unreadable, before standing and turning away. He leaves the pharmacy without a word, stepping into the quiet streets of the village.
+		Thorinn (agitated): Don’t worry, I'll take care of them. Rest, Ian. You’ll find peace soon.
+		*Ian’s body goes limp, his breath slowing until it stops. Thorinn watches for a moment, his face unreadable, before standing and turning away. He leaves the pharmacy without a word, stepping into the quiet streets of the village.*
 	- Refuse to Help
 		set {Ian.Selected_Ian_Choice} = 3
-		Thorinn (agitated): Ian, I didn’t come to take anything from you. I just came to help; I came here out of respect.
+		Thorinn (agitated): Ian, I didn’t come to take anything from you. I just came to help. I came here out of respect.
 		Ian (angry): Respect? Is that what you call this? Do you really wish to say that our master has taught you more and better than me?
-		Thorinn (normal): I was his best student after all, Ian. But that doesn’t make me your enemy. Now tell me, do you wish for me to help you or not?
+		Thorinn (normal): I was his best student after all. But that doesn’t make me your enemy. Now tell me, do you wish for me to help you or not?
 		Ian (angry): Does it really seem like I need your help? I can take care of myself!
 		Thorinn (agitated): Then I won’t, if that’s what you wish, but know that I’ll take over your pharmacy sooner or later.
 		Thorinn (normal): You’ve given the village your life, Ian, and no one will forget that. But their needs have grown beyond what you can offer.
 		Thorinn (normal): And they will turn to me, whether you survive or not.
-		Ian (sceming): That remains to be seen, now leave me be. I don’t feel like hearing anymore of your arrogant remarks.
-		Ian stares at Thorinn, his breathing slowing as his strength fades. Thorinn stands for a moment, watching, his expression heavy with unspoken emotion. He finally turns to leave.
+		Ian (sceming): That remains to be seen, now leave me be. I don’t feel like hearing any more of your arrogant remarks.
+		*Ian stares at Thorinn, his breathing slowing as his strength fades. Thorinn stands there for a moment, watching, his expression heavy with unspoken emotions. He finally turns to leave.*
 		leave Ian
 		Thorinn (agitated): Very well, Ian. I’ll leave. The village will remember you...
-		Thorinn leaves Ian to his fate. Ian dies shortly after.
+		*Thorinn leaves Ian to his fate. Ian dies shortly after.*
 	set {Ian.Confrontationn_at_home} = 2
 	[signal arg="End_Find_Ian"]
 	[signal arg="end-night"]

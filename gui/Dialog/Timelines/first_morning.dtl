@@ -4,6 +4,7 @@ if {Hugo.Followed_to_rockfall} == false:
 	Thorinn: This must be Hugo's inn.
 	*knock knock*
 	join Hugo rightmost
+	[signal arg="show_hugo"]
 	Hugo: Look who we have here, seems like you've found your way.
 Hugo: Come on in I'll get you your room ready.
 leave --All--

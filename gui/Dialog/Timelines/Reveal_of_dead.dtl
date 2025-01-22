@@ -8,6 +8,7 @@ if {Dead_person_choice} == 1:
 	Malrik: *Malric whispers from the shadows* Psst.
 	Malrik: What will you do now doctor...?
 	- Publicly credit Malric
+		set {Blame_choice} = 2
 		Thorinn: This cure wasn't mine alone. Malric's knowledge made this possible.
 		Town_Leader: Malric? That explains... I'd hoped never to hear that name again.
 		Town_Leader: But if what you say is the truth, then even in the darkest of souls you can find a spark of light.
@@ -17,9 +18,11 @@ if {Dead_person_choice} == 1:
 		join Malrik rightmost
 		Malrik: A rare day, doctor. They don't hate me quite as much... for now. You have my thanks.
 	- Accept the credit
+		set {Blame_choice} = 1
 		Thorinn (normal): I just did what had to be done.
 		Thorinn: Vivian was the purest soul that managed to save everyone. Lets honour her by never forgetting her kindness.
 	- Thank Malric in private
+		set {Blame_choice} = 3
 		Thorinn: I just did what had to be done.
 		leave Town_Leader
 		join Malrik rightmost
@@ -36,9 +39,11 @@ elif {Dead_person_choice} == 2:
 	Malrik: *Malric whispers from the shadows* Psst.
 	Malrik: What will you do now doctor...?
 	- Admit fault
+		set {Blame_choice} = 1
 		Thorinn (agitated): I really did the best I could.
 		Town_Leader: Your capabilities as a doctor have proven to be less than what you've promised.
 	- Publicly blame Malric
+		set {Blame_choice} = 2
 		Thorinn: This failure wasn't mine alone. Malric's evil ways made this possible.
 		Town_Leader: Malric? That explains... I'd hoped never to hear that name again.
 		Thorinn: He led me astray with his twisted words!
@@ -47,6 +52,7 @@ elif {Dead_person_choice} == 2:
 		Malrik: ...!
 		Malrik: You've got no idea whose name you've just tarnished.
 	- Confront Malric in private
+		set {Blame_choice} = 3
 		Thorinn (agitated): I really did the best I could.
 		Town_Leader: Your capabilities as a doctor have proven to be less than what you've promised.
 		leave Town_Leader
@@ -63,10 +69,12 @@ elif {Dead_person_choice} == 3:
 	Malrik: *Malric whispers from the shadows* Psst.
 	Malrik: What will you do now doctor...?
 	- Accept the responsibility
+		set {Blame_choice} = 1
 		Thorinn: I did what was in my power.
 		Town_Leader: We might disagree if this was the right choice, but Astrid's sacrifice saved three lives.
 		Town_Leader: Let's forever honour her memory.
 	- Publicly put the responsibility on Malric
+		set {Blame_choice} = 2
 		Thorinn: This cure wasn't mine alone. Malric's knowledge made this possible.
 		Town_Leader: Malric? That explains... I'd hoped never to hear that name again.
 		Thorinn: I'm not guilt free, but if Malric didn't trick me, this could've been avoided.
@@ -76,6 +84,7 @@ elif {Dead_person_choice} == 3:
 		Malrik: ...!
 		Malrik: You've got no idea whose name you've just tarnished.
 	- Confront Malric in private
+		set {Blame_choice} = 3
 		Thorinn: I did what was in my power.
 		leave Town_Leader
 		Thorinn: *Turning to Malric in the shadows* So...listen.
@@ -92,15 +101,22 @@ elif {Dead_person_choice} == 4:
 	Malrik: *Malric whispers from the shadows* Psst.
 	Malrik: Seems like your good intentions weren't of much help this time. What will you tell them now?
 	- Admit fault
+		set {Blame_choice} = 1
 		Thorinn (agitated): I tried to find a way that wouldn’t cause more harm than what was already done, but in the end, I failed them. I will always carry this burden.
 		Town_Leader: You speak of burdens, but what about the mourning families? You had a choice, doctor, and you chose wrong.
 	
 	- Publicly blame Malric
+		set {Blame_choice} = 2
 		Thorinn (agitated): I admit that I did know of a cure, but it was based on Malric's twisted words.
 		Thorinn: I had a choice to make, a terrible choice, take an innocent life or let these people die. I just couldn't cross that line.
 		Thorinn: Malric is too far gone in his ways of dark magic, there wasn't even a guarantee this was going to work.
-		Town_Leader: I understand you didn't want to give into Malric's dishonourable ways. 
+		Town_Leader: I understand you didn't want to give into Malric's dishonourable ways.
 		leave Town_Leader
 		join Malrik rightmost
 		Malrik: ...!
 		Malrik: You've got no idea whose name you've just tarnished.
+if {Dead_person_choice} != 0:
+	leave --All--
+	[signal arg="start_night"]
+	[wait time="2.0"]
+	jump Final_summary/

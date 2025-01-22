@@ -38,6 +38,7 @@ directories/dch_directory={
 "Magic_book": "res://gui/Dialog/Characters/Magic_book.dch",
 "Malrik": "res://gui/Dialog/Characters/Malrik.dch",
 "Nick": "res://gui/Dialog/Characters/Nick.dch",
+"Scale": "res://gui/Dialog/Characters/Scale.dch",
 "Thorinn": "res://gui/Dialog/Characters/Thorinn.dch",
 "Town_Leader": "res://gui/Dialog/Characters/Town_Leader.dch",
 "Whiskers": "res://gui/Dialog/Characters/Whiskers.dch",
@@ -48,6 +49,7 @@ directories/dtl_directory={
 "Astrid_request": "res://gui/Dialog/Timelines/Astrid_request.dtl",
 "Choose_which_villager_to_kill": "res://gui/Dialog/Timelines/Choose_which_villager_to_kill.dtl",
 "DEMO_interaction": "res://gui/Dialog/Timelines/DEMO_interaction.dtl",
+"Final_summary": "res://gui/Dialog/Timelines/Final_summary.dtl",
 "Fish_quest_completion": "res://gui/Dialog/Timelines/Fish_quest_completion.dtl",
 "Iann_interaction": "res://gui/Dialog/Timelines/Iann_interaction.dtl",
 "IntroTimeline": "res://gui/Dialog/Timelines/IntroTimeline.dtl",
@@ -75,6 +77,7 @@ variables={
 "Astrid": {
 "ask_for_help": 1
 },
+"Blame_choice": 0,
 "Dead_person_choice": 0,
 "Hugo": {
 "Followed_to_rockfall": false
@@ -85,12 +88,14 @@ variables={
 },
 "Malrik": {
 "Cure": 1,
+"Found_book": false,
 "Talked_already": false,
 "Trusted_malric": false
 },
 "Nick": {
 "killing_nick": false
 },
+"Scale_value": 0,
 "Vivian": {
 "Interaction_phase": 1,
 "New_Dialog": true,
@@ -100,7 +105,8 @@ variables={
 "Whiskers": {
 "Accepted_Fish_Quest": false,
 "Forest_Interaction_phase": 1,
-"New_Dialog": true
+"New_Dialog": true,
+"Shoo_away": false
 },
 "selected_character": 0
 }

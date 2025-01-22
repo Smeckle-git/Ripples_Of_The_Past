@@ -44,7 +44,13 @@ func _sort_by_distance_to_player(area1, area2):
 	player = get_tree().get_first_node_in_group("Player")
 	var area1_to_player = player.global_position.distance_to(area1.global_position)
 	var area2_to_player = player.global_position.distance_to(area2.global_position)
-	return area1_to_player < area2_to_player
+	
+	if area1.is_in_group("Companion"):
+		return false
+	elif area2.is_in_group("Companion"):
+		return true
+	else:
+		return area1_to_player < area2_to_player
 
 func _input(event: InputEvent) -> void:
 	if active_areas.size() > 0:

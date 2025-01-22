@@ -2,12 +2,20 @@
 if {Astrid.ask_for_help} == 1:
 	*A tree different from all the others. Its trunk is shaped to hold something.*
 else:
-	elif {Malrik.Talked_already} == true:
-		[signal arg="change_tree"]
-		join Thorinn leftmost
-		join Magic_book (Closed) center
-		Thorinn (surprised): Well well well, look what we have here.
+	if {Malrik.Found_book} == true:
+		join Magic_book (Open) center
 		Magic_book (Open): Take 3x different coloured papilora flowers and blood of a ???? soul, mix it in a bowl and then eat it after a meal.
-		Thorinn: Blood?! What kind of cure demands blood?
-		Thorinn: It's the only option I've got. But is the price for salvation really worth it?
-		[signal arg="Start_flower_quest"]
+	elif {Malrik.Talked_already} == true:
+		if {Malrik.Trusted_malric} == false:
+			[signal arg="change_tree"]
+			join Thorinn leftmost
+			join Magic_book (Closed) center
+			Thorinn (surprised): Well well well, look what we have here.
+			Thorinn: This must be that all knowing book Malric was talking about.
+			Magic_book (Open): Take 3x different coloured papilora flowers and blood of a ???? soul, mix it in a bowl and then eat it after a meal.
+			Thorinn: Blood?! What kind of cure demands blood?
+			Thorinn: It's the only option I've got. But is the price for salvation really worth it?
+			set {Malrik.Found_book} = true
+			[signal arg="Start_flower_quest"]
+	else:
+		Thorinn: That's odd, this wasn't here before. I probably shouldn't mess with it.

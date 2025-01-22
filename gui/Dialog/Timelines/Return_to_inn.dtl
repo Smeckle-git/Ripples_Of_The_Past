@@ -3,6 +3,7 @@ if {Ian.Confrontationn_at_home} == 1:
 	join Thorinn leftmost
 	join Hugo rightmost
 	Hugo: Could you check on Ian? He lives in The pharmacy across the river. You will recogise it by the sign by  the door.
+elif {Dead_person_choice} != 0:
 elif {Astrid.ask_for_help} == 2:
 elif {Ian.Confrontationn_at_home} == 2:
 	[signal arg="start_night"]

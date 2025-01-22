@@ -37,6 +37,7 @@ directories/dch_directory={
 "Mage": "res://gui/Dialog/Characters/Mage.dch",
 "Magic_book": "res://gui/Dialog/Characters/Magic_book.dch",
 "Malrik": "res://gui/Dialog/Characters/Malrik.dch",
+"Narrator": "res://gui/Dialog/Characters/Narrator.dch",
 "Nick": "res://gui/Dialog/Characters/Nick.dch",
 "Scale": "res://gui/Dialog/Characters/Scale.dch",
 "Thorinn": "res://gui/Dialog/Characters/Thorinn.dch",

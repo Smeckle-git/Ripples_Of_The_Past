@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://de8pr30ne14cm"]
+[gd_scene load_steps=7 format=3 uid="uid://de8pr30ne14cm"]
 
 [ext_resource type="Texture2D" uid="uid://bc8c53eqjrcxv" path="res://assets/images/Village/Buildings/Buildings_Hospital.png" id="1_pguw8"]
+[ext_resource type="Texture2D" uid="uid://yhriif5k2w2h" path="res://assets/images/Village/pharmacy_sign.png" id="2_gyyu2"]
 [ext_resource type="Texture2D" uid="uid://dnolqqnsy2d4o" path="res://assets/images/Village/Buildings/Pharm_left.png" id="2_togdl"]
 [ext_resource type="Texture2D" uid="uid://q7oa2jgomuo7" path="res://assets/images/Village/Buildings/a878cb1f-3139-43cb-8c77-d7bc464f46b1.png" id="3_x6qoy"]
 [ext_resource type="Texture2D" uid="uid://dhelistioasb1" path="res://assets/images/Village/Buildings/Pharmacy_right.png" id="4_2k787"]
@@ -13,6 +14,12 @@ size = Vector3(17.772, 11.8362, 8.22913)
 [node name="Sprite3D" type="Sprite3D" parent="."]
 shaded = true
 texture = ExtResource("1_pguw8")
+
+[node name="Sprite3D8" type="Sprite3D" parent="."]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 5.75671, -2.76404, -0.557707)
+flip_h = true
+render_priority = 1
+texture = ExtResource("2_gyyu2")
 
 [node name="Sprite3D3" type="Sprite3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.98974, -1.17575, 3.75755)

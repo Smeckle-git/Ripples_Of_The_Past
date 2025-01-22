@@ -24,11 +24,11 @@ if {Ian.Confrontationn_at_home} == 1:
 		Thorinn (agitated): I don’t need to take what’s already slipping from your grasp, Ian. This village doesn’t need someone clinging to old ways. They need someone who can do more...
 		Thorinn: ...someone who can truly save them. They need me. And I will do whatever is necessary to protect them.
 		Ian (sceming): Save them? I’ve cared for these people for years, Thorinn. I know their needs better than you ever will.
-		Thorinn (agitated): You’ve cared for them, yes. But have you healed them? Look around, Ian. The village is wasting away, just like you.
-		Thorinn: You hold onto traditions that no longer work. Soon, they will see it too. They’ll come to me, because they’ll have no other choice.
+		Thorinn (agitated): You’ve cared for them, yes. But have you healed them? Look around, Ian. Already from my way here I could tell that the village is not doing so well, just like you.
+		Thorinn: I can even see on your equipment, you hold onto traditions that no longer work. Soon, the village will see it too. They’ll come to me, because they’ll have no other choice.
 		Ian (angry): So why save me, then? If you’re so sure they’ll turn to you, why bother? To ease your conscience? Or so I can live long enough to watch you take everything from me?
 		Thorinn (normal): I am treating you because that's my job, I heal people.
-		Ian (angry): You arrogant fool. Do you think this will make them trust you? I’ll tell them what kind of man you are. I’ll make sure they see the truth.
+		Ian (angry): You arrogant fool! Do you think this will make them trust you? I’ll tell them what kind of man you are. I’ll make sure they see the truth.
 		Thorinn (agitated): We’ll see. Now lie still. You don’t have much time, and I won’t let my first victory here be a failure.
 		leave --All--
 		join Thorinn (surprised) leftmost
@@ -40,9 +40,9 @@ if {Ian.Confrontationn_at_home} == 1:
 		Ian (angry): What... what is that?
 		Thorinn (normal): A blend of rare herbs, taught to me by our master. It will calm your body, let you rest and make your life come to a peaceful end.
 		Ian (angry): That’s pathetic, you think I will just give up now?
-		Thorinn (normal): We both know that your condition in this state is inreverable, there is nothing anyone could do. The only thing you have a choice in now is how you die.
+		Thorinn (normal): We both know that your condition in this state is irreversible, there is nothing anyone could do. The only thing you have a choice in now is how you die.
 		Thorinn: If you take the potion I'm offering you, it wouldn't be a sign of giving up. It would grant you a chance to take matters into your own hands.
-		Thorinn: You can either be dreadfully waiting for a painfull death, or accept your faith and give yourself a soothing end.
+		Thorinn: You can either be dreadfully waiting for a painful death, or accept your fate and give yourself a soothing end.
 		Ian (normal): You know Thorinn, you might be right. I think it ends here, but please don’t tell the villagers of my cowardice.
 		Thorinn (surprised): If that’s the cost, so be it. For now, let this be the end of your suffering.
 		*Ian, too weak to resist, takes the vial and drinks it. His breaths becoming shallow and laboured.*

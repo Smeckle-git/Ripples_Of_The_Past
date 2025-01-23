@@ -1,51 +1,122 @@
 [style name="Interaction_Style"]
-join Thorinn leftmost
-join Malrik rightmost
-if {Malrik.Trusted_malric} == false:
-	Malrik: Even after all those troubles you've gone through, we've come full circle. You're back asking me for help.
-	Malrik: I can see that you've managed to get your hands on my book, you must've figured out the price of the antidote. You'll see it would've been better to listen to my advice.
-elif {Malrik.Trusted_malric} == true:
-	Malrik: I see you've managed to collect all the papilora flowers. You've only half succeeded because that's only the easy part of the antidote.
-Malrik: Now, who will you sacrifice?
-- Vivian
+if {Dead_person_choice} == 1:
+	join Town_Leader rightmost
+	join Thorinn (normal) leftmost
+	Town_Leader: Thorinn, you've saved them! Truly, you are a gift to Rockfall!
+	Thorinn: Lets not forget the one who paid the ultimate price.
+	Town_Leader: The lives of others in not to be played with. I do understand however that dire circumstances call for desperate measures.
+	Malrik: *Malric whispers from the shadows* Psst.
+	Malrik: What will you do now doctor...?
+	- Publicly credit Malric
+		set {Blame_choice} = 2
+		Thorinn: This cure wasn't mine alone. Malric's knowledge made this possible.
+		Town_Leader: Malric? That explains... I'd hoped never to hear that name again.
+		Town_Leader: But if what you say is the truth, then even in the darkest of souls you can find a spark of light.
+		Town_Leader: Do be careful, even thogh he was of great help this time, following his ways will lead to a dangerous path we do not condone.
+		leave Town_Leader
+		Thorinn: *Turning to Malric in the shadows*
+		join Malrik rightmost
+		Malrik: A rare day, doctor. They don't hate me quite as much... for now. You have my thanks.
+	- Accept the credit
+		set {Blame_choice} = 1
+		Thorinn (normal): I just did what had to be done.
+		Thorinn: Vivian was the purest soul that managed to save everyone. Lets honour her by never forgetting her kindness.
+	- Thank Malric in private
+		set {Blame_choice} = 3
+		Thorinn: I just did what had to be done.
+		leave Town_Leader
+		join Malrik rightmost
+		Thorinn: *Turning to Malric in the shadows* So...listen.
+		Thorinn: I know I didn't mention you, but know this, you have my thanks.
+		Thorinn: Without your help I wouldn't have been able to create the antidote.
+		Malrik: So that's how it is. I had hoped for a glimpse of salvation in return. Secrets weigh heavy doctor.
+
+elif {Dead_person_choice} == 2:
+	join Town_Leader rightmost
+	join Thorinn (agitated) leftmost
+	Town_Leader: Thorinn, you tried your best, but this time it was not enough.
+	Town_Leader: Only one saved and so many lost. Couldn't you have done more?
+	Malrik: *Malric whispers from the shadows* Psst.
+	Malrik: What will you do now doctor...?
+	- Admit fault
+		set {Blame_choice} = 1
+		Thorinn (agitated): I really did the best I could.
+		Town_Leader: Your capabilities as a doctor have proven to be less than what you've promised.
+	- Publicly blame Malric
+		set {Blame_choice} = 2
+		Thorinn: This failure wasn't mine alone. Malric's evil ways made this possible.
+		Town_Leader: Malric? That explains... I'd hoped never to hear that name again.
+		Thorinn: He led me astray with his twisted words!
+		leave Town_Leader
+		join Malrik rightmost
+		Malrik: ...!
+		Malrik: You've got no idea whose name you've just tarnished.
+	- Confront Malric in private
+		set {Blame_choice} = 3
+		Thorinn (agitated): I really did the best I could.
+		Town_Leader: Your capabilities as a doctor have proven to be less than what you've promised.
+		leave Town_Leader
+		Thorinn (agitated): *Turning to Malric in the shadows* So...listen.
+		join Malrik rightmost
+		Thorinn: I didn't expose you, but know this, you also had a hand in this failure and I'll never forgive you for it.
+		Malrik: I've warned you sufficiently but you did not want to listen because your judgement was clouded by the rumours fed to you by the village.
+
+elif {Dead_person_choice} == 3:
+	join Town_Leader rightmost
+	join Thorinn (agitated) leftmost
+	Town_Leader: Thorinn, you tried your best but you only half succeeded.
+	Town_Leader: You killed one of us to save three, and yet, two more are dead. Was it worth the life of an innocent?
+	Malrik: *Malric whispers from the shadows* Psst.
+	Malrik: What will you do now doctor...?
+	- Accept the responsibility
+		set {Blame_choice} = 1
+		Thorinn: I did what was in my power.
+		Town_Leader: We might disagree if this was the right choice, but Astrid's sacrifice saved three lives.
+		Town_Leader: Let's forever honour her memory.
+	- Publicly put the responsibility on Malric
+		set {Blame_choice} = 2
+		Thorinn: This cure wasn't mine alone. Malric's knowledge made this possible.
+		Town_Leader: Malric? That explains... I'd hoped never to hear that name again.
+		Thorinn: I'm not guilt free, but if Malric didn't trick me, this could've been avoided.
+		Thorinn: I will make sure not to trust Malric's misleading words from now on.
+		leave Town_Leader
+		join Malrik rightmost
+		Malrik: ...!
+		Malrik: You've got no idea whose name you've just tarnished.
+	- Confront Malric in private
+		set {Blame_choice} = 3
+		Thorinn: I did what was in my power.
+		leave Town_Leader
+		Thorinn: *Turning to Malric in the shadows* So...listen.
+		join Malrik rightmost
+		Thorinn: I didn't mention you, but know this, you had a hand in this aswell.
+		Thorinn: Your cryptic messages caused this loss.
+		Malrik: I've warned you sufficiently.
+		Malrik: It isn't my fault that you didn't trust my word enough, as your judgement was clouded by the rumours fed to you by the village.
+
+elif {Dead_person_choice} == 4:
+	join Town_Leader rightmost
+	join Thorinn (agitated) leftmost
+	Town_Leader: Thorinn, you came with hope and promises, but we are left with grief. Five lives were lost under your care. You had a strong opinion doctor but you should've consulted us.
+	Malrik: *Malric whispers from the shadows* Psst.
+	Malrik: Seems like your good intentions weren't of much help this time. What will you tell them now?
+	- Admit fault
+		set {Blame_choice} = 1
+		Thorinn (agitated): I tried to find a way that wouldn’t cause more harm than what was already done, but in the end, I failed them. I will always carry this burden.
+		Town_Leader: You speak of burdens, but what about the mourning families? You had a choice, doctor, and you chose wrong.
+	
+	- Publicly blame Malric
+		set {Blame_choice} = 2
+		Thorinn (agitated): I admit that I did know of a cure, but it was based on Malric's twisted words.
+		Thorinn: I had a choice to make, a terrible choice, take an innocent life or let these people die. I just couldn't cross that line.
+		Thorinn: Malric is too far gone in his ways of dark magic, there wasn't even a guarantee this was going to work.
+		Town_Leader: I understand you didn't want to give into Malric's dishonourable ways.
+		leave Town_Leader
+		join Malrik rightmost
+		Malrik: ...!
+		Malrik: You've got no idea whose name you've just tarnished.
+if {Dead_person_choice} != 0:
 	leave --All--
 	[signal arg="start_night"]
 	[wait time="2.0"]
-	join Thorinn leftmost
-	join left_Malrik left [z_index="-1"]
-	join vivian rightmost
-	Thorinn (agitated): I’m sorry, Vivian.
-	set {Dead_person_choice} = 1
-	leave vivian [animation="Instant Out"]
-- Marcellus
-	leave --All--
-	[signal arg="start_night"]
-	[wait time="2.0"]
-	join Thorinn leftmost
-	join left_Malrik left [z_index="-1"]
-	join Nick rightmost
-	Thorinn: This ends tonight!
-	set {Dead_person_choice} = 2
-	leave Nick [animation="Instant Out"]
-- Astrid
-	leave --All--
-	[signal arg="start_night"]
-	[wait time="2.0"]
-	join Thorinn leftmost
-	join left_Malrik left [z_index="-1"]
-	join Astrid rightmost
-	Astrid: What are you doing here in the middle of the night?
-	Thorinn (agitated): I’m sorry, I don't have any other choice.
-	set {Dead_person_choice} = 3
-	leave Astrid [animation="Instant Out"]
-- Don’t kill anyone
-	Thorinn: I can’t do this. There must be another way.
-	Malrik: Let it be your way then.
-	set {Dead_person_choice} = 4
-[signal arg="Final_reveal"]
-[signal arg="change_to_day_light"]
-[wait time="2.0"]
-leave --All--
-[signal arg="end-night"]
-[wait time="2.0" hide_text="false"]
-Thorinn (surprised): Seems like there's quite some ruckus over at the town square.
+	jump Final_summary/

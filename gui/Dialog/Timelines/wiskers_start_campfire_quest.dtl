@@ -24,13 +24,14 @@ elif {Whiskers.Forest_Interaction_phase} == 2:
 		Thorinn: Am I losing my mind? Two days in the woods, no food... yeah, this can’t be. I’m definitely hallucinating.
 		Whiskers: Relax, Thorinn! You’re not crazy. I can talk, but only to you. Why?  Well...
 		Whiskers: Let’s just say, it’s complicated. For now, you’ll just have to trust me. And don’t worry, I’m on your side.
-		Whiskers: Let it be known... your choices matter. Big time. Call it karma, fate,\
-or cosmic scales—every decision you make will come back to you. So, just, choose wisely.
+		Whiskers: Let it be known... your choices matter. Big time. Call it karma, fate,
+or cosmic scales... Every decision you make will come back to you. So, just, choose wisely.
 		Thorinn (normal): Well, that’s... oddly comforting, I guess? Are you feeling better now?
 		Whiskers: Thanks to you, I’m warmed up again. But I could use a little something to eat. Got any fish handy? Maybe cooked over that lovely fire of yours?
 		- Sure, I could use something to eat myself.
 			Whiskers: There should be a river up ahead. See if you can catch a fish for us there.
 			[signal arg="start_fish_quest"]
+			set {Whiskers.Accepted_Fish_Quest} = true
 			set {Whiskers.New_Dialog} = false
 		- No, ignore Whiskers.
 			leave Whiskers
@@ -38,6 +39,7 @@ or cosmic scales—every decision you make will come back to you. So, just, choo
 		- I've already saved you once today, you ungrateful thing.
 			Whiskers: Fine I'll go and find my own food.
 			leave Whiskers
+			set {Whiskers.Shoo_away} = true
 			[signal arg="cat_leaves"]
 			[signal arg="hugo_encounter"]
 	else:
@@ -51,13 +53,15 @@ elif {Whiskers.Forest_Interaction_phase} == 3:
 	join Hugo rightmost
 	Hugo: Evening, stranger. You don’t look like you’re from around here.
 	Hugo: Are you perhaps a traveler?
-	Thorinn: I'm trying to find my way to a small village called Rockfall. But I've lost my way as soon as it got darker. What about you? Why are you here and who are you?
+	Thorinn: Who are you!?
 	Hugo: I’m Hugo. I saw your campfire while collecting my ingredients for supper at my inn.
-	Hugo: I’ve lived in Rockfall my whole life, so I know this forest by heart.
+	Thorinn: An inn? I'm actually trying to find my way to a small village called Rockfall. But I've lost my way as soon as it got darker.
+	Hugo: You're in luck. I’ve lived in Rockfall my entire life, so I know this forest by heart.
 	Hugo: Can I help you get there? The village is not that far anymore.
 	- Yes
 		Hugo: Then come along traveller, you must be tired from your journey.
 		Hugo: I'll show you to my inn.
+		set {Hugo.Followed_to_rockfall} = true
 		[signal arg="follow_hugo"]
 	- No
 		Hugo: You will have your reasons. Then I'll be on my way.

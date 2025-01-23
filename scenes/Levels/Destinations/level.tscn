@@ -111,7 +111,6 @@ shadow_blur = 6.0
 
 [node name="Progression_block" type="StaticBody3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.26, 3.609, -19.3771)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Progression_block"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25544, 0)

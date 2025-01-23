@@ -42,6 +42,9 @@ Malrik: Now, who will you sacrifice?
 - Don’t kill anyone
 	Thorinn: I can’t do this. There must be another way.
 	Malrik: Let it be your way then.
+	leave --All--
+	[signal arg="start_night"]
+	[wait time="2.0"]
 	set {Dead_person_choice} = 4
 [signal arg="Final_reveal"]
 [signal arg="change_to_day_light"]

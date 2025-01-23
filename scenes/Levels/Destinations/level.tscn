@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://0ft6wn2pxu0l"]
+[gd_scene load_steps=37 format=3 uid="uid://0ft6wn2pxu0l"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/Forest_quests.gd" id="1_eo63n"]
 [ext_resource type="Script" path="res://Scripts/Demo/demo_environment.gd" id="1_ivdn3"]
@@ -22,11 +22,12 @@
 [ext_resource type="PackedScene" uid="uid://chf253ku10t4e" path="res://scenes/environment/grass_3.tscn" id="15_83egy"]
 [ext_resource type="PackedScene" uid="uid://dkwevn51pv8k7" path="res://scenes/environment/campfire_merchant.tscn" id="20_0xhrj"]
 [ext_resource type="PackedScene" uid="uid://dn4vjb5x6o1yr" path="res://scenes/Characters/companion.tscn" id="20_7nc36"]
-[ext_resource type="PackedScene" uid="uid://bx461jbnpm1h7" path="res://scenes/ui/spooky.tscn" id="20_xasyh"]
 [ext_resource type="PackedScene" uid="uid://doja1555vib8p" path="res://scenes/ui/Player_Camera.tscn" id="24_18fqv"]
 [ext_resource type="PackedScene" uid="uid://u08d6vo5c344" path="res://assets/shaders/shader_nick/Scene's/fire_flies.tscn" id="25_2wcrm"]
 [ext_resource type="Script" path="res://Scripts/Camera/player_camera.gd" id="25_0880s"]
 [ext_resource type="PackedScene" uid="uid://knbahi2pgrbe" path="res://scenes/Characters/hugo.tscn" id="27_17q3d"]
+[ext_resource type="AudioStream" uid="uid://br3ofmjbjse5a" path="res://addons/dialogic/Modules/Audio/Forest_theme.mp3" id="27_q2x5h"]
+[ext_resource type="Script" path="res://scenes/Levels/Destinations/audio_stream_player_2d_forest.gd" id="28_2yb3p"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lfbac"]
 panorama = ExtResource("5_yv3ao")
@@ -1586,12 +1587,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.3311, 0.999998, -71.5973)
 [node name="tree_trunk4" parent="foilage/foilage_collection_tutorial/tree trunks" instance=ExtResource("9_cyinu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.3525, 1.00001, -85.9894)
 
-[node name="ScaryNode" type="Node3D" parent="foilage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
-
-[node name="Spooky" parent="foilage/ScaryNode" instance=ExtResource("20_xasyh")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -62.3827, 4.31573, -52.6872)
-
 [node name="Thorinn" parent="." instance=ExtResource("6_dd3lb")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 3.08784, 71.0657)
 
@@ -1649,3 +1644,8 @@ visible = false
 [node name="Hugo" parent="." instance=ExtResource("27_17q3d")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -45.3302, 2.6, 71.211)
 collision_mask = 0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("27_q2x5h")
+autoplay = true
+script = ExtResource("28_2yb3p")

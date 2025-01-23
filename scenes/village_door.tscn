@@ -2,38 +2,51 @@
 
 [ext_resource type="Script" path="res://Scripts/village_door.gd" id="1_8p0t1"]
 [ext_resource type="Script" path="res://Scripts/ui/interaction_area.gd" id="2_otuns"]
+[ext_resource type="PackedScene" uid="uid://iukdhnvw7thj" path="res://assets/shaders/shader_nick/Scene's/Portal.tscn" id="3_1uvu3"]
+[ext_resource type="Texture2D" uid="uid://c007dlqolwmyl" path="res://assets/Objects/tree_bark.png" id="4_i2tpu"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_djpa2"]
+height = 3.92727
+radius = 0.987364
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v4qai"]
-size = Vector3(2.01019, 3.33105, 1.99463)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_ijev6"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjsep"]
-albedo_color = Color(1, 0.0352941, 0, 1)
-
-[sub_resource type="QuadMesh" id="QuadMesh_ljsr6"]
-material = SubResource("StandardMaterial3D_gjsep")
+size = Vector3(1.14968, 3.89514, 2.1548)
 
 [node name="Village_door" type="Node3D"]
 script = ExtResource("1_8p0t1")
 
-[node name="InteractionArea" type="Area3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.932589, 0.360941, 0, -0.360941, 0.932589, -1.22416, 0, 0)
+texture = ExtResource("4_i2tpu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27366, 0, 0)
+shape = SubResource("CylinderShape3D_djpa2")
+
+[node name="Sprite3D2" type="Sprite3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.926213, 0.377, 0, -0.377, 0.926213, 1.91173, 0, 0)
+texture = ExtResource("4_i2tpu")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85101, 0, 0)
+shape = SubResource("CylinderShape3D_djpa2")
+
+[node name="Portal_spawn" type="Node3D" parent="."]
+
+[node name="InteractionArea" type="Area3D" parent="Portal_spawn"]
 transform = Transform3D(0.999971, 0, -0.00764447, 0, 1, 0, 0.00764447, 0, 0.999971, 0, 0, 0)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("2_otuns")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00424184, 1.70751, 0.0100098)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Portal_spawn/InteractionArea"]
+transform = Transform3D(1, 0, -2.14204e-07, 0, 1, 0, 2.14204e-07, 0, 1, 0.338298, 0.00150537, 1.09237)
 shape = SubResource("BoxShape3D_v4qai")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.999971, 0, -0.00764447, 0, 1, 0, 0.00764447, 0, 0.999971, 0.00582314, 2.38419e-07, 0.0113039)
-mesh = SubResource("PlaneMesh_ijev6")
+[node name="VFX_Portal" parent="Portal_spawn" instance=ExtResource("3_1uvu3")]
+transform = Transform3D(1.03123, 0, 0, 0, 1.35561, 0.268552, 0, -0.360547, 1.00972, 0.370946, -0.51959, -0.707268)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.9882, 0, 0, 0, 2.88417, 0, 0, 0, 1.00253, 0, 1.44951, -1.02085)
-mesh = SubResource("QuadMesh_ljsr6")
-
-[connection signal="body_entered" from="InteractionArea" to="InteractionArea" method="_on_body_entered"]
-[connection signal="body_exited" from="InteractionArea" to="InteractionArea" method="_on_body_exited"]
+[connection signal="body_entered" from="Portal_spawn/InteractionArea" to="Portal_spawn/InteractionArea" method="_on_body_entered"]
+[connection signal="body_exited" from="Portal_spawn/InteractionArea" to="Portal_spawn/InteractionArea" method="_on_body_exited"]

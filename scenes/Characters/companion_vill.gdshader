@@ -11,7 +11,7 @@ varying float track;
 void vertex() {
 	mat4 globalMatrix = mat4(INV_VIEW_MATRIX[0], INV_VIEW_MATRIX[1], MODEL_MATRIX[2],MODEL_MATRIX[3]);
 	MODELVIEW_MATRIX = VIEW_MATRIX * globalMatrix;
-	
+
 	phase = INSTANCE_CUSTOM.y;
 	//track = float(INSTANCE_ID % int(verticalFrames));
 	// Called for every vertex the material is visible on.
@@ -20,12 +20,12 @@ void vertex() {
 void fragment() {
 	float frameNumber = floor(phase * horizontalFrames)/ horizontalFrames;
 	//float trackNumber = track/ verticalFrames;
-	
+
 	vec2 UVscaler = vec2(1.0/ horizontalFrames, 1.0/ verticalFrames);
 	vec2 UVshifter = vec2(frameNumber, tracks);
 	vec4 colour = texture(text,UV * UVscaler + UVshifter );
-	ALBEDO =colour.rgb;
-	//EMISSION = colour.rgb;
+	ALBEDO = vec3(0);
+	EMISSION = colour.rgb;
 	//ALPHA = colour.a;
 	// Called for every pixel the material is visible on.
 }

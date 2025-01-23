@@ -123,7 +123,7 @@ size = Vector3(88.12, 18.08, 11.3319)
 material = SubResource("ShaderMaterial_y1wvd")
 
 [node name="Village_door" parent="Environment" instance=ExtResource("8_upw2j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.488194, 2.06884, 47.1706)
+transform = Transform3D(0.869921, 0, 0, 0, 0.802697, 0, 0, 0, 1, -5.32777, 3.48567, 53.6329)
 
 [node name="trees" type="Node3D" parent="."]
 

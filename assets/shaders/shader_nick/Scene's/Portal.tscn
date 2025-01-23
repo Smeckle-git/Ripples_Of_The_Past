@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://iukdhnvw7thj"]
+
+[ext_resource type="Shader" uid="uid://m4bhsbj0v6oy" path="res://portal_shader.tres" id="1_bv6tu"]
+[ext_resource type="Texture2D" uid="uid://suni44416x8w" path="res://assets/shaders/shader_nick/Assets/sparkle-lights-stars-vector-23848922.jpg" id="2_2a4kl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r0rdv"]
+render_priority = 0
+shader = ExtResource("1_bv6tu")
+shader_parameter/ColorIntense = 10.0
+shader_parameter/PortalColor = Color(0.117647, 0.054902, 0.427451, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_bqeso"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_50ta3"]
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0, 0.0156863, 0.835294, 1)
+albedo_texture = ExtResource("2_2a4kl")
+use_particle_trails = true
+
+[sub_resource type="Curve" id="Curve_iccfo"]
+max_value = 0.01
+_data = [Vector2(0, 0.005), 0.0, 0.0, 0, 1, Vector2(1, 0.005), 0.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_cmnki"]
+max_value = 0.01
+_data = [Vector2(0, 0.005), 0.0, 0.0, 0, 1, Vector2(1, 0.005), 0.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_je4og"]
+min_value = -2.0
+max_value = 2.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_d5ske"]
+curve_x = SubResource("Curve_iccfo")
+curve_y = SubResource("Curve_cmnki")
+curve_z = SubResource("Curve_je4og")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j5l57"]
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.0
+emission_ring_radius = 1.1
+emission_ring_inner_radius = 1.1
+orbit_velocity_min = 0.2
+orbit_velocity_max = 0.2
+orbit_velocity_curve = SubResource("CurveXYZTexture_d5ske")
+radial_velocity_min = 0.199978
+radial_velocity_max = 0.499978
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_dk8bo"]
+size = 0.2
+
+[node name="VFX_Portal" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.50817, 0, 0, 0, 2.50817, 0, 0, 0, 2.50817, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_r0rdv")
+mesh = SubResource("QuadMesh_bqeso")
+skeleton = NodePath("../..")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.998412, 0, 0, 0, 0.998412, 0, 0, 0, 0.998412, 0, -0.0394559, 0)
+material_override = SubResource("StandardMaterial3D_50ta3")
+amount = 200
+trail_enabled = true
+trail_lifetime = 1.0
+process_material = SubResource("ParticleProcessMaterial_j5l57")
+draw_pass_1 = SubResource("RibbonTrailMesh_dk8bo")

@@ -9,8 +9,10 @@ process_mode = 3
 script = ExtResource("1_onfik")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+
+[node name="Journal" parent="CanvasLayer" instance=ExtResource("3_xhmdu")]
 
 [node name="Village" parent="." instance=ExtResource("2_fouv5")]
 process_mode = 1
-
-[node name="Journal" parent="." instance=ExtResource("3_xhmdu")]

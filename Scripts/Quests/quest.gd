@@ -1,9 +1,9 @@
 class_name Quest extends QuestManager
+
 #base class for making quest
 func start_quest() -> void:
 	if quest_status == QuestStatus.available:
 		quest_status = QuestStatus.started
-		QuestLog.visible = true
 		QuestTitle.text = quest_name
 		QuestDescription.text = str(collect_obj) + "/" + str(amount_obj) +" "+ quest_description
 		

@@ -1,5 +1,7 @@
 extends Control
 
+@onready var self_layer = $".."
+
 @onready var _continue: Button = $MarginContainer2/VBoxContainer/TabContainer/Settings/Continue
 @onready var root = get_tree().current_scene
 
@@ -13,7 +15,6 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$MarginContainer2/VBoxContainer/TabContainer/Settings/Continue.grab_focus()
-	#cycle_all_nodes(root)
 
 func _on_back_to_main_pressed() -> void:
 	get_tree().paused = false
@@ -21,10 +22,12 @@ func _on_back_to_main_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
+	self_layer.visible = false
 	get_tree().quit()
 
 func _on_continue_pressed() -> void:
 	get_tree().paused = false
+	self_layer.visible = false
 	$AnimationPlayer.play_backwards("blur")
 
 func pause():
@@ -35,16 +38,19 @@ func pause():
 func testFunc():
 	if Input.is_action_just_pressed("Journal") and !get_tree().paused:
 		pause()
+		self_layer.visible = true
 		quests.visible = true
 	elif Input.is_action_just_pressed("Journal") and get_tree().paused:
 		_on_continue_pressed()
 		
 	if Input.is_action_just_pressed("Pause") and !get_tree().paused:
 		pause()
+		self_layer.visible = true
 		settings.visible = true
 	elif Input.is_action_just_pressed("Pause") and get_tree().paused and settings.visible:
 		_on_continue_pressed()
 	elif Input.is_action_just_pressed("Pause") and get_tree().paused and !settings.visible:
+		self_layer.visible = true
 		settings.visible = true
 	
 func _process(_delta: float) -> void:
@@ -52,24 +58,11 @@ func _process(_delta: float) -> void:
 	Quest()
 
 func Quest():
-	var temp_title = GameHudManager.get_node("QuestLog/HUD/MarginContainer/HBoxContainer/Quest/MarginContainer/quest title")
-	var temp_text = GameHudManager.get_node("QuestLog/HUD/MarginContainer/HBoxContainer/Quest/MarginContainer/quest text")
+	var temp_title = GameHudManager.get_node("QuestLog/HUD/MarginContainer/Quest/MarginContainer/quest title")
+	var temp_text = GameHudManager.get_node("QuestLog/HUD/MarginContainer/Quest/MarginContainer/quest text")
 	
 	quest_text.text = temp_text.text
 	quest_title.text = temp_title.text
-
-#func cycle_all_nodes(node: Node):
-	#for child in node.get_children():
-		#print("Found node: ",child.name)
-		#if child.name =="Village":
-			#map_village.visible= true
-			#map_forest.visible = false
-		#else:
-			#map_village.visible= false
-			#map_forest.visible = true
-
- # Replace with function body.
-
 
 func _on_reset_pressed() -> void:
 	_on_continue_pressed()

@@ -19,7 +19,6 @@ Ludix: Now your soul will be put on the scale against the feather of fate.
 Narrator: *A creepy silence and anticipation fill the space but the scale does not move.*
 [signal arg="proceed_intro_background"]
 Ludix: How odd. This has never happened before. You are an intriguing case, with both your good and bad choices holding equal influence.
-[signal arg="proceed_intro_background"]
 Thorinn (surprised): What's the meaning of that? Are you serious?
 Ludix: Your fate is still uncertain as the scale cannot determine your destination based on your past choices.
 Thorinn: Now hold on a minute. This all doesn't make sense.

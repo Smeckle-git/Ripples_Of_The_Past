@@ -1,6 +1,7 @@
 extends Node3D
 
-@onready var interaction_area: InteractionArea = $InteractionArea
+@onready var interaction_area: InteractionArea = $Portal_spawn/InteractionArea
+
 @onready var root = get_node("/root/Game/Loading")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,5 +1,5 @@
 extends CharacterBody3D
-class_name Companion
+class_name Companion_old
 
 @onready var thorinn: CharacterBody3D = $"../Thorinn"
 @onready var animation_tree: AnimationTree = $AnimationTree

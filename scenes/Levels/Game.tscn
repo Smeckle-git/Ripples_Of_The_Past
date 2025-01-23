@@ -14,4 +14,8 @@ script = ExtResource("1_qyr1s")
 [node name="Level" parent="." instance=ExtResource("3_xwloq")]
 process_mode = 1
 
-[node name="Journal" parent="." instance=ExtResource("4_pfjdc")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+
+[node name="Journal" parent="CanvasLayer" instance=ExtResource("4_pfjdc")]

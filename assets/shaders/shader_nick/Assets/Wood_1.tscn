@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx5vdbk1vh3gh"]
+[gd_scene load_steps=2 format=3 uid="uid://dx5vdbk1vh3gh"]
 
 [ext_resource type="Texture2D" uid="uid://drqx8ttv7t5gw" path="res://assets/shaders/shader_nick/Assets/Wood_1.png" id="1_xlm5h"]
-[ext_resource type="PackedScene" path="res://area affects/area_effect.tscn" id="3_dd81a"]
 
 [node name="Wood_1" type="Area3D"]
 transform = Transform3D(0.998351, 0, 0, 0, 0.998351, 0, 0, 0, 0.998351, 0, 0, 0)
@@ -16,8 +15,18 @@ texture = ExtResource("1_xlm5h")
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
 polygon = PackedVector2Array(-0.823426, -0.788624, -0.711636, -0.439226, -0.594349, -0.277788, -0.435678, -0.0873246, -0.333795, 0.0431242, -0.0611245, 0.258382, 0.40309, 0.896702, 0.597162, 0.96943, 0.712387, 0.865895, 0.768781, 0.702453, 0.664834, 0.522733, 0.513706, 0.315925, 0.21412, -0.130678, -0.0428236, -0.587102, -0.1423, -0.713772, -0.410228, -0.733565)
 
-[node name="area_effect" parent="." instance=ExtResource("3_dd81a")]
+[node name="area_effect" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(5.55373, 0, 0, 0, 0.999787, 0, 0, 0, 5.01701, 0, -0.369358, 0)
 visible = false
+script = null
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

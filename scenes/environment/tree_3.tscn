@@ -27,5 +27,5 @@ texture_filter = 2
 texture = ExtResource("1_a2b1o")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -0.788454, 3, 2.47105)
 shape = SubResource("CylinderShape3D_nm4n6")

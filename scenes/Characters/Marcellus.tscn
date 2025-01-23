@@ -37,6 +37,7 @@ shape = SubResource("SphereShape3D_vm1pk")
 [node name="InteractionArea" type="Area3D" parent="."]
 collision_mask = 2
 script = ExtResource("3_ipfce")
+show_label = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
 shape = SubResource("CylinderShape3D_0xnxu")

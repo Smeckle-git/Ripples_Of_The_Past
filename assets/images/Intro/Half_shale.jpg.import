@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1elvgtmmmey1"
-path="res://.godot/imported/Screenshot 2025-01-16 at 14.26.00.png-933f1ae145a7f1aaaadaf1887e8fb4d0.ctex"
+uid="uid://cceufyv0k40v1"
+path="res://.godot/imported/Half_shale.jpg-dfff378db68caaeab32f32fbb60c01a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gui/Dialog/styles/Screenshot 2025-01-16 at 14.26.00.png"
-dest_files=["res://.godot/imported/Screenshot 2025-01-16 at 14.26.00.png-933f1ae145a7f1aaaadaf1887e8fb4d0.ctex"]
+source_file="res://assets/images/Intro/Half_shale.jpg"
+dest_files=["res://.godot/imported/Half_shale.jpg-dfff378db68caaeab32f32fbb60c01a4.ctex"]
 
 [params]
 

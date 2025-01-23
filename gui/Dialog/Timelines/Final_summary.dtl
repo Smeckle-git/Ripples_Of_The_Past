@@ -9,19 +9,18 @@ set {Scale_value} += 1
 jump Change_scale
 if {Whiskers.Accepted_Fish_Quest} == true:
 	God: You offered food to someone in need, that's good deed.
-	[signal arg="Increas_scale"]
+	set {Scale_value} += 1
 elif {Whiskers.Shoo_away} == true:
 	God: You refused to feed a cat even tho it wouldn't have cost you anything.
 	God: Not only that, but you were mean to him.
-	[signal arg="Decrese_scale"]
-	[signal arg="Decrese_scale"]
+	set {Scale_value} -= 2
 else:
 	God: You ignored a cry for food.
-	[signal arg="Decrese_scale"]
+	set {Scale_value} -= 1
 jump Change_scale
 if {Hugo.Followed_to_rockfall} == true:
 	God: You've accepted Hugo's kindness following him to Rockfall.
-	[signal arg="Increas_scale"]
+	set {Scale_value} += 1
 else:
 	God: You've ignored Hugo's kindness and tought you were better off alone.
 jump Change_scale
@@ -29,82 +28,65 @@ if {Ian.Selected_Ian_Choice} == 1:
 	God: You tried your best to save Ian's suffering soul, but failed in the end.
 elif {Ian.Selected_Ian_Choice} == 2:
 	God: You did your job as a doctor. You gave Ian his last mercy, but you did take a life.
-	[signal arg="Increas_scale"]
+	set {Scale_value} += 1
 else:
 	God: You were mean to a dying person, and refused to help.
-	[signal arg="Decrese_scale"]
-	[signal arg="Decrese_scale"]
+	set {Scale_value} -= 2
 jump Change_scale
 if {Malrik.Trusted_malric} == true:
 	God: Even when warned about Marlic you decided to trust him and not the rumours.
-	[signal arg="Increas_scale"]
-	[signal arg="Increas_scale"]
+	set {Scale_value} += 2
 else:
 	God: You blindly based your trust on groundless rumours and didn't give Marlic a chance.
 	God: On top of that, you stole his book behind his back.
-	[signal arg="Decrese_scale"]
-	[signal arg="Decrese_scale"]
+	set {Scale_value} -= 2
 jump Change_scale
 if {Dead_person_choice} == 1:
 	God: You've managed to save all 5 lives, which sadly came at the cost of Vivian's.
-	[signal arg="Increas_scale"]
-	[signal arg="Increas_scale"]
-	[signal arg="Increas_scale"]
-	[signal arg="Increas_scale"]
+	set {Scale_value} += 4
 	jump Change_scale
 	if {Blame_choice} == 1:
 		God: You pretentiously accepted credit for something in what Malric also played a part.
-		[signal arg="Decrese_scale"]
-		[signal arg="Decrese_scale"]
+		set {Scale_value} -= 2
 	elif {Blame_choice} == 2:
 		God: You were honest about who helped you, but that cost you some credibility with those who don't trust Malric.
 	elif {Blame_choice} == 3:
 		God: You pretentiously accepted credit for something in what Malric also played a part. At least you thanked him in private.
-		[signal arg="Decrese_scale"]
+		set {Scale_value} -= 1
 	jump Change_scale
 elif {Dead_person_choice} == 2:
 	God: You took the life of a criminal, yet it left four dead.
-	[signal arg="Decrese_scale"]
-	[signal arg="Decrese_scale"]
-	[signal arg="Decrese_scale"]
+	set {Scale_value} -= 3
 	if {Blame_choice} == 1:
 		God: You were brave and stood by your mistake.
 		God: You even shouldered the whole blame, shielding Malric from further disgrace.
-		[signal arg="Increas_scale"]
-		[signal arg="Increas_scale"]
+		set {Scale_value} += 2
 	elif {Blame_choice} == 2:
 		God: You put the blame of your own wrongdoings on Malric.
-		[signal arg="Decrese_scale"]
-		[signal arg="Decrese_scale"]
+		set {Scale_value} -= 2
 	elif {Blame_choice} == 3:
 		God: You didn't fulfill your duty as a doctor, and you hold a grudge over your own mistake.
-		[signal arg="Decrese_scale"]
-		[signal arg="Decrese_scale"]
+		set {Scale_value} -= 2
 	jump Change_scale
 elif {Dead_person_choice} == 3:
 	God: You took the life of an innocent, yet it left two more dead.
 	if {Blame_choice} == 1:
 		God: You were brave and stood by your choices.
-		[signal arg="Increas_scale"]
-		[signal arg="Increas_scale"]
+		set {Scale_value} += 2
 	elif {Blame_choice} == 2:
 		God: You put the blame of your own wrongdoings on Malric.
-		[signal arg="Decrese_scale"]
-		[signal arg="Decrese_scale"]
+		set {Scale_value} -= 2
 	elif {Blame_choice} == 3:
 		God: You only half fulfilled your duty as a doctor, and you hold a grudge over your own mistake.
-		[signal arg="Decrese_scale"]
-		[signal arg="Decrese_scale"]
+		set {Scale_value} -= 2
 	jump Change_scale
 elif {Dead_person_choice} == 4:
 	God: You let five people die. Altough no one was sacrificed.
-	[signal arg="Decrese_scale"]
-	[signal arg="Decrese_scale"]
+	set {Scale_value} -= 2
 	if {Blame_choice} == 1:
 		God: You made the effort to find the cure.
 		God: You could've faulted Malric, but you kept his involvement to yourself.
-		[signal arg="Increas_scale"]
-		[signal arg="Increas_scale"]
+		set {Scale_value} += 2
 	elif {Blame_choice} == 2:
 		God: You've kept your reputation with the village intact at the cost of Malric's unjust exposure.
 	jump Change_scale

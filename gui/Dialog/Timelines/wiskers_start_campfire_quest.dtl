@@ -7,7 +7,6 @@ if {Whiskers.Forest_Interaction_phase} == 1:
 		Thorinn: Hey there, little one. What are you doing all the way out here, huh?
 		Whiskers: *shivering* Me-me-meow
 		Thorinn: You’re freezing! Hang tight, I’ll get a fire going for you over at that abandoned fireplace.
-		set {Whiskers.New_Dialog} = false
 	else:
 		Whiskers: *shivers*
 		Thorinn: I should hurry up and get this campfire going.

@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://3ewrf4xj24mt" path="res://assets/images/sprites/thorinn/Thorinn_walking_up_3.png" id="19_khffe"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ulyrf"]
-radius = 1.0
+radius = 0.582293
 
 [sub_resource type="Animation" id="Animation_7n61x"]
 resource_name = "Idle_Down"
@@ -491,7 +491,7 @@ collision_mask = 15
 script = ExtResource("1_2m2tc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-1.42053e-07, 0, 1.00143, 0, 5.09185, 0, -3.24979, 0, -4.37739e-08, 0, 0, 0)
+transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ulyrf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

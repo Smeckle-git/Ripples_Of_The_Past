@@ -14,7 +14,6 @@ extends Control
 @onready var pause1: Button = $TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer3/Button
 @onready var pause2: Button = $TabContainer/Controls/MarginContainer/VBoxContainer/System/HBoxContainer3/Button2
 
-@onready var mv_slider: HSlider = $"TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider"
 @onready var ms_slider: HSlider = $"TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider"
 @onready var am_slider: HSlider = $"TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience/AM-Slider"
 @onready var sfx_slider: HSlider = $"TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects/SFX-Slider"
@@ -52,18 +51,12 @@ func set_value():
 	pause2.pressed.connect(on_input_button_pressed.bind(pause2, "Pause2"))
 	
 	var audio = GameSettingsManager.load_audio_setting()
-	mv_slider.value = min(audio["Master voume"], 1.0) * 100
 	ms_slider.value = min(audio["Music volume"], 1.0) * 100
 	am_slider.value = min(audio["Ambiant sound volume"], 1.0) * 100
 	sfx_slider.value = min(audio["SFX vulue"], 1.0) * 100
 	
 func _ready() -> void:
 	set_value()
-
-func _on_mv_slider_drag_ended(value_changed: bool) -> void:
-	if value_changed:
-		GameSettingsManager.save_audio_setting("Master voume", mv_slider.value / 100)
-
 
 func _on_ms_slider_drag_ended(value_changed: bool) -> void:
 	if value_changed:

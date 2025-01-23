@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cibu7wutpf3ib"]
+
+[ext_resource type="Texture2D" uid="uid://b6i7r44mm78ke" path="res://assets/images/sprites/jeroen_NPC.png" id="1_oy1rc"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vm1pk"]
+radius = 0.155276
+
+[node name="Jeroen" type="CharacterBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-5.24537e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.24537e-08, -4.6714, 0, 10.1717)
+billboard = 1
+shaded = true
+alpha_cut = 2
+texture = ExtResource("1_oy1rc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.420316, 0)
+shape = SubResource("SphereShape3D_vm1pk")

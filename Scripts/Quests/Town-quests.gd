@@ -7,6 +7,8 @@ extends Node
 @onready var vivian: NPC = $Character/Vivian
 @onready var marcellus: NPC = $Character/marcellus
 @onready var favian: NPC = $Character/Favian
+@onready var jeroen: CharacterBody3D = $Character/Jeroen
+@onready var companion: Companion = $Character/Companion
 
 
 @onready var villager_1: NPC = $Character/Villager1
@@ -22,18 +24,11 @@ extends Node
 @onready var find_ian_quest: Quest = $Quests/Find_ian_quest
 @onready var find_book_quest: Quest = $Quests/Find_book_quest
 @onready var collectflowers: Flowers = $Quests/Collectflowers
+@onready var find_malric: Quest = $Quests/Find_malric
+
 
 @onready var animation_player: AnimationPlayer = $CanvasLayer/AnimationPlayer
 @onready var directional_light_3d: DirectionalLight3D = $Environment/WorldEnvironment/DirectionalLight3D
-
-
-
-
-
-
-
-
-
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -46,18 +41,29 @@ func _ready() -> void:
 	vivian.interaction_area.interact = Callable(self, "_on_vivian_interact")
 	marcellus.interaction_area.interact = Callable(self, "_on_marcellus_interact")
 	favian.interaction_area.interact = Callable(self, "_on_favian_interact")
-	
-	#thorinn.state_machine.follow_target = hugo
-	#thorinn.state_machine.change_state("follow")
-	#hugo.move_to_location = [Vector3(78.838, 2.57, 67.381), Vector3(74.978, 2.57, 70.043), Vector3(71.93, 3.52, 71.431), Vector3(64.001, 3.52, 77.358), Vector3(57.87, 3.52, 77.358), Vector3(54.056, 1.957, 75.402), Vector3(46.614, 1.557, 67.844), Vector3(39.94, 1.557, 64.231)]
-	
-	collectflowers.start()
-	
-	if !Dialogic.VAR.Hugo.Followed_to_rockfall:
+
+	if Dialogic.VAR.get_variable("Hugo.Followed_to_rockfall") == false:
 		hugo.visible = false
 
+	thorinn.state_machine.follow_target = hugo
+	thorinn.state_machine.change_state("follow")
+	hugo.move_to_location = [Vector3(78.838, 2.57, 67.381), Vector3(74.978, 2.57, 70.043), Vector3(71.93, 3.52, 71.431), Vector3(64.001, 3.52, 77.358), Vector3(57.87, 3.52, 77.358), Vector3(54.056, 1.957, 75.402), Vector3(46.614, 1.557, 67.844), Vector3(39.94, 1.557, 64.231)]
+	
+	companion.following = true
+	companion.interaction_area.interact = Callable(companion, "_on_interact")
+	companion.interaction_area.action_name = "pat"
+
+
 func _on_dialogic_signal(argument:String):
-	if argument == "start_night":
+	if argument == "show_hugo":
+		hugo.visible = true
+	elif argument == "Increas_scale":
+		Dialogic.VAR.Scale_value += 1
+		print(Dialogic.VAR.Scale_value)
+	elif argument == "Decrese_scale":
+		Dialogic.VAR.Scale_value -= 1
+		print(Dialogic.VAR.Scale_value)
+	elif argument == "start_night":
 		animation_player.play("Time warp in")
 	elif argument == "end-night":
 		animation_player.play("Time warp out")
@@ -78,7 +84,14 @@ func _on_dialogic_signal(argument:String):
 		marlic.visible = true
 		hugo.interaction_area.show_label = false
 		Hospital.show_label = false
+		marcellus.visible = true
+		marcellus.interaction_area.show_label = true
+		vivian.visible = true
+		vivian.interaction_area.show_label = true
+		astrid.visible = true
+		astrid.interaction_area.show_label = true
 		tree.switch_sprite()
+		find_malric.start_quest()
 	elif argument == "start_alinora_interaction":
 		Dialogic.start("Astrid_request")
 	elif argument == "Start_find_another_way_quest":
@@ -90,9 +103,37 @@ func _on_dialogic_signal(argument:String):
 	elif argument == "Final_reveal":
 		thorinn.global_position = Vector3(42,1.6,-4)
 		
-		if Dialogic.VAR.Dead_person_choice == 1:
-			pass
-		elif Dialogic.VAR.Dead_person_choice == 2:
+		vivian.visible = false
+		vivian.interaction_area.show_label = false
+		
+		marcellus.visible = false
+		marcellus.interaction_area.show_label = false
+		
+		astrid.visible = false
+		astrid.interaction_area.show_label = false
+		
+		hugo.visible = true
+		hugo.global_position = Vector3(14, 1.5, 30)
+		hugo.interaction_area.show_label = false
+		alinora.global_position = Vector3(10, 1.5, 30)
+		jeroen.visible = true
+		marlic.global_position = Vector3(27, 1.5, 37)
+		
+		
+		favian.global_position = Vector3(16, 1.5, 36)
+		villager_1.global_position = Vector3(11, 1.5, 37)
+		villager_2.global_position = Vector3(10, 1.5, 34)
+		villager_3.global_position = Vector3(12, 1.5, 42)
+		villager_4.global_position = Vector3(12, 1.5, 32)
+		villager_5.global_position = Vector3(10, 1.5, 40)
+		
+		villager_1.interaction_area.show_label = false
+		villager_2.interaction_area.show_label = false
+		villager_3.interaction_area.show_label = false
+		villager_4.interaction_area.show_label = false
+		villager_5.interaction_area.show_label = false
+		
+		if Dialogic.VAR.Dead_person_choice == 2:
 			villager_1.turn_dead()
 			villager_3.turn_dead()
 			villager_4.turn_dead()
@@ -140,5 +181,3 @@ func _on_hospital_interaction():
 
 func _on_hugo_destination_reached() -> void:
 	Dialogic.start("first_morning")
-	hugo.visible = true
-	pass

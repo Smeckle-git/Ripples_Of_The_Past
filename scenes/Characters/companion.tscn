@@ -643,7 +643,7 @@ parameters/Idle/blend_position = Vector2(0.0014782, 0.907767)
 parameters/Sitting/blend_position = Vector2(-0.00166392, 0.971223)
 parameters/Walking/blend_position = Vector2(-0.0014782, 0.893204)
 
-[node name="InteractionArea2" parent="." instance=ExtResource("3_oq3e6")]
+[node name="InteractionArea2" parent="." groups=["Companion"] instance=ExtResource("3_oq3e6")]
 
 [node name="Area3D" type="CollisionShape3D" parent="InteractionArea2"]
 shape = SubResource("CylinderShape3D_4bp0j")

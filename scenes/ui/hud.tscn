@@ -184,38 +184,35 @@ default_font_size = 24
 [node name="HUD" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1151.0
-offset_bottom = 647.0
+offset_right = 298.0
+offset_bottom = 194.0
 script = ExtResource("1_rfbj8")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 259.0
+offset_bottom = 163.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Quest" type="Control" parent="MarginContainer/HBoxContainer"]
+[node name="Quest" type="Control" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Quest"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Quest"]
 clip_contents = true
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.3
-offset_right = -4.0
-offset_bottom = 5.59999
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/Quest/MarginContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/Quest/MarginContainer"]
 scale = Vector2(0.117672, 0.0971223)
 texture = ExtResource("2_ojncg")
 centered = false
 
-[node name="quest title" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Quest/MarginContainer"]
+[node name="quest title" type="RichTextLabel" parent="MarginContainer/Quest/MarginContainer"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_vertical = 0
@@ -224,7 +221,7 @@ text = "Quest Title"
 fit_content = true
 scroll_active = false
 
-[node name="quest text" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Quest/MarginContainer"]
+[node name="quest text" type="RichTextLabel" parent="MarginContainer/Quest/MarginContainer"]
 custom_minimum_size = Vector2(0, 125)
 layout_mode = 2
 size_flags_vertical = 8
@@ -232,7 +229,7 @@ theme = SubResource("Theme_d1tx7")
 text = "Quest log"
 scroll_active = false
 
-[node name="Screen" type="Control" parent="MarginContainer/HBoxContainer"]
+[node name="Screen" type="Control" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0

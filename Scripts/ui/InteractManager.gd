@@ -15,7 +15,7 @@ func _ready() -> void:
 	interact_key = GameSettingsManager.get_keybinding("Interact")
 	base_text = "[" + interact_key + "]" + " to "
 	var custom_font = load("res://scenes/ui/Font/Laura_font_file.tres")  
-	label.set("theme_override_fonts/font", custom_font) 
+	label.set("theme_override_fonts/font", custom_font)
 
 	
 func register_area(area: InteractionArea):

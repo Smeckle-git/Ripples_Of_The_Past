@@ -35,7 +35,7 @@ double_sided = false
 texture = ExtResource("3_x6qoy")
 
 [node name="Sprite3D5" type="Sprite3D" parent="."]
-transform = Transform3D(-1.9779e-08, -0.63404, 0.774944, 0, 0.77741, 0.632029, -0.45249, 2.77148e-08, -3.38739e-08, 9.42118, -2.48953, 4.01749)
+transform = Transform3D(-1.9779e-08, -0.63404, 0.774944, 0, 0.77741, 0.632029, -0.45249, 2.77148e-08, -3.38739e-08, 9.7151, -2.24981, 4.30269)
 shaded = true
 double_sided = false
 texture = ExtResource("3_x6qoy")

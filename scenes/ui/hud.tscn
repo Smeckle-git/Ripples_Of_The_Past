@@ -220,6 +220,7 @@ custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_vertical = 0
 theme = SubResource("Theme_esxve")
+bbcode_enabled = true
 text = "Quest Title"
 fit_content = true
 scroll_active = false
@@ -229,6 +230,7 @@ custom_minimum_size = Vector2(0, 125)
 layout_mode = 2
 size_flags_vertical = 8
 theme = SubResource("Theme_d1tx7")
+bbcode_enabled = true
 text = "Quest log"
 scroll_active = false
 

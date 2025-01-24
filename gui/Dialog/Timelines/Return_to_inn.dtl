@@ -8,7 +8,7 @@ elif {Astrid.ask_for_help} == 2:
 elif {Ian.Confrontationn_at_home} == 2:
 	[signal arg="start_night"]
 	[wait time="2.0"]
-	*A month passes. Thorinn took over the role as town doctor while slowly trying to gain more trust with the villagers*
+	Narrator: *A month passes. Thorinn took over the role as town doctor while slowly trying to gain more trust with the villagers*
 	[signal arg="Scene_5_switch"]
 	[wait time="2.0"]
 	[signal arg="start_alinora_interaction"]

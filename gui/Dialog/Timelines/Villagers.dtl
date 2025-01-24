@@ -1,0 +1,17 @@
+[style name="Interaction_Style"]
+if {Ian.Selected_Ian_Choice} == 0:
+	if {Favian.Villagers_interaction} == 0:
+		set {Favian.Villagers_interaction} += 1
+		Villager: Keep your questions to yourself.
+	elif {Favian.Villagers_interaction} == 1:
+		set {Favian.Villagers_interaction} += 1
+		Villager: Whatever you're looking for, it ain't here.
+	elif {Favian.Villagers_interaction} == 2:
+		set {Favian.Villagers_interaction} += 1
+		Villager: Strangers bring nothing but bad luck.
+	elif {Favian.Villagers_interaction} == 3:
+		set {Favian.Villagers_interaction} += 1
+		Villager: Nothing for you here, stranger.
+	else:
+		set {Favian.Villagers_interaction} = 0
+		Villager: We don't trust your kind here.

@@ -426,12 +426,12 @@ animation = &"Walk_forward"
 blend_point_0/node = SubResource("AnimationNodeAnimation_0dgsb")
 blend_point_0/pos = Vector2(0, 1)
 blend_point_1/node = SubResource("AnimationNodeAnimation_pg7ey")
-blend_point_1/pos = Vector2(-1, 0)
+blend_point_1/pos = Vector2(1, 0)
 blend_point_2/node = SubResource("AnimationNodeAnimation_xelut")
-blend_point_2/pos = Vector2(1, 0)
+blend_point_2/pos = Vector2(-1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_sj7hm")
 blend_point_3/pos = Vector2(0, -1)
-blend_mode = 1
+blend_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bf4l5"]
 advance_mode = 2
@@ -483,7 +483,7 @@ tree_root = SubResource("AnimationNodeStateMachine_eu5xx")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.508536, 0.652593)
-parameters/Walking/blend_position = Vector2(0.673599, -0.00719428)
+parameters/Walking/blend_position = Vector2(-1, 0.0319149)
 
 [node name="InteractionArea2" parent="." instance=ExtResource("8_glajy")]
 show_label = false

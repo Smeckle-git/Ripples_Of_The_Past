@@ -90,6 +90,7 @@ elif {Dead_person_choice} == 4:
 	elif {Blame_choice} == 2:
 		God: You've kept your reputation with the village intact at the cost of Malric's unjust exposure.
 	jump Change_scale
+leave Scale [animation="Instant Out"]
 [background arg="res://assets/images/Intro/MeetingWGod-IntroScene2.jpg" fade="0.0"]
 
 if {Scale_value} == 0:

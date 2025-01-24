@@ -46,7 +46,7 @@ func _on_dialogic_signal(argument:String):
 		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]
 		
 		await  get_tree().create_timer(2.0).timeout
-		get_tree().change_scene_to_file("res://scenes/Levels/Game_2.tscn")
+		get_tree().change_scene_to_file("res://scenes/Levels/Destinations/Village.tscn")
 		
 	elif argument == "leave_hugo":
 		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]

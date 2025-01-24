@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://0ft6wn2pxu0l"]
+[gd_scene load_steps=38 format=3 uid="uid://0ft6wn2pxu0l"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/Forest_quests.gd" id="1_eo63n"]
 [ext_resource type="Script" path="res://Scripts/Demo/demo_environment.gd" id="1_ivdn3"]
@@ -1650,5 +1650,6 @@ collision_mask = 0
 stream = ExtResource("27_q2x5h")
 autoplay = true
 script = ExtResource("28_2yb3p")
+
 [node name="Village_door" parent="." instance=ExtResource("28_010tm")]
 transform = Transform3D(0.999075, 0.0430091, 0, -0.0430091, 0.999075, 0, 0, 0, 1, -27.6147, 2.74516, -111.772)

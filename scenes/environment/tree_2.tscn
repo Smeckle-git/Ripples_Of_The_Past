@@ -13,7 +13,7 @@ shader_parameter/sprite = ExtResource("1_nlvuo")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_nm4n6"]
 height = 7.0
-radius = 2.0
+radius = 1.8
 
 [node name="Tree" type="StaticBody3D"]
 
@@ -27,5 +27,5 @@ texture_filter = 2
 texture = ExtResource("1_nlvuo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.965035, 3.5, 2.77421)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.965035, 3.5, 2.03363)
 shape = SubResource("CylinderShape3D_nm4n6")

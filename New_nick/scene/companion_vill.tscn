@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://dsdcn7dj5xb4"]
+[gd_scene load_steps=64 format=3 uid="uid://dsdcn7dj5xb4"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/companion.gd" id="1_o6vyl"]
 [ext_resource type="Texture2D" uid="uid://fbm46rjo2rxs" path="res://assets/images/sprites/Companion/cat_sprite.png" id="1_owu7i"]
@@ -13,6 +13,10 @@ radius = 0.155276
 [sub_resource type="AtlasTexture" id="AtlasTexture_rhj1a"]
 atlas = ExtResource("1_owu7i")
 region = Rect2(426, 150, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_208qy"]
+atlas = ExtResource("1_owu7i")
+region = Rect2(415, 650, 500, 500)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3rwtd"]
 atlas = ExtResource("1_owu7i")
@@ -42,7 +46,7 @@ region = Rect2(1383, 150, 500, 500)
 atlas = ExtResource("1_owu7i")
 region = Rect2(892, 650, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_208qy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_uat60"]
 atlas = ExtResource("1_owu7i")
 region = Rect2(415, 650, 500, 500)
 
@@ -66,6 +70,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_208qy")
+}],
+"loop": true,
+"name": &"Idle_side",
 "speed": 5.0
 }, {
 "frames": [{
@@ -130,13 +142,13 @@ animations = [{
 "texture": SubResource("AtlasTexture_jqh1v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_208qy")
+"texture": SubResource("AtlasTexture_uat60")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xo0mb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_208qy")
+"texture": SubResource("AtlasTexture_uat60")
 }],
 "loop": true,
 "name": &"Walking_side",
@@ -157,11 +169,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking_up",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -689,7 +696,7 @@ parameters/Idle/blend_position = Vector2(0.00166392, 1)
 parameters/Sitting/blend_position = Vector2(-0.00166392, 0.971223)
 parameters/Walking/blend_position = Vector2(-0.0014782, 0.893204)
 
-[node name="InteractionArea2" parent="." instance=ExtResource("3_vhi5a")]
+[node name="InteractionArea2" parent="." groups=["Companion"] instance=ExtResource("3_vhi5a")]
 
 [node name="Area3D" type="CollisionShape3D" parent="InteractionArea2"]
 shape = SubResource("CylinderShape3D_4bp0j")

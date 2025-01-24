@@ -41,6 +41,12 @@ func _ready() -> void:
 	vivian.interaction_area.interact = Callable(self, "_on_vivian_interact")
 	marcellus.interaction_area.interact = Callable(self, "_on_marcellus_interact")
 	favian.interaction_area.interact = Callable(self, "_on_favian_interact")
+	
+	villager_1.interaction_area.interact = Callable(self, "_on_villager_interact")
+	villager_2.interaction_area.interact = Callable(self, "_on_villager_interact")
+	villager_3.interaction_area.interact = Callable(self, "_on_villager_interact")
+	villager_4.interaction_area.interact = Callable(self, "_on_villager_interact")
+	villager_5.interaction_area.interact = Callable(self, "_on_villager_interact")
 
 	if Dialogic.VAR.get_variable("Hugo.Followed_to_rockfall") == false:
 		hugo.visible = false
@@ -74,6 +80,20 @@ func _on_dialogic_signal(argument:String):
 		thorinn.state_machine.change_state("Idle")
 		find_ian_quest.start_quest()
 	elif argument == "End_Find_Ian":
+		villager_1.visible = false
+		villager_2.visible = false
+		villager_3.visible = false
+		villager_4.visible = false
+		villager_5.visible = false
+		favian.visible = false
+		
+		villager_1.interaction_area.show_label = false
+		villager_2.interaction_area.show_label = false
+		villager_3.interaction_area.show_label = false
+		villager_4.interaction_area.show_label = false
+		villager_5.interaction_area.show_label = false
+		favian.interaction_area.show_label = false
+
 		directional_light_3d.light_color = Color("#02758f")
 		return_to_inn.start_quest()
 		hugo.visible = false
@@ -127,11 +147,13 @@ func _on_dialogic_signal(argument:String):
 		villager_4.global_position = Vector3(12, 1.5, 32)
 		villager_5.global_position = Vector3(10, 1.5, 40)
 		
-		villager_1.interaction_area.show_label = false
-		villager_2.interaction_area.show_label = false
-		villager_3.interaction_area.show_label = false
-		villager_4.interaction_area.show_label = false
-		villager_5.interaction_area.show_label = false
+		favian.visible = true
+		favian.interaction_area.show_label = true
+		villager_1.visible = true
+		villager_2.visible = true
+		villager_3.visible = true
+		villager_4.visible = true
+		villager_5.visible = true
 		
 		if Dialogic.VAR.Dead_person_choice == 2:
 			villager_1.turn_dead()
@@ -147,6 +169,9 @@ func _on_dialogic_signal(argument:String):
 			villager_3.turn_dead()
 			villager_4.turn_dead()
 			villager_5.turn_dead()
+
+func _on_villager_interact():
+	Dialogic.start("Villagers")
 
 func _on_favian_interact():
 	Dialogic.start("Reveal_of_dead")

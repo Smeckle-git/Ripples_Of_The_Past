@@ -42,6 +42,7 @@ directories/dch_directory={
 "Scale": "res://gui/Dialog/Characters/Scale.dch",
 "Thorinn": "res://gui/Dialog/Characters/Thorinn.dch",
 "Town_Leader": "res://gui/Dialog/Characters/Town_Leader.dch",
+"Villager": "res://gui/Dialog/Characters/Villager.dch",
 "Whiskers": "res://gui/Dialog/Characters/Whiskers.dch",
 "left_Malrik": "res://gui/Dialog/Characters/left_Malrik.dch",
 "vivian": "res://gui/Dialog/Timelines/vivian.dch"
@@ -60,6 +61,7 @@ directories/dtl_directory={
 "Return_to_inn": "res://gui/Dialog/Timelines/Return_to_inn.dtl",
 "Reveal_of_dead": "res://gui/Dialog/Timelines/Reveal_of_dead.dtl",
 "Tree_interaction": "res://gui/Dialog/Timelines/Tree_interaction.dtl",
+"Villagers": "res://gui/Dialog/Timelines/Villagers.dtl",
 "first_morning": "res://gui/Dialog/Timelines/first_morning.dtl",
 "flower_girl_quest": "res://gui/Dialog/Timelines/flower_girl_quest.dtl",
 "non_malric_Killing_choice": "res://gui/Dialog/Timelines/non_malric_Killing_choice.dtl",
@@ -80,6 +82,10 @@ variables={
 },
 "Blame_choice": 0,
 "Dead_person_choice": 0,
+"Favian": {
+"Talked_to": false,
+"Villagers_interaction": 0
+},
 "Hugo": {
 "Followed_to_rockfall": false
 },

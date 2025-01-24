@@ -6,7 +6,7 @@ class_name Companion
 @onready var timer: Timer = $Timer
 @onready var interaction_area: InteractionArea = $InteractionArea2
 @onready var cpu_particles_3d: GPUParticles3D = $CPUParticles3D
-const SPEED = 10.0
+const SPEED = 8
 var track = 0.0;
 @export var following := false
 @export var sitting = false

@@ -1,6 +1,6 @@
 [style name="Interaction_Style"]
 if {Astrid.ask_for_help} == 1:
-	*A tree different from all the others. Its trunk is shaped to hold something.*
+	Narrator: *A tree different from all the others. Its trunk is shaped to hold something.*
 else:
 	if {Malrik.Found_book} == true:
 		join Magic_book (Open) center

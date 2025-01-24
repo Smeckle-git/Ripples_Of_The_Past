@@ -1,5 +1,5 @@
 [style name="Interaction_Style"]
-Narrator: *Thorinn wakes up  confused, he feels a cold marble floor under him, even though his cape is covering most of his body he feels a shiver run down his back.*
+Narrator: *Thorinn wakes up confused, he feels a cold marble floor under him, even though his cape is covering most of his body he feels a shiver run down his back.*
 Narrator: *He can’t make out anything at first, but slowly, his vision clears. He’s in a strange hall, one he doesn’t recognise.*
 Narrator: *There are huge pillars surrounding him and in the middle stands a towering statue of an old, bald man.*
 [signal arg="proceed_intro_background"]
@@ -8,7 +8,7 @@ Thorinn (surprised): What... where am I? What’s going on?
 Ludix: I’m Iudix, God of Judgment. We’ve crossed paths because your mortal life ended in tragedy.
 Ludix: Now your soul will be put on the scale against the feather of fate.
 [signal arg="proceed_intro_background"]
-Narrator: *He feels a strange emptying pull. Then sees something shiny levitate from his chest towards a scale on the left of the god.*
+Narrator: *Thorinn feels a strange emptying pull. Then sees something shiny levitate from his chest towards a scale on the left of the god.*
 Ludix: The scale will determine your fate, if you will spend the rest of eternity in heaven or in hell.
 Narrator: *Even if the scale tips for the shortest amount of time, it returns to a perfectly balanced state immediately.*
 Narrator: *Then there was silence.*

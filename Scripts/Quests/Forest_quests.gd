@@ -7,6 +7,7 @@ extends Node3D
 @onready var hugo: CharacterBody3D = $Hugo
 @onready var player_camera: Player_camera = $Thorinn/PlayerCamera
 
+@onready var root = get_node("/root/Game/Loading")
 
 func _ready() -> void:
 	player_camera.default_position = Vector3(0, 11, 9)
@@ -46,7 +47,7 @@ func _on_dialogic_signal(argument:String):
 		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]
 		
 		await  get_tree().create_timer(2.0).timeout
-		get_tree().change_scene_to_file("res://scenes/Levels/Destinations/Village.tscn")
+		root.scene_loader.change_scene("Village")
 		
 	elif argument == "leave_hugo":
 		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]

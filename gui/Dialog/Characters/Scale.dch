@@ -41,6 +41,15 @@
 "offset": Vector2(-15, -6),
 "scale": 0.74,
 "scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+},
+"invis": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
 }
 },
 "scale": 1.0

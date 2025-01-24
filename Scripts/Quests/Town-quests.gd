@@ -169,6 +169,8 @@ func _on_dialogic_signal(argument:String):
 			villager_3.turn_dead()
 			villager_4.turn_dead()
 			villager_5.turn_dead()
+	elif argument == "Start_summary":
+		Dialogic.start("Final_summary")
 
 func _on_villager_interact():
 	Dialogic.start("Villagers")

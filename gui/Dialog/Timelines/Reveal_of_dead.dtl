@@ -14,7 +14,7 @@ if {Dead_person_choice} != 0:
 			Town_Leader: Malric? That explains... I'd hoped never to hear that name again.
 			Town_Leader: But if what you say is the truth, then even in the darkest of souls you can find a spark of light.
 			Town_Leader: Do be careful, even thogh he was of great help this time, following his ways will lead to a dangerous path we do not condone.
-			leave Town_Leader
+			update Town_Leader (invis)
 			Thorinn: *Turning to Malric in the shadows*
 			join Malrik rightmost
 			Malrik: A rare day, doctor. They don't hate me quite as much... for now. You have my thanks.
@@ -25,7 +25,7 @@ if {Dead_person_choice} != 0:
 		- Thank Malric in private
 			set {Blame_choice} = 3
 			Thorinn: I just did what had to be done.
-			leave Town_Leader
+			update Town_Leader (invis)
 			join Malrik rightmost
 			Thorinn: *Turning to Malric in the shadows* So...listen.
 			Thorinn: I know I didn't mention you, but know this, you have my thanks.
@@ -48,7 +48,7 @@ if {Dead_person_choice} != 0:
 			Thorinn: This failure wasn't mine alone. Malric's evil ways made this possible.
 			Town_Leader: Malric? That explains... I'd hoped never to hear that name again.
 			Thorinn: He led me astray with his twisted words!
-			leave Town_Leader
+			update Town_Leader (invis)
 			join Malrik rightmost
 			Malrik: ...!
 			Malrik: You've got no idea whose name you've just tarnished.
@@ -56,7 +56,7 @@ if {Dead_person_choice} != 0:
 			set {Blame_choice} = 3
 			Thorinn (agitated): I really did the best I could.
 			Town_Leader: Your capabilities as a doctor have proven to be less than what you've promised.
-			leave Town_Leader
+			update Town_Leader (invis)
 			Thorinn (agitated): *Turning to Malric in the shadows* So...listen.
 			join Malrik rightmost
 			Thorinn: I didn't expose you, but know this, you also had a hand in this failure and I'll never forgive you for it.
@@ -80,14 +80,14 @@ if {Dead_person_choice} != 0:
 			Town_Leader: Malric? That explains... I'd hoped never to hear that name again.
 			Thorinn: I'm not guilt free, but if Malric didn't trick me, this could've been avoided.
 			Thorinn: I will make sure not to trust Malric's misleading words from now on.
-			leave Town_Leader
+			update Town_Leader (invis)
 			join Malrik rightmost
 			Malrik: ...!
 			Malrik: You've got no idea whose name you've just tarnished.
 		- Confront Malric in private
 			set {Blame_choice} = 3
 			Thorinn: I did what was in my power.
-			leave Town_Leader
+			update Town_Leader (invis)
 			Thorinn: *Turning to Malric in the shadows* So...listen.
 			join Malrik rightmost
 			Thorinn: I didn't mention you, but know this, you had a hand in this aswell.
@@ -112,14 +112,17 @@ if {Dead_person_choice} != 0:
 			Thorinn: I had a choice to make, a terrible choice, take an innocent life or let these people die. I just couldn't cross that line.
 			Thorinn: Malric is too far gone in his ways of dark magic, there wasn't even a guarantee this was going to work.
 			Town_Leader: I understand you didn't want to give into Malric's dishonourable ways.
-			leave Town_Leader
+			update Town_Leader (invis)
 			join Malrik rightmost
 			Malrik: ...!
 			Malrik: You've got no idea whose name you've just tarnished.
-	leave --All--
+	else:
 	[signal arg="start_night"]
+	update Thorinn (invis)
+	update Town_Leader (invis)
+	update Malrik (invis)
 	[wait time="2.0"]
-	jump Final_summary/
+	[signal arg="Start_summary"]
 elif {Ian.Selected_Ian_Choice} == 0:
 	if {Favian.Talked_to} == false:
 		set {Favian.Talked_to} = true

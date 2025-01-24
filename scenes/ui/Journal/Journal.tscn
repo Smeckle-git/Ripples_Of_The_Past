@@ -140,6 +140,7 @@ _data = {
 [node name="Journal" type="Control"]
 process_mode = 3
 modulate = Color(1, 1, 1, 0)
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -199,22 +200,29 @@ metadata/_tab_index = 0
 
 [node name="Control" type="Control" parent="MarginContainer2/VBoxContainer/TabContainer/Quests"]
 anchors_preset = 0
-offset_right = 905.0
+offset_right = 652.0
 offset_bottom = 497.0
-
-[node name="quest_text" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
-layout_mode = 0
-offset_left = -3.0
-offset_top = 75.0
-offset_right = 506.0
-offset_bottom = 343.0
 
 [node name="quest_title" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 13.0
-offset_right = 380.0
-offset_bottom = 53.0
+offset_left = -35.0
+offset_top = 22.0
+offset_right = 307.0
+offset_bottom = 61.0
+
+[node name="quest_text" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 76.0
+offset_right = 282.0
+offset_bottom = 468.0
+
+[node name="quest_description" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 55.0
+offset_right = 652.0
+offset_bottom = 447.0
 
 [node name="Characters" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
 visible = false
@@ -331,10 +339,11 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0021, 1)
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 script = ExtResource("5_ojk0n")
 
 [node name="Controls" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer"]
+visible = false
 layout_mode = 2
 tab_alignment = 1
 metadata/_tab_index = 0
@@ -490,7 +499,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sound" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -511,34 +519,6 @@ layout_mode = 2
 theme_override_constants/separation = 24
 script = ExtResource("7_5a34q")
 
-[node name="MasterVolume" type="VBoxContainer" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer"]
-layout_mode = 2
-
-[node name="Sound" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume"]
-layout_mode = 2
-text = "Master Volume:"
-
-[node name="General" type="HBoxContainer" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume"]
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="MV-label" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 2
-text = "Set volume: "
-
-[node name="MV-Slider" type="HSlider" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
-layout_mode = 2
-size_flags_horizontal = 3
-value = 50.0
-
-[node name="MV-visual" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "...%"
-horizontal_alignment = 1
-
 [node name="SoundOptions" type="VBoxContainer" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer"]
 layout_mode = 2
 
@@ -550,11 +530,12 @@ text = "Music & Sound Settings:"
 layout_mode = 2
 
 [node name="M-label" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music"]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 text = "Music Volume:  "
 
 [node name="MS-Slider" type="HSlider" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 value = 100.0
@@ -569,11 +550,12 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="A-label" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience"]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 text = "Ambient Sound: "
 
 [node name="AM-Slider" type="HSlider" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 value = 100.0
@@ -588,11 +570,12 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="SFX-label" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects"]
-custom_minimum_size = Vector2(250, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 text = "Sound Effects Volume: "
 
 [node name="SFX-Slider" type="HSlider" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 value = 100.0
@@ -636,7 +619,6 @@ libraries = {
 "": SubResource("AnimationLibrary_g4opo")
 }
 
-[connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_mv_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_ms_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience/AM-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_am_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects/SFX-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_sfx_slider_value_changed"]

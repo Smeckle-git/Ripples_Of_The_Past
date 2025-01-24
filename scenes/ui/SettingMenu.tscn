@@ -22,9 +22,10 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0021, 1)
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 
 [node name="Controls" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -197,7 +198,6 @@ text = "Back to Menu"
 script = ExtResource("1_3lp24")
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -217,34 +217,6 @@ theme_override_constants/margin_bottom = 32
 layout_mode = 2
 theme_override_constants/separation = 24
 script = ExtResource("2_2kfok")
-
-[node name="MasterVolume" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer"]
-layout_mode = 2
-
-[node name="Sound" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume"]
-layout_mode = 2
-text = "Master Volume:"
-
-[node name="General" type="HBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume"]
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="MV-label" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 2
-text = "Set volume: "
-
-[node name="MV-Slider" type="HSlider" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
-layout_mode = 2
-size_flags_horizontal = 3
-value = 50.0
-
-[node name="MV-visual" type="Label" parent="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "...%"
-horizontal_alignment = 1
 
 [node name="SoundOptions" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer/SoundControlContainer"]
 layout_mode = 2
@@ -329,9 +301,6 @@ text = "Back to Menu"
 script = ExtResource("1_3lp24")
 
 [connection signal="pressed" from="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer/return-buton" to="TabContainer/Controls/MarginContainer/VBoxContainer/Back/HBoxContainer/CenterContainer/return-buton" method="_on_pressed"]
-[connection signal="drag_ended" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="." method="_on_mv_slider_drag_ended"]
-[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="." method="_on_mv_slider_value_changed"]
-[connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/MasterVolume/General/MV-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_mv_slider_value_changed"]
 [connection signal="drag_ended" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="." method="_on_ms_slider_drag_ended"]
 [connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="." method="_on_ms_slider_value_changed"]
 [connection signal="value_changed" from="TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_ms_slider_value_changed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://cbewddi7nlylt"]
+[gd_scene load_steps=74 format=3 uid="uid://cbewddi7nlylt"]
 
 [ext_resource type="Terrain3DStorage" uid="uid://dg65rwgfgee5x" path="res://scenes/Levels/Village.res" id="1_io80y"]
 [ext_resource type="Texture2D" uid="uid://caywlopemv63v" path="res://assets/images/874898150658134d8f3b33a13ff2b247_images_jpeg.webp" id="1_kmf6u"]
@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://cibu7wutpf3ib" path="res://scenes/Characters/Jeroen.tscn" id="47_eqx67"]
 [ext_resource type="AudioStream" uid="uid://xhk0s2jga8vk" path="res://addons/dialogic/Modules/Audio/Home sweet home.mp3" id="49_6ojjr"]
 [ext_resource type="Script" path="res://scenes/Levels/Destinations/audio_stream_player_2d_village.gd" id="50_kpapy"]
+[ext_resource type="PackedScene" uid="uid://dsdcn7dj5xb4" path="res://New_nick/scene/companion_vill.tscn" id="49_0vd70"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_47r1e"]
 panorama = ExtResource("1_kmf6u")
@@ -1489,6 +1490,9 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 42.988, 1.41567, 29.737
 [node name="Jeroen" parent="Character" instance=ExtResource("47_eqx67")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 8.08388, 1.28543, 35.716)
 visible = false
+
+[node name="Companion" parent="Character" instance=ExtResource("49_0vd70")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 63.2414, 3.35966, 77.2881)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -7,6 +7,7 @@ Ludix: Next soul, time of death was at 18\:12.
 Thorinn (surprised): What... where am I? What’s going on?
 Ludix: I’m Iudix, God of Judgment. We’ve crossed paths because your mortal life ended in tragedy.
 Ludix: Now your soul will be put on the scale against the feather of fate.
+[signal arg="proceed_intro_background"]
 Narrator: *Thorinn feels a strange emptying pull. Then sees something shiny levitate from his chest towards a scale on the left of the god.*
 Ludix: The scale will determine your fate, if you will spend the rest of eternity in heaven or in hell.
 Narrator: *Even if the scale tips for the shortest amount of time, it returns to a perfectly balanced state immediately.*
@@ -14,7 +15,9 @@ Narrator: *Then there was silence.*
 Narrator: *The god moves for the first time since Thorinn woke up here, it seems unnatural for the statue like being to be shuffling.*
 Narrator: *The god clears his throat and repeats*
 Ludix: Now your soul will be put on the scale against the feather of fate.
+[signal arg="proceed_intro_background"]
 Narrator: *A creepy silence and anticipation fill the space but the scale does not move.*
+[signal arg="proceed_intro_background"]
 Ludix: How odd. This has never happened before. You are an intriguing case, with both your good and bad choices holding equal influence.
 Thorinn (surprised): What's the meaning of that? Are you serious?
 Ludix: Your fate is still uncertain as the scale cannot determine your destination based on your past choices.
@@ -28,8 +31,4 @@ Ludix: As it has not been clear up until now, I will remove your ability to reme
 Ludix: You'll then have to relive some of your experiences to see what you would choose. And every choice you make, will shape your fate.
 Ludix: I have chosen to send you back to where your career began, in Rockfall.
 Ludix: Now be gone, I have more work to do.
-
-[signal arg="proceed_intro_background"]
-[signal arg="proceed_intro_background"]
-[signal arg="proceed_intro_background"]
 [signal arg="proceed_into_demo"]

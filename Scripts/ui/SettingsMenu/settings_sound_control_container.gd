@@ -24,8 +24,6 @@ var ambient_volume_value : int
 var sfx_volume_value : int
 
 func _ready() -> void:
-	master_volume_value = mv_slider.value
-	mv_visual.text  = visual_format % master_volume_value
 	
 	music_volume_value = ms_slider.value
 	ms_visual.text  = visual_format % music_volume_value

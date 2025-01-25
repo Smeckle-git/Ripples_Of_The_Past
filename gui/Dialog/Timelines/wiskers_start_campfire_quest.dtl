@@ -26,7 +26,7 @@ elif {Whiskers.Forest_Interaction_phase} == 2:
 		Whiskers: Let it be known... your choices matter. Big time. Call it karma, fate,
 		Whiskers: or cosmic scales... Every decision you make will come back to you. So, just, choose wisely.
 		Thorinn (normal): Well, that’s... oddly comforting, I guess? Are you feeling better now?
-		Whiskers: Thanks to you, I’m warmed up again. But I could use a little something to eat. Got any fish handy? Maybe cooked over that lovely fire of yours?
+		Whiskers: Thanks to you, I’m warmed up again. But I could use something to eat. Got any fish handy? Maybe cooked on that fire of yours?
 		- Sure, I could use something to eat myself.
 			Whiskers: There should be a river up ahead. See if you can catch a fish for us there.
 			[signal arg="start_fish_quest"]
@@ -54,7 +54,8 @@ elif {Whiskers.Forest_Interaction_phase} == 3:
 	Hugo: Are you perhaps a traveler?
 	Thorinn: Who are you!?
 	Hugo: I’m Hugo. I saw your campfire while collecting my ingredients for supper at my inn.
-	Thorinn: An inn? I'm actually trying to find my way to a small village called Rockfall. But I've lost my way as soon as it got darker.
+	Thorinn: An inn? I'm actually trying to find my way to a small village called Rockfall. 
+	Thorinn: But I've lost my way as soon as it got darker.
 	Hugo: You're in luck. I’ve lived in Rockfall my entire life, so I know this forest by heart.
 	Hugo: Can I help you get there? The village is not that far anymore.
 	- Yes

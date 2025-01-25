@@ -1,7 +1,7 @@
 [style name="Interaction_Style"]
-Narrator: *Thorinn wakes up confused, he feels a cold marble floor under him, even though his cape is covering most of his body he feels a shiver run down his back.*
+Narrator: *Thorinn stirs on the marble floor, the weight of a cape covering him. Yet the cold lingers, sending an uneasy shiver down his spine.* 
 Narrator: *He can’t make out anything at first, but slowly, his vision clears. He’s in a strange hall, one he doesn’t recognise.*
-Narrator: *There are huge pillars surrounding him and in the middle stands a towering statue of an old, bald man.*
+Narrator: *There are huge pillars surrounding him and in the middle is towering statue of an old, bald man.*
 [signal arg="proceed_intro_background"]
 Ludix: [b]Next soul[/b], time of death: 18:12.
 Thorinn (surprised): What... where am I? What’s going on?

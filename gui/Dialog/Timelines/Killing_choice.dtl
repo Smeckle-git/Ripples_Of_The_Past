@@ -3,8 +3,8 @@ join Thorinn leftmost
 join Malrik rightmost
 if {Malrik.Trusted_malric} == false:
 	Malrik: Even after [i]all[/i] those troubles you've gone through, we've come full circle. You're back asking me for help.
-	Malrik: I can see that you've managed to get your hands on [i]my[/i] book, you must've figured out the price of the antidote. You'll see it would've been better to [b]listen[/b] to my advice.
-	Malrik: I'm curious what path the [i]glorious[/i] doctor will take.
+	Malrik: I can see that you've managed to get your hands on [i]my[/i] book, you must've figured out the price of the antidote.
+	Malrik: You'll see it would've been better to [b]listen[/b] to my advice. I'm curious what path the [i]glorious[/i] doctor will take.
 elif {Malrik.Trusted_malric} == true:
 	Malrik: I see you've managed to collect all the papilora flowers. You've only half succeeded because that's only the easy part of the antidote.
 Malrik: Now, who will you sacrifice?

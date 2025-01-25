@@ -2,13 +2,13 @@
 if {Ian.Confrontationn_at_home} == 1:
 	join Thorinn leftmost
 	join Hugo rightmost
-	Hugo: Could you check on Ian? He lives in The pharmacy across the river. You will recogise it by the sign by  the door.
+	Hugo: Could you check on Ian? He lives in the pharmacy across the river. You will recogise it by the sign by the door.
 elif {Dead_person_choice} != 0:
 elif {Astrid.ask_for_help} == 2:
 elif {Ian.Confrontationn_at_home} == 2:
 	[signal arg="start_night"]
 	[wait time="2.0"]
-	Narrator: *A month passes. Thorinn took over the role as town doctor while slowly trying to gain more trust with the villagers*
+	Narrator: *A month passes. Thorinn took over the role as town doctor, moved into Ians pharmacy, while slowly trying to gain more trust with the villagers*
 	[signal arg="Scene_5_switch"]
 	[wait time="2.0"]
 	[signal arg="start_alinora_interaction"]

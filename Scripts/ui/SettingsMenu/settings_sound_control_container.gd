@@ -3,11 +3,6 @@ extends VBoxContainer
 # visual format
 var visual_format = " %s"
 
-# Master Volume Slider
-@onready var mv_slider: HSlider = $"MasterVolume/General/MV-Slider"
-@onready var mv_visual: Label = $"MasterVolume/General/MV-visual"
-var master_volume_value : int
-
 # Music Volume Slider
 @onready var ms_slider: HSlider = $"SoundOptions/Music/MS-Slider"
 @onready var ms_visual: Label = $"SoundOptions/Music/MS-visual"
@@ -33,17 +28,6 @@ func _ready() -> void:
 	
 	sfx_volume_value = sfx_slider.value
 	sfx_visual.text = visual_format % sfx_volume_value
-
-#func _process(delta: float) -> void:
-	#mv_visual.text  = visual_format % master_volume_value
-	#ms_visual.text  = visual_format % music_volume_value
-	#am_visual.text  = visual_format % ambient_volume_value
-	#sfx_visual.text = visual_format % sfx_volume_value
-
-
-func _on_mv_slider_value_changed(value: float) -> void:
-	master_volume_value = value
-	mv_visual.text  = visual_format % master_volume_value
 
 func _on_ms_slider_value_changed(value: float) -> void:
 	music_volume_value = value

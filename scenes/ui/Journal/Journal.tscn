@@ -619,8 +619,11 @@ libraries = {
 "": SubResource("AnimationLibrary_g4opo")
 }
 
+[connection signal="drag_ended" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer" method="_on_ms_slider_drag_ended"]
 [connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music/MS-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_ms_slider_value_changed"]
+[connection signal="drag_ended" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience/AM-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer" method="_on_am_slider_drag_ended"]
 [connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience/AM-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_am_slider_value_changed"]
+[connection signal="drag_ended" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects/SFX-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer" method="_on_sfx_slider_drag_ended"]
 [connection signal="value_changed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects/SFX-Slider" to="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer" method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/TabContainer/Settings/Reset" to="." method="_on_reset_pressed"]

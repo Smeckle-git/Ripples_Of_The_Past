@@ -1,6 +1,12 @@
 extends Player_State
 class_name PlayerWalking
 	
+@onready var walking_sound: AudioStreamPlayer2D = $"../../Walking Sound"
+
+func Enter():
+	if not walking_sound.playing:
+		walking_sound.play() 
+
 func Update(_delta:float):
 	if not target.is_on_floor():
 		state_transition.emit("falling")
@@ -8,6 +14,8 @@ func Update(_delta:float):
 		state_transition.emit("dialogue")
 	elif Input.get_axis("Walk left", "Walk right") == 0.0 and Input.get_axis("Walk forward", "Walk backwards") == 0.0:
 		state_transition.emit("idle")
+	if not walking_sound.playing:
+		walking_sound.play() 
 
 func Physics_Update(_delta: float):
 	if target:
@@ -16,4 +24,6 @@ func Physics_Update(_delta: float):
 
 		if direction.length() > 0:
 			target.velocity = direction * speed
-		
+
+func Exit():
+	walking_sound.stop()

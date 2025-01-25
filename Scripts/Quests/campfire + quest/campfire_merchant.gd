@@ -28,6 +28,7 @@ var fish_1 := load("res://scenes/environment/Fish_quest_item.tscn")
 
 # starts the quest whenever the player interacts with the campfire
 func _on_interact():
+	#print_debug("campfire interacted")
 	if find_fish_quest.quest_status == find_fish_quest.QuestStatus.reached_goal:
 		find_fish_quest.finish_quest()
 		sparkles.get_child(0).emitting = true
@@ -89,6 +90,7 @@ func spawn_wood(position : Vector3, quest : Quest) -> void:
 	add_child(wood)
 	
 	wood.position = position
+	wood.scale *= 0.5
 	wood.quest = quest
 
 func spawn_Stone(position : Vector3, quest : Quest) -> void: 
@@ -96,6 +98,7 @@ func spawn_Stone(position : Vector3, quest : Quest) -> void:
 	add_child(stone)
 	
 	stone.position = position
+	stone.scale *= 0.5
 	stone.quest = quest
 
 func spawn_Fish(position : Vector3, quest : Quest) -> void: 

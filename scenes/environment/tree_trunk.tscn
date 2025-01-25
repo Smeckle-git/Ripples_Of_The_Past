@@ -9,7 +9,7 @@ radius = 1.0
 [node name="tree_trunk" type="StaticBody3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1.25, 0)
 billboard = 1
 shaded = true
 alpha_cut = 1

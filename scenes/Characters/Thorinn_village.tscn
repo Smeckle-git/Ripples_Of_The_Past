@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://btwaj2bepu0pl"]
+[gd_scene load_steps=66 format=3 uid="uid://btwaj2bepu0pl"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/thorinn.gd" id="1_2m2tc"]
 [ext_resource type="Script" path="res://Scripts/managers/StateMachine/Player_State_machine.gd" id="2_2p0hw"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://djxw8nonun4eo" path="res://assets/images/sprites/thorinn/Thorinn_walking_up_1.png" id="18_wcqw1"]
 [ext_resource type="Texture2D" uid="uid://3ewrf4xj24mt" path="res://assets/images/sprites/thorinn/Thorinn_walking_up_3.png" id="19_khffe"]
 [ext_resource type="AudioStream" uid="uid://tqp7rndwmvqa" path="res://addons/dialogic/Example Assets/sound-effects/WalkingSound.mp3" id="20_vk7iy"]
+[ext_resource type="Script" path="res://scenes/Characters/walking_sound.gd" id="21_mxdat"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h3e7k"]
 radius = 3.0
@@ -540,3 +541,4 @@ animation = &"WalkingDown"
 
 [node name="Walking Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("20_vk7iy")
+script = ExtResource("21_mxdat")

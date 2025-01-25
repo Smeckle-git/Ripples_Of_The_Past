@@ -10,12 +10,12 @@ else:
 			[signal arg="change_tree"]
 			join Thorinn leftmost
 			join Magic_book (Closed) center
-			Thorinn (surprised): Well well well, look what we have here.
+			Thorinn (surprised): [i]Well well well,[/i] look what we have here.
 			Thorinn: This must be that all knowing book Malric was talking about.
 			Magic_book (Open): Take 3x different coloured papilora flowers and blood of a ???? soul, mix it in a bowl and then eat it after a meal.
-			Thorinn: Blood?! What kind of cure demands blood?
+			Thorinn: [b]Blood?![/b] What kind of cure demands blood?
 			Thorinn: It's the only option I've got. But is the price for salvation really worth it?
 			set {Malrik.Found_book} = true
 			[signal arg="Start_flower_quest"]
 	else:
-		Thorinn: That's odd, this wasn't here before. I probably shouldn't mess with it.
+		Thorinn: [i]That's odd,[/i] this wasn't here before. I probably shouldn't mess with it.

@@ -6,20 +6,20 @@ if {Astrid.ask_for_help} == 2:
 			join vivian rightmost
 			if {Vivian.killing_viv} == false:
 				Narrator: *Vivian hums softly, picking flowers.*
-				Thorinn: You must be Vivian. But say why are you out so late?
-				vivian: I am, you must be the traveling doctor Thorinn. And the night is peaceful. It clears my mind.
+				Thorinn: You must be [i]Vivian[/i]. But say why are you out so late?
+				vivian: I am, you must be the traveling doctor [b]Thorinn[/b]. And the night is peaceful. It clears my mind.
 				set {Vivian.killing_viv} = true
 			elif {Vivian.killing_viv} == true:
 				Narrator: *Vivian is still looking at flowers.*
-				vivian: Hello Mister Doctor. Aren't these flowers just  so pretty?
-				Thorinn: You're right, they are indeed.
+				vivian: Hello [b]Mister Doctor[/b]. Aren't these flowers just  so [i]pretty[/i]?
+				Thorinn: You're right, they are [i]indeed[/i].
 		elif {selected_character} == 2:
 			join Thorinn leftmost
 			join Astrid rightmost
 			if {Alinora¨.killing_Alin} == false:
 				Narrator: *Astrid is closing up the store, tired but content.*
 				Thorinn: Long day?
-				Astrid: Books don’t sell themselves. But it’s honest work. Now good night.
+				Astrid: Books don’t [i]sell themselves[/i]. But it’s honest work. Now [i]good night[/i].
 				set {Alinora¨.killing_Alin} = true
 			elif {Alinora¨.killing_Alin} == true:
 				Narrator: *Standing in front of the darkened shop of Astrid, Thorinn realises she must've gone to sleep.*
@@ -28,9 +28,9 @@ if {Astrid.ask_for_help} == 2:
 			join Nick rightmost
 			if {Nick.killing_nick} == false:
 				Narrator: *Marcellus crouches, inspecting traps, smirking.*
-				Thorinn: Hunting out of season, are we?
-				Nick: Laws are for fools. A man’s gotta eat.
+				Thorinn: Hunting out of season, [i]are we[/i]?
+				Nick: [b]Laws are for fools[/b]. A man’s gotta eat.
 				set {Nick.killing_nick} = true
 			elif {Nick.killing_nick} == true:
-				Nick: Leave! You will shoo away all my prey!
+				Nick: Leave! You will shoo away all my [i]prey[/i]!
 				Thorinn (agitated): ...

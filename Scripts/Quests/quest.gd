@@ -6,6 +6,7 @@ func start_quest() -> void:
 		quest_status = QuestStatus.started
 		QuestTitle.text = quest_name
 		QuestDescription.text = str(collect_obj) + "/" + str(amount_obj) +" "+ quest_description
+		QuestDetails.text = quest_details
 		
 func update_goal()-> void:
 	if quest_status == QuestStatus.started || quest_status == QuestStatus.update_goal:
@@ -24,7 +25,6 @@ func reached_goal() -> void:
 func finish_quest() -> void:
 	if quest_status == QuestStatus.reached_goal:
 		quest_status = QuestStatus.finished
-		QuestLog.visible = false
 		GameHudManager.reputation += Reputation_amount 
 		update_karma()
 		print_debug(KarmaGlobal.KARMA_SCORE)

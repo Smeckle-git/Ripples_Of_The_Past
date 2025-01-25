@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ddu443etw7oh2"]
+[gd_scene load_steps=31 format=3 uid="uid://ddu443etw7oh2"]
 
 [ext_resource type="Script" path="res://scenes/ui/Journal/journal.gd" id="1_kjdks"]
 [ext_resource type="Shader" path="res://assets/shaders/journal/Journal.gdshader" id="2_nbn3k"]
@@ -60,6 +60,8 @@ default_font = ExtResource("4_jcik7")
 Button/styles/hover = SubResource("StyleBoxFlat_bbwbx")
 Button/styles/normal = SubResource("StyleBoxFlat_rtmpa")
 Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 18
+RichTextLabel/fonts/normal_font = ExtResource("4_jcik7")
 TabContainer/colors/font_selected_color = Color(1, 1, 1, 1)
 TabContainer/colors/font_unselected_color = Color(1, 1, 1, 1)
 TabContainer/constants/outline_size = 5
@@ -71,10 +73,60 @@ TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_t50xt")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_86b73")
 TabContainer/styles/tabbar_background = SubResource("StyleBoxEmpty_11kei")
 
+[sub_resource type="LabelSettings" id="LabelSettings_1efr3"]
+font = ExtResource("4_jcik7")
+font_size = 21
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vqfxq"]
+font = ExtResource("4_jcik7")
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nwlei"]
+font = ExtResource("4_jcik7")
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
 [sub_resource type="Theme" id="Theme_hl7y2"]
 Label/colors/font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_770di"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dblfy"]
+font = ExtResource("4_jcik7")
+font_size = 21
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5cp0k"]
+font = ExtResource("4_jcik7")
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wnu13"]
+font = ExtResource("4_jcik7")
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_roq6x"]
+font = ExtResource("4_jcik7")
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_617ys"]
+font = ExtResource("4_jcik7")
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_miyea"]
+font = ExtResource("4_jcik7")
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3w1m6"]
+font = ExtResource("4_jcik7")
+font_size = 18
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_6x6j5"]
@@ -191,10 +243,9 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_wlnwy")
-current_tab = 2
+current_tab = 0
 
 [node name="Quests" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -203,19 +254,48 @@ anchors_preset = 0
 offset_right = 652.0
 offset_bottom = 497.0
 
+[node name="QuestLog" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = 24.0
+offset_right = 123.0
+offset_bottom = 67.0
+text = "Quest Log:"
+label_settings = SubResource("LabelSettings_1efr3")
+
+[node name="QuestTitle" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 72.0
+offset_right = 120.0
+offset_bottom = 115.0
+text = "Title:"
+label_settings = SubResource("LabelSettings_vqfxq")
+
 [node name="quest_title" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
 layout_mode = 0
-offset_left = -35.0
-offset_top = 22.0
-offset_right = 307.0
-offset_bottom = 61.0
+offset_left = -15.0
+offset_top = 101.0
+offset_right = 285.0
+offset_bottom = 140.0
+text = "No Current Active Quest"
+
+[node name="QuestObjective" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 144.0
+offset_right = 120.0
+offset_bottom = 187.0
+text = "Objective(s):"
+label_settings = SubResource("LabelSettings_nwlei")
 
 [node name="quest_text" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
 layout_mode = 0
-offset_left = -16.0
-offset_top = 76.0
-offset_right = 282.0
-offset_bottom = 468.0
+offset_left = -15.0
+offset_top = 170.0
+offset_right = 285.0
+offset_bottom = 466.0
+text = "No objectives"
 
 [node name="quest_description" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/TabContainer/Quests/Control"]
 layout_mode = 0
@@ -223,6 +303,7 @@ offset_left = 354.0
 offset_top = 55.0
 offset_right = 652.0
 offset_bottom = 447.0
+text = "qweqweqeq"
 
 [node name="Characters" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
 visible = false
@@ -323,6 +404,7 @@ label_settings = SubResource("LabelSettings_770di")
 autowrap_mode = 2
 
 [node name="Settings" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -339,11 +421,10 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0021, 1)
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 script = ExtResource("5_ojk0n")
 
 [node name="Controls" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer"]
-visible = false
 layout_mode = 2
 tab_alignment = 1
 metadata/_tab_index = 0
@@ -499,6 +580,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sound" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -507,6 +589,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -31.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 32
@@ -525,14 +608,16 @@ layout_mode = 2
 [node name="MS-Title" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions"]
 layout_mode = 2
 text = "Music & Sound Settings:"
+label_settings = SubResource("LabelSettings_dblfy")
 
 [node name="Music" type="HBoxContainer" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions"]
 layout_mode = 2
 
 [node name="M-label" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music"]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 text = "Music Volume:  "
+label_settings = SubResource("LabelSettings_5cp0k")
 
 [node name="MS-Slider" type="HSlider" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Music"]
 custom_minimum_size = Vector2(250, 0)
@@ -544,15 +629,17 @@ value = 100.0
 layout_mode = 2
 size_flags_horizontal = 3
 text = "...%"
+label_settings = SubResource("LabelSettings_wnu13")
 horizontal_alignment = 1
 
 [node name="Ambience" type="HBoxContainer" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions"]
 layout_mode = 2
 
 [node name="A-label" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience"]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 text = "Ambient Sound: "
+label_settings = SubResource("LabelSettings_roq6x")
 
 [node name="AM-Slider" type="HSlider" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/Ambience"]
 custom_minimum_size = Vector2(250, 0)
@@ -564,15 +651,17 @@ value = 100.0
 layout_mode = 2
 size_flags_horizontal = 3
 text = "...%"
+label_settings = SubResource("LabelSettings_617ys")
 horizontal_alignment = 1
 
 [node name="SoundEffects" type="HBoxContainer" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions"]
 layout_mode = 2
 
 [node name="SFX-label" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects"]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 text = "Sound Effects Volume: "
+label_settings = SubResource("LabelSettings_miyea")
 
 [node name="SFX-Slider" type="HSlider" parent="MarginContainer2/VBoxContainer/TabContainer/Settings/TabContainer/Sound/MarginContainer/SoundControlContainer/SoundOptions/SoundEffects"]
 custom_minimum_size = Vector2(250, 0)
@@ -584,6 +673,7 @@ value = 100.0
 layout_mode = 2
 size_flags_horizontal = 3
 text = "...%"
+label_settings = SubResource("LabelSettings_3w1m6")
 horizontal_alignment = 1
 
 [node name="Continue" type="Button" parent="MarginContainer2/VBoxContainer/TabContainer/Settings"]

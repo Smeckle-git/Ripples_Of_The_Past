@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://gn2wet1nisjq"]
+
+[ext_resource type="Script" path="res://Scripts/Demo/Game.gd" id="1_qyr1s"]
+[ext_resource type="PackedScene" uid="uid://bgofflk61vtx8" path="res://scenes/ui/Loading_Screen/loading_screens.tscn" id="2_pkfgk"]
+[ext_resource type="PackedScene" uid="uid://bd7lvx5fmmc5q" path="res://scenes/Levels/Destinations/level.tscn" id="3_xwloq"]
+[ext_resource type="PackedScene" uid="uid://ddu443etw7oh2" path="res://scenes/ui/Journal/Journal.tscn" id="4_pfjdc"]
+
+[node name="Game" type="Node"]
+process_mode = 3
+script = ExtResource("1_qyr1s")
+
+[node name="Loading" parent="." instance=ExtResource("2_pkfgk")]
+
+[node name="Level" parent="." instance=ExtResource("3_xwloq")]
+process_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+
+[node name="Journal" parent="CanvasLayer" instance=ExtResource("4_pfjdc")]

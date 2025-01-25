@@ -1,12 +1,14 @@
 extends Control
 
 @onready var self_layer = $".."
+@onready var quest_manager = QuestManager
 
 @onready var _continue: Button = $MarginContainer2/VBoxContainer/TabContainer/Settings/Continue
 @onready var root = get_tree().current_scene
 
 @onready var quest_text: RichTextLabel = $MarginContainer2/VBoxContainer/TabContainer/Quests/Control/quest_text
 @onready var quest_title: RichTextLabel = $MarginContainer2/VBoxContainer/TabContainer/Quests/Control/quest_title
+@onready var quest_details: RichTextLabel = $MarginContainer2/VBoxContainer/TabContainer/Quests/Control/quest_description
 
 @onready var quests: TabBar = $MarginContainer2/VBoxContainer/TabContainer/Quests
 @onready var settings: Control = $MarginContainer2/VBoxContainer/TabContainer/Settings
@@ -60,15 +62,31 @@ func _process(_delta: float) -> void:
 func Quest():
 	var temp_title = GameHudManager.get_node("QuestLog/HUD/MarginContainer/Quest/MarginContainer/quest title")
 	var temp_text = GameHudManager.get_node("QuestLog/HUD/MarginContainer/Quest/MarginContainer/quest text")
+	var temp_details = GameHudManager.get_node("QuestLog/HUD/MarginContainer/Quest/MarginContainer/quest details")
 	
-	quest_text.text = temp_text.text
 	quest_title.text = temp_title.text
+	quest_text.text = temp_text.text
+	quest_details.text = temp_details.text
+
 
 func _on_reset_pressed() -> void:
 	_on_continue_pressed()
 	for child in root.get_children():
-		print("Found node: ",child.name)
-		for n in child.get_children():
-			if n.name == "Thorinn":
-				print_debug("manfound")
-				n.global_transform.origin.z += 5
+		if child.name == "Level":
+			for n in child.get_children():
+				if n.name == "Thorinn":
+					print_debug("manfound")
+					n.global_transform.origin.z += 0.5
+		elif child.name == "Village":
+			for char in child.get_children():
+				if char.name == "Character":
+					for n in char.get_children():
+						if n.name == "Thorinn":
+							print_debug("manfound")
+							n.global_transform.origin.x += 0.5
+
+
+func _on_button_pressed() -> void:
+	pause()
+	self_layer.visible = true
+	quests.visible = true

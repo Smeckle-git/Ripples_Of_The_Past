@@ -43,8 +43,6 @@ func remap_keys():
 		if InputMap.has_action(key):
 			InputMap.action_erase_events(key)
 	
-	print(InputMap.action_get_events("Walk forward"))
-	
 	for key in keys:
 		var event_str = config.get_value("keybinding", key)
 		key = key.trim_suffix("2")
@@ -52,8 +50,6 @@ func remap_keys():
 			var input_event = InputEventKey.new()
 			input_event.keycode = OS.find_keycode_from_string(event_str)
 			InputMap.action_add_event(key, input_event)
-	
-	print(InputMap.action_get_events("Walk forward"))
 
 
 #functions to save to file
@@ -66,11 +62,15 @@ func save_video_setting(key: String, value):
 	config.save(SETTINGS_FILE_PATH)
 
 func save_keybinding(action: StringName, event: InputEvent):
-	var event_str
-	if event is InputEvent:
+	var event_str = ""
+	
+	if event is InputEventKey:  # Keyboard/Key input
 		event_str = OS.get_keycode_string(event.physical_keycode)
-	config.set_value("keybinding", action, event_str)
-	config.save(SETTINGS_FILE_PATH)
+	if event is InputEventJoypadButton:  # Joypad button input
+		print_debug("pressed a controller key")
+		event_str = "JoypadButton:" + str(event.button_index)
+	if event is InputEventJoypadMotion:  # Joypad axis motion
+		event_str = "JoypadAxis:" + str(event.axis)
 
 
 #functions to load from file

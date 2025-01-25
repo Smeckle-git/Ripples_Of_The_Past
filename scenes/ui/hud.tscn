@@ -231,6 +231,15 @@ bbcode_enabled = true
 text = "Quest log"
 scroll_active = false
 
+[node name="quest details" type="RichTextLabel" parent="MarginContainer/Quest/MarginContainer"]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
+size_flags_vertical = 8
+theme = SubResource("Theme_d1tx7")
+bbcode_enabled = true
+text = "Quest details"
+scroll_active = false
+
 [node name="Screen" type="Control" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3

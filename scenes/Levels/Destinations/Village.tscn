@@ -1325,18 +1325,19 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 74.3594, 1.84293, 67.71
 [node name="Find_ian_quest" type="Node3D" parent="Quests"]
 script = ExtResource("14_i1ok3")
 quest_name = "Talk to Ian"
-quest_description = "he lives in the pharmacy over the river"
+quest_description = "He lives in the pharmacy over the river. There's a sign by the door. "
 amount_obj = 1
 
 [node name="Return_to_inn" type="Node3D" parent="Quests"]
 script = ExtResource("14_i1ok3")
 quest_name = "Spend another night at the inn"
+quest_description = "The inn is at the entrance to the village."
 amount_obj = 1
 
 [node name="Find_book_quest" type="Node3D" parent="Quests"]
 script = ExtResource("14_i1ok3")
-quest_name = "Find another way to cure the villagers"
-quest_description = "Malric mentioned something about a book."
+quest_name = "Find a different way to cure the villagers"
+quest_description = "Malric mentioned something about an all knowing book."
 amount_obj = 1
 
 [node name="Collectflowers" type="Node3D" parent="Quests"]
@@ -1360,8 +1361,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4191, 1.26401, 25.8032)
 
 [node name="Find_malric" type="Node3D" parent="Quests"]
 script = ExtResource("14_i1ok3")
-quest_name = "Talk to the stranger in the woods"
-quest_description = "Malric might know a solution for the curse"
+quest_name = "Talk to the dark mage in the woods"
+quest_description = "Malric might know a solution for the curse."
 amount_obj = 1
 
 [node name="Buildings" type="Node3D" parent="."]

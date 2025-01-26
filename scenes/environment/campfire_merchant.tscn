@@ -115,9 +115,12 @@ shape = SubResource("CylinderShape3D_4honw")
 [node name="Find_materials_quest" type="Node3D" parent="."]
 script = ExtResource("3_dgjng")
 quest_name = "Make a campfire"
-quest_description = "Find sticks and stones to start a campfire."
-reached_goal_text = "Go back to the campfire."
-amount_obj = 8
+quest_description = "Find sticks and stones to start a campfire"
+quest_details = "Its getting dark and pretty cold. I should collect materials to make a campfire.
+
+I would need a decent amount if sticks and stones. Luckaly the forest should have everything i need, lets have a look around!"
+reached_goal_text = "Go back to the campfire"
+amount_obj = 5
 Karma_Gained = 5
 
 [node name="Find_fish_quest" type="Node3D" parent="."]

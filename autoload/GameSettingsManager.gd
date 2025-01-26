@@ -15,7 +15,7 @@ func _ready() -> void:
 		config.set_value("keybinding", "Walk right", "Right")
 		config.set_value("keybinding", "Walk right2", "D")
 		config.set_value("keybinding", "Interact", "E")
-		config.set_value("keybinding", "Interact2", "")
+		config.set_value("keybinding", "Interact2", "Space")
 		config.set_value("keybinding", "Journal", "J")
 		config.set_value("keybinding", "Journal2", "")
 		config.set_value("keybinding", "Pause", "Escape")

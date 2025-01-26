@@ -9,6 +9,8 @@ extends Control
 var IntroBackgrounds: Array = []
 var current_background_index: int = 0
 
+@onready var loading: Node = $"../Loading/SceneLoader" #New
+@onready var canvas_control: Control = $"." #New
 # disables the devkeys
 # TODO: as a late fix, make a global variable for devmode to enable / disable all the debug keys!!!
 var devMode : bool = 0
@@ -62,4 +64,5 @@ func _on_dialogic_event(argument : String):
 	if argument == "proceed_intro_background":
 		_next_background()
 	if argument == "proceed_into_demo":
-		get_tree().change_scene_to_file("res://scenes/Levels/Game.tscn")
+		loading.change_scene("level") #New
+		#get_tree().change_scene_to_file("res://scenes/Levels/Game.tscn")

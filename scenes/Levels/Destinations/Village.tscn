@@ -1346,7 +1346,8 @@ script = ExtResource("15_f0ldj")
 [node name="Find_flowers_quest" type="Node3D" parent="Quests/Collectflowers"]
 script = ExtResource("14_i1ok3")
 quest_name = "Find papilora around town."
-quest_description = "Flowers collected.      Get to know the villagers."
+quest_description = "Flowers collected. 
+[Optional] Get to know the villagers."
 reached_goal_text = "Return to Malric and choose the blood sacrifice."
 amount_obj = 3
 

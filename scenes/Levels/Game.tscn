@@ -1,9 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://gn2wet1nisjq"]
+[gd_scene load_steps=14 format=3 uid="uid://gn2wet1nisjq"]
 
 [ext_resource type="Script" path="res://Scripts/Demo/Game.gd" id="1_qyr1s"]
 [ext_resource type="PackedScene" uid="uid://bgofflk61vtx8" path="res://scenes/ui/Loading_Screen/loading_screens.tscn" id="2_pkfgk"]
-[ext_resource type="PackedScene" uid="uid://0ft6wn2pxu0l" path="res://scenes/Levels/Destinations/level.tscn" id="3_xwloq"]
+[ext_resource type="PackedScene" uid="uid://b8tg243b5gjro" path="res://scenes/Levels/Destinations/Intro.tscn" id="3_2i1vf"]
 [ext_resource type="PackedScene" uid="uid://ddu443etw7oh2" path="res://scenes/ui/Journal/Journal.tscn" id="4_pfjdc"]
+[ext_resource type="Texture2D" uid="uid://ba75e1klwo158" path="res://assets/images/sprites/Journal2.png" id="5_3jxex"]
+[ext_resource type="Script" path="res://scenes/Levels/journal_icon_group.gd" id="5_swh3h"]
+[ext_resource type="Script" path="res://scenes/Levels/questupdate_canvas.gd" id="7_wf0df"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5t6u2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h20b4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wxf5o"]
+
+[sub_resource type="Theme" id="Theme_hy73m"]
+Button/colors/icon_focus_color = Color(1, 1, 1, 0)
+Button/styles/focus = SubResource("StyleBoxEmpty_5t6u2")
+Button/styles/normal = SubResource("StyleBoxEmpty_h20b4")
+Button/styles/pressed = SubResource("StyleBoxEmpty_wxf5o")
+
+[sub_resource type="LabelSettings" id="LabelSettings_oqdl3"]
+font_size = 20
+font_color = Color(0.564706, 0.329412, 0.235294, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uhwxi"]
+font_size = 80
+font_color = Color(1, 0, 0, 1)
 
 [node name="Game" type="Node"]
 process_mode = 3
@@ -11,11 +34,97 @@ script = ExtResource("1_qyr1s")
 
 [node name="Loading" parent="." instance=ExtResource("2_pkfgk")]
 
-[node name="Level" parent="." instance=ExtResource("3_xwloq")]
-process_mode = 1
+[node name="Intro" parent="." instance=ExtResource("3_2i1vf")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
 visible = false
 
 [node name="Journal" parent="CanvasLayer" instance=ExtResource("4_pfjdc")]
+
+[node name="JournalIconLayer" type="CanvasLayer" parent="."]
+
+[node name="JournalIconGroup" type="Control" parent="JournalIconLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 114.0
+offset_bottom = 89.0
+script = ExtResource("5_swh3h")
+
+[node name="MarginContainer" type="MarginContainer" parent="JournalIconLayer/JournalIconGroup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_hy73m")
+
+[node name="TextureRect" type="TextureRect" parent="JournalIconLayer/JournalIconGroup/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_3jxex")
+expand_mode = 3
+
+[node name="Button" type="Button" parent="JournalIconLayer/JournalIconGroup/MarginContainer"]
+layout_mode = 2
+flat = true
+
+[node name="Label" type="Label" parent="JournalIconLayer/JournalIconGroup"]
+layout_mode = 2
+offset_left = -20.0
+offset_top = 23.0
+offset_right = 79.0
+offset_bottom = 51.0
+label_settings = SubResource("LabelSettings_oqdl3")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="JournalIconLayer/JournalIconGroup"]
+layout_mode = 2
+offset_left = 62.0
+offset_top = -62.0
+offset_right = 96.0
+offset_bottom = 48.0
+text = "."
+label_settings = SubResource("LabelSettings_uhwxi")
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="QuestUpdateLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="QuestUpdateLayer"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 151.0
+offset_right = -149.0
+offset_bottom = 39.0
+grow_horizontal = 2
+script = ExtResource("7_wf0df")
+
+[node name="MarginContainer" type="MarginContainer" parent="QuestUpdateLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="QuestUpdateLayer/Control/MarginContainer"]
+layout_mode = 2
+text = "Quest Objective Updated"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="QuestUpdateLayer/Control/MarginContainer"]
+layout_mode = 2
+text = "New Quest Started!"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="QuestUpdateLayer/Control/MarginContainer"]
+layout_mode = 2
+text = "Quest completed!"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="JournalIconLayer/JournalIconGroup/MarginContainer/Button" to="CanvasLayer/Journal" method="_on_button_pressed"]

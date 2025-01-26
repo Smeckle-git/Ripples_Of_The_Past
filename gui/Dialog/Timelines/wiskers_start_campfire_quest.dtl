@@ -48,7 +48,7 @@ elif {Whiskers.Forest_Interaction_phase} == 3:
 	Hey!
 	[signal arg="thorinn_looks_right"]
 	Thorinn: !!!
-	[wait time="2.0"]
+	[wait time="3.0"]
 	join Hugo rightmost
 	Hugo: Evening, stranger. You don’t look like you’re from around here.
 	Hugo: Are you perhaps a traveler?

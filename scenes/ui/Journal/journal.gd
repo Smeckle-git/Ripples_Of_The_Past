@@ -81,9 +81,9 @@ func _on_reset_pressed() -> void:
 					print_debug("manfound")
 					n.global_transform.origin.z += 0.5
 		elif child.name == "Village":
-			for char in child.get_children():
-				if char.name == "Character":
-					for n in char.get_children():
+			for chars in child.get_children():
+				if chars.name == "Character":
+					for n in chars.get_children():
 						if n.name == "Thorinn":
 							print_debug("manfound")
 							n.global_transform.origin.x += 0.5

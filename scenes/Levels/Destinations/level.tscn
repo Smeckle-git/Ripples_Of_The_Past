@@ -1424,6 +1424,7 @@ collision_mask = 0
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("27_q2x5h")
 autoplay = true
+parameters/looping = true
 script = ExtResource("28_2yb3p")
 
 [node name="Village_door" parent="." instance=ExtResource("28_010tm")]

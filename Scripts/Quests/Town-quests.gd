@@ -47,7 +47,7 @@ func _ready() -> void:
 	villager_3.interaction_area.interact = Callable(self, "_on_villager_interact")
 	villager_4.interaction_area.interact = Callable(self, "_on_villager_interact")
 	villager_5.interaction_area.interact = Callable(self, "_on_villager_interact")
-
+	
 	if Dialogic.VAR.get_variable("Hugo.Followed_to_rockfall") == false:
 		hugo.visible = false
 
@@ -55,9 +55,13 @@ func _ready() -> void:
 	thorinn.state_machine.change_state("follow")
 	hugo.move_to_location = [Vector3(78.838, 2.57, 67.381), Vector3(74.978, 2.57, 70.043), Vector3(71.93, 3.52, 71.431), Vector3(64.001, 3.52, 77.358), Vector3(57.87, 3.52, 77.358), Vector3(54.056, 1.957, 75.402), Vector3(46.614, 1.557, 67.844), Vector3(39.94, 1.557, 64.231)]
 	
-	companion.following = true
-	companion.interaction_area.interact = Callable(companion, "_on_interact")
-	companion.interaction_area.action_name = "pat"
+	if Dialogic.VAR.get_variable("Whiskers.Shoo_away") == true:
+		companion.following = false
+		companion.global_position = Vector3(26, 1.2, 31)
+	else:
+		companion.following = true
+		companion.interaction_area.interact = Callable(companion, "_on_interact")
+		companion.interaction_area.action_name = "pat"
 
 
 func _on_dialogic_signal(argument:String):
@@ -120,6 +124,8 @@ func _on_dialogic_signal(argument:String):
 		tree.switch_sprite()
 		find_book_quest.finish_quest()
 		collectflowers.start()
+	elif argument == "Hide_astrid":
+		astrid.visible = false
 	elif argument == "Final_reveal":
 		thorinn.global_position = Vector3(42,1.6,-4)
 		

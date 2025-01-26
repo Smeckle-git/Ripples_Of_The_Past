@@ -20,6 +20,7 @@ if {Astrid.ask_for_help} == 2:
 				Narrator: *Astrid is closing up the store, tired but content.*
 				Thorinn: Long day?
 				Astrid: Books don’t [i]sell themselves[/i]. But it’s honest work. Now [i]good night[/i].
+				[signal arg="Hide_astrid"]
 				set {Alinora¨.killing_Alin} = true
 			elif {Alinora¨.killing_Alin} == true:
 				Narrator: *Standing in front of the darkened shop of Astrid, Thorinn realises she must've gone to sleep.*

@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://bsiakj4d6biro"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/chicken.gd" id="1_cgr2k"]
+[ext_resource type="Texture2D" uid="uid://djge5tbxsftrt" path="res://assets/images/sprites/Chicken/Chicken_2_stand.png" id="1_w10c8"]
+[ext_resource type="Texture2D" uid="uid://csvon7l8vkpps" path="res://assets/images/sprites/Chicken/chicken_2_run.png" id="2_l4axx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3dy1"]
+atlas = ExtResource("1_w10c8")
+region = Rect2(0, 0, 2640, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulm07"]
+atlas = ExtResource("2_l4axx")
+region = Rect2(0, 0, 2640, 2000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t6vqy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3dy1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulm07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3dy1")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wha13"]
+radius = 3.0
+height = 10.0
+
+[node name="Chicken" type="CharacterBody3D"]
+script = ExtResource("1_cgr2k")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+billboard = 2
+shaded = true
+alpha_antialiasing_mode = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_t6vqy")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_wha13")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

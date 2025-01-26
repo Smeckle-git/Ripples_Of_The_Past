@@ -57,6 +57,7 @@ if {Dead_person_choice} == 1:
 elif {Dead_person_choice} == 2:
 	God: You took the life of a criminal, [b]yet[/b] it left four dead.
 	set {Scale_value} -= 3
+	jump Change_scale
 	if {Blame_choice} == 1:
 		God: You were brave and stood by [i]your[/i] mistake.
 		God: You even shouldered the whole blame, shielding Malric from [i]further disgrace[/i].
@@ -83,6 +84,7 @@ elif {Dead_person_choice} == 3:
 elif {Dead_person_choice} == 4:
 	God: You let [b]five people[/b] [i]die[/i]. Altough no one was sacrificed.
 	set {Scale_value} -= 2
+	jump Change_scale
 	if {Blame_choice} == 1:
 		God: You made the effort to find the cure.
 		God: You [i]could've[/i] faulted Malric, but you kept his involvement to yourself.

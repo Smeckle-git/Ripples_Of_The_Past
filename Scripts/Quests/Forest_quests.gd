@@ -35,7 +35,7 @@ func _on_dialogic_signal(argument:String):
 	elif argument == "hugo_encounter":
 		Dialogic.VAR.Whiskers.Forest_Interaction_phase += 1
 		Dialogic.start("wiskers_start_campfire_quest")
-		hugo.global_position = Vector3(1,2.5,62)
+		hugo.global_position = Vector3(14,2.5,-10)
 		hugo.visible = true
 		hugo.move_to_location = [thorinn.global_position + Vector3(1,0,0)]
 		Dialogic.start("wiskers_start_campfire_quest")

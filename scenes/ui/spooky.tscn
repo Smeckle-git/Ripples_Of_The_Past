@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx461jbnpm1h7"]
+
+[ext_resource type="Texture2D" uid="uid://cgl44i7yedw18" path="res://assets/images/Spooky/VewyScawy.jpg" id="1_hxi51"]
+
+[node name="Spooky" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 1
+texture = ExtResource("1_hxi51")

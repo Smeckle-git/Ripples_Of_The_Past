@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ykk6pnf13i7v"]
+
+[ext_resource type="ArrayMesh" uid="uid://d11syclfp4sgb" path="res://assets/Objects/Outside_corner.obj" id="1_i1ivy"]
+[ext_resource type="Texture2D" uid="uid://bt01c48lgl5nn" path="res://assets/images/roads/Grass_textured.jpg" id="2_ypmfu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h13gn"]
+albedo_texture = ExtResource("2_ypmfu")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tvh44"]
+margin = 0.0
+points = PackedVector3Array(0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5)
+
+[node name="Ground3" type="MeshInstance3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.00139427, 5.96046e-08, -0.000808358)
+mesh = ExtResource("1_i1ivy")
+surface_material_override/0 = SubResource("StandardMaterial3D_h13gn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_tvh44")

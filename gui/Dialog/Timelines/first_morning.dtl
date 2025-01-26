@@ -1,0 +1,33 @@
+[style name="Interaction_Style"]
+join Thorinn (normal) leftmost
+if {Hugo.Followed_to_rockfall} == false:
+	Thorinn: This must be Hugo's inn.
+	Narrator: *knock knock*
+	join Hugo rightmost
+	[signal arg="show_hugo"]
+	Hugo: [i]Look who we have here[/i], seems like you've found your way.
+join Hugo rightmost
+Hugo: Come on in, I'll get you your room ready.
+leave --All--
+[signal arg="start_night"]
+[wait time="2.0"]
+Narrator: *Thorinn spends the night at the inn*
+[signal arg="change_to_day_light"]
+[signal arg="end-night"]
+[wait time="2.0"]
+join Thorinn leftmost
+join Hugo rightmost
+Hugo: Morning, traveler! How was your sleep?
+Thorinn: It was good. The bed was a welcome change after spending days in the woods.
+Hugo: Glad to hear. What brings you to Rockfall?
+Thorinn: Mhhh...
+Thorinn: I’m a [i]doctor[/i]. I thought a remote village like this might benefit from my skills. Medical knowledge can be hard to come by in places like this.
+Hugo: Hmm... What a [i]coincidence[/i]. Ian, our pharmacist, has fallen ill. Perhaps you could visit him. See if there’s anything you can do to help?
+Thorinn: I’d be happy to help. Where can I find him?
+Hugo: The pharmacy is the building [b]across[/b] the river. You will recognise it by the sign by the door. The door’s always open.
+Hugo: Tell Ian I sent you, he’ll trust you more that way.
+Thorinn (surprised): Why [i]wouldn’t[/i] he trust me?
+Hugo: This town doesn’t welcome strangers easily. You’ll see soon enough.
+Hugo: But if there is [i]anything[/i] I can help you with, don't hesitate to ask. You would be surprised about the secrets this village holds.
+set {Hugo.Talked_already} = true
+[signal arg="Start_Find_Ian"]

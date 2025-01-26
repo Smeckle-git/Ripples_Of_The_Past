@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6bo32qfcu4no"]
+
+[ext_resource type="Script" path="res://scenes/Characters/NPC.gd" id="1_0f073"]
+[ext_resource type="Texture2D" uid="uid://cj7qjlieowl6t" path="res://assets/images/sprites/Nick_sprite.png" id="1_uux1n"]
+[ext_resource type="Texture2D" uid="uid://dyn0lyo87gywf" path="res://assets/images/sprites/Passed_villager.png" id="3_16ga2"]
+[ext_resource type="Script" path="res://Scripts/ui/interaction_area.gd" id="3_ipfce"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vm1pk"]
+radius = 0.155276
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0xnxu"]
+height = 37.19
+radius = 12.816
+
+[node name="Marcellus" type="CharacterBody3D"]
+script = ExtResource("1_0f073")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -7.79332, 0, 8.02627)
+billboard = 1
+shaded = true
+alpha_cut = 2
+texture = ExtResource("1_uux1n")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, -3.15055, 0)
+visible = false
+billboard = 1
+shaded = true
+alpha_cut = 2
+texture = ExtResource("3_16ga2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.420316, 0)
+shape = SubResource("SphereShape3D_vm1pk")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+collision_mask = 2
+script = ExtResource("3_ipfce")
+show_label = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+shape = SubResource("CylinderShape3D_0xnxu")
+
+[connection signal="body_entered" from="InteractionArea" to="InteractionArea" method="_on_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="InteractionArea" method="_on_body_exited"]

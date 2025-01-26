@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkvxdnm5kledk"]
+
+[ext_resource type="Texture2D" uid="uid://b5xxtr8ofnlm3" path="res://assets/images/Village/Buildings/Buildings_House1.png" id="1_yuqab"]
+[ext_resource type="Texture2D" uid="uid://dfip1h30yqlaa" path="res://assets/images/Village/Buildings/144c7f54-e506-4536-a4b8-f675937dfdf5.png" id="2_pdgce"]
+[ext_resource type="Texture2D" uid="uid://q7oa2jgomuo7" path="res://assets/images/Village/Buildings/a878cb1f-3139-43cb-8c77-d7bc464f46b1.png" id="3_asbks"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wfdg"]
+size = Vector3(16, 15.5447, 16.2749)
+
+[node name="BuildingInn" type="StaticBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+shaded = true
+texture = ExtResource("1_yuqab")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 0.962277, 0, 1, 0, -4.37114e-08, -7.52231, -0.192554, -7.45603)
+shaded = true
+double_sided = false
+texture = ExtResource("2_pdgce")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(-4.06331e-08, 0.590057, 0.739197, 0, 1.02201, -0.426775, -0.929577, -2.57922e-08, -3.23113e-08, -9.00761, -0.496686, -7.8799)
+shaded = true
+texture = ExtResource("3_asbks")
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.44602, 0.0676322, -7.44784)
+flip_h = true
+shaded = true
+double_sided = false
+texture = ExtResource("2_pdgce")
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform3D(-4.06516e-08, -0.5485, 0.687624, 0, 0.95003, 0.397, -0.93, 2.39757e-08, -3.0057e-08, 4.02802, 0.472944, -7.92877)
+shaded = true
+texture = ExtResource("3_asbks")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.176496, -0.626587, -7.63746)
+shape = SubResource("BoxShape3D_5wfdg")

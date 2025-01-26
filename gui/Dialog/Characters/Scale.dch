@@ -1,0 +1,56 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "Interaction_Style"
+},
+"default_portrait": "Neutral",
+"description": "",
+"display_name": "Scale",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"Bad": {
+"export_overrides": {
+"image": "\"res://gui/Dialog/Characters/Bad_scale.png\""
+},
+"mirror": false,
+"offset": Vector2(-38, -7),
+"scale": 0.74,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+},
+"Good": {
+"export_overrides": {
+"image": "\"res://gui/Dialog/Characters/Good_scale.png\""
+},
+"mirror": false,
+"offset": Vector2(-14, -7),
+"scale": 0.74,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+},
+"Neutral": {
+"export_overrides": {
+"image": "\"res://gui/Dialog/Characters/Neutral_scale.png\""
+},
+"mirror": false,
+"offset": Vector2(-15, -6),
+"scale": 0.74,
+"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+},
+"invis": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+}
+},
+"scale": 1.0
+}

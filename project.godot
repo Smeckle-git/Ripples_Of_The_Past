@@ -11,10 +11,230 @@ config_version=5
 [application]
 
 config/name="Ripples_Of_The_Past"
-config/version="Alpha 0.0.0"
+config/version="Beta Build 0.0.1"
+run/main_scene="res://scenes/ui/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/images/icon.svg"
+
+[autoload]
+
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+GameHudManager="*res://scenes/ui/game_hud_manager.tscn"
+GameSettingsManager="*res://autoload/GameSettingsManager.gd"
+KarmaGlobal="*res://Scripts/Quests/Karma_global.gd"
+InteractManager="*res://scenes/ui/InteractManager.tscn"
+
+[dialogic]
+
+directories/dch_directory={
+"Alinora": "res://gui/Dialog/Characters/Alinora.dch",
+"Astrid": "res://gui/Dialog/Characters/Astrid.dch",
+"Barbarian": "res://gui/Dialog/Characters/Barbarian.dch",
+"God": "res://gui/Dialog/Timelines/God.dch",
+"Hugo": "res://gui/Dialog/Characters/Hugo.dch",
+"Ian": "res://gui/Dialog/Characters/Ian.dch",
+"Ludix": "res://gui/Dialog/Timelines/Ludix.dch",
+"Mage": "res://gui/Dialog/Characters/Mage.dch",
+"Magic_book": "res://gui/Dialog/Characters/Magic_book.dch",
+"Malrik": "res://gui/Dialog/Characters/Malrik.dch",
+"Narrator": "res://gui/Dialog/Characters/Narrator.dch",
+"Nick": "res://gui/Dialog/Characters/Nick.dch",
+"Scale": "res://gui/Dialog/Characters/Scale.dch",
+"Thorinn": "res://gui/Dialog/Characters/Thorinn.dch",
+"Town_Leader": "res://gui/Dialog/Characters/Town_Leader.dch",
+"Villager": "res://gui/Dialog/Characters/Villager.dch",
+"Whiskers": "res://gui/Dialog/Characters/Whiskers.dch",
+"left_Malrik": "res://gui/Dialog/Characters/left_Malrik.dch",
+"vivian": "res://gui/Dialog/Timelines/vivian.dch"
+}
+directories/dtl_directory={
+"Astrid_request": "res://gui/Dialog/Timelines/Astrid_request.dtl",
+"Choose_which_villager_to_kill": "res://gui/Dialog/Timelines/Choose_which_villager_to_kill.dtl",
+"DEMO_interaction": "res://gui/Dialog/Timelines/DEMO_interaction.dtl",
+"Final_summary": "res://gui/Dialog/Timelines/Final_summary.dtl",
+"Fish_quest_completion": "res://gui/Dialog/Timelines/Fish_quest_completion.dtl",
+"Iann_interaction": "res://gui/Dialog/Timelines/Iann_interaction.dtl",
+"IntroTimeline": "res://gui/Dialog/Timelines/IntroTimeline.dtl",
+"Killing_choice": "res://gui/Dialog/Timelines/Killing_choice.dtl",
+"Malrik_Cure": "res://gui/Dialog/Timelines/Malrik_Cure.dtl",
+"Morning_of_killig": "res://gui/Dialog/Timelines/Morning_of_killig.dtl",
+"Return_to_inn": "res://gui/Dialog/Timelines/Return_to_inn.dtl",
+"Reveal_of_dead": "res://gui/Dialog/Timelines/Reveal_of_dead.dtl",
+"Tree_interaction": "res://gui/Dialog/Timelines/Tree_interaction.dtl",
+"Villagers": "res://gui/Dialog/Timelines/Villagers.dtl",
+"first_morning": "res://gui/Dialog/Timelines/first_morning.dtl",
+"flower_girl_quest": "res://gui/Dialog/Timelines/flower_girl_quest.dtl",
+"non_malric_Killing_choice": "res://gui/Dialog/Timelines/non_malric_Killing_choice.dtl",
+"pharmacy_location": "res://gui/Dialog/Timelines/pharmacy_location.dtl",
+"quest1_end": "res://gui/Dialog/Timelines/quest1_end.dtl",
+"quest1_start": "res://gui/Dialog/Timelines/quest1_start.dtl",
+"thorinn_hugo_forest": "res://gui/Dialog/Timelines/thorinn_hugo_forest.dtl",
+"thorinn_meets_whiskers": "res://gui/Dialog/Timelines/thorinn_meets_whiskers.dtl",
+"thorinn_whiskers_forest": "res://gui/Dialog/Timelines/thorinn_whiskers_forest.dtl",
+"wiskers_start_campfire_quest": "res://gui/Dialog/Timelines/wiskers_start_campfire_quest.dtl"
+}
+variables={
+"Alinora¨": {
+"killing_Alin": false
+},
+"Astrid": {
+"ask_for_help": 1
+},
+"Blame_choice": 0,
+"Dead_person_choice": 0,
+"Favian": {
+"Talked_to": false,
+"Villagers_interaction": 0
+},
+"Hugo": {
+"Followed_to_rockfall": false,
+"Talked_already": true
+},
+"Ian": {
+"Confrontationn_at_home": 1,
+"Selected_Ian_Choice": 0
+},
+"Malrik": {
+"Cure": 1,
+"Found_book": false,
+"Talked_already": false,
+"Trusted_malric": false
+},
+"Nick": {
+"killing_nick": false
+},
+"Scale_value": 0,
+"Vivian": {
+"Interaction_phase": 1,
+"New_Dialog": true,
+"flower_quest_accepted": false,
+"killing_viv": false
+},
+"Whiskers": {
+"Accepted_Fish_Quest": false,
+"Forest_Interaction_phase": 1,
+"New_Dialog": true,
+"Shoo_away": false
+},
+"selected_character": 0
+}
+layout/style_list=["res://gui/Dialog/Interaction_Style.tres"]
+layout/default_style="Default"
+glossary/default_case_sensitive=true
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+
+[display]
+
+window/stretch/mode="viewport"
 
 [dotnet]
 
 project/assembly_name="Ripples_Of_The_Past"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
+
+[input]
+
+Interact={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+"Walk forward"={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":-1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":11,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+"Walk backwards"={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":12,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+"Walk left"={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":-1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":13,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+"Walk right"={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":1.0,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":14,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+Journal={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":74,"key_label":0,"unicode":106,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+Pause={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":4,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+go_to_village={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":80,"key_label":0,"unicode":112,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":4,"axis_value":1.0,"script":null)
+]
+}
+
+[layer_names]
+
+3d_physics/layer_1="World"
+3d_physics/layer_2="Player"
+3d_physics/layer_3="Items"
+3d_physics/layer_4="Hitboxes"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=2
+anti_aliasing/quality/use_taa=true

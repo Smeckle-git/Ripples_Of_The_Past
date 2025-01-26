@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://u08d6vo5c344"]
+
+[ext_resource type="Texture2D" uid="uid://mut8rhipm6qx" path="res://assets/shaders/shader_nick/Assets/firefly.png" id="2_sfatk"]
+
+[sub_resource type="Gradient" id="Gradient_1wsir"]
+offsets = PackedFloat32Array(0, 0.757895, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.803922, 0.803922, 0.803922, 0.870588, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_a7xlw"]
+gradient = SubResource("Gradient_1wsir")
+
+[sub_resource type="Curve" id="Curve_x5v7d"]
+max_value = 100.0
+_data = [Vector2(0, 100), 0.0, -18.4277, 0, 0, Vector2(0.954128, 6.59341), 47.9121, 47.9121, 0, 0, Vector2(1, 0), -143.736, 0.0, 1, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_fyhfh"]
+curve = SubResource("Curve_x5v7d")
+
+[sub_resource type="Curve" id="Curve_v6g6k"]
+_data = [Vector2(1e-05, 1), 1.4, 0.0, 0, 0, Vector2(0.617391, 0.835165), -0.842491, -0.842491, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_mg1im"]
+curve = SubResource("Curve_v6g6k")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_adcie"]
+emission_shape = 3
+emission_box_extents = Vector3(10, 5, 10)
+initial_velocity_min = 1.0
+initial_velocity_max = 2.0
+gravity = Vector3(0, 0, 0)
+scale_min = 159.54
+scale_max = 317.44
+color = Color(0, 1, 1, 1)
+color_ramp = SubResource("GradientTexture1D_a7xlw")
+emission_curve = SubResource("CurveTexture_fyhfh")
+turbulence_enabled = true
+turbulence_noise_scale = 5.0
+turbulence_influence_over_life = SubResource("CurveTexture_mg1im")
+collision_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3ecd"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 1, 1, 1)
+albedo_texture = ExtResource("2_sfatk")
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_aib2u"]
+material = SubResource("StandardMaterial3D_d3ecd")
+size = Vector2(0.3, 0.3)
+
+[node name="FireFlies" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49298, 0)
+amount = 100
+lifetime = 3.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_adcie")
+draw_pass_1 = SubResource("QuadMesh_aib2u")
+
+[node name="GPUParticlesAttractorSphere3D" type="GPUParticlesAttractorSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.40545, 1.24719, 4.62826)
+visible = false
+strength = 50.0
+radius = 6.0

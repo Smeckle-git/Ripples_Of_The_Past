@@ -1,0 +1,17 @@
+[style name="Interaction_Style"]
+if {Astrid.ask_for_help} == 1:
+	[background arg="res://gui/Dialog/styles/Room_Tidy.jpg" fade="0.0"]
+	join Thorinn leftmost
+	join Alinora rightmost
+	Alinora: [i]Thorinn![/i] We need your help! Five villagers... they've fallen very ill, we’re afraid they’re [i]dying[/i]. It's like a [b]curse[/b]!
+	Thorinn: A [i]curse[/i]? What do you know of it?
+	Alinora: Not much, but ... there is someone who might hel-..... [i]no, i shouldn’t[/i]!
+	Thorinn: What is it Alinora? Who are you talking about?
+	Alinora: The doomed one... [b]Malric[/b]. People say he dabbles in dark magic.
+	Thorinn (normal): Malric... I haven't heared that name since I arrived here. What do you know about him?
+	Alinora: He was once part of the village, but he became [i]obsessed[/i] with the future and so lost his way in the arts of [b]divination[/b].
+	Alinora: It's rumoured that exercising these dark arts required living beings, so our town elder [b]exiled[/b] him to live in the woods.
+	Alinora: If anyone does know about the cure... it’s [b]him[/b]. His knowledge was unparalleled, even before... [i]whatever he became[/i].
+	Thorinn (agitated): I'll go look for him.
+	set {Astrid.ask_for_help} = 2
+	[signal arg="end-night"]

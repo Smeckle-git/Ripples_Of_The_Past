@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://glo46xhmiwun"]
+
+[ext_resource type="Script" path="res://scenes/Characters/NPC.gd" id="1_g7syb"]
+[ext_resource type="Texture2D" uid="uid://dyn0lyo87gywf" path="res://assets/images/sprites/Passed_villager.png" id="2_pde2g"]
+[ext_resource type="Texture2D" uid="uid://bsraorvupvjq0" path="res://assets/images/sprites/NPC2.png" id="2_w03vk"]
+[ext_resource type="Script" path="res://Scripts/ui/interaction_area.gd" id="3_tije0"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lyu3t"]
+height = 37.19
+radius = 12.816
+
+[node name="Villager2" type="Node3D"]
+script = ExtResource("1_g7syb")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+billboard = 1
+shaded = true
+alpha_cut = 2
+texture = ExtResource("2_w03vk")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, -3.15055, 0)
+visible = false
+billboard = 1
+shaded = true
+alpha_cut = 2
+texture = ExtResource("2_pde2g")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+collision_mask = 2
+script = ExtResource("3_tije0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+shape = SubResource("CylinderShape3D_lyu3t")
+
+[connection signal="body_entered" from="InteractionArea" to="InteractionArea" method="_on_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="InteractionArea" method="_on_body_exited"]

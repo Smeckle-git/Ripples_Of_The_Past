@@ -1,0 +1,83 @@
+[gd_scene load_steps=27 format=3 uid="uid://di55lv8a6ufmb"]
+
+[ext_resource type="PackedScene" uid="uid://duf26uu2tvh8" path="res://scenes/gridmap_blocks/ground_grass.tscn" id="1_qt4il"]
+[ext_resource type="PackedScene" uid="uid://nyml7y4ttuo2" path="res://scenes/gridmap_blocks/ground_grass_slope.tscn" id="2_rj6bb"]
+[ext_resource type="PackedScene" uid="uid://b4hfdh5a1t88w" path="res://scenes/gridmap_blocks/ground_mountain.tscn" id="3_tbwc7"]
+[ext_resource type="PackedScene" uid="uid://dbusiy8gr1xbd" path="res://scenes/gridmap_blocks/ground_mountain_slope.tscn" id="4_m3j1w"]
+[ext_resource type="PackedScene" uid="uid://cumuxu5rf8qal" path="res://scenes/gridmap_blocks/ground_path.tscn" id="5_3hvjn"]
+[ext_resource type="PackedScene" uid="uid://bbsmlyf8p2a1e" path="res://scenes/gridmap_blocks/ground_path_slope.tscn" id="6_54niy"]
+[ext_resource type="PackedScene" uid="uid://bmlruq41srjyq" path="res://scenes/gridmap_blocks/ground_water.tscn" id="7_5jt0c"]
+[ext_resource type="PackedScene" uid="uid://b0d8rfwrlalc2" path="res://scenes/gridmap_blocks/ground_water_slope.tscn" id="8_0o0oi"]
+[ext_resource type="PackedScene" uid="uid://cw23bd3q4okjw" path="res://scenes/gridmap_blocks/tree.tscn" id="9_hl1vc"]
+[ext_resource type="PackedScene" uid="uid://ihj7kgoo6kdu" path="res://scenes/gridmap_blocks/All_corners_grass_path.tscn" id="10_h6rg5"]
+[ext_resource type="PackedScene" uid="uid://2kgwaej6bpt2" path="res://scenes/gridmap_blocks/Uturn_grass_path.tscn" id="11_16360"]
+[ext_resource type="PackedScene" uid="uid://cdh11u8a0jmnd" path="res://scenes/gridmap_blocks/Tsplit_grass_path.tscn" id="12_oe2b1"]
+[ext_resource type="PackedScene" uid="uid://iy1ssvf7bxpa" path="res://scenes/gridmap_blocks/Tight_corner_texture.tscn" id="13_cp8r2"]
+[ext_resource type="PackedScene" uid="uid://cxar3ajpfoube" path="res://scenes/gridmap_blocks/sand.tscn" id="14_nwly5"]
+[ext_resource type="PackedScene" uid="uid://df13uot45l8vb" path="res://scenes/gridmap_blocks/Right_corner_grass_path.tscn" id="15_efhm2"]
+[ext_resource type="PackedScene" uid="uid://1uo3hr8qpo6e" path="res://scenes/gridmap_blocks/path-straight.tscn" id="16_d343v"]
+[ext_resource type="PackedScene" uid="uid://ljsbg1ff66xp" path="res://scenes/gridmap_blocks/New_grass.tscn" id="16_m6jne"]
+[ext_resource type="PackedScene" uid="uid://nqe4uy8a80xt" path="res://scenes/gridmap_blocks/grass_with_path.tscn" id="17_ulye2"]
+[ext_resource type="PackedScene" uid="uid://bwnkhynmrhmmw" path="res://scenes/gridmap_blocks/grass_path_texture.tscn" id="18_w2lth"]
+[ext_resource type="PackedScene" uid="uid://clpc84coflxwp" path="res://scenes/gridmap_blocks/Corner_texture.tscn" id="19_mim8b"]
+[ext_resource type="PackedScene" uid="uid://cfyguj42mhujx" path="res://scenes/gridmap_blocks/Corner_grass_path.tscn" id="20_ageyc"]
+[ext_resource type="PackedScene" uid="uid://b5m6h0qggqryo" path="res://scenes/gridmap_blocks/GodRoom_Tile.tscn" id="22_he2tl"]
+[ext_resource type="PackedScene" uid="uid://dlckajgc6aiiu" path="res://scenes/gridmap_blocks/new_grass_slope.tscn" id="23_2yj1n"]
+[ext_resource type="PackedScene" uid="uid://bo2dx4ynfvoht" path="res://scenes/gridmap_blocks/new_path_slope.tscn" id="24_rkjqs"]
+[ext_resource type="PackedScene" uid="uid://cfrd2aodhx8qa" path="res://scenes/gridmap_blocks/new_grass_slope_corner_inside.tscn" id="25_5tuuh"]
+[ext_resource type="PackedScene" uid="uid://ykk6pnf13i7v" path="res://scenes/gridmap_blocks/new_grass_slope_corner_outside.tscn" id="26_v6tur"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_qt4il")]
+
+[node name="Ground3" parent="." instance=ExtResource("2_rj6bb")]
+
+[node name="Ground2" parent="." instance=ExtResource("3_tbwc7")]
+
+[node name="Ground4" parent="." instance=ExtResource("4_m3j1w")]
+
+[node name="Ground5" parent="." instance=ExtResource("5_3hvjn")]
+
+[node name="Ground6" parent="." instance=ExtResource("6_54niy")]
+
+[node name="Ground7" parent="." instance=ExtResource("7_5jt0c")]
+
+[node name="Ground8" parent="." instance=ExtResource("8_0o0oi")]
+
+[node name="Tree" parent="." instance=ExtResource("9_hl1vc")]
+
+[node name="Ground9" parent="." instance=ExtResource("10_h6rg5")]
+
+[node name="Ground10" parent="." instance=ExtResource("20_ageyc")]
+
+[node name="Ground11" parent="." instance=ExtResource("19_mim8b")]
+
+[node name="Ground12" parent="." instance=ExtResource("18_w2lth")]
+
+[node name="Ground13" parent="." instance=ExtResource("17_ulye2")]
+
+[node name="Ground14" parent="." instance=ExtResource("16_m6jne")]
+
+[node name="sand" parent="." instance=ExtResource("16_d343v")]
+
+[node name="Ground15" parent="." instance=ExtResource("15_efhm2")]
+
+[node name="sand2" parent="." instance=ExtResource("14_nwly5")]
+
+[node name="Ground16" parent="." instance=ExtResource("13_cp8r2")]
+
+[node name="Ground17" parent="." instance=ExtResource("12_oe2b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00173831, -0.00625068, 0.000382304)
+
+[node name="Ground18" parent="." instance=ExtResource("11_16360")]
+
+[node name="Ground19" parent="." instance=ExtResource("22_he2tl")]
+
+[node name="Ground20" parent="." instance=ExtResource("23_2yj1n")]
+
+[node name="Ground21" parent="." instance=ExtResource("24_rkjqs")]
+
+[node name="Ground22" parent="." instance=ExtResource("25_5tuuh")]
+
+[node name="Ground23" parent="." instance=ExtResource("26_v6tur")]

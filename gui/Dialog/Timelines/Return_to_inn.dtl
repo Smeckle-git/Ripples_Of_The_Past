@@ -1,0 +1,38 @@
+[style name="Interaction_Style"]
+if {Ian.Confrontationn_at_home} == 1:
+	join Thorinn leftmost
+	join Hugo rightmost
+	Hugo: What can I help you with?
+	- What was it you wanted me to do?
+		Hugo: Could you check on Ian? He lives in the pharmacy across the river. You will recogise it by the sign by the door.
+	- Can I ask about Ian?
+		Thorinn: As I am going there, it would be good to know, if there is annything worth mentioning.
+		Hugo: Mhhh...Ian. He’s been unwell for a while. What was a minor cough has grown worse, and despite his efforts, he’s not improving.
+		Hugo: He still tries to help the villagers, but he’s struggling. The unfortunate truth is that many are now suffering because of his absense.
+		Thorinn: That bad already. That... not good.
+
+	- Oh no, nevermind
+elif {Dead_person_choice} != 0:
+elif {Astrid.ask_for_help} == 2:
+	Hugo: What can I help you with?
+	- Ask about the village
+		Thorinn: Is there anything I need to know about the village?
+		Hugo: As mentioned, this village doesn't trust outsiders. Not often does this town see travelers. It's in their nature to be suspicious of them.
+		Hugo: There was an incident a few years back. Malric. He was a traveler but soon became one of us, just a regular and curious man.
+		Hugo: Then... he started fooling around with things no one should mess with. Divination, dark magic. No one knows what got into him.
+		Hugo: He became obsessed with seeing the future, probably saw more than he was meant to.
+		Hugo: They say he started using people, even animals, for his ‘rituals.’
+		- What happened then?
+			Hugo: At that point our elder had no choice but to exile him, send him out to the woods so he couldn’t hurt anyone anymore.
+			I see...
+		- They say?
+			Hugo: It was never proven to be true. Who knows maybe people just feared his power and knowledge.
+			Thorinn: I see...
+	- Oh no, nevermind
+elif {Ian.Confrontationn_at_home} == 2:
+	[signal arg="start_night"]
+	[wait time="2.0"]
+	Narrator: *A month passes. Thorinn took over the role as town doctor, moved into Ians pharmacy, while slowly trying to gain more trust with the villagers*
+	[signal arg="Scene_5_switch"]
+	[wait time="2.0"]
+	[signal arg="start_alinora_interaction"]

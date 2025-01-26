@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://djxw8nonun4eo" path="res://assets/images/sprites/thorinn/Thorinn_walking_up_1.png" id="16_wvicx"]
 [ext_resource type="Texture2D" uid="uid://md40adet2xb2" path="res://assets/images/sprites/thorinn/Thorinn_walk_right_blue_3.png" id="17_d5qk2"]
 [ext_resource type="Texture2D" uid="uid://3ewrf4xj24mt" path="res://assets/images/sprites/thorinn/Thorinn_walking_up_3.png" id="17_kw78q"]
-[ext_resource type="AudioStream" uid="uid://tqp7rndwmvqa" path="res://addons/dialogic/Example Assets/sound-effects/WalkingSound.mp3" id="20_x1fg5"]
+[ext_resource type="AudioStream" uid="uid://by8to75r8x7vy" path="res://addons/dialogic/Example Assets/sound-effects/foot_steps.mp3" id="20_t4d6u"]
 [ext_resource type="Script" path="res://scenes/Characters/walking_sound.gd" id="21_s1edn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ulyrf"]
@@ -531,5 +531,5 @@ sprite_frames = SubResource("SpriteFrames_50jpj")
 animation = &"WalkingDown"
 
 [node name="Walking Sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("20_x1fg5")
+stream = ExtResource("20_t4d6u")
 script = ExtResource("21_s1edn")

@@ -11,7 +11,7 @@ if {Astrid.ask_for_help} == 2:
 				set {Vivian.killing_viv} = true
 			elif {Vivian.killing_viv} == true:
 				Narrator: *Vivian is still looking at flowers.*
-				vivian: Hello [b]Mister Doctor[/b]. Aren't these flowers just  so [i]pretty[/i]?
+				vivian: Hello [b]Mister Doctor[/b]. Aren't these flowers just so [i]pretty[/i]?
 				Thorinn: You're right, they are [i]indeed[/i].
 		elif {selected_character} == 2:
 			join Thorinn leftmost

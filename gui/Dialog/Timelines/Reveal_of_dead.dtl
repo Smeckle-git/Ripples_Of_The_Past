@@ -5,7 +5,7 @@ if {Dead_person_choice} != 0:
 		join Thorinn (normal) leftmost
 		Town_Leader: Thorinn, you've saved them! [b]Truly[/b], you are a gift to Rockfall!
 		Thorinn: Lets not [b]forget[/b] the one who paid the ultimate price.
-		Town_Leader: The lives of others in not to be played with. I do understand however that dire circumstances call for desperate measures.
+		Town_Leader: The lives of others in not to be played with. I understand however that dire circumstances call for desperate measures.
 		Malrik: *Malric whispers from the shadows* Psst.
 		Malrik: What will you do now [i]doctor...?
 		- Publicly credit Malric
@@ -93,24 +93,27 @@ if {Dead_person_choice} != 0:
 			Thorinn: I didn't mention you, but know this, [i]you had a hand in this aswell.
 			Thorinn: Your cryptic messages caused this loss.
 			Malrik: I've warned you [i]sufficiently.
-			Malrik: It isn't my fault that you didn't trust my word enough, as your judgement was clouded by the rumours fed to you by the village.
+			Malrik: It's not my fault that you didn't trust my word, as your judgement was clouded by the rumours fed to you by the village.
 	
 	elif {Dead_person_choice} == 4:
 		join Town_Leader rightmost
 		join Thorinn (agitated) leftmost
-		Town_Leader: Thorinn, you came with hope and promises, but we are left with grief. Five lives were lost under your care. You had a strong opinion, doctor, but you should've consulted us.
+		Town_Leader: Thorinn, you came with hope and promises, but we are left with grief. Five lives were lost under your care. 
+		Town_Leader: You had a strong opinion, doctor, but you should've consulted us.
 		Malrik: *Malric whispers from the shadows* Psst.
 		Malrik: Seems like your good intentions [b]weren't[/b] of much help this time. What will you tell them now?
 		- Admit fault
 			set {Blame_choice} = 1
-			Thorinn (agitated): I tried to find a way that wouldn’t cause [b]more harm[/b] than what was already done, but in the end, I failed them. I will always carry this burden.
+			Thorinn (agitated): I tried to find a way that wouldn’t cause [b]more harm[/b] than what was already done.
+			Thorinn: But in the end, I failed them. I will always carry this burden.
 			Town_Leader: You speak of [i]burdens[/i], but what about the mourning families? You had a [b]choice[/b], doctor, and you chose [b]wrong.
 		
 		- Publicly blame Malric
 			set {Blame_choice} = 2
 			Thorinn (agitated): I admit that I did [i]know[/i] of a cure, but it was based on [b]Malric's twisted words.
-			Thorinn: I had a choice to make, a [i][b]terrible[/b][/i] choice, take an innocent life or let these people die. I just couldn't cross that line.
-			Thorinn: Malric is too far gone in his ways of dark magic, there [i]wasn't even[/i] a guarantee this was going to work.
+			Thorinn: I had a choice to make, a [i][b]terrible[/b][/i] choice, take an innocent life or let these people die. 
+			Thorinn: I just couldn't cross that line.
+			Thorinn: Malric is too far gone in his ways of dark magic, there [i]wasn't even[/i] a guarantee this would work.
 			Town_Leader: I understand you didn't want to give into Malric's dishonourable ways.
 			update Town_Leader (invis)
 			join Malrik rightmost

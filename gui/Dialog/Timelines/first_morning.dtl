@@ -28,4 +28,6 @@ Hugo: The pharmacy is the building [b]across[/b] the river. You will recognise i
 Hugo: Tell Ian I sent you, he’ll trust you more that way.
 Thorinn (surprised): Why [i]wouldn’t[/i] he trust me?
 Hugo: This town doesn’t welcome strangers easily. You’ll see soon enough.
+Hugo: But if there is [i]anything[/i] I can help you with, don't hesitate to ask. You would be surprised about the secrets this village holds.
+set {Hugo.Talked_already} = true
 [signal arg="Start_Find_Ian"]

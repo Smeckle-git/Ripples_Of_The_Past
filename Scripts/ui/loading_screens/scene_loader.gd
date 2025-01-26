@@ -7,6 +7,7 @@ signal loaded()
 @export var emit_loading_signal: bool = true
 var target_folder = "res://scenes/Levels/Destinations/"
 var target_scene: String = "level"
+var village: String = "Village"
 var current_scene: String
 
 
@@ -14,7 +15,7 @@ var current_scene: String
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("go_to_village") :
 		#print_debug(target_scene)
-		change_scene(target_scene)
+		change_scene(village)
 
 func change_scene(new_scene:String):
 	

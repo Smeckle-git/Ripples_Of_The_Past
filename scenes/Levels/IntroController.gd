@@ -12,6 +12,7 @@ extends Control
 #Redirect main menu to Game tscn
 #For code change search CHANGEEEEEEEEEEEE in scene_loader, scene_manager, IntroController,Mainmenu
 #Change Level.tscn to level.tscn Same for node !!!!!!!
+# Make disolve unshaded but look at the other colletables to
 @onready var loading: Node = $"../Loading/SceneLoader" #CHANGEEEEEEEEEEEE
 @onready var canvas_control: Control = $"." #CHANGEEEEEEEEEEEE
 

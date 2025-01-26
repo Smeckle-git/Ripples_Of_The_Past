@@ -77,7 +77,7 @@ shader = SubResource("Shader_y8r1q")
 shader_parameter/noise_scale = 0.2
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_syuyu")
 
-[node name="Level" type="Node3D"]
+[node name="level" type="Node3D"]
 script = ExtResource("1_eo63n")
 
 [node name="Environment" type="Node3D" parent="."]
@@ -1408,8 +1408,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.719, -9.36, -406.637)
 
 [node name="Companion" parent="." instance=ExtResource("20_7nc36")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -2, 2.3, -18)
+following = null
 sitting = true
+petting = null
 move_to_location = Vector3(-1, 2.3, -11)
+last_direction = null
 
 [node name="FireFlies" parent="." instance=ExtResource("25_2wcrm")]
 transform = Transform3D(2.37983, 0, 0, 0, 1, 0, 0, 0, 2.10923, -14.8674, 6.11313, 8.53555)

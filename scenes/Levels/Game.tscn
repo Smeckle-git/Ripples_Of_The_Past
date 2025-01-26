@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Demo/Game.gd" id="1_qyr1s"]
 [ext_resource type="PackedScene" uid="uid://bgofflk61vtx8" path="res://scenes/ui/Loading_Screen/loading_screens.tscn" id="2_pkfgk"]
-[ext_resource type="PackedScene" uid="uid://bd7lvx5fmmc5q" path="res://scenes/Levels/Destinations/level.tscn" id="3_xwloq"]
+[ext_resource type="PackedScene" uid="uid://b8tg243b5gjro" path="res://scenes/Levels/Destinations/Intro.tscn" id="3_2i1vf"]
 [ext_resource type="PackedScene" uid="uid://ddu443etw7oh2" path="res://scenes/ui/Journal/Journal.tscn" id="4_pfjdc"]
 [ext_resource type="Texture2D" uid="uid://ba75e1klwo158" path="res://assets/images/sprites/Journal2.png" id="5_3jxex"]
 [ext_resource type="Script" path="res://scenes/Levels/journal_icon_group.gd" id="5_swh3h"]
@@ -34,8 +34,7 @@ script = ExtResource("1_qyr1s")
 
 [node name="Loading" parent="." instance=ExtResource("2_pkfgk")]
 
-[node name="Level" parent="." instance=ExtResource("3_xwloq")]
-process_mode = 1
+[node name="Intro" parent="." instance=ExtResource("3_2i1vf")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2

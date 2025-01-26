@@ -3039,8 +3039,7 @@ offset_left = 354.0
 offset_top = 55.0
 offset_right = 652.0
 offset_bottom = 447.0
-theme = SubResource("Theme_lma57")
-text = "qweqweqeq"
+text = "[quest lore placeholder]"
 
 [node name="Characters" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer"]
 layout_mode = 2
@@ -3198,6 +3197,41 @@ offset_bottom = 450.0
 scale = Vector2(1.03087, 1.0651)
 
 [node name="Label2" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer/Ian/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "When Ian finally meets Thorinn, his envy is immediate, and his resentment is clear.  From the very beginning, Ian is antagonistic, constantly challenging and trying to provoke Thorinn, driven by jealousy and a need to prove himself in comparison to the “great” student from the past."
+autowrap_mode = 2
+
+[node name="Malrick" type="TabBar" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer/Malrick"]
+layout_mode = 0
+offset_left = -60.0
+offset_top = 7.0
+offset_right = 258.0
+offset_bottom = 454.0
+scale = Vector2(1.03087, 1.0651)
+
+[node name="Label2" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer/Malrick/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "Ian never knew Thorinn as a young man, but he grew up hearing stories about the genius student who had once studied under their shared master.
+
+Thorinn’s achievements always seemed to outshine his own, and Ian always felt inferior about the praise his master had given Thorinn."
+autowrap_mode = 2
+
+[node name="HBoxContainer2" type="VBoxContainer" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer/Malrick"]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 50.0
+offset_right = 641.0
+offset_bottom = 450.0
+scale = Vector2(1.03087, 1.0651)
+
+[node name="Label2" type="Label" parent="MarginContainer2/VBoxContainer/TabContainer/Characters/TabContainer/Malrick/HBoxContainer2"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 text = "When Ian finally meets Thorinn, his envy is immediate, and his resentment is clear.  From the very beginning, Ian is antagonistic, constantly challenging and trying to provoke Thorinn, driven by jealousy and a need to prove himself in comparison to the “great” student from the past."

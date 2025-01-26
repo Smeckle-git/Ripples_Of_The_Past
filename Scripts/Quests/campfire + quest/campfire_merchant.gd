@@ -12,6 +12,8 @@ var night_triggered = false
 @onready var directional_light_3d: DirectionalLight3D = $"../Environment/DirectionalLight3D"
 @onready var progression_block: StaticBody3D = $"../Environment/Progression_block"
 @onready var fire_flies: Node3D = $"../FireFlies"
+@onready var fire_flies2: Node3D = $"../FireFlies2"
+@onready var fire_flies3: Node3D = $"../FireFlies3"
 @onready var sparkles: Node3D = $Sparkles
 
 # variables for campfire quest
@@ -124,6 +126,8 @@ func _process(delta: float) -> void:
 			trigger_nightfall()
 			night_triggered = true
 			fire_flies.visible = true
+			fire_flies2.visible = true
+			fire_flies3.visible = true
 	else :
 		animated_sprite_3d_2.visible = false
 		omni_light_3d.light_energy = 0

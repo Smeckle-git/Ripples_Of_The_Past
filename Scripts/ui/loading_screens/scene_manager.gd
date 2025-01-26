@@ -6,6 +6,7 @@ signal loaded()
 @onready var LoadingScreens: CanvasLayer = $"."
 @onready var animation_player: AnimationPlayer = $Loading_screen/AnimationPlayer
 @onready var scene_loader: Node = $SceneLoader
+@onready var journal_layer = get_tree().get_root().get_node("Game/JournalIconLayer")
 
 func transition_to(scene: String, previous_scene: String)-> void:
 	if previous_scene == null || scene == null:
@@ -30,10 +31,12 @@ func transition_to(scene: String, previous_scene: String)-> void:
 	#scene_loader.ughhh = true
 
 func transition_in() -> void:
+	journal_layer.visible = false
 	animation_player.play("Loading_in")
 	LoadingScreens.visible = true
 	
 func transition_out():
+	journal_layer.visible = true
 	animation_player.play("Loading_out")
 	LoadingScreens.visible = false
 	

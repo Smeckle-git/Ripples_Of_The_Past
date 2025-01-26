@@ -11,11 +11,15 @@ var current_background_index: int = 0
 
 @onready var loading: Node = $"../Loading/SceneLoader" #New
 @onready var canvas_control: Control = $"." #New
+@onready var journal_layer = get_tree().get_root().get_node("Game/JournalIconLayer")
+
 # disables the devkeys
 # TODO: as a late fix, make a global variable for devmode to enable / disable all the debug keys!!!
 var devMode : bool = 0
 
 func _ready():
+	journal_layer.visible = false
+	
 	IntroBackgrounds = [
 		IntroBackground1, 
 		IntroBackground2, 
@@ -39,7 +43,7 @@ func _process(delta: float):
 			
 	elif Input.is_action_just_pressed("Walk backwards"):
 		Dialogic.end_timeline()
-		get_tree().change_scene_to_file("res://scenes/Levels/Game.tscn")
+		loading.change_scene("level")
 
 func _next_background():
 	# Move to the next background in the list

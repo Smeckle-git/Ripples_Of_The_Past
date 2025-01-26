@@ -61,7 +61,7 @@ func _ready() -> void:
 	else:
 		companion.following = true
 		companion.interaction_area.interact = Callable(companion, "_on_interact")
-		companion.interaction_area.action_name = "pat"
+		companion.interaction_area.action_name = "pet"
 
 
 func _on_dialogic_signal(argument:String):

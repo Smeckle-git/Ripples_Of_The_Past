@@ -24,6 +24,15 @@
 "scale": 0.67,
 "scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 },
+"invis": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+},
 "normal": {
 "export_overrides": {
 "image": "\"res://gui/Dialog/Characters/Ian.png\""

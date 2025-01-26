@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c8gnm1snorgyx" path="res://assets/images/Intro/TheWeighting-IntroScene3.jpg" id="3_kfu3x"]
 [ext_resource type="Texture2D" uid="uid://dkwootyli6ekr" path="res://assets/images/Intro/TheWeighting-IntroScene4.jpg" id="4_vpoj6"]
 
-[node name="CanvasControl" type="Control" node_paths=PackedStringArray("IntroBackground1", "IntroBackground2", "IntroBackground3", "IntroBackground4", "IntroBackground5")]
+[node name="Intro" type="Control" node_paths=PackedStringArray("IntroBackground1", "IntroBackground2", "IntroBackground3", "IntroBackground4", "IntroBackground5")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

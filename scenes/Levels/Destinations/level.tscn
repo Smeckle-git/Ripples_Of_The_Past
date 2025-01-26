@@ -77,7 +77,7 @@ shader = SubResource("Shader_y8r1q")
 shader_parameter/noise_scale = 0.2
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_syuyu")
 
-[node name="Level" type="Node3D"]
+[node name="level" type="Node3D"]
 script = ExtResource("1_eo63n")
 
 [node name="Environment" type="Node3D" parent="."]

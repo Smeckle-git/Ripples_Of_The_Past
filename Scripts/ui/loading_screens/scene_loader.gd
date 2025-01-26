@@ -6,7 +6,7 @@ signal loaded()
 @onready var LoadingScreens = get_parent()
 @export var emit_loading_signal: bool = true
 var target_folder = "res://scenes/Levels/Destinations/"
-var target_scene: String = "Village"
+var target_scene: String = "Level"
 var current_scene: String
 
 
@@ -19,7 +19,7 @@ func _process(_delta: float) -> void:
 func change_scene(new_scene:String):
 	
 	if current_scene == "":
-		current_scene = "Level"
+		current_scene = "Intro"
 	print(current_scene)
 	if current_scene == new_scene:
 		print("Is the same scene")

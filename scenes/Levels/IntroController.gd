@@ -6,6 +6,15 @@ extends Control
 @export var IntroBackground4 : TextureRect
 @export var IntroBackground5 : TextureRect
 
+#Change into's canvas name to Intro. 
+#Add Intro.tscn in Destinations folder. 
+#Remove Level out of Game scene and add Intro
+#Redirect main menu to Game tscn
+#For code change search CHANGEEEEEEEEEEEE in scene_loader, scene_manager, IntroController,Mainmenu
+#Change Level.tscn to level.tscn Same for node !!!!!!!
+@onready var loading: Node = $"../Loading/SceneLoader" #CHANGEEEEEEEEEEEE
+@onready var canvas_control: Control = $"." #CHANGEEEEEEEEEEEE
+
 var IntroBackgrounds: Array = []
 var current_background_index: int = 0
 
@@ -62,4 +71,6 @@ func _on_dialogic_event(argument : String):
 	if argument == "proceed_intro_background":
 		_next_background()
 	if argument == "proceed_into_demo":
-		get_tree().change_scene_to_file("res://scenes/Levels/Game.tscn")
+		self.visible = false #CHANGEEEEEEEEEEEE
+		loading.change_scene("level") #CHANGEEEEEEEEEEEE
+		#get_tree().change_scene_to_file("res://scenes/Levels/Game.tscn") #CHANGEEEEEEEEEEEE

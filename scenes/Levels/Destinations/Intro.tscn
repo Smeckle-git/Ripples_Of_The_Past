@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8tg243b5gjro"]
+[gd_scene load_steps=6 format=3 uid="uid://dcwbyljfoqw1x"]
 
 [ext_resource type="Script" path="res://scenes/Levels/IntroController.gd" id="1_7ergw"]
 [ext_resource type="Texture2D" uid="uid://c3jlloipom3r3" path="res://assets/images/Intro/T_horinn_unconscious-IntoScene1.jpg" id="1_p4a60"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c8gnm1snorgyx" path="res://assets/images/Intro/TheWeighting-IntroScene3.jpg" id="3_kfu3x"]
 [ext_resource type="Texture2D" uid="uid://dkwootyli6ekr" path="res://assets/images/Intro/TheWeighting-IntroScene4.jpg" id="4_vpoj6"]
 
-[node name="CanvasControl" type="Control" node_paths=PackedStringArray("IntroBackground1", "IntroBackground2", "IntroBackground3", "IntroBackground4", "IntroBackground5")]
+[node name="Intro" type="Control" node_paths=PackedStringArray("IntroBackground1", "IntroBackground2", "IntroBackground3", "IntroBackground4", "IntroBackground5")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

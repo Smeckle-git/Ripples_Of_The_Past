@@ -12,10 +12,11 @@ func transition_to(scene: String, previous_scene: String)-> void:
 		push_error("Scenes are not loaded in or something")
 	
 	var Game_root = get_node("/root/Game")
-	
+
 	transition_in()
 	await transitioned_in
 	print_debug(scene)
+	print_debug(previous_scene)
 	var new_scene = load(scene).instantiate()
 	Game_root.add_child(new_scene)
 	
@@ -27,18 +28,18 @@ func transition_to(scene: String, previous_scene: String)-> void:
 	
 	transition_out()
 	await transitioned_out
-	#scene_loader.ughhh = true
 
 func transition_in() -> void:
 	animation_player.play("Loading_in")
 	LoadingScreens.visible = true
+	
 	
 func transition_out():
 	animation_player.play("Loading_out")
 	LoadingScreens.visible = false
 	
 func load_scene() ->void: 
-	print("test")
+
 	await get_tree().create_timer(1.0).timeout
 	loaded.emit()
 

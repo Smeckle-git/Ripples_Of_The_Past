@@ -42,9 +42,7 @@ func _on_interact():
 		var wood2_position = $Wood_2_marker.position
 		spawn_wood(wood2_position, find_materials_quest)
 		
-		var wood3_position = $Wood_3_marker.position
-		spawn_wood(wood3_position, find_materials_quest)
-		
+
 		var stone1_position = $Stone_1_marker.position
 		spawn_Stone(stone1_position, find_materials_quest)
 		
@@ -54,11 +52,6 @@ func _on_interact():
 		var stone3_position = $Stone_3_marker.position
 		spawn_Stone(stone3_position, find_materials_quest)
 		
-		var stone4_position = $Stone_4_marker.position
-		spawn_Stone(stone4_position, find_materials_quest)
-		
-		var stone5_position = $Stone_5_marker.position
-		spawn_Stone(stone5_position, find_materials_quest)
 		
 		
 #	dit is voor het op pakken van een element van de quest 

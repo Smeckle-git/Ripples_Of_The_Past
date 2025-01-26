@@ -6,11 +6,11 @@ extends Node3D
 @onready var campfire_merchant: Campfire_merchant = $Campfire_merchant
 @onready var hugo: CharacterBody3D = $Hugo
 @onready var player_camera: Player_camera = $Thorinn/PlayerCamera
+@onready var village_door: village_door = $Village_door
 
 @onready var root = get_node("/root/Game/Loading")
 
 func _ready() -> void:
-	player_camera.default_position = Vector3(0, 11, 9)
 	
 	companion.interaction_area.interact = Callable(self, "_on_companion_interact")
 	campfire_merchant.interaction_area.interact = Callable(campfire_merchant, "_on_interact")
@@ -51,3 +51,4 @@ func _on_dialogic_signal(argument:String):
 		
 	elif argument == "leave_hugo":
 		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]
+		village_door.vfx_portal.visible = true

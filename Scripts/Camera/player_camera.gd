@@ -7,7 +7,7 @@ class_name Player_camera
 
 var player_camera_position
 
-@export var default_position : Vector3 = Vector3(-0.75, 20, 17)
+@export var default_position : Vector3 = Vector3(0, 17, 25)
 #const default_rotation_degrees : Vector3 = Vector3(-30, 0, 0)
 
 

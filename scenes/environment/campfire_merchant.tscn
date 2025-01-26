@@ -120,7 +120,7 @@ quest_details = "Its getting dark and pretty cold. I should collect materials to
 
 I would need a decent amount if sticks and stones. Luckaly the forest should have everything i need, lets have a look around!"
 reached_goal_text = "Go back to the campfire"
-amount_obj = 8
+amount_obj = 5
 Karma_Gained = 5
 
 [node name="Find_fish_quest" type="Node3D" parent="."]

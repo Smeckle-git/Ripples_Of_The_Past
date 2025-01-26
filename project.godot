@@ -87,7 +87,8 @@ variables={
 "Villagers_interaction": 0
 },
 "Hugo": {
-"Followed_to_rockfall": false
+"Followed_to_rockfall": false,
+"Talked_already": true
 },
 "Ian": {
 "Confrontationn_at_home": 1,

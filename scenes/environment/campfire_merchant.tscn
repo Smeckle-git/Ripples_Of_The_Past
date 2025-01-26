@@ -118,7 +118,7 @@ quest_name = "Make a campfire"
 quest_description = "Find sticks and stones to start a campfire"
 quest_details = "Its getting dark and pretty cold. I should collect materials to make a campfire.
 
-I would need a decent amount if sticks and stones. Luckaly the forest should have everything i need, lets have a look around!"
+I would need a decent amount of sticks and stones. Luckily the forest should have everything I need, lets have a look around!"
 reached_goal_text = "Go back to the campfire"
 amount_obj = 5
 Karma_Gained = 5
@@ -126,7 +126,10 @@ Karma_Gained = 5
 [node name="Find_fish_quest" type="Node3D" parent="."]
 script = ExtResource("3_dgjng")
 quest_name = "Feed whiskers "
-quest_description = "Catch some fish. There is a river up ahead."
+quest_description = "Catch some fish."
+quest_details = "I found a strange cat out in the forest on my way to Rockfall, I named it Whiskers. It's talking to me and demanding fish. It could be just my imagination. But I will get some food anyway.
+
+Whiskers told me there is a river up ahead. I'll go check it out."
 reached_goal_text = "Go back to the campfire."
 amount_obj = 2
 Karma_Gained = 3

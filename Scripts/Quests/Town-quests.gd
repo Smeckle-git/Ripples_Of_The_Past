@@ -25,10 +25,13 @@ extends Node
 @onready var find_book_quest: Quest = $Quests/Find_book_quest
 @onready var collectflowers: Flowers = $Quests/Collectflowers
 @onready var find_malric: Quest = $Quests/Find_malric
+@onready var town_ruckus: Quest = $Quests/Town_ruckus
 
 
 @onready var animation_player: AnimationPlayer = $CanvasLayer/AnimationPlayer
 @onready var directional_light_3d: DirectionalLight3D = $Environment/WorldEnvironment/DirectionalLight3D
+
+@onready var Dead_ian: Sprite3D = $Buildings/BuildingHospital/Sprite3D9
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -118,6 +121,7 @@ func _on_dialogic_signal(argument:String):
 		find_malric.start_quest()
 	elif argument == "start_alinora_interaction":
 		Dialogic.start("Astrid_request")
+		Dead_ian.visible = true
 		hugo.visible = true
 		hugo.interaction_area.show_label = true
 	elif argument == "Start_find_another_way_quest":
@@ -177,6 +181,9 @@ func _on_dialogic_signal(argument:String):
 			villager_3.turn_dead()
 			villager_4.turn_dead()
 			villager_5.turn_dead()
+		
+		town_ruckus.start_quest()
+		
 	elif argument == "Start_summary":
 		Dialogic.start("Final_summary")
 

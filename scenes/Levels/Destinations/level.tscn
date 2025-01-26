@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bd7lvx5fmmc5q"]
+[gd_scene load_steps=41 format=3 uid="uid://bd7lvx5fmmc5q"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/Forest_quests.gd" id="1_eo63n"]
 [ext_resource type="Script" path="res://Scripts/Demo/demo_environment.gd" id="1_ivdn3"]
@@ -31,6 +31,7 @@
 [ext_resource type="AudioStream" uid="uid://br3ofmjbjse5a" path="res://addons/dialogic/Modules/Audio/Forest_theme.mp3" id="27_q2x5h"]
 [ext_resource type="Script" path="res://scenes/Levels/Destinations/audio_stream_player_2d_forest.gd" id="28_2yb3p"]
 [ext_resource type="PackedScene" uid="uid://bufar747dxh1b" path="res://New_nick/scene/village_door.tscn" id="28_010tm"]
+[ext_resource type="Script" path="res://Scripts/Quests/quest.gd" id="32_8pk4q"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lfbac"]
 panorama = ExtResource("5_yv3ao")
@@ -1423,3 +1424,9 @@ script = ExtResource("28_2yb3p")
 
 [node name="Village_door" parent="." instance=ExtResource("28_010tm")]
 transform = Transform3D(0.999075, 0.0430091, 0, -0.0430091, 0.999075, 0, 0, 0, 1, -30.6018, 2.74516, -119.695)
+
+[node name="Go_to_rockfall" type="Node3D" parent="Village_door"]
+script = ExtResource("32_8pk4q")
+quest_name = "Go to Rockfall"
+quest_description = "Find another way to Rockfall."
+quest_details = "I just met Hugo. He claims to be the innkeeper of Rockfall and offered me a place to stay. He was creepily friendly so I declined for now. Rockfall should be close, I'll find it on my own."

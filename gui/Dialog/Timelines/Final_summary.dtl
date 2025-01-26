@@ -1,113 +1,119 @@
 [style name="Interaction_Style"]
 [background arg="res://assets/images/Intro/MeetingWGod-IntroScene2.jpg" fade="0.0"]
-God: I see you've [i]returned[/i] from your journey.
-God: Now lets see what [i]fate-altering[/i] decisions you've made.
+Ludix: I see you've [i]returned[/i] from your journey.
+Ludix: Now lets see what [i]fate-altering[/i] decisions you've made.
 [background arg="res://assets/images/Intro/Half_shale.jpg" fade="0.0"]
 join Scale center [animation="Instant In"]
-God: You've helped a lost companion out of the [i]goodwill[/i] of your heart.
+Ludix: You've helped a lost companion out of the [i]goodwill[/i] of your heart.
 set {Scale_value} += 1
 jump Change_scale
 if {Whiskers.Accepted_Fish_Quest} == true:
-	God: You offered food to someone in need, that's a good deed.
+	Ludix: You offered food to someone in need, that's a good deed.
 	set {Scale_value} += 1
 elif {Whiskers.Shoo_away} == true:
-	God: You [b]refused[/b] to feed a cat even tho it wouldn't have cost you anything.
-	God: Not only that, but you were [i]mean[/i] to him.
+	Ludix: You [b]refused[/b] to feed a cat even tho it wouldn't have cost you anything.
+	Ludix: Not only that, but you were [i]mean[/i] to him.
 	set {Scale_value} -= 2
 else:
-	God: You [b]ignored[/b] a cry for food.
+	Ludix: You [b]ignored[/b] a cry for food.
 	set {Scale_value} -= 1
 jump Change_scale
 if {Hugo.Followed_to_rockfall} == true:
-	God: You've [i]accepted[/i] Hugo's kindness following him to Rockfall.
+	Ludix: You've [i]accepted[/i] Hugo's kindness following him to Rockfall.
 	set {Scale_value} += 1
 else:
-	God: You've [b]ignored[/b] Hugo's [i]kindness[/i] and tought you were better off alone.
+	Ludix: You've [b]ignored[/b] Hugo's [i]kindness[/i] and tought you were better off alone.
 jump Change_scale
 if {Ian.Selected_Ian_Choice} == 1:
-	God: You [i]tried[/i] your best to save Ian's suffering soul, but failed in the end.
+	Ludix: You [i]tried[/i] your best to save Ian's suffering soul, but failed in the end.
 elif {Ian.Selected_Ian_Choice} == 2:
-	God: You did your job as a doctor. You gave Ian his last mercy, but you [b]did take a life[/b].
+	Ludix: You did your job as a doctor. You gave Ian his last mercy, but you [b]did take a life[/b].
 	set {Scale_value} += 1
 else:
-	God: You were [b]mean[/b] to a dying person, and refused to help.
+	Ludix: You were [b]mean[/b] to a dying person, and refused to help.
 	set {Scale_value} -= 2
 jump Change_scale
 if {Malrik.Trusted_malric} == true:
-	God: Even when [b]warned[/b] about Marlic you decided to [i]trust[/i] him and not the rumours.
+	Ludix: Even when [b]warned[/b] about Marlic you decided to [i]trust[/i] him and not the rumours.
 	set {Scale_value} += 2
 else:
-	God: You [b]blindly[/b] based your trust on groundless rumours and didn't give Marlic a chance.
-	God: On top of that, you [b]stole[/b] his book behind his back.
+	Ludix: You [b]blindly[/b] based your trust on groundless rumours and didn't give Marlic a chance.
+	Ludix: On top of that, you [b]stole[/b] his book behind his back.
 	set {Scale_value} -= 2
 jump Change_scale
 if {Dead_person_choice} == 1:
-	God: You've managed to save [b]all 5 lives[/b], which sadly came at the [i]cost[/i] of Vivian's.
+	Ludix: You've managed to save [b]all 5 lives[/b], which sadly came at the [i]cost[/i] of Vivian's.
 	set {Scale_value} += 4
 	jump Change_scale
 	if {Blame_choice} == 1:
-		God: You pretentiously accepted credit for something in what Malric also played a part.
+		Ludix: You pretentiously accepted credit for something in what Malric also played a part.
 		set {Scale_value} -= 2
 	elif {Blame_choice} == 2:
-		God: You were [i]honest[/i] about who helped you, but that cost you some credibility with those who don't trust Malric.
+		Ludix: You were [i]honest[/i] about who helped you, but that cost you some credibility with those who don't trust Malric.
 	elif {Blame_choice} == 3:
-		God: You pretentiously accepted credit for something in what Malric also played a part. [i]At least[/i] you thanked him in private.
+		Ludix: You pretentiously accepted credit for something in what Malric also played a part. [i]At least[/i] you thanked him in private.
 		set {Scale_value} -= 1
 	jump Change_scale
+	[wait time="1.0"]
 elif {Dead_person_choice} == 2:
-	God: You took the life of a criminal, [b]yet[/b] it left four dead.
+	Ludix: You took the life of a criminal, [b]yet[/b] it left four dead.
 	set {Scale_value} -= 3
 	jump Change_scale
 	if {Blame_choice} == 1:
-		God: You were brave and stood by [i]your[/i] mistake.
-		God: You even shouldered the whole blame, shielding Malric from [i]further disgrace[/i].
+		Ludix: You were brave and stood by [i]your[/i] mistake.
+		Ludix: You even shouldered the whole blame, shielding Malric from [i]further disgrace[/i].
 		set {Scale_value} += 2
 	elif {Blame_choice} == 2:
-		God: You put the blame of your [b]own wrongdoings[/b] on Malric.
+		Ludix: You put the blame of your [b]own wrongdoings[/b] on Malric.
 		set {Scale_value} -= 2
 	elif {Blame_choice} == 3:
-		God: You [b]didn't[/b] fulfill your duty as a doctor, and you hold a grudge over your own mistake.
+		Ludix: You [b]didn't[/b] fulfill your duty as a doctor, and you hold a grudge over your own mistake.
 		set {Scale_value} -= 2
 	jump Change_scale
+	[wait time="1.0"]
 elif {Dead_person_choice} == 3:
-	God: You took the life of an [b]innocent[/b], yet it left two more dead.
+	Ludix: You took the life of an [b]innocent[/b], yet it left two more dead.
 	if {Blame_choice} == 1:
-		God: You were [i]brave[/i] and stood by your choices.
+		Ludix: You were [i]brave[/i] and stood by your choices.
 		set {Scale_value} += 2
 	elif {Blame_choice} == 2:
-		God: You put the [i]blame[/i] of your own wrongdoings on Malric.
+		Ludix: You put the [i]blame[/i] of your own wrongdoings on Malric.
 		set {Scale_value} -= 2
 	elif {Blame_choice} == 3:
-		God: You only half fulfilled your [i]duty[/i] as a doctor, and you hold a [b]grudge[/b] over your own mistake.
+		Ludix: You only half fulfilled your [i]duty[/i] as a doctor, and you hold a [b]grudge[/b] over your own mistake.
 		set {Scale_value} -= 2
 	jump Change_scale
+	[wait time="1.0"]
 elif {Dead_person_choice} == 4:
-	God: You let [b]five people[/b] [i]die[/i]. Altough no one was sacrificed.
+	Ludix: You let [b]five people[/b] [i]die[/i]. Altough no one was sacrificed.
 	set {Scale_value} -= 2
 	jump Change_scale
 	if {Blame_choice} == 1:
-		God: You made the effort to find the cure.
-		God: You [i]could've[/i] faulted Malric, but you kept his involvement to yourself.
+		Ludix: You made the effort to find the cure.
+		Ludix: You [i]could've[/i] faulted Malric, but you kept his involvement to yourself.
 		set {Scale_value} += 2
 	elif {Blame_choice} == 2:
-		God: You've kept your reputation with the village intact at the cost of Malric's [b]unjust[/b] exposure.
+		Ludix: You've kept your reputation with the village intact at the cost of Malric's [b]unjust[/b] exposure.
 	jump Change_scale
+	[wait time="1.0"]
 update Scale (invis) [animation="Instant Out"]
 [background arg="res://assets/images/Intro/MeetingWGod-IntroScene2.jpg" fade="0.0"]
 
 if {Scale_value} == 0:
-	God: Your scale is once again [b]balanced[/b], you are doing an [i]astonishing[/i] job of being neutral.
-	God: But one memory could [b]never[/b] have been enough to determine your fate. Lives are put together by a lifetime's worth of memories.
-	God: You shall be tested in your next one.
+	Ludix: Your scale is once again [b]balanced[/b], you are doing an [i]astonishing[/i] job of being neutral.
+	Ludix: But one memory could [b]never[/b] have been enough to determine your fate. Lives are put together by a lifetime's worth of memories.
+	Ludix: You shall be tested in your next one.
 
 elif {Scale_value} < 0:
-	God: I see that you have taken the first dip towards the [b]negative[/b] end.
-	God: But fear not Thorinn it's impossible to grasp someone's nature just with one memory, thus you still get plenty of chances to redeem yourself.
+	Ludix: I see that you have taken the first dip towards the [b]negative[/b] end.
+	Ludix: But fear not Thorinn it's impossible to grasp someone's nature just with one memory, thus you still get plenty of chances to redeem yourself.
 
 else:
-	God: Your [i]choices[/i] have been going in the right direction.
-	God: you just have to keep following this path, because one memory could [i]never[/i] be enough to determine your fate.
-	God: Lives are put together by a lifetime's worth of memories. You shall be tested in your next one.
+	Ludix: Your [i]choices[/i] have been going in the right direction.
+	Ludix: you just have to keep following this path, because one memory could [i]never[/i] be enough to determine your fate.
+	Ludix: Lives are put together by a lifetime's worth of memories. You shall be tested in your next one.
+[background arg="res://assets/images/MainMenu/mainmenu-bg.jpeg" fade="0.0"]
+Narrator: Thanks for playing! To be continued...
 
 [end_timeline]
 label Change_scale

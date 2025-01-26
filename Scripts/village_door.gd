@@ -7,7 +7,6 @@ class_name village_door
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	vfx_portal.visible = false
-	interaction_area.interact = Callable(self, "_on_object_int")
 	pass # Replace with function body.
 
 func _on_object_int():

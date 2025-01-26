@@ -11,7 +11,6 @@ extends Node3D
 @onready var root = get_node("/root/Game/Loading")
 
 func _ready() -> void:
-	
 	companion.interaction_area.interact = Callable(self, "_on_companion_interact")
 	campfire_merchant.interaction_area.interact = Callable(campfire_merchant, "_on_interact")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -52,3 +51,4 @@ func _on_dialogic_signal(argument:String):
 	elif argument == "leave_hugo":
 		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]
 		village_door.vfx_portal.visible = true
+		village_door.interaction_area.interact = Callable(village_door, "_on_object_int")

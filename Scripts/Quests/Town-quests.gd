@@ -118,6 +118,8 @@ func _on_dialogic_signal(argument:String):
 		find_malric.start_quest()
 	elif argument == "start_alinora_interaction":
 		Dialogic.start("Astrid_request")
+		hugo.visible = true
+		hugo.interaction_area.show_label = true
 	elif argument == "Start_find_another_way_quest":
 		find_book_quest.start_quest()
 	elif argument == "Start_flower_quest":

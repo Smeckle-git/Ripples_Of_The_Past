@@ -9,7 +9,7 @@ class_name QuestManager extends Node3D
 #https://www.youtube.com/watch?v=-8yaaWrdQe0&ab_channel=DevWorm
 @export_group("Quest Settings")
 @export var quest_name: String
-@export var quest_description: String
+@export_multiline var quest_description: String
 @export_multiline var quest_details: String
 @export var reached_goal_text: String
 @export var amount_obj: int

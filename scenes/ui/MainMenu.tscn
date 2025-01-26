@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cgyt23pysau0k"]
+[gd_scene load_steps=14 format=3 uid="uid://cgyt23pysau0k"]
 
 [ext_resource type="Script" path="res://Scripts/ui/MainMenu/MainMenu.gd" id="1_283wr"]
 [ext_resource type="Texture2D" uid="uid://bysyn2h28hcc8" path="res://assets/images/MainMenu/Product_page.jpg" id="2_8fwgx"]
@@ -7,9 +7,9 @@
 [ext_resource type="Script" path="res://scenes/ui/main_menu_thememanager.gd" id="3_c3bv2"]
 [ext_resource type="Texture2D" uid="uid://ca5frnce0aedr" path="res://assets/images/Promotion/logo.png" id="3_uqq2b"]
 [ext_resource type="FontFile" uid="uid://cr0j6tgbc30xg" path="res://scenes/ui/Font/ShiftyNotesRegular-BWZ6d.ttf" id="7_t8fif"]
-[ext_resource type="Texture2D" uid="uid://d0qtbrhaaafd0" path="res://gui/Dialog/styles/Textbox_2.png" id="8_gom52"]
+[ext_resource type="Texture2D" uid="uid://twluixpq1sen" path="res://assets/images/MainMenu/Menu_button.png" id="8_vr6c4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy30r"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e2qn"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -21,44 +21,16 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knt3p"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(1, 1, 1, 0.75)
-draw_center = false
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lap8"]
+texture = ExtResource("8_vr6c4")
+region_rect = Rect2(30, 71, 798, 164)
+modulate_color = Color(0.509286, 0.509286, 0.509286, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4qds"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.225, 0.225, 0.225, 0.6)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nvjl1"]
+texture = ExtResource("8_vr6c4")
+region_rect = Rect2(30, 71, 798, 159)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_snmew"]
-texture = ExtResource("8_gom52")
-region_rect = Rect2(34.8718, 70.4358, 789.231, 161.257)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8i8er"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvctf"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -70,13 +42,13 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="Theme" id="Theme_nf2yg"]
-Button/colors/font_color = Color(0, 0, 0, 1)
-Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
-Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+[sub_resource type="Theme" id="Theme_mkdey"]
+Button/colors/font_color = Color(0.266667, 0.196078, 0.0941176, 1)
+Button/colors/font_disabled_color = Color(0.758192, 0.758192, 0.758192, 0.5)
+Button/colors/font_focus_color = Color(0.266667, 0.196078, 0.0941176, 1)
 Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
 Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 Button/colors/icon_focus_color = Color(1, 1, 1, 1)
@@ -88,17 +60,13 @@ Button/constants/align_to_largest_stylebox = 0
 Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
-Button/font_sizes/font_size = 28
+Button/font_sizes/font_size = 26
 Button/fonts/font = ExtResource("7_t8fif")
-Button/styles/disabled = SubResource("StyleBoxFlat_uy30r")
-Button/styles/focus = SubResource("StyleBoxFlat_knt3p")
-Button/styles/hover = SubResource("StyleBoxFlat_l4qds")
-Button/styles/normal = SubResource("StyleBoxTexture_snmew")
-Button/styles/pressed = SubResource("StyleBoxFlat_8i8er")
-
-[sub_resource type="SystemFont" id="SystemFont_iwrgx"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_mrehf"]
+Button/styles/disabled = SubResource("StyleBoxFlat_3e2qn")
+Button/styles/focus = null
+Button/styles/hover = SubResource("StyleBoxTexture_4lap8")
+Button/styles/normal = SubResource("StyleBoxTexture_nvjl1")
+Button/styles/pressed = SubResource("StyleBoxFlat_qvctf")
 
 [node name="MainMenu" type="Control"]
 process_mode = 3
@@ -183,19 +151,21 @@ text = "Continue Game / Load Game [WIP]"
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
 size_flags_vertical = 3
-theme = SubResource("Theme_nf2yg")
+theme = SubResource("Theme_mkdey")
 text = "New Game"
 
 [node name="Settings" type="Button" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer"]
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
 size_flags_vertical = 3
+theme = SubResource("Theme_mkdey")
 text = "Settings"
 
 [node name="Quit" type="Button" parent="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer"]
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
 size_flags_vertical = 3
+theme = SubResource("Theme_mkdey")
 button_mask = 3
 text = "Quit Game"
 expand_icon = true
@@ -211,7 +181,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MainMenu/HBoxContainer/MenuContainer/CreditsContainer/TextContainer"]
 layout_mode = 2
-text = "Beta Version 0.2.0 - Entangled Studios"
+text = "Beta Version 0.3.0 - Entangled Studios"
 
 [node name="LogoContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer"]
 layout_mode = 2
@@ -226,13 +196,6 @@ alignment = 1
 [node name="CenterContainer" type="CenterContainer" parent="MainMenu/HBoxContainer/LogoContainer/TitleContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="MainMenu/HBoxContainer/LogoContainer/TitleContainer/CenterContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_iwrgx")
-theme_override_font_sizes/font_size = 0
-text = "Ripples Of The Past"
-label_settings = SubResource("LabelSettings_mrehf")
 
 [connection signal="pressed" from="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer/ContinueGame" to="MainMenu" method="_on_continue_game_pressed"]
 [connection signal="pressed" from="MainMenu/HBoxContainer/MenuContainer/MainContainer/ChoiceContainer/NewGame" to="MainMenu" method="_on_new_game_pressed"]

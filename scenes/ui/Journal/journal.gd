@@ -42,6 +42,7 @@ func testFunc():
 		pause()
 		self_layer.visible = true
 		quests.visible = true
+		disable_quest_notification()
 	elif Input.is_action_just_pressed("Journal") and get_tree().paused:
 		_on_continue_pressed()
 		
@@ -49,11 +50,13 @@ func testFunc():
 		pause()
 		self_layer.visible = true
 		settings.visible = true
+		disable_quest_notification()
 	elif Input.is_action_just_pressed("Pause") and get_tree().paused and settings.visible:
 		_on_continue_pressed()
 	elif Input.is_action_just_pressed("Pause") and get_tree().paused and !settings.visible:
 		self_layer.visible = true
 		settings.visible = true
+		disable_quest_notification()
 	
 func _process(_delta: float) -> void:
 	testFunc()
@@ -90,3 +93,9 @@ func _on_button_pressed() -> void:
 	pause()
 	self_layer.visible = true
 	quests.visible = true
+	disable_quest_notification()
+
+func disable_quest_notification() -> void:
+	var journal = get_tree().get_root().get_node("Game/JournalIconLayer/JournalIconGroup")
+	if journal:
+		journal.on_opening_journal()

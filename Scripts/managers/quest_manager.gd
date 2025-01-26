@@ -35,5 +35,13 @@ func find_update_canvas(status : String, content : String) -> void:
 	else:
 		print("QuestUpdateCanvas not found!")
 
+func find_update_journal():
+	var journal = get_tree().get_root().get_node("Game/JournalIconLayer/JournalIconGroup")
+	if journal:
+		journal.on_quest_update()
+	else:
+		print_debug("cannot find the journal layer in: " + str(journal))
+
+
 func update_karma():
 	KarmaGlobal.KARMA_SCORE += Karma_Gained

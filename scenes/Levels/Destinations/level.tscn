@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bd7lvx5fmmc5q"]
+[gd_scene load_steps=40 format=3 uid="uid://bd7lvx5fmmc5q"]
 
 [ext_resource type="Script" path="res://Scripts/Quests/Forest_quests.gd" id="1_eo63n"]
 [ext_resource type="Script" path="res://Scripts/Demo/demo_environment.gd" id="1_ivdn3"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cwhg5dt7uh11x" path="res://scenes/environment/tree_3.tscn" id="6_ced4g"]
 [ext_resource type="PackedScene" uid="uid://hqh15shxywyx" path="res://scenes/Characters/Thorinn.tscn" id="6_dd3lb"]
 [ext_resource type="PackedScene" uid="uid://cju7mir2fyt65" path="res://scenes/environment/tree_2.tscn" id="7_jfi5y"]
+[ext_resource type="PackedScene" uid="uid://bludx3tlsqmo3" path="res://assets/shaders/shader_nick/Scene's/falling leaves.tscn" id="8_ot4un"]
 [ext_resource type="PackedScene" uid="uid://b5rxeqhdmkkkj" path="res://scenes/environment/tree_4.tscn" id="8_vdqgb"]
 [ext_resource type="PackedScene" uid="uid://bvy7tlferryk5" path="res://scenes/environment/tree_trunk.tscn" id="9_cyinu"]
 [ext_resource type="PackedScene" uid="uid://b1cu2ipgkr85v" path="res://scenes/environment/bush_1.tscn" id="9_eu7qi"]
@@ -123,6 +124,14 @@ shape = SubResource("BoxShape3D_ah4qg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.255, -0.334045)
 size = Vector3(88.12, 18.08, 11.3319)
 material = SubResource("ShaderMaterial_y1wvd")
+
+[node name="FallingLeaves1" parent="Environment" instance=ExtResource("8_ot4un")]
+transform = Transform3D(5.0991, 0.0015339, -0.00437271, -0.00778398, 1.00465, 0.00331988, 0.00297517, -0.000443644, 7.50297, 2.07281, 6.09285, -10.6737)
+amount = 600
+
+[node name="FallingLeaves2" parent="Environment" instance=ExtResource("8_ot4un")]
+transform = Transform3D(-2.22889e-07, -7.66459e-11, 7.50297, -0.00889961, 1.00465, 0, -5.0991, -0.00175345, -3.27965e-07, -16.6555, 5.71893, -92.2899)
+amount = 600
 
 [node name="trees" type="Node3D" parent="."]
 
@@ -1415,7 +1424,15 @@ move_to_location = Vector3(-1, 2.3, -11)
 last_direction = null
 
 [node name="FireFlies" parent="." instance=ExtResource("25_2wcrm")]
-transform = Transform3D(2.37983, 0, 0, 0, 1, 0, 0, 0, 2.10923, -14.8674, 6.11313, 8.53555)
+transform = Transform3D(2.37983, 0, 0, 0, 1, 0, 0, 0, 2.10923, -14.8674, 3.70641, -25.8378)
+visible = false
+
+[node name="FireFlies2" parent="." instance=ExtResource("25_2wcrm")]
+transform = Transform3D(2.37983, 0, 0, 0, 1, 0, 0, 0, 2.10923, -46.8137, -3.53637, -93.907)
+visible = false
+
+[node name="FireFlies3" parent="." instance=ExtResource("25_2wcrm")]
+transform = Transform3D(2.37983, 0, 0, 0, 1, 0, 0, 0, 2.10923, -41.471, -2.21509, -120.734)
 visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

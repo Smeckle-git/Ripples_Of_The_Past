@@ -7,7 +7,7 @@ extends Node3D
 @onready var hugo: CharacterBody3D = $Hugo
 @onready var player_camera: Player_camera = $Thorinn/PlayerCamera
 @onready var village_door: village_door = $Village_door
-@onready var Go_to_rockfall: Quest = $Village_door/Quest
+@onready var go_to_rockfall: Quest = $Village_door/Go_to_rockfall
 
 @onready var root = get_node("/root/Game/Loading")
 
@@ -50,7 +50,7 @@ func _on_dialogic_signal(argument:String):
 		root.scene_loader.change_scene("Village")
 		
 	elif argument == "leave_hugo":
-		Go_to_rockfall.start_quest()
+		go_to_rockfall.start_quest()
 		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]
 		village_door.vfx_portal.visible = true
 		village_door.interaction_area.interact = Callable(village_door, "_on_object_int")

@@ -7,7 +7,7 @@ extends Node3D
 @onready var hugo: CharacterBody3D = $Hugo
 @onready var player_camera: Player_camera = $Thorinn/PlayerCamera
 @onready var village_door: village_door = $Village_door
-@onready var Go_to_rockfall: Quest = $Village_door/Quest
+@onready var Go_to_rockfall: Quest = $Village_door/Go_to_rockfall
 
 @onready var root = get_node("/root/Game/Loading")
 
@@ -42,11 +42,13 @@ func _on_dialogic_signal(argument:String):
 	elif argument == "thorinn_looks_right":
 		thorinn.state_machine.last_direction = Vector2(1,0)
 	elif argument == "follow_hugo":
+		thorinn.state_machine.change_state("idle")
 		thorinn.state_machine.follow_target = hugo
 		thorinn.state_machine.change_state("follow")
 		hugo.move_to_location = [Vector3(0,3,50),  Vector3(3,1.5,-50)]
 		
 		await  get_tree().create_timer(2.0).timeout
+		thorinn.state_machine.change_state("idle")
 		root.scene_loader.change_scene("Village")
 		
 	elif argument == "leave_hugo":

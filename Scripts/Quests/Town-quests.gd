@@ -222,4 +222,6 @@ func _on_hospital_interaction():
 	Dialogic.start("pharmacy_location")
 
 func _on_hugo_destination_reached() -> void:
+	thorinn.state_machine.change_state("idle")
+	thorinn.state_machine.change_state("dialogue")
 	Dialogic.start("first_morning")

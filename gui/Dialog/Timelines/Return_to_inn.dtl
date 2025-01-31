@@ -10,7 +10,7 @@ if {Ian.Confrontationn_at_home} == 1:
 		Hugo: Mhhh...Ian. He’s been unwell for a while. What was a minor cough has grown worse, and despite his efforts, he’s not improving.
 		Hugo: He still tries to help the villagers, but he’s struggling. The unfortunate truth is that many are now suffering because of his absense.
 		Thorinn: That bad already. That... not good.
-
+	
 	- Oh no, nevermind
 elif {Dead_person_choice} != 0:
 elif {Astrid.ask_for_help} == 2:
@@ -24,7 +24,7 @@ elif {Astrid.ask_for_help} == 2:
 		Hugo: They say he started using people, even animals, for his ‘rituals.’
 		- What happened then?
 			Hugo: At that point our elder had no choice but to exile him, send him out to the woods so he couldn’t hurt anyone anymore.
-			I see...
+			Thorinn: I see...
 		- They say?
 			Hugo: It was never proven to be true. Who knows maybe people just feared his power and knowledge.
 			Thorinn: I see...

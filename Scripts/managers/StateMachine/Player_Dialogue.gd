@@ -1,7 +1,7 @@
 extends Player_State
 class_name player_Dialogue
 
-var disabled_inputs =["Interact","Walk forward", "Walk backwards", "Walk Left", "Walk right"]
+var disabled_inputs =["Interact"]
 var stored_events = {}
 
 func Enter():
@@ -32,4 +32,4 @@ func _enable_input():
 			for event in stored_events[action]:
 				InputMap.action_add_event(action, event)
 			stored_events.erase(action)
-		print("Input enabled")
+		print("Input enabled") 

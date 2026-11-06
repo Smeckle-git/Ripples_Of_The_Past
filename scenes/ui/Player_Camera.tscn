@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://doja1555vib8p"]
-
-[ext_resource type="PackedScene" uid="uid://dve4r2tv8p2id" path="res://scenes/ui/game_hud_manager.tscn" id="1_ve41f"]
-
-[node name="PlayerCamera" type="Camera3D"]
-
-[node name="Game_hud_manager" parent="." instance=ExtResource("1_ve41f")]

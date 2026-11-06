@@ -1,0 +1,50 @@
+[gd_resource type="Theme" format=3 uid="uid://c7u3i21reqh1n"]
+
+[ext_resource type="FontFile" uid="uid://cjo6o8ajsmv5y" path="res://Resources/Themes/ShiftyNotesRegular-BWZ6d.ttf" id="1_j1d1w"]
+[ext_resource type="Texture2D" uid="uid://blsou6wf5j1rf" path="res://Resources/Images/Menus/Menu_Button.png" id="2_x4qtw"]
+
+[sub_resource type="StyleBoxTexture" id="DisabledButton"]
+texture = ExtResource("2_x4qtw")
+region_rect = Rect2(30, 71, 798, 159)
+modulate_color = Color(0.65, 0.65, 0.65, 0.45)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lap8"]
+texture = ExtResource("2_x4qtw")
+region_rect = Rect2(30, 71, 798, 164)
+modulate_color = Color(0.5317126, 0.5317129, 0.5317127, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nvjl1"]
+texture = ExtResource("2_x4qtw")
+region_rect = Rect2(30, 71, 798, 159)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j1d1w"]
+texture = ExtResource("2_x4qtw")
+region_rect = Rect2(30, 71, 798, 164)
+modulate_color = Color(0.28729475, 0.28729498, 0.28729483, 1)
+
+[resource]
+default_font = ExtResource("1_j1d1w")
+Button/colors/font_color = Color(0.266667, 0.196078, 0.0941176, 1)
+Button/colors/font_disabled_color = Color(0.64, 0.62, 0.57, 0.75)
+Button/colors/font_focus_color = Color(0.266667, 0.196078, 0.0941176, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 26
+Button/fonts/font = ExtResource("1_j1d1w")
+Button/styles/disabled = SubResource("DisabledButton")
+Button/styles/focus = SubResource("StyleBoxTexture_4lap8")
+Button/styles/hover = SubResource("StyleBoxTexture_4lap8")
+Button/styles/normal = SubResource("StyleBoxTexture_nvjl1")
+Button/styles/pressed = SubResource("StyleBoxTexture_j1d1w")

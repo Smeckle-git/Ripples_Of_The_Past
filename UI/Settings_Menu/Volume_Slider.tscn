@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bq8sr873ulk7m"]
+
+[ext_resource type="Script" uid="uid://cnkjjjsr3y8f1" path="res://UI/Settings_Menu/volume_slider.gd" id="1_gqr87"]
+[ext_resource type="FontFile" uid="uid://cjo6o8ajsmv5y" path="res://Resources/Themes/ShiftyNotesRegular-BWZ6d.ttf" id="2_3fmmc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_48ss2"]
+font = ExtResource("2_3fmmc")
+font_size = 45
+font_color = Color(0.27450982, 0.14117648, 0.043137256, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gqr87"]
+font_size = 38
+font_color = Color(0.27450982, 0.14117648, 0.043137256, 1)
+
+[node name="Volume_Slider" type="HBoxContainer" unique_id=227467496]
+theme_override_constants/separation = 80
+script = ExtResource("1_gqr87")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1431147310]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="HBoxContainer" unique_id=514897299]
+layout_mode = 2
+text = "Settings"
+label_settings = SubResource("LabelSettings_48ss2")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1768900338]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer2" unique_id=602800015]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+
+[node name="Percentage" type="Label" parent="HBoxContainer2" unique_id=947524087]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "100%"
+label_settings = SubResource("LabelSettings_gqr87")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="value_changed" from="HBoxContainer2/HSlider" to="." method="_on_h_slider_value_changed"]

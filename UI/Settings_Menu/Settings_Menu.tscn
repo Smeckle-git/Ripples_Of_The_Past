@@ -1,0 +1,430 @@
+[gd_scene format=3 uid="uid://isovvljf2enp"]
+
+[ext_resource type="FontFile" uid="uid://cjo6o8ajsmv5y" path="res://Resources/Themes/ShiftyNotesRegular-BWZ6d.ttf" id="1_01ili"]
+[ext_resource type="Script" uid="uid://pxkdu56h2r0d" path="res://UI/Settings_Menu/settings_menu.gd" id="1_dewmm"]
+[ext_resource type="Texture2D" uid="uid://ph083400n5se" path="res://Resources/Images/Menus/Background_2.jpeg" id="1_du7w0"]
+[ext_resource type="Texture2D" uid="uid://dbgmgpxc7ph6n" path="res://Resources/Images/Menus/Settings_Book.png" id="3_dewmm"]
+[ext_resource type="Texture2D" uid="uid://dck7x04wypub4" path="res://Resources/Images/Menus/Back_Button.png" id="5_dewmm"]
+[ext_resource type="Texture2D" uid="uid://m4wpwiskevv6" path="res://Resources/Images/Icons/Paintbrush.png" id="6_jbrhm"]
+[ext_resource type="Texture2D" uid="uid://bfymbhwmcb3fn" path="res://Resources/Images/Icons/Cogwheel.png" id="6_mgahm"]
+[ext_resource type="Texture2D" uid="uid://bbfm3dixw0ktl" path="res://Resources/Images/Logos/Entangled_Logo_Brown.png" id="7_srmtc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("1_01ili")
+font_size = 92
+font_color = Color(0.27450982, 0.14117648, 0.043137256, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_srmtc"]
+font = ExtResource("1_01ili")
+font_size = 45
+font_color = Color(0.27450982, 0.14117648, 0.043137256, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vs0dx"]
+font = ExtResource("1_01ili")
+font_size = 45
+font_color = Color(0.44705883, 0.23137255, 0.07058824, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iobgw"]
+font = ExtResource("1_01ili")
+font_size = 28
+font_color = Color(0.27450982, 0.14117648, 0.043137256, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ujxr8"]
+font = ExtResource("1_01ili")
+font_size = 28
+font_color = Color(0.44705883, 0.23137255, 0.07058824, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d0u6y"]
+texture = ExtResource("5_dewmm")
+modulate_color = Color(0.8346143, 0.8346143, 0.8346143, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fcnqv"]
+texture = ExtResource("5_dewmm")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dewmm"]
+load_path = "res://.godot/imported/Back_Button.png-2a9d0314326d24296b6076215755afca.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mgahm"]
+texture = SubResource("CompressedTexture2D_dewmm")
+modulate_color = Color(0.5237817, 0.52378017, 0.5237805, 1)
+
+[sub_resource type="Theme" id="Theme_yf5fn"]
+default_font = ExtResource("1_01ili")
+Button/font_sizes/font_size = 30
+Button/styles/focus = SubResource("StyleBoxTexture_d0u6y")
+Button/styles/hover = SubResource("StyleBoxTexture_d0u6y")
+Button/styles/normal = SubResource("StyleBoxTexture_fcnqv")
+Button/styles/pressed = SubResource("StyleBoxTexture_mgahm")
+
+[node name="SettingsMenu" type="Control" unique_id=2803917]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dewmm")
+
+[node name="Title" type="Label" parent="." unique_id=179243181]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19114584
+anchor_top = 0.119444445
+anchor_right = 0.5161458
+anchor_bottom = 0.2574074
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+label_settings = SubResource("LabelSettings_g4v7s")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=258220316]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_du7w0")
+expand_mode = 2
+
+[node name="Book" type="TextureRect" parent="." unique_id=595349564]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0890625
+anchor_right = 0.9322917
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dewmm")
+expand_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="Control" parent="Book" unique_id=265391867]
+layout_mode = 1
+anchor_left = 0.55651635
+anchor_top = 0.075
+anchor_right = 0.6269302
+anchor_bottom = 0.17870371
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Book/Settings" unique_id=1255499427]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="Book/Settings/MarginContainer" unique_id=259360611]
+layout_mode = 2
+texture_normal = ExtResource("6_mgahm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Galery" type="Control" parent="Book" unique_id=13850751]
+layout_mode = 1
+anchor_left = 0.6812847
+anchor_top = 0.087037034
+anchor_right = 0.75169855
+anchor_bottom = 0.19074073
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Book/Galery" unique_id=911329512]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="TextureButton" type="TextureButton" parent="Book/Galery/MarginContainer" unique_id=1382555790]
+layout_mode = 2
+texture_normal = ExtResource("6_jbrhm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Credits" type="Control" parent="Book" unique_id=1317555433]
+layout_mode = 1
+anchor_left = 0.7807288
+anchor_top = 0.085185185
+anchor_right = 0.8814083
+anchor_bottom = 0.23425926
+offset_right = 6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Book/Credits" unique_id=1681641158]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="TextureButton" type="TextureButton" parent="Book/Credits/MarginContainer" unique_id=219407655]
+layout_mode = 2
+texture_normal = ExtResource("7_srmtc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=484407311]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13645834
+anchor_top = 0.25
+anchor_right = 0.884375
+anchor_bottom = 0.8111111
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="ScrollContainer" parent="MarginContainer" unique_id=1557716066]
+layout_mode = 2
+
+[node name="Settings" type="VBoxContainer" parent="MarginContainer/Settings" unique_id=1734973324]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Galery" type="ScrollContainer" parent="MarginContainer" unique_id=1371930526]
+visible = false
+layout_mode = 2
+
+[node name="Galery" type="VBoxContainer" parent="MarginContainer/Galery" unique_id=1967228829]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Credits" type="ScrollContainer" parent="MarginContainer" unique_id=929087339]
+visible = false
+layout_mode = 2
+
+[node name="Credits" type="VBoxContainer" parent="MarginContainer/Credits" unique_id=1164811298]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 29
+
+[node name="Lead" type="HBoxContainer" parent="MarginContainer/Credits/Credits" unique_id=1088876557]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Job" type="Label" parent="MarginContainer/Credits/Credits/Lead" unique_id=1505820000]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Game designed and published by:"
+label_settings = SubResource("LabelSettings_srmtc")
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="Label" parent="MarginContainer/Credits/Credits/Lead" unique_id=827834650]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Entangled Studios"
+label_settings = SubResource("LabelSettings_vs0dx")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Row3" type="HBoxContainer" parent="MarginContainer/Credits/Credits" unique_id=1962520703]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Job" type="Label" parent="MarginContainer/Credits/Credits/Row3" unique_id=2000364809]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Project Lead
+
+Concept Design
+
+
+
+Branding & Marketing
+
+
+
+Programming
+
+
+
+
+
+Game Design
+
+
+
+
+Story & Narrative
+
+
+
+"
+label_settings = SubResource("LabelSettings_iobgw")
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="Label" parent="MarginContainer/Credits/Credits/Row3" unique_id=1379167138]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Youri Knoop
+
+Corina Costache
+Jeroen van Poeijer
+Laura Kiss
+
+Corina Costache
+Laura Kiss
+Marly de Haard
+
+Nick Teeuwen
+Rainald Isabella
+Sawanthi Mooijman
+Vincent Pohlkamp
+Youri Knoop
+
+Laura Kiss
+Nick Teeuwen
+Sawanthi Mooijman
+Youri Knoop
+
+Berbel Johanson
+Corina Costache
+Laura Kiss
+Marly de Haard
+Sawanthi Mooijman"
+label_settings = SubResource("LabelSettings_ujxr8")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Job2" type="Label" parent="MarginContainer/Credits/Credits/Row3" unique_id=706574523]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Level Design
+
+
+
+UI/UX Design
+
+
+
+
+Art
+
+Animation
+
+
+Music
+
+
+Special Thanks"
+label_settings = SubResource("LabelSettings_iobgw")
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Name2" type="Label" parent="MarginContainer/Credits/Credits/Row3" unique_id=471823033]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Laura Kiss
+Sawanthi Mooijman
+Youri Knoop
+
+Laura Kiss
+Rainald Isabella
+Sawanthi Mooijman
+Youri Knoop
+
+Laura Kiss
+
+Laura Kiss
+Sawanthi Mooijman
+
+Jeroen van Poeijer
+Marly de Haard
+
+Mathijs Koning
+Erwin Steenberg
+The Hague University (THUAS)"
+label_settings = SubResource("LabelSettings_ujxr8")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Footer" type="HBoxContainer" parent="MarginContainer/Credits/Credits" unique_id=294100951]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Credits/Credits/Footer" unique_id=1728515576]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Entangled studios were formed during a semester of the 
+Game Development minor at The Hague University of Applied Sciences. 
+What started as a student project grew into a shared ambition to create
+memorable and immersive gaming experiences. 
+`Ripples of the Past` is our first step on that journey, 
+and we hope you enjoyed playing it as much as we enjoyed creating it."
+label_settings = SubResource("LabelSettings_ujxr8")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="MarginContainer/Credits/Credits/Footer" unique_id=539930310]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "With the conclusion of the Game Development minor, many of the 
+original team members have moved on. Continued development of 
+this project will be led by Laura and Sawanthi. All intellectual property 
+rights, creative ownership, and contributions made throughout 
+the project's development remain the property of their respective 
+original creators and members of Entangled Studios. 
+Future development will continue with respect for and 
+acknowledgment of those contributions."
+label_settings = SubResource("LabelSettings_ujxr8")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" type="Button" parent="." unique_id=309960193]
+layout_mode = 0
+anchor_left = 0.7739583
+anchor_top = 0.8175926
+anchor_right = 0.8677083
+anchor_bottom = 0.9
+theme = SubResource("Theme_yf5fn")
+text = "     Back"
+alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Book/Settings/MarginContainer/TextureButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Book/Galery/MarginContainer/TextureButton" to="." method="_on_galery_button_pressed"]
+[connection signal="pressed" from="Book/Credits/MarginContainer/TextureButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://1ak7t85yqvb1"]
+
+[sub_resource type="BoxShape3D" id="Floor"]
+size = Vector3(19, 0.4, 25)
+
+[sub_resource type="BoxShape3D" id="Podium"]
+size = Vector3(10, 1.22, 4)
+
+[sub_resource type="ConvexPolygonShape3D" id="StairsRamp"]
+points = PackedVector3Array(-5, 0, -5.185, 5, 0, -5.185, -5, 1.22, -7.6, 5, 1.22, -7.6, -5, 0, -7.6, 5, 0, -7.6)
+
+[sub_resource type="BoxShape3D" id="SideWall"]
+size = Vector3(0.5, 14.5, 24)
+
+[sub_resource type="BoxShape3D" id="BackWall"]
+size = Vector3(19, 14.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="PillarBase"]
+size = Vector3(1.45, 0.48, 1.45)
+
+[sub_resource type="CylinderShape3D" id="PillarShaft"]
+height = 9.04
+radius = 0.54
+
+[node name="GodRoomCollision" type="StaticBody3D" unique_id=2028438771]
+
+[node name="Floor" type="CollisionShape3D" parent="." unique_id=1308794237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+shape = SubResource("Floor")
+
+[node name="Podium" type="CollisionShape3D" parent="." unique_id=1288773480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.61, -9.6)
+shape = SubResource("Podium")
+
+[node name="StairsWalkableRamp" type="CollisionShape3D" parent="." unique_id=1641047017]
+shape = SubResource("StairsRamp")
+
+[node name="LeftWall" type="CollisionShape3D" parent="." unique_id=1594664736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.25, 7.25, 0)
+shape = SubResource("SideWall")
+
+[node name="RightWall" type="CollisionShape3D" parent="." unique_id=599878316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.25, 7.25, 0)
+shape = SubResource("SideWall")
+
+[node name="BackWall" type="CollisionShape3D" parent="." unique_id=970207079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.25, -12.25)
+shape = SubResource("BackWall")
+
+[node name="FrontWall" type="CollisionShape3D" parent="." unique_id=925422263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.25, 12.2672415)
+shape = SubResource("BackWall")
+
+[node name="LeftPillar01Base" type="CollisionShape3D" parent="." unique_id=1499204564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 0.24, 8)
+shape = SubResource("PillarBase")
+
+[node name="LeftPillar01Shaft" type="CollisionShape3D" parent="." unique_id=510096666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 5, 8)
+shape = SubResource("PillarShaft")
+
+[node name="LeftPillar02Base" type="CollisionShape3D" parent="." unique_id=329704318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 0.24, 3)
+shape = SubResource("PillarBase")
+
+[node name="LeftPillar02Shaft" type="CollisionShape3D" parent="." unique_id=1267514116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 5, 3)
+shape = SubResource("PillarShaft")
+
+[node name="LeftPillar03Base" type="CollisionShape3D" parent="." unique_id=85210445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 0.24, -2)
+shape = SubResource("PillarBase")
+
+[node name="LeftPillar03Shaft" type="CollisionShape3D" parent="." unique_id=1324348212]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 5, -2)
+shape = SubResource("PillarShaft")
+
+[node name="LeftPillar04Base" type="CollisionShape3D" parent="." unique_id=2139427016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 0.24, -7)
+shape = SubResource("PillarBase")
+
+[node name="LeftPillar04Shaft" type="CollisionShape3D" parent="." unique_id=1259206746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 5, -7)
+shape = SubResource("PillarShaft")
+
+[node name="RightPillar01Base" type="CollisionShape3D" parent="." unique_id=988685314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 0.24, 8)
+shape = SubResource("PillarBase")
+
+[node name="RightPillar01Shaft" type="CollisionShape3D" parent="." unique_id=1485680627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 5, 8)
+shape = SubResource("PillarShaft")
+
+[node name="RightPillar02Base" type="CollisionShape3D" parent="." unique_id=1443641232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 0.24, 3)
+shape = SubResource("PillarBase")
+
+[node name="RightPillar02Shaft" type="CollisionShape3D" parent="." unique_id=706456914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 5, 3)
+shape = SubResource("PillarShaft")
+
+[node name="RightPillar03Base" type="CollisionShape3D" parent="." unique_id=1485774060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 0.24, -2)
+shape = SubResource("PillarBase")
+
+[node name="RightPillar03Shaft" type="CollisionShape3D" parent="." unique_id=1044313182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 5, -2)
+shape = SubResource("PillarShaft")
+
+[node name="RightPillar04Base" type="CollisionShape3D" parent="." unique_id=1164879799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 0.24, -7)
+shape = SubResource("PillarBase")
+
+[node name="RightPillar04Shaft" type="CollisionShape3D" parent="." unique_id=1349764476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8, 5, -7)
+shape = SubResource("PillarShaft")

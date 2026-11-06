@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://gorsbynqy3sw"]
+
+[ext_resource type="PackedScene" path="res://UI/Gameplay/Gameplay_UI.tscn" id="2_gameplay_ui"]
+[ext_resource type="PackedScene" uid="uid://c1gtiafvsf8yc" path="res://Levels/God_Room/God_Room.tscn" id="3_god_room"]
+
+[node name="Game" type="Node" unique_id=1362280131]
+
+[node name="World" type="Node" parent="." unique_id=695574550]
+
+[node name="GodRoom" parent="World" unique_id=1752575156 instance=ExtResource("3_god_room")]
+
+[node name="UI" type="Node" parent="." unique_id=864249908]
+
+[node name="GameplayUI" parent="UI" unique_id=555208819 instance=ExtResource("2_gameplay_ui")]

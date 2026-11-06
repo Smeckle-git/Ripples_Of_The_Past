@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://sjd2xje7o3d7"]
+
+[ext_resource type="Script" uid="uid://b4tgajq1wlhay" path="res://UI/Main_Menu/main_menu.gd" id="1_4xec8"]
+[ext_resource type="Texture2D" uid="uid://dwed8y68jhbe6" path="res://Resources/Images/Menus/Background_1.jpg" id="2_b1fxw"]
+[ext_resource type="Texture2D" uid="uid://12junn01rbcp" path="res://Resources/Images/Logos/Ripples_Logo.png" id="4_skkl5"]
+[ext_resource type="Theme" uid="uid://c7u3i21reqh1n" path="res://Resources/Themes/Main_Button_Theme.tres" id="5_otcqi"]
+
+[node name="MainMenu" type="Control" unique_id=1331941362]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4xec8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1341895769]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_b1fxw")
+expand_mode = 2
+flip_h = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=149907501]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -869.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1231260666]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=649724163]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1171223148]
+layout_mode = 2
+texture = ExtResource("4_skkl5")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=712792416]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1994047553]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ContignueGame" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1113488722]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = ExtResource("5_otcqi")
+text = "Continue Game"
+
+[node name="NewGame" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1894014137]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = ExtResource("5_otcqi")
+text = "New Game"
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1980332914]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = ExtResource("5_otcqi")
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1205740775]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = ExtResource("5_otcqi")
+text = "Quit game"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/ContignueGame" to="." method="_on_contignue_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://ckh18ua8un0u8"]
+
+[ext_resource type="Texture2D" uid="uid://bx4vw6atn0mtn" path="res://Resources/Images/Characters/God/God_Statue.png" id="1_b0tbl"]
+[ext_resource type="Script" uid="uid://cx3tbijq28rnp" path="res://Scripts/Interaction/Interaction_Area.gd" id="2_interaction"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g4v7s"]
+height = 7.0
+radius = 1.55
+
+[sub_resource type="CylinderShape3D" id="InteractionRange"]
+height = 3.0
+radius = 3.2
+
+[node name="Ludix" type="StaticBody3D" unique_id=2134078645 groups=["NPC"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=97614408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1918030476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.364, 0)
+cast_shadow = 2
+pixel_size = 0.008
+billboard = 2
+shaded = true
+alpha_cut = 1
+alpha_scissor_threshold = 0.35
+texture = ExtResource("1_b0tbl")
+
+[node name="InteractionArea" type="Area3D" parent="." unique_id=781923760]
+collision_layer = 0
+monitorable = false
+script = ExtResource("2_interaction")
+action_name = "talk to Ludix"
+prompt_offset = Vector3(0, 2.6, 2)
+dialogue_timeline = "res://UI/Dialog/Timelines/Ludix_God_Room.dtl"
+
+[node name="Range" type="CollisionShape3D" parent="InteractionArea" unique_id=283369688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("InteractionRange")

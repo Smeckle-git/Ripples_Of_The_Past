@@ -1,5 +1,0 @@
-[style name="Interaction_Style"]
-if {Dead_person_choice} == 1:
-elif {Dead_person_choice} == 2:
-elif {Dead_person_choice} == 3:
-elif {Dead_person_choice} == 4:

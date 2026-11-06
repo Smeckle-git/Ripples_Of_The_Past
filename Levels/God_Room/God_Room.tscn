@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://c1gtiafvsf8yc"]
+
+[ext_resource type="PackedScene" uid="uid://mwfcl2w67j84" path="res://Assets/Environments/GodRoom_Cathedral.glb" id="1_dn7be"]
+[ext_resource type="PackedScene" uid="uid://mrgeom7c0ivx" path="res://Assets/Characters/Thorinn.tscn" id="2_372ik"]
+[ext_resource type="PackedScene" uid="uid://1ak7t85yqvb1" path="res://Levels/God_Room/God_Room_Collision.tscn" id="3_collision"]
+[ext_resource type="PackedScene" uid="uid://ckh18ua8un0u8" path="res://Assets/Characters/Ludix.tscn" id="4_biekl"]
+[ext_resource type="Script" uid="uid://c6jiggya5mf2b" path="res://Levels/God_Room/god_room.gd" id="5_room"]
+
+[node name="GodRoom" type="Node3D" unique_id=1457409948]
+script = ExtResource("5_room")
+
+[node name="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" parent="." unique_id=837514134 instance=ExtResource("1_dn7be")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002063036, -0.0023226738, -0.0014545918)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" unique_id=53759570]
+transform = Transform3D(-4.371139e-08, 0.57357645, -0.81915206, 0, 0.81915206, 0.57357645, 1, 2.5071824e-08, -3.5806274e-08, -9.252063, 5.0023227, -6.9985456)
+light_color = Color(1, 1, 0.87058824, 1)
+light_energy = 3.859
+shadow_enabled = true
+shadow_normal_bias = 0.5
+spot_range = 18.176
+spot_attenuation = 0.54
+spot_angle = 75.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" unique_id=167242291]
+transform = Transform3D(-4.371139e-08, 0.57357645, -0.81915206, 0, 0.81915206, 0.57357645, 1, 2.5071824e-08, -3.5806274e-08, -9.252063, 5.0023227, -1.9985454)
+light_color = Color(1, 1, 0.87058824, 1)
+light_energy = 3.859
+shadow_enabled = true
+shadow_normal_bias = 0.5
+spot_range = 18.176
+spot_attenuation = 0.54
+spot_angle = 75.0
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" unique_id=832370169]
+transform = Transform3D(-4.371139e-08, 0.57357645, -0.81915206, 0, 0.81915206, 0.57357645, 1, 2.5071824e-08, -3.5806274e-08, -9.252063, 5.0023227, 3.0014546)
+light_color = Color(1, 1, 0.87058824, 1)
+light_energy = 3.859
+shadow_enabled = true
+shadow_normal_bias = 0.5
+spot_range = 18.176
+spot_attenuation = 0.54
+spot_angle = 75.0
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" unique_id=907667138]
+transform = Transform3D(-4.371139e-08, 0.57357645, -0.81915206, 0, 0.81915206, 0.57357645, 1, 2.5071824e-08, -3.5806274e-08, -9.252063, 5.0023227, 8.001454)
+light_color = Color(1, 1, 0.87058824, 1)
+light_energy = 3.859
+shadow_enabled = true
+shadow_normal_bias = 0.5
+spot_range = 18.176
+spot_attenuation = 0.54
+spot_angle = 75.0
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" unique_id=357645102]
+transform = Transform3D(-4.371139e-08, 0.819152, 0.57357645, 0, -0.57357645, 0.819152, 1, 3.580627e-08, 2.5071824e-08, 9.247937, 5.0023227, -6.9985456)
+light_color = Color(1, 1, 0.87058824, 1)
+light_energy = 3.859
+shadow_enabled = true
+shadow_normal_bias = 0.5
+spot_range = 18.176
+spot_attenuation = 0.54
+spot_angle = 75.0
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" unique_id=1527991348]
+transform = Transform3D(-4.371139e-08, 0.819152, 0.57357645, 0, -0.57357645, 0.819152, 1, 3.580627e-08, 2.5071824e-08, 9.247937, 5.0023227, -1.9985454)
+light_color = Color(1, 1, 0.87058824, 1)
+light_energy = 3.859
+shadow_enabled = true
+shadow_normal_bias = 0.5
+spot_range = 18.176
+spot_attenuation = 0.54
+spot_angle = 75.0
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" unique_id=1389018458]
+transform = Transform3D(-4.371139e-08, 0.819152, 0.57357645, 0, -0.57357645, 0.819152, 1, 3.580627e-08, 2.5071824e-08, 9.247937, 5.0023227, 3.0014546)
+light_color = Color(1, 1, 0.87058824, 1)
+light_energy = 3.859
+shadow_enabled = true
+shadow_normal_bias = 0.5
+spot_range = 18.176
+spot_attenuation = 0.54
+spot_angle = 75.0
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" unique_id=477618251]
+transform = Transform3D(-4.371139e-08, 0.819152, 0.57357645, 0, -0.57357645, 0.819152, 1, 3.580627e-08, 2.5071824e-08, 9.247937, 5.0023227, 8.001454)
+light_color = Color(1, 1, 0.87058824, 1)
+light_energy = 3.859
+shadow_enabled = true
+shadow_normal_bias = 0.5
+spot_range = 18.176
+spot_attenuation = 0.54
+spot_angle = 75.0
+
+[node name="GodRoomCollision" parent="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" unique_id=1265195759 instance=ExtResource("3_collision")]
+
+[node name="Camera3D" type="Camera3D" parent="GodRoom_Cathedral_Detailed_before-static-export-2026-10-22" unique_id=1421734614]
+transform = Transform3D(1, 0, 0, 0, 0.9063078, 0.4226183, 0, -0.4226183, 0.9063078, -0.002063036, 6.0023227, 15.001454)
+
+[node name="Thorinn" parent="." unique_id=119198543 instance=ExtResource("2_372ik")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.05, 7)
+floor_snap_length = 0.25
+
+[node name="Ludix" parent="." unique_id=2134078645 instance=ExtResource("4_biekl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9857843, -9.71449)

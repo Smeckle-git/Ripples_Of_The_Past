@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dfqyvcjgbka68"]
+
+[ext_resource type="Script" uid="uid://jxj4voxqqaqy" path="res://UI/Loading/Loading_Screen.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bf23f2b46wabl" path="res://Resources/Images/Loading_Scale/Loading_Scale_Spritesheet.png" id="2_sheet"]
+
+[node name="LoadingScreen" type="Control" unique_id=852986110]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1231623003]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Content" type="VBoxContainer" parent="Center" unique_id=2120117965]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+
+[node name="ScaleHost" type="Control" parent="Center/Content" unique_id=1164153899]
+custom_minimum_size = Vector2(264, 200)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Scale" type="Sprite2D" parent="Center/Content/ScaleHost" unique_id=282151611]
+position = Vector2(132, 100)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sheet")
+hframes = 3
+vframes = 3
+frame = 4
+
+[node name="Status" type="Label" parent="Center/Content" unique_id=172546975]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.97, 0.91, 1)
+theme_override_font_sizes/font_size = 28
+text = "Loading..."
+horizontal_alignment = 1
